@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Database file #1: Bibliografia.bib
+Warning--string name "june" is undefined
+--line 199 of file Bibliografia.bib
+Warning--empty journal in 33
+Warning--empty year in 33
+You've used 76 entries,
+            1876 wiz_defined-function locations,
+            913 strings with 20672 characters,
+and the built_in function-call counts, 22532 in all, are:
+= -- 2062
+> -- 1243
+< -- 2
++ -- 446
+- -- 370
+* -- 1675
+:= -- 3265
+add.period$ -- 91
+call.type$ -- 76
+change.case$ -- 72
+chr.to.int$ -- 0
+cite$ -- 78
+duplicate$ -- 1082
+empty$ -- 1872
+format.name$ -- 370
+if$ -- 5458
+int.to.chr$ -- 0
+int.to.str$ -- 76
+missing$ -- 72
+newline$ -- 247
+num.names$ -- 76
+pop$ -- 237
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 896
+stack$ -- 0
+substring$ -- 1256
+swap$ -- 536
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 162
+width$ -- 78
+write$ -- 729
+(There were 3 warnings)

@@ -1,0 +1,751 @@
+\documentclass[11pt,twoside,a4paper]{report}
+\usepackage[DF,newLogo]{uaThesis}
+\def\ThesisYear{2025}
+\usepackage{cite}
+\usepackage[utf8]{inputenc} 
+\usepackage{eurosym}
+% optional packages
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xspace}% used by \sigla
+\usepackage{siunitx}
+\DeclareSIUnit{\molar}{M}
+\usepackage{floatrow}
+\usepackage{graphicx}
+%\usepackage{subfig}
+\usepackage[label font=bf,labelformat=simple]{subfig}% <-- changed
+\usepackage{caption}
+\floatsetup[figure]{style=plain,subcapbesideposition=top}
+\usepackage{setspace} % for \setstretch
+%\usepackage[printonlyused]{acronym}
+\usepackage{multicol}
+\usepackage{array}  % For m{} column types
+\frenchspacing
+%Use acronyms
+\usepackage{acronym}
+\usepackage{booktabs} % for \toprule, \midrule, \bottomrule
+\usepackage{etoolbox}
+\usepackage{notoccite}
+\usepackage{multirow}
+\usepackage{ifthen}
+\usepackage{tikz}
+
+
+\makeatletter
+\patchcmd{\@makechapterhead}{\vspace*{50\p@}}{\vspace*{0pt}}{}{}
+\patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{\vspace*{0pt}}{}{}
+\makeatother\makeatletter
+\patchcmd{\@makechapterhead}
+  {%
+    \ifnum \c@secnumdepth >\m@ne
+      \huge\bfseries \@chapapp\space \thechapter
+      \par\nobreak
+      \vskip 20\p@
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+  }
+  {%
+    \ifnum \c@secnumdepth >\m@ne
+      \huge\bfseries \@chapapp\space \thechapter. #1\par\nobreak
+      \vskip 20\p@
+    \else
+      \Huge \bfseries #1\par\nobreak
+    \fi
+  }
+  {}{}
+\makeatother
+\makeatletter
+% Reduce the vskip after the chapter heading (default is usually 40pt)
+\patchcmd{\@makechapterhead}
+  {\vskip 40\p@}
+  {\vskip 10\p@} % or even \vskip 0\p@ for no extra space
+  {}{}
+\makeatother
+\usepackage[abs]{overpic}
+% Reduce vertical space before unnumbered chapters (like \chapter*)
+\makeatletter
+\patchcmd{\@makeschapterhead}
+  {\vspace*{50\p@}} % default is usually 50pt
+  {\vspace*{0\p@}} % or adjust to your liking (e.g., 0pt or 20pt)
+  {}{}
+\makeatother
+% optional (comment to use default)s
+%   depth of the table of contents
+%     1 ... chapther and sections
+%     2 ... chapters, sections, and subsections
+%     3 ... chapters, sections, subsections, and subsubsections
+\setcounter{tocdepth}{2}
+
+% optional (comment to used default)
+%   horizontal line to separate floats (figures and tables) from text
+\def\topfigrule{\kern 7.8pt \hrule width\textwidth\kern -8.2pt\relax}
+\def\dblfigrule{\kern 7.8pt \hrule width\textwidth\kern -8.2pt\relax}
+\def\botfigrule{\kern -7.8pt \hrule width\textwidth\kern 8.2pt\relax}
+
+% custom macros (could also be defined using \newcommand)
+\def\I{\mathtt{i}}         % one possible way to represent $\sqrt{-1}$
+\def\Exp#1{e^{2\pi\I #1}}  % argument inside braces, i.e., "{}"
+\def\EXP#1.{e^{2\pi\I #1}} % argument finishes when a full stop is encountered, i.e., "."
+\def\sigla{\LaTeX\xspace}  % use as "blabla \sigla blabla (no need to do "blabla \sigla\ blabla"
+
+\def\AddVMargin#1{\setbox0=\hbox{#1}%
+                  \dimen0=\ht0\advance\dimen0 by 2pt\ht0=\dimen0%
+                  \dimen0=\dp0\advance\dimen0 by 2pt\dp0=\dimen0%
+                  \box0}   % add extra vertical space above and below the argument (#1)
+\def\Header#1#2{\setbox1=\hbox{#1}\setbox2=\hbox{#2}%
+           \ifdim\wd1>\wd2\dimen0=\wd1\else\dimen0=\wd2\fi%
+           \AddVMargin{\parbox{\dimen0}{\centering #1\\#2}}} % put #1 on top #2
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter} %remove for fig1.1, fig1.2, etc.
+\counterwithout{table}{chapter}%remove for tab1.1, tab1.2, etc.
+\usepackage[font=small,labelfont=bf]{caption}
+\captionsetup{belowskip=2pt, aboveskip=4pt}
+\usepackage{float}
+\floatsetup[figure]{style=plain,subcapbesideposition=top}
+% Force normal, clean formatting of List of Figures
+%for italic on title page
+\usepackage{lmodern}
+\addto\captionsenglish{\renewcommand{\bibname}{References}}
+\usepackage{enumitem}
+\usepackage{tabularx}
+
+\begin{document}
+
+% First front page
+\TitlePage
+  %\GRID  % for debugging ONLY (comment this out when finished)
+  \HEADER{\BAR\FIG{\begin{minipage}{50mm} 
+           \begin{flushright}
+           \end{flushright}
+          \end{minipage}}}
+         {\ThesisYear}
+  \TITLE{Marta \\ Moniz Rodrigues}
+        {Sistema de Dosimetria \textsl{Wireless} para Radiologia de Intervenção\\[1\baselineskip]
+        Wireless Dosimetry System for Interventional Radiology\\
+        }
+\EndTitlePage
+
+% Second front page
+\TitlePage
+\HEADER{\BAR\FIG{\begin{minipage}{50mm} % no more than 120mm
+           \begin{flushright}
+           \end{flushright}
+          \end{minipage}}}
+         {\ThesisYear}
+   \TITLE{Marta \\ Moniz Rodrigues}
+        {Sistema de Dosimetria {\textit{Wireless}} para Radiologia de Intervenção\\[1\baselineskip]
+        Wireless Dosimetry System for Interventional Radiology\\
+        }
+  \vspace*{15mm}
+  \TEXT{}
+      {Projeto apresentado à Universidade de Aveiro para cumprimento dos requisitos
+necessários à aprovação na unidade curricular de Laboratórios Avançados de Engenharia Biomédica, realizada sob a orientação científica do Doutor Carlos Davide da Rocha Azevedo, professor auxiliar do Departamento de Física da Universidade de Aveiro}
+
+        %\vspace*{60mm}
+    %\TEXT{}
+%{Este trabalho foi apoiado pelas bolsas
+       %PTDC/NAN-MAT/3901/2020 e CICECO - Instituto de Materiais de Aveiro  UIDB/50011/2020 e UIDP/50011/2020, financiadas pela Fundação para a Ciência e a Tecnologia/MCTES e pelo projeto ThermoRise, ERC-2019-CoG-865437, financiado pelo Conselho Europeu de Investigação/H2020
+       %https://erc.europa.eu/manage-your-project/communicate-your-research
+       %https://www.compete2020.gov.pt/sobre-nos/comunicacao
+      % }
+%\vspace*{2mm}
+%\begin{figure}[H]
+% \begin{minipage}{1.4\textwidth}
+
+  
+ %\end{minipage}
+%\end{figure}  
+\EndTitlePage
+
+% Jury page
+\TitlePage
+  \vspace*{55mm}
+  \TEXT{\textbf{o j\'uri~/~the jury\newline}}{}
+  \TEXT{Presidente}
+       {\textbf{Prof. Luiz Fernando Ribeiro Pereira}
+       \newline {\small Professor Auxiliar do Departamento de Física da Universidade de Aveiro}}
+  \vspace*{5mm}
+  \TEXT{Arguente}
+       {\textbf{Prof. Jorge Miguel de Brito Almeida Sampaio}\newline {\small Professor Auxiliar do Departamento de Física da Faculdade de Ciências da Universidade de Lisboa}}
+ \vspace*{5mm}
+  \TEXT{Orientador}
+       {\textbf{Prof. Doutor Carlos Davide da Rocha Azevedo}\newline {\small Professor Auxiliar do Departamento de Física da Universidade de Aveiro}}
+\EndTitlePage
+\TitlePage
+  \vspace*{55mm}
+  \TEXT{\textbf{agradecimentos~/\newline acknowledgements}}
+       {}
+  \TEXT{}
+       {agradecimento} 
+        \TEXT{}
+       {}
+       \TEXT{}
+       {agradecimento}
+        \TEXT{}
+       {}
+       \TEXT{}
+       {agradecimento}
+        \TEXT{}
+       {}
+        \TEXT{}
+       {agradecimento}
+        \TEXT{}
+       {}
+         \TEXT{}
+       {agradecimento}
+\EndTitlePage
+% \titlepage\ \endtitlepage -> empty page
+\TitlePage
+  \vspace*{55mm}
+  \TEXT{\textbf{reconhecimento de uso~/\newline acknowledgement of use}}
+       {I acknowledge the use of Perplexity Pro (\url{https://www.perplexity.ai/}) for linguistic revision and assistance with \LaTeX{} formatting. All original images in this document were created using Canva (\url{https://www.canva.com/}) and PowerPoint (Microsoft 365).}
+  
+\EndTitlePage
+\TitlePage
+  \vspace*{35mm}
+\TEXT{\textbf{Palavras-chave}}
+      {Dosímetros pessoais ativos, Exposição ocupacional, Monitorização em tempo real, Radiação dispersa, Radiologia de intervenção.} 
+ \vspace*{15mm}
+  \TEXT{\textbf{Resumo}}
+       {\hspace{5mm}A radiologia de intervenção (RI) é a especialidade médica sujeita à maior exposição profissional a radiação ionizante, dado depender da fluoroscopia. Nesta modalidade, a radiação dispersa é o principal fator que contribui para a dose do operador. Atualmente, a monitorização dos trabalhadores reside em dosímetros passivos que apenas fornecem informação \emph{a posteriori} da dose acumulada. Como consequência, a capacidade de prevenir e agir sobre exposições desnecessárias é limitada.}
+      \TEXT{} {\hspace{5mm}Os dosímetros pessoais ativos são considerados uma solução complementar. Estes sistemas fornecem informação em tempo real, possibilitando mudanças comportamentais preventivas. Este trabalho analisa o atual estado da arte dos dosímetros ativos na RI. São apresentados os equipamentos disponíveis no mercado e a sua evolução, bem como os princípios de funcionamento. Benefícios documentados na li\-teratura incluem uma redução geral da dose, dependente das condições base de exposição, e maior consciencialização da equipa quanto à radiação recebida durante as intervenções. O seu papel como ferramenta educativa para boas práticas de proteção radiológica também é reconhecido. Contudo, os dispositivos exis\-ten\-tes têm um elevado custo associado e são limitados à monitorização ao nível do tórax. Como resposta, é proposto o desenvolvimento de um dosimetro ativo durante o próximo ano letivo. O sistema é projetado para monitorizar a exposição em quatro regiões anatómicas distintitas: olhos, pescoço, tórax e mãos. A aquisição de dados é acompanhada de \emph{feedback} em tempo real com transmissão de informação \emph{wireless} para uma unidade de visualização externa. A deteção da radiação será baseada em fibras óticas cintilantes de plástico (PMMA), cujo coeficiente de atenuação é equivalente aos dos tecidos moles. As fibras serão acopladas a um fotomultiplicador de sílicio, permitindo um \emph{design} compacto e leve. Neste documento é ainda apre\-sen\-ta\-do o plano de trabalho que contém as etapas para o desenvolvimento e avaliação do protótipo durante o ano letivo 2025/2026.}
+\EndTitlePage
+
+
+\TitlePage
+  \vspace*{35mm}
+\TEXT{\textbf{Keywords}}
+      {Active personal dosimeters, Interventional radiology, Occupational exposure, Real-time monitoring, Scattered radiation.} 
+ \vspace*{15mm}
+  \TEXT{\textbf{Abstract}}
+      {\hspace{5mm}Interventional radiology (IR) is the medical specialty with the highest occupational exposure to ionising radiation, due to its reliance on fluoroscopy. In this modality, scattered radiation is the main contributor to operator dose. Current monitoring systems rely on passive dosimeters that only provide \emph{a posteriori} dose information. This limits the ability to prevent unnecessary exposure.}
+      \TEXT{}  {\hspace{5mm}Active personal dosimeters (APDs) are identified as a complementary solution. These systems provide real-time feedback that can prompt preventive behavioural adjustments. This work reviews the current state of the art of APDs in IR. Commercial solutions and their evolution are presented, along with their operating principles. Reported benefits include general dose reduction, dependent on baseline exposure conditions, and improved team awareness of the radiation received during interventions. Their role as an educational tool for radiation safety practices is also recognised. However, existing devices are costly and limited in anatomical coverage, as they are restricted to chest-level monitoring. In response to these limitations, a new APD prototype is proposed for development during the next academic year. It is designed to monitor exposure at four different anatomical regions: the eyes, neck, thorax and hands. Measurement data will be transmitted wirelessly to an external display, enabling real-time feedback to the users. The sensing unit will be based on plastic (PMMA) scintillation optical fibres, with an attenuation coefficient similar to that of soft tissues. The fibres will be coupled to a silicon photomultiplier for a compact and lightweight design. This document also presents the workplan that will guide the development and evaluation of the prototype during the 2025/2026 academic year.}        
+\EndTitlePage
+
+
+
+%
+% Tables of contents, of figures, ...
+%
+
+\pagenumbering{roman}
+
+\begin{spacing}{0.85} % or try 0.8, 0.7 for tighter spacing
+\tableofcontents
+\end{spacing}
+
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\input{lista_acronimos}
+\newpage
+\input{lista_simbolos}
+% The chapters (usually written using the isolatin font encoding ...)
+
+
+\newpage
+\pagenumbering{arabic}
+
+%% Motivation and Contextualization
+\chapter*{Motivation and Contextualization}
+Interventional radiology refers to image-guided therapeutic procedures
+performed under real-time X-ray visualization \cite{6}. The number of these procedures has
+increased over the past two decades worldwide. Interventional radiologists
+and their teams are the most exposed group of medical radiation workers due to the prolonged
+use of fluoroscopy and the proximity required during interventions \cite{10,55}. 
+Currently, protection strategies rely on lead garments
+and structural shielding within the room \cite{37}. Compliance with established occupational dose limits is monitored
+using passive dosimeters, which are worn either above or below the lead apron. These devices
+are read \emph{a posteriori}, in the best-case scenario, once a month. As a result, there is no
+immediate feedback during procedures and exposure incidents cannot be prevented \cite{46,67}.
+
+Active personal dosimeters offer a complementary solution by providing real-time auditory and/or visual feedback. The main benefit
+of these devices in IR is not to prevent exceedance of annual dose limits, which have been extensively studied and are rarely 
+surpassed under standard conditions. Instead, ADPs support
+the principle of keeping exposure {\it as low as reasonably achievable }(ALARA) \cite{1,2,3}. These systems alert personnel to high-dose situations, promoting behavioural adjustments to reduce avoidable exposure. Adjustments may include reducing fluoroscopy time and frame rate, optimizing patient and operator positioning, and improve radiation shielding placement \cite{4}. 
+
+The proposed project explores the development of an APD system for IR, capable of monitoring
+radiation exposure at four anatomical regions: eyes, neck, thorax (chest) and hands. The system will transmit dose data wirelessly to an external 
+dashboard for real-time visualization. 
+
+\newpage
+%%%% Chapter 1: Basics of X-Ray Physics
+
+\chapter{Radiation in Interventional Radiology}
+
+\section{Interventional Radiology}
+Interventional radiology (IR) is a subspecialty of radiology that utilizes fluoroscopy to perform diagnostic and therapeutic procedures through minimally invasive techniques \cite{8}. Fluoroscopy involves the use of X-rays and an image detection system to visualize internal structures and interventional tools in real-time \cite{11}. The conventional IR equipment configuration is illustrated in Fig.~\ref{fig:interventional_radiology_setup}. The X-rays are produced in an X-ray tube by converting the kinetic energy of electrons into electromagnetic radiation. It consists of two electrodes enclosed in a vacuum-sealed glass envelope. The cathode serves as the electron source, while the anode acts as the positive target. When heated by an electric current, the cathode emits electrons via thermionic emission. The number of electrons produced depends on the current passing through the filament. A high potential difference applied between the cathode and the anode accelerates the electrons toward the anode. The total incident energy delivered to the anode is proportional to both the voltage and the current\cite{5,6}. 
+\begin{figure}[H]
+ \centering
+  \includegraphics[width=\linewidth]{images/interventional radiology setup.png}
+ \caption[Interventional Radiology Setup]{Interventional Radiology Setup. The C-arm is positioned in a posteroanterior projection (standard clinical practice) directing the most intense backscatter towards the floor, protecting above-knee radiosensitive organs~\cite{26}. The images shown on the display monitor were reproduced from Refs.~\cite{111,112}.}
+
+ \label{fig:interventional_radiology_setup}
+\end{figure}
+The X-rays transmitted through the patient strike the image detection system, mounted opposing the X-ray tube on a C-arm gantry. In the standard configuration, the X-ray tube is positioned beneath the patient table and the detector above, capitalising on the anisotropic distribution of scattered radiation to minimise occupational exposure~\cite{21,22}. The detector converts incident X-rays into visible light, which is optically transmitted to a camera system and displayed on a monitor to guide interventions in real-time. For continuous fluoroscopy, a steady tube current is supplied and images are acquired at 30 frames per second to maintain the perception of smooth motion~\cite{16}. Table~\ref{tab:ir_parameters} outlines common technical parameters used in IR procedures \cite{20}.
+% Small vertical space after surrounding text
+\vspace{1em}
+
+% Manual table title, numbered and added to LoT
+\refstepcounter{table}
+\label{tab:ir_parameters}
+\noindent\textbf{Table~\thetable.} Representative ranges of technical parameters used in IR procedures. Adapted from Ref.~\cite{20}.%
+\addcontentsline{lot}{table}{\protect\numberline{\thetable}Representative ranges of technical parameters used in IR procedures.}
+
+% Small space between title and table
+\vspace{0.1em}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{>{\raggedright\arraybackslash}p{0.08\textwidth} 
+                  >{\centering\arraybackslash}p{0.08\textwidth} 
+                  >{\centering\arraybackslash}p{0.08\textwidth} 
+                  >{\centering\arraybackslash}p{0.11\textwidth} 
+                  >{\centering\arraybackslash}p{0.11\textwidth} 
+                  >{\centering\arraybackslash}p{0.11\textwidth} 
+                  >{\centering\arraybackslash}p{0.11\textwidth}
+                  >{\centering\arraybackslash}p{0.09\textwidth}}
+    
+    \toprule
+\scriptsize \textbf{Parame\-ter} & \scriptsize \textbf{Peak high voltage} & \scriptsize \textbf{Tube current} & \scriptsize \textbf{Inherent Al filtration} & \scriptsize \textbf{Cu filtration} & \scriptsize \textbf{Pulse duration} & \scriptsize \textbf{Pulse frequency} & \scriptsize \textbf{Scatter Energy} \\
+   
+    \midrule
+    \scriptsize \textbf{Range} 
+& \scriptsize 60–120 kV 
+& \scriptsize 5–1000 mA 
+& \scriptsize 4.5 mm 
+& \scriptsize 0.2–0.9 mm 
+& \scriptsize 1–20 ms 
+& \scriptsize 1–30 Hz 
+& \scriptsize 20–100 keV \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+ \section{Photon Interaction with Matter}
+X-rays interact with matter through four physical mechanisms: Rayleigh and Compton scattering, the photoelectric effect and pair production. Rayleigh scattering involves the elastic interaction of a photon with the entire atom, resulting in a slightly deflected scattered photon with the same energy. Its contribution to overall interactions in the context of IR is negligible. Additionally, pair production requires photon energies exceeding 1.02 MeV, which are not present in diagnostic X-ray procedures \cite{6}. Therefore, only the photoelectric effect and Compton scattering are considered in detail.
+\subsection{Compton Scattering}
+Compton scattering is an inelastic interaction in which an 
+incident photon interacts with a free outer-shell electron, 
+transferring part of its energy. As a result, 
+the electron is ejected as a recoil (Compton) electron. 
+In accordance with the conservation of energy and momentum, 
+the photon is deflected at an angle $\theta$, dependent on the energy 
+transferred. The energy of the scattered photon $E_c$
+is described \cite{6}:
+
+\begin{equation}
+E_c = \frac{E_0}{1 + \frac{E_0}{511} (1 - \cos\theta)},\ \text{unit: } [\mathrm{keV}]
+\label{eq:compton}
+\end{equation}
+where $E_0$ is the energy of the incident photon. The maximum energy transfer to the electron occurs at the maximum permissible angle, when $\theta = 180^\circ$.
+
+At photon energies typical of diagnostic radiology, the scattered photon retains most of the initial energy and remains sufficiently energetic to penetrate tissue. Within this energy range, Compton scattering predominates over the photoelectric effect in materials such as soft tissue, water and air. The interaction probability is proportional to the physical density of the material, but it is independent of the atomic number due to the uniform electron density across soft 
+tissues~\cite{5,6}.
+\subsection{Photoelectric Effect}
+The photoelectric effect occurs when an incident photon transfers all of its energy to a bound electron within an atom, resulting in the complete absorption of the photon and the ejection of the electron from its orbital. This process preferentially involves inner-shell electrons due to their greater electron density. The incident photon energy is expended to overcome the binding energy of the electron ($E_b$), and any remaining energy is converted into the kinetic energy of the ejected photoelectron ($E_{\text{pe}}$), expressed as~\cite{5,6}:
+\begin{equation}
+E_{\text{pe}} = E_0 - E_b,\ \text{unit: } [\mathrm{keV}]
+\label{eq:photoeletric}
+\end{equation}
+\indent The probability of photoelectric interaction is predominant at lower energies ($<$50 keV). It is also dependent on atomic number, increasing with higher-$Z$ materials, which provides contrast in X-ray imaging. As a result, lower-energy X-ray beams produce higher contrast but also increase photon absorption in the patient, leading to a higher dose. In interventional planning, beam quality is therefore optimised to balance image quality and patient dose, as higher photon energies reduce patient absorption but increase the contribution of Compton scattering, leading to greater noise and poorer contrast~\cite{6}.
+
+\section{Dosimetry Fundamentals}
+
+\subsection{Physical Quantities}
+\subsubsection{\emph{KERMA}}
+When a beam of indirectly ionizing radiation, such as X-rays, interacts with matter, it transfers energy to charged particles within the medium. The total energy transferred ($\varepsilon_{tr}$) within a volume, $V$, is defined as \cite{12}:
+\begin{equation}
+\varepsilon_{tr} = (R_{in})_u - (R_{out})_u^{\text{nonr}} + \sum Q,\ \text{unit: } [\mathrm{J}]
+\label{eq:energy_transferred}
+\end{equation}
+\noindent where \((R_{\text{in}})_u\) and \((R_{\text{out}})_u\) are the radiant energies of uncharged particles entering and leaving the volume, respectively, excluding secondary radiative emissions. \(\sum Q\) represents changes in rest mass energy within \(V\).
+
+The dosimetric quantity \emph{KERMA} (Kinetic Energy Released in MAtter) quantifies the initial kinetic energy transferred to char\-ged particles, per unit mass, regardless of where and how that energy is spent \cite{6,12}: 
+\begin{equation}
+KERMA = \frac{d\varepsilon_{tr}}{dm},\ \text{unit: } \left[\frac{\mathrm{J}}{\mathrm{kg}}\right] \text{ or } [\mathrm{Gy}]
+\label{eq:kerma}
+\end{equation}
+\subsubsection{Absorbed Dose}
+Absorbed dose ($D$) incorporates all subsequent energy deposition mechanisms such as radiative losses, e.g. \emph{Bremsstrahlung}. The total deposited energy (\( \varepsilon \)) includes the energy balance defined in Eq. \ref{eq:energy_transferred}, along with all contributions from charged particles, per unit mass at a point of interest. $D$ is used to quantify the effects of radiation and is expressed as \cite{11,12}: 
+\begin{equation}
+D = \frac{d\varepsilon}{dm},\ \text{unit: } [\mathrm{Gy}]
+\label{eq:absorbed_dose}
+\end{equation}
+
+\subsubsection{Exposure}
+Exposure ($X$) is the earliest defined dosimetric quantity and applies to photon interactions in air. It measures the amount of electric charge, \(dQ\), produced by ionization in a given mass of dry air \cite{12}:
+\begin{equation}
+X = \frac{dQ}{dm},\ \text{unit: } \left[\frac{\mathrm{C}}{\mathrm{kg}}\right]
+\label{eq:exposure}
+\end{equation}
+
+Exposure is directly related to the collision component of \emph{KERMA}, (\(K_{col}\)). \(K_{col}\) represents the fraction of energy transferred that is deposited through ionization and excitation, excluding radiative losses. In fact, a connection between $X$ and \(K_{\text{col}}\) can be established through the quantity \(\overline{W}_{\text{air}}\), defined as the mean energy required to produce an ion pair in dry air (\(\overline{W}_{\text{air}} = 33.97~\mathrm{J/C}\)):
+\begin{equation}
+K_{\text{col, air}} = \overline{W}_{\text{air}} \cdot X = 33.97 \cdot X,\ \text{unit: } [\mathrm{Gy}]
+\label{eq:kcair_exposure}
+\end{equation}
+\noindent
+In practice, \(K_{\text{col, air}}\) is commonly referred to as \emph{air KERMA} and is used to describe the output of an X-ray tube, as it can be measured directly in free air \cite{11}.
+
+\subsection{Protection Quantities}
+Radiation effects on humans vary due to differences in bio\-logical response and are classified as either stochastic or deterministic. Deterministic effects (Fig.~\ref{fig:effects}~(a)), inclu\-ding development of cataracts or skin erythema, have a threshold dose and increase in severity with higher exposure.  Stochastic outcomes (Fig.~\ref{fig:effects}~(b)), such as cancer, occur statistically, with the probability increasing with dose but without a threshold. To reflect these probabilistic biological responses, additional weighting factors for radiation type and tissue radiosensitivity must be considered. Thus, two protection-related quantities, equivalent dose ($H$) and effective dose~($E$), are derived from absorbed dose~\cite{13,14}.
+\begin{figure}[H]
+  \centering
+  \input{figures/deterministic_stochastic}
+  \caption[Deterministic and stochastic effets.]{\textbf{(a)} Deterministic effects exhibit a threshold dose below which no effect occurs. Above the threshold, severity increases with dose. Thresholds are expressed in Gy (absorbed dose) as deterministic effects depend only on how much energy is deposited.
+    \textbf{(b)} Stochastic effects have no threshold; the probability of occurrence increases with dose, but severity is independent of exposure. The individual either develops the condition or not \cite{13}.}
+
+  \label{fig:effects}
+\end{figure}
+
+
+\subsubsection{Equivalent Dose}
+The stochastic effects of radiation depend on the type of particles involved, as they interact with matter in distinct ways, exhibiting different patterns of ionization along their paths~\cite{12}. This variation is described by the linear energy transfer (LET) function, which represents the rate at which energy is deposited along a particle’s trajectory through a medium. Low-LET radiation produces ionization over longer paths, whereas high-LET radiation transfers energy more densely over shorter distances, enhancing its potential for biological damage per unit of absorbed dose~\cite{6}. 
+
+To account for these differences in LET, the International Commission on Radiological Protection (ICRP) introduced the concept of equivalent dose. This measure applies an empirical and dimensionless radiation weighting factor, $w_R$, to the absorbed dose, to reflect the relative biological effectiveness of different types of radiation~\cite{6,14}:
+
+\begin{equation}
+H_T = \sum_R D_{T,R} \cdot w_R,\ \text{unit: } [\mathrm{Sv}]
+\label{eq:equivalent_dose}
+\end{equation}
+
+\noindent The sievert (Sv) is dimensionally equivalent to joules per kilogram (J/kg) and gray (Gy), but specifically used for radiological protection to distinguish it from the physical quantity $D$~\cite{6}.
+
+As shown in Table \ref{tab:wr_factors}, fast electrons, X-rays and $\gamma$-rays have a weighting factor $w_R$ of one, meaning that absorbed dose and equivalent dose are numerically equal~\cite{14}. In contrast, $\alpha$ particles have a $w_R$ of 20 due to their higher ionization density. Thus, $\alpha$ particles can produce the same biological outcome as X-rays at only 5\% of the absorbed dose~\cite{13,14}.
+
+% Right before the table environment
+% Small vertical space after surrounding text
+\vspace{1em}
+% Manual table title, numbered and added to LoT
+\refstepcounter{table}
+\label{tab:wr_factors}
+\noindent\textbf{Table~\thetable.} Radiation weighting factors. Adapted from Ref.~\cite{15}.%
+\addcontentsline{lot}{table}{\protect\numberline{\thetable}Radiation weighting factors.}
+
+
+\vspace{0.1em} % Small space between title and table
+\begin{table}[H]
+\centering
+\begin{tabular}{c c}
+\toprule
+\textbf{Radiation type} & \textbf{Radiation weighting factor, $w_R$} \\
+\midrule
+X-rays, $\gamma$-rays and Electrons & 1 \\
+Protons & 2 \\
+$\alpha$ and Heavy Particles & 20 \\
+Neutrons &
+\begin{minipage}[c][3.5cm][c]{0.4\textwidth}
+\centering
+\includegraphics[height=3cm]{images/neutron.jpg} \\
+\footnotesize {Continuous function of neutron energy}
+\end{minipage} \\
+\bottomrule
+\end{tabular}
+
+\end{table}
+
+\subsubsection{Effective Dose}
+Effective dose extends the concept of equivalent dose by incorporating tissue weighting factors, $w_T$. These factors quantify the relative contribution of specific organs and tissues to the overall radiation detriment, and are represented in Table \ref{tab:wt_factors}. The values are derived from epidemiological and radiobiological data and reflect averaged population risk, making $E$ a comparative metric rather than an indicator of individual risk. Effective dose is defined as the sum of the equivalent doses received by individual organs and tissues, each weighted by its respective factor~\cite{6,13,14}:
+
+\begin{equation}
+E = \sum_T H_T \cdot w_T,\ \text{unit: } [\mathrm{Sv}]
+\label{eq:effective_dose}
+\end{equation}
+
+% Small vertical space after surrounding text
+\vspace{1em}
+
+% Manual table title, numbered and added to LoT
+\refstepcounter{table}
+\label{tab:wt_factors}
+\noindent\textbf{Table~\thetable.} Tissue weighting factors for each organ/tissue. Adapted from Ref.~\cite{15}.%
+\addcontentsline{lot}{table}{\protect\numberline{\thetable}Tissue weighting factors for each organ/tissue.}
+
+% Small space between title and table
+\vspace{0.1em}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{0.58\textwidth} c c}
+    \toprule
+    \textbf{Tissues and Organs} & \textbf{Weighting Factor,$w_T$} & \textbf{$\sum w_T$} \\
+    \midrule
+    Red bone marrow, Colon, Lung, Stomach, Breast, Remaining tissues* & 0.12 & 0.72 \\
+    Gonads & 0.08 & 0.08 \\
+    Bladder, Esophagus, Liver, Thyroid & 0.04 & 0.16 \\
+    Bone surface, Brain, Salivary glands, Skin & 0.01 & 0.04 \\
+    \midrule
+    & \textit{Total} & \textbf{1.00} \\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{0.3em}
+  {\footnotesize *Adrenals, Extrathoracic region,
+Gall bladder, Heart, Kidneys, Lymphatic nodes, Muscle, Oral
+mucosa, Pancreas, Prostate, Small intestine, Spleen, Thymus, Uterus/cervix}
+\end{table}
+\subsection{Operational Quantity}
+In operational dosimetry, equivalent and effective dose cannot be measured directly~\cite{13}. Personal dosimetry is the applied science of using individual monitoring devices to estimate dose from occupational exposure. These devices are calibrated in terms of the personal dose equivalent, $H_p(d)$, defined as the dose equivalent in soft tissue at a depth $d$~mm beneath a specified point on the body and is expressed in Sv. At 10 mm, $H_p(10)$ is used to estimate effective dose from deeply penetrating radiation and is the principal quantity for assessing whole-body exposure. Dosimeters intended to measure Hp(10) are calibrated using reference radiation qualities defined in ISO 4037-1~\cite{113}. During calibration, the dosimeter is mounted on a polymethyl methacrylate (PMMA) phantom, and the field is characterized in terms of \emph{air KERMA}. For each radiation energy $E$ and angle of incidence $\alpha$, the International Commission on Radiation Units and Measurements (ICRU) provides conversion coefficients $h_{pK}(10; E, \alpha)$, which relate \emph{air KERMA} to $H_p(10)$~\cite{ICRU53}:
+\begin{equation}
+H_p(10) = h_{pK}(10; E, \alpha)\cdot K_{\mathrm{air}}, \quad [\mathrm{Sv}]
+\label{eq:hp10}
+\end{equation}
+
+The same calibration approach applies to the assessment of equivalent dose, for which shallower depths are used. At 0.07 mm, $H_p(0.07)$ is used to assess dose to the skin from weakly penetrating radiation, and at 3 mm, $H_p(3)$  has been proposed specifically for the lens of the eye~\cite{13}.
+
+\section{Occupational Exposure}
+As previously mentioned, at the photon energies typical of fluoroscopy (recall Table~\ref{tab:ir_parameters}), the Compton effect predominates, degrading image quality and generating scattered radiation throughout the room \cite{6,23}. This stray radiation is the main source of occupational exposure for staff \cite{24}. From a dosimetric perspective, characterising the IR settings is inherently challenging due to the variability of parameters that influence radiation output and scatter distribution \cite{30}. In general, exposure to staff is proportional to the dose received by the patient \cite{21}. Tube voltage and current are adjusted based on patient size and anatomy during procedure planning, which in turn influence the amount of scatter produced \cite{30,31}. In addition, FOV and beam filtration also play a role, though their effects are not linear and highly dependent on scatter geometry \cite{32}. Beyond equipment settings, procedural complexity and operator technique contribute to variations in staff exposure. Advanced or prolonged interventions typically require longer fluoroscopy times, more image acquisitions, and non-standard projections \cite{30}. Operator experience has been shown to significantly reduce exposure through more efficient techniques, reduced reliance on fluoroscopy, and better positioning practices \cite{33}.
+
+To illustrate scatter behaviour in a real clinical context, Fig.~\ref{fig:scatter} presents an isodose map, at chest height, generated during a fluoroscopically guided hip replacement procedure, and highlights the locations typically occupied by staff \cite{34}. The image reveals an asymmetric scatter pattern, with notably higher intensities recorded opposite to the position of the C-arm. The referenced study also reported lower dose levels on the side opposite the patient table, where equipment provides partial shielding. Although the inverse square law does not perfectly apply in the clinical environment \cite{35} due to scattering within the patient and surrounding structures, a general decrease in dose rate with increasing distance was still evident \cite{34}. This reaffirms the protective effect of physical separation from the source \cite{36}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{images/dose rates.png}
+  \caption[Scatter radiation distribution in IR environment.]{Isodose map of scatter radiation during a fluoroscopically guided hip replacement procedure. Acquisition parameters included 77~kVp, 20.6~mA, 32.1~s of fluoroscopy time, and a pulse rate of 15~fps. Dose rates were measured using an active dosimeter at multiple positions around the phantom and linearly interpolated to generate the map. Values incorporating shielding (right scale) were estimated using theoretical models. Measurements are documented at chest level. The image was adapted from Ref.~\cite{34}. Although the C-arm configuration was not explicitly reported, a posteroanterior projection (left icon) was inferred based on findings from Ref.~\cite{35}. 
+  }
+
+  \label{fig:scatter}
+\end{figure}
+
+Protection against cumulative exposure requires consistent application of shielding practices \cite{37}. Shielding is implemented at multiple levels, including structural room design, fixed barriers, and mobile shields, which contribute to protecting helping staff \cite{38} and sensitive areas such as the head and eyes, respectively~\cite{39}. However, personal protective equipment remains the most reliable and controllable form of protection. According to ICRP recommendations, all staff should wear lead aprons, along with thyroid shields, during fluoroscopic procedures \cite{37,39}. Most aprons have a lead thickness range of 0.35 to 0.5~mm, with 0.5~mm reducing scattered radiation by over 90\% \cite{37}. To be effective, aprons must fit properly, and facilities should be encouraged to invest in a variety of sizes to ensure proper coverage and comfort \cite{38,40}. Thyroid shields are manufactured with a lead equivalence of 0.5~mm and have been reported to reduce exposure to the gland by approximately 50\% \cite{41}. %Their use is particularly advised for staff who receive monthly collar readings above 4~mSv and are under 40 years of age, due to the increased risk of thyroid cancer \cite{42}. 
+Lead glasses are also available but remain underutilised. As the second most effective protective measure after ceiling-suspended shields, these glasses are available in various frame designs and thicknesses ranging from 0.35 to 0.75~mm. %Their protective benefit, however, depends greatly on the positioning of the operator’s head in relation to the patient during procedures \cite{40}. 
+
+ The effectiveness of these protective measures is ultimately verified against the annual occupational dose limits recommended by the ICRP, summarised in Table \ref{tab:occupational_dose_limits}. These limits are not an absolute safety threshold but rather boundaries beyond which cumulative exposures are no longer considered justified~\cite{13}. For instance, the $E$ limit for radiation workers is set at 20~mSv per year, averaged over five years, with an upper limit of 50~mSv in any single year \cite{15}. 
+
+
+
+
+
+
+\vspace{1em}
+
+\refstepcounter{table}
+\label{tab:occupational_dose_limits}
+\noindent\textbf{Table~\thetable.} ICRP occupational dose limits. Adapted from Refs.~\cite{15,44}.%
+\addcontentsline{lot}{table}{\protect\numberline{\thetable}ICRP occupational dose limits.}
+
+\vspace{0.1em}
+
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{
+  >{\centering\arraybackslash}m{0.22\textwidth} 
+  >{\centering\arraybackslash}m{0.33\textwidth} 
+  >{\centering\arraybackslash}m{0.33\textwidth}}
+\toprule
+\multicolumn{2}{m{0.55\textwidth}}{\centering\textbf{Protection Quantity}} & \textbf{Annual Permissible Dose} \\
+\midrule
+\multicolumn{2}{m{0.55\textwidth}}{
+  \centering\textbf{Effective Dose}
+} & 
+\begin{minipage}[c][3.5\baselineskip][c]{\linewidth}
+\centering
+20 mSv per year averaged over 5 years \\
+(no single year exceeding 50 mSv)
+\end{minipage} \\
+\midrule
+\multirow{3}{=}{\textbf{Equivalent Dose}} 
+& Lens of the Eyes & 20 mSv \\
+& Thyroid Gland & 300 mSv \\
+& Individual Organs (excluding the eye), Skin and Extremity & 500 mSv \\
+\bottomrule
+\end{tabular}
+%\caption{Annual permissible dose limits for various protection quantities.}
+\end{table} 
+
+As previously introduced, currently, compliance with occupational dose limits in IR is verified through routine monitoring using passive dosimeters worn by staff over predefined time intervals. The most common devices are thermoluminescent dosimeters and optically stimulated luminescence dosimeters. Both operate by trapping energy when exposed to ionising radiation, which is later released as light when stimulated under controlled conditions. The intensity of the emitted light is proportional to the amount of absorbed radiation \cite{11}. These devices measure the previously discussed quantity $H_p(10)$. While $H_p(10)$ can serve as an approximation of effective dose under conditions of uniform whole-body exposure, this does not reflect the typical environment in IR, as described \cite{64}. When a single dosimeter is used, placement beneath the lead apron tends to underestimate $E$ due to shielding, while positioning it above may overestimate it~\cite{30}. To improve accuracy, the ICRP recommends a dual dosimetry approach. In this method, one dosimeter is worn underneath the protective apron between the waist and chest to record the attenuated exposure to shielded tissues ($H^u$). The second device is placed at collar level outside the apron to monitor exposure to unshielded regions ($H^o$). An effective dose estimate is then calculated by applying a linear combination of these two measurements \cite{65}:
+
+\begin{equation}
+E = \alpha H^u + \beta H^o,\ \text{unit: } [\mathrm{Sv}]
+\label{eq:dual_dosimetry}
+\end{equation}
+
+However, there is currently no global consensus on the value of both weighting factors, $\alpha$ and $\beta$ \cite{65}. Over 14 different algorithms have been reported in the literature, most of which overestimate $E$. Despite this variability, double dosimetry remains more accurate than single-dosimeter methods \cite{66}.
+
+The major limitation of passive dosimeters lies in their inability to provide dose information in real-time. These devices are typically read at monthly intervals \cite{67}, which prevents identification of excessive exposures or deviations from standard operating conditions in time. As a result, opportunities for real-time corrective action are lost, and staff may remain unaware of elevated exposure levels until the data can be reviewed retrospectively \cite{46,68}. In this context, active personal dosimeters (APDs) have emerged as a complementary solution. APDs are not intended to replace passive dosimeters, which remain the standard for legal dose documentation. By providing real-time feedback on dose rate, APDs support adherence to the ALARA principle by enabling immediate adjustments to operator behaviour or shielding practices \cite{2,3}.
+
+
+%\subsection{Exposure to the Hand}
+%Among the anatomical positions proposed for monitoring in this work, the hands receive substantially higher radiation doses compared to other regions, with reported values up to ten times greater \cite{45,46,47}. This is due to their frequent positioning on the patient’s skin surface or within the area of highest scattered radiation and are often unshielded during manual manipulation of wires or catheters \cite{48}. While hands are generally not within the primary beam, direct exposure would quickly exceed annual dose limits \cite{49}. Lead gloves are commercially available and offer dose reductions ranging from 15\% to 60\%, but their adoption remains limited due to loss of tactile sensitivity and user discomfort \cite{50,51}. These gloves are not suitable when there is a risk of entering the primary beam as the X-ray tube will automatically compensate for attenuation by increasing output, leading to higher exposure~\cite{51}. Monitoring compliance with extremity dose limits is commonly achieved using passive dosimeter rings worn on the fingers \cite{52}. Higher doses are typically recorded on the nondominant hand, most often the left, due to its use in stabilising the patient, while the dominant hand primarily handles instruments. The dose distribution across the hand is heterogeneous, with the region spanning the little to middle fingers receiving the highest exposure \cite{52}. Reported dose rates vary significantly. Values of 265.2~$\mu$Sv/h \cite{46}, 324.96~$\mu$Sv/h \cite{53}, and 7600~$\mu$Sv/h \cite{48} have been documented. Orthopaedic procedures, such as the one represented earlier in Fig.~\ref{fig:scatter} (a), are associated with the highest occupational radiation doses, with a maximum reported rate of 360,000~$\mu$Gy/h \cite{54}.
+
+%\subsection{Exposure to the Lens of the Eye}
+%Fluoroscopy practitioners are exposed to the highest eye radiation doses compared to other radiation workers \cite{55}. Due to the significantly lower dose threshold and the ease with which these limits can be exceeded in fluoroscopy settings \cite{56,57,58}, the use of protective lead glasses has become mandatory in many IR settings \cite{59}. The use of a third dosimeter behind protective eyewear is recommended to assess cumulative lens dose, recorded as $H_p(3)$ \cite{51,56}. Placement can be on the left or right side, or centrally between the eyes. Central positioning provides an approximate average between the two lenses, while lateral placement captures the maximum dose to one side. Documented dose rates include 3.5~$\mu$Sv/h \cite{46}, 20--44~$\mu$Sv/h \cite{62}, and range from 925.2 to 944~$\mu$Sv/h in orthopaedic procedures \cite{63}. Fig.~\ref{fig:anatomical_doses} illustrates reported dose rates from the literature across all proposed monitoring body regions.
+
+%\begin{figure}[H]
+  %\centering
+  %\includegraphics[width=\linewidth]{images/anatomical_DR.png}
+  %\caption[Reported dose rates to the hand, eye, thorax and thyroid in IR.]{Reported dose rates to the hand, eye, thorax and thyroid in IR~\cite{34,46,53,54,63}. Hand exposures consistently exceeds those to other anatomical positions. Eye doses are orders of magnitude lower when compared other body regions . In orthopaedic procedures dose rates are significantly higher.}
+
+  %\label{fig:anatomical_doses}
+%\end{figure}
+
+%\section{Personnel Monitoring}
+\section{Real-Time Dosimetry}
+The concept of real-time radiation monitoring in occupational settings was first established through the use of APDs, which have been widely adopted in the nuclear industry as a standard safety practice \cite{69}. However, it was only within the last 15 years that their use in IR began to be critically evaluated \cite{2,38,69,70}. As previously discussed, the IR environment is characterised by pulsed radiation, lower photon energies, and predominantly scattered fields, which differ significantly from the conditions under which the APDs available at the time were originally developed \cite{70}. Although several studies \cite{20,69,70} explored the possibility of adapting existing devices for IR, it was Sánchez \emph{et al}. \cite{2}, working as part of an early development initiative at Philips, who introduced the first APD specifically engineered for interventional use. Unlike existing APDs that provided exclusively auditory feedback, this prototype included a visual interface displaying real-time dose data to staff in the procedure room. It became the first generation of the DoseAware system, which started being distributed commercially in 2010 \cite{71}. Later, Philips and Unfors RaySafe signed a joint development agreement in 2012 and, in 2017, the third-generation system, RaySafe i3, was introduced at the European Congress of Radiology \cite{76}. 
+
+The device features a silicon solid-state diode \cite{72}, integrated into an invididual wearable bagde with wireless capabilities, transmitting scattered dose information to a data collection unit at a one second rate. Detected dose values are displayed on an in-room monitor as both numerical data and a bar graph. Each badge is represented individually, with exposure levels indicated using a colour-coded scheme (green, yellow, and red) corresponding to increasing dose rates~\cite{2}. 
+The operational photon energy range of the system is N40--N150 for X- and $\gamma$-radiation. The relative measurement uncertainty is approximately 10\% for dose rates in the range of 40--150~$\mu$Sv/h and 20\% for dose rates between 150--300~$\mu$Sv/h. The system has been shown to correlate well with legal-for-record passive dosimeters, typically overestimating $H_{\mathrm{p}}(10)$ by 5--15\%. 
+
+The collaboration between Philips and RaySafe enabled the integration of badge-derived data into dedicated software platforms, such as Dose Viewer and Dose Manager \cite{81}. These platforms support retrospective analysis by allowing users to access, export, and manage individual dose histories, as well as aggregate exposure data across teams or departments. RaySafe i3 is currently priced at around 27,000\euro~\cite{79}, which raises concerns about cost. Individual APD units are expensive, making it difficult for most imaging departments to provide them for all staff. In addition, current systems do not support extremity monitoring, such as for the eyes or hands \cite{80}.
+
+\subsection{Reported Benefits}
+The development and clinical integration of the APDs described above enabled structured evaluation of their practical impact in IR. Since their introduction, a number of studies have compared conditions with and without real-time feedback~\cite{4,68,72,82,83,85,86,87,88,114,115,116}. A common finding is a general decrease in staff dose when feedback is available. This effect appears across various professional roles, though the degree of reduction can vary. In a study led by Baumann \emph{et al}~\cite{86} dose reduction was observed in almost every staff group~\cite{86}. Further analysis reveals a pattern seen across multiple studies, where the most significant reductions are recorded in the main radiologist, who is positioned closest to the patient. In some studies, this group was the only one to show a statistically significant change in radiation exposure~\cite{72,86,87,88}. This may be explained by findings from Baumgartner \emph{et al}\ \cite{72}, which showed that procedural contexts associated with higher radiation exposure tend to demonstrate the most pronounced reductions following the introduction of APDs \cite{72}. This is consistent with reports that the effectiveness of APDs depends on baseline conditions. Operators who initially demonstrated poor radiation safety habits were able to significantly reduce their dose after the introduction of APDs through simple corrective actions. In contrast, those already practising good protection strategies had less room to improve and showed minimal change \cite{82,87,115}. These baseline variations are also associated with the operator’s level of experience, as discussed in section~1.4, and were recently studied by Koch \emph{et al}~\cite{83}. A pronounced decrease in dose was registered among the least experiences group, while operators with over ten years of experience show, in this case, even a slight increase in dose. Experienced operators may rely on ingrained habits and confidence in their technique, whereas less experienced users appear to adjust more readily when confronted with live feedback \cite{83}. It has been reported that younger operators tend to show less concern for radiation safety \cite{89}. These results suggest that APDs may be especially valuable as educational tools for junior staff, helping them build good radiation safety practices \cite{83}. 
+
+Consistent with these findings, James \emph{et al}~\cite{115} reported a reduction in red events over time. They argued that, while these events serve as prompts for immediate dose adjustment, they also function as a reflective tool for operators. This enables professionals to identify specific maneuvers, projection angles, and procedural choices associated with increased radiation exposure. Consequently, such practices can be replaced by lower-exposure alternatives and operators can adopt safer procedural habits more permanently. Ultimately, it also contributes to a reduction in radiation dose to the patient~\cite{115,116}.
+
+Other staff members, including nurses and technicians, also benefited from dose reductions \cite{82,83,85,86,88,115}. In these cases, dose reductions were primarily attributed to individual awareness and simple adjustments, such as changes in positioning. Some studies further emphasised the collaborative value of these systems, noting that when all staff members wear APDs with visible displays, teams can collectively monitor exposure. This practice creates an environment of mutual accountability, where individuals not only adjust their own behaviour but also remain aware of their colleagues’ exposure, promoting safer team dynamics \cite{86,87,115}.
+
+\newpage
+%%% Chapter 3: DORI
+\chapter{Detection System}
+\section{Scintillator}
+\section{Photodetector}
+\section{Front-End Electronics}
+\begin{figure}[H]
+  \centering
+  \input{figures/Architecture.tex}
+  \caption[Architecture]{Architecture of the detection system.}
+  \label{fig:architecture}
+\end{figure}
+\subsection{Charge-Sensitive Amplifier}
+The current pulse produced by the SiPM delivers a quantity of charge, $Q$, that must be converted into a measurable voltage signal in the preamplifier~\cite{105}:
+\begin{equation}
+    Q = \int I(t)\, dt, \quad \text{unit: } [\mathrm{C}]
+    \label{eq:charge}
+\end{equation}
+
+To achieve this, a Charge-Sensitive Amplifier (CSA) was implemented. The CSA is widely used as a preamplifier since the rise time of the output pulse depends only on the charge collection time in the detector, independent of both the detector and the preamplifier input capacitances~\cite{14}. It is an inverting integrator configuration designed around a low-noise operational amplifier, such as the LTC6228~\cite{LTC6228}, that was chosen accordingly. The feedback loop is closed by a capacitor $C_f$ in parallel with a resistor $R_f$~\cite{106,14}.
+
+In this circuit, the current flows through $C_f$, allowing it to store charge and producing an output voltage proportional to $Q$. $R_f$ acts as a reset mechanism, providing a discharge path for $C_f$, in order for new pulses to be detected. The resulting output voltage can be written as~\cite{104,105}:
+\begin{equation}
+    V_{\text{out}} = -\frac{Q}{C_f}\, e^{-t/\tau_f}, \quad \text{unit: } [\mathrm{V}]
+    \label{eq:vout}
+\end{equation}
+
+\noindent where $\tau_f = R_f C_f$ is the discharge time constant. For total 
+charge integration, this constant must be longer than the duration of the SiPM current pulse. 
+
+The charge gain of the CSA, $G$,  depends exclusively on $C_f$ and is therefore~\cite{106}:
+\begin{equation}
+    G = \frac{V_{\text{out}}}{Q} = -\frac{1}{C_f}, \quad \text{unit: } [\mathrm{V/C}]
+    \label{eq:gain}
+\end{equation}
+\subsection{Pole-Zero Cancellation}
+To preserve the pulse amplitude, which carries the energy information of the detected event, additional signal conditioning stages were implemented. Given the high event count rate expected in IR, a Semi-Gaussian shaper was adopted in order to improve the signal-to-noise ratio and prevent baseline drift. It consists of a CR differentiator followed by $n$ RC integrator stages. Increasing $n$ produces a more symmetric output pulse, which returns to baseline faster but introduces a longer peaking time~\cite{14}. For this work, a simple CR-RC ($n=1$) network was used.
+
+The finite decay time constant of the CSA causes an undershoot at the shaper output~\cite{107}. If the signal has not recovered before the next event arrives, the subsequent pulse is superimposed on this undershoot, reducing its measured amplitude. To mitigate this effect, a Pole-Zero Cancellation (PZC) configuration was implemented. $C_{\text{diff}}$ and $R_{\text{diff}}$ form the CR differentiation network. A resistor $R_{\text{pz}}$, placed in parallel with $C_{\text{diff}}$, introduces a zero that compensates the pole produced by the CSA. Proper cancellation occurs when the following condition is satisfied~\cite{108,14,110}:
+\begin{equation}
+    R_{\text{pz}}\, C_{\text{diff}} = R_f\, C_f
+    \label{eq:pzc}
+\end{equation}
+
+\subsection{Shaping Amplifier}
+Due to the attenuation introduced by the PZC filter, the subsequent integrating stage must also provide amplification. The RC stage was implemented as an inverting active low-pass filter, similar to the CSA configuration, but with an input resistor $R_S$ added to set the gain. The voltage gain of the shaper, $A_s$, is given by~\cite{109}:
+\begin{equation}
+    A_s = -\frac{R_g}{R_S}, \quad
+    \label{eq:shaper_gain}
+\end{equation}
+\section{Readout Logic}
+
+
+
+
+
+%\begin{figure}[H]
+  %%\centering
+  %\includegraphics[width=\linewidth]{images/dose_red.png}
+  %\caption[Occupational dose reduction following introduction of an ADP.]{Occupational dose reduction following introduction of an ADP (live screen). \textbf{(a)} Dose rate per staff role (Adapted from Ref.~\cite{86}). 
+    %\textbf{(b)} Radiation dose by experience (Adapted from Ref.~\cite{83}).
+  %}
+
+  %\label{fig:dose_red}
+%\end{figure}
+
+
+%\section{Assessment of Dose Rates Thresholds}
+%An important consideration in real-time dosimetry is the establishment of dose rate thresholds that delineate acceptable, elevated, and excessively high exposure levels. The current APD generation incorporates a colour-code scale, where green indicates dose rates below 200~$\mu$Sv/h, yellow represents exposures between 200 and 2000~$\mu$Sv/h, and red designates rates from 2000 to 20000~$\mu$Sv/h, at chest height. According to the manufacturer, frequent exposure to the yellow or red zones should prompt the operator to take immediate protective actions \cite{75}. Nevertheless, consistent green readings may create a false sense of security, potentially overlooking further opportunities for dose reduction. In line with the ALARA principle, efforts to minimise exposure should continue even when readings fall within the lowest threshold, as optimisation of protection remains essential regardless of apparent safety \cite{88}. This can be addressed by implementing a graduated display scale. However, the scientific basis for selecting these ranges is not explicitly detailed in the literature. It remains unclear whether the dose rates were empirically derived from procedural data in IR or adopted from general radiation protection guidance. Moreover, the applicability of these thresholds across different anatomical regions has not been evaluated. In the context of the multi-channel dosimetry system proposed in this work, it is plausible that threshold values should be adjusted according to the anatomical position being monitored. To assess the applicability of existing thresholds, a bar graph was constructed (Fig.~\ref{fig:annual_limit}) by applying the DoseAware scale to estimated annual fluoroscopy times (FTs) in cardiology \cite{90} and the five most frequent general interventional procedures \cite{91}. As can be seen, the lower threshold (green) remains within safe boundaries under current fluoroscopy usage. Consistent exposure within the yellow range results in annual dose limit exceedance in higher FT procedures. Sustained readings within the upper threshold (red) would only be acceptable if FTs were drastically lower than normal.
+%\begin{figure}[H]
+  %\centering
+  %\includegraphics[width=\linewidth]{images/annual limit.png}
+  %\caption[Estimated annual occupational exposure according to dose rate thresholds.]{Estimated annual occupational doses at chest level for selected fluoroscopic procedures~\cite{90,91}, categorized according to real-time dose thresholds applied in the current used ADPs, and contextualized against the annual dose limit.}
+  %\label{fig:annual_limit}
+%\end{figure}
+%According to the dose rates discussed in Chapter~2, typical values measured at chest level during most procedures fall within the lower threshold, excluding high-exposure procedures. Thresholds for hand exposure require revision based on reported dose rates and the higher occupational limit. Eye dose rates are typically more than an order of magnitude lower than those at chest level. Khan \emph{et al}.\ \cite{92} proposed threshold levels for an eye dosimeter, with the lowest set at 0.5 to 50~$\mu$Sv/h, above normal from 50--500~$\mu$Sv/h, and elevated exposure between 500 to 1000~$\mu$Sv/h.
+
+%\section{Proposed Prototype}
+%APDs’ response should be energy independent in the spectrum previously outlined in Table~\ref{tab:ir_parameters}. Their angular response should be minimal. The device must be sufficiently sensitive to detect low dose rates, especially those associated with eyes monitoring, and maintain linearity over the expected dose range. A resolution of at least 1~$\mu$Sv is required to detect variations in exposure. It must remain stable under environmental influences such as temperature shifts and electromagnetic interference. Battery capacity should support uninterrupted operation over extended periods and data integrity needs to be assured~\cite{51,80}.
+
+%\newpage
+%%% Chapter : Calibration
+\chapter{??}
+
+
+\section{Energy Calibration}
+
+\section{Dose Rate Calibration}
+By accounting for discrete energy levels, the accuracy of dose calculations can be improved. The $G(E)$ function provides a method of spectrum-to-dose conversion applied to a pulse height system response. It was first introduced by Moriuchi \emph{et al}. \cite{Moriuchi}, and has since been recommended by the ICRU \cite{ICRU53} in applications when only dose rates are of interest, such as in EPDs \cite{HWANG,100}.
+
+It is assumed that for a monoenergetic photon fluence rate $\phi(E_0)$, the absorbed dose rate at the scintillator is expressed as~\cite{HWANG}:
+\begin{equation}
+    D_0 = \phi(E_0)\, h(E_0)
+    \label{eq:fluence_dose}
+\end{equation}
+where $h(E_0)$ is the fluence-to-dose conversion coefficient.
+
+Equation \eqref{eq:fluence_dose} can be rewritten by incorporating the $G(E)$ function~\cite{Moriuchi}:
+\begin{equation}
+    D_0 = \int_{0}^{E_0} f(E,\, E_0)\, G(E)\, \mathrm{d}E
+    \label{eq:mono_dose}
+\end{equation}
+with $f(E, E_0)$ being the detector response function for an incident photon of energy $E_0$ that deposits energy $E$.
+
+As the measured spectrum, $F(E)$, of a complex radiation field is simply the combination of monoenergetic responses, with $N_i$ photons incident at energy $E_i$ across $n$ total channels defined by the ADC::
+\begin{equation}
+    F(E) = \sum_{i=1}^{n} N_i\, f(E,\, E_i)
+    \label{eq:total_spectrum}
+\end{equation}
+
+
+Within the target energy range and substituting into Eq.~\eqref{eq:mono_dose}, the total dose rate is:
+\begin{equation}
+    D = \int_{E_{\min}}^{E_{\max}} F(E)\, G(E)\, \mathrm{d}E
+    \label{eq:total_dose}
+\end{equation}
+
+Recently, Hwang \emph{et al}. \cite{HWANG} validated the use of the $G(E)$ function for plastic scintillators. Mathematically, it is expressed as the following polynomial expression~\cite{HWANG}:
+\begin{equation}
+    G(E_n) = \sum_{k=1}^{K_{\max}} A_k \left(\log_{10} (E_n)\right)^{k-m-1}
+    \label{eq:G_function}
+\end{equation}
+where $K_{\max}$ is the number of polynomial terms, $m$ can be set to 0~\cite{102}, and $A_k$ are coefficients determined by least-squares fitting to a reference spectrum~\cite{103,HWANG}; obtained either from measurements with known sources or Monte Carlo simulation~\cite{101,100}. 
+%The precision of the G(E) function is very dependent on the number of input response spectra, and it is desirable to obtain as manyresponse gamma-ray spectra as possible at appropriately homogeneous energy intervals(
+\newpage
+
+
+
+%%%% Chapter 6: Final Considerations
+\chapter{Final Considerations}
+
+
+
+% The bibliography
+%
+%\cleardoublepage
+%\iffalse
+
+  \bibliographystyle{ieeetr}
+  %\bibliographystyle{plain}
+  {\footnotesize
+\bibliography{Bibliografia}}
+%\bibliography{Biblio}% replace by the name of name of your .bib file
+%\cleardoublepage
+\end{document}

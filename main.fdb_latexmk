@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1778001444.63877 "main.aux" "main.bbl" "main" 1778001449.72986 0
-  "./Bibliografia.bib" 1778001439 162569 d812473e89e6b91dda11c92e1b041a93 ""
+["bibtex main"] 1778023019.01628 "main.aux" "main.bbl" "main" 1778023023.31504 0
+  "./Bibliografia.bib" 1778022882 162569 d812473e89e6b91dda11c92e1b041a93 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "main.aux" 1778001448 13173 6a48e5023b647c7b8c9cc7b27d3770f9 "pdflatex"
+  "main.aux" 1778023022 13173 6a48e5023b647c7b8c9cc7b27d3770f9 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1778001445.01659 "c:/Users/marta/Documents/GitHub/Thesis/main.tex" "main.pdf" "main" 1778001449.73067 0
+["pdflatex"] 1778023019.52096 "c:/Users/marta/Documents/GitHub/Thesis-DORI/main.tex" "main.pdf" "main" 1778023023.31605 0
   "C:/Users/marta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771861074 81107 70b8516c68c2e617189c5e44bfd16b96 ""
   "C:/Users/marta/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1771859310 13333890 b91e712dd45a68599a6b5e06c2d953d5 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256929440 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -243,23 +243,23 @@
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/marta/Documents/GitHub/Thesis/main.tex" 1778001067 63289 fc6f4cfe18112c9305ccd495ad66763d ""
+  "c:/Users/marta/Documents/GitHub/Thesis-DORI/main.tex" 1778022882 63289 fc6f4cfe18112c9305ccd495ad66763d ""
   "figures/Architecture.tex" 1777991419 24238 26be44cf6b3f3a656a40c7c1d8910f14 ""
   "figures/deterministic_stochastic.tex" 1773057439 3423 f30b30ba4fcd3aaacd6f23a6f81fc22e ""
   "images/dose rates.png" 1776942125 370210 4eb020adb98b9e8bd47db07101bfc2b9 ""
   "images/interventional radiology setup.png" 1776899465 303836 021ceef49fb3be8948d5f1d12c75c87b ""
   "images/neutron.jpg" 1772571238 63995 4adb5e98313a311f03b57f7b716bb842 ""
-  "lista_acronimos.tex" 1772570876 854 e0f44b4d4b1827bb92445f0e5ff356ac ""
-  "lista_simbolos.tex" 1772570876 1082 913d0af5b40fe41644a9fdfbedd5c7da ""
-  "main.aux" 1778001448 13173 6a48e5023b647c7b8c9cc7b27d3770f9 "pdflatex"
-  "main.bbl" 1778001444 19302 91344426ba89bcfde6dcf380d7ac4704 "bibtex main"
-  "main.lof" 1778001448 693 5912ad74e1c9341a5013da160fe3c518 "pdflatex"
-  "main.lot" 1778001448 639 b37912d31b2d7f18c88556baaf1d722a "pdflatex"
-  "main.out" 1778001448 4680 2b7f3484ed8a0c0b456015f83981c81b "pdflatex"
-  "main.tex" 1778001067 63289 fc6f4cfe18112c9305ccd495ad66763d ""
-  "main.toc" 1778001448 2755 e05142a2e8c64bab2960d0673658e6f4 "pdflatex"
-  "uaLogoNew.pdf" 1772570876 2911 e3fb8f77330f913af87495e8c6b0dc02 ""
-  "uaThesis.sty" 1772570876 9256 9525aa5e8d8eeef8b5cb2d7f2bde3887 ""
+  "lista_acronimos.tex" 1778022882 854 e0f44b4d4b1827bb92445f0e5ff356ac ""
+  "lista_simbolos.tex" 1778022882 1082 913d0af5b40fe41644a9fdfbedd5c7da ""
+  "main.aux" 1778023022 13173 6a48e5023b647c7b8c9cc7b27d3770f9 "pdflatex"
+  "main.bbl" 1778023019 19302 91344426ba89bcfde6dcf380d7ac4704 "bibtex main"
+  "main.lof" 1778023022 693 5912ad74e1c9341a5013da160fe3c518 "pdflatex"
+  "main.lot" 1778023022 639 b37912d31b2d7f18c88556baaf1d722a "pdflatex"
+  "main.out" 1778023022 4680 2b7f3484ed8a0c0b456015f83981c81b "pdflatex"
+  "main.tex" 1778022882 63289 fc6f4cfe18112c9305ccd495ad66763d ""
+  "main.toc" 1778023022 2755 e05142a2e8c64bab2960d0673658e6f4 "pdflatex"
+  "uaLogoNew.pdf" 1778022882 2911 e3fb8f77330f913af87495e8c6b0dc02 ""
+  "uaThesis.sty" 1778022882 9256 9525aa5e8d8eeef8b5cb2d7f2bde3887 ""
   (generated)
   "main.aux"
   "main.lof"

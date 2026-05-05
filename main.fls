@@ -1,6 +1,6 @@
-PWD c:\Users\marta\Documents\GitHub\Thesis
+PWD c:\Users\marta\Documents\GitHub\Thesis-DORI
 INPUT C:\Users\marta\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\marta\Documents\GitHub\Thesis\main.tex
+INPUT c:\Users\marta\Documents\GitHub\Thesis-DORI\main.tex
 OUTPUT main.log
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls

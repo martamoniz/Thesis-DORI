@@ -16,7 +16,7 @@
 \usepackage{floatrow}
 \usepackage{graphicx}
 %\usepackage{subfig}
-\usepackage[label font=bf,labelformat=simple]{subfig}% <-- changed
+\usepackage[labelfont=bf,labelformat=parens,font=normalsize]{subfig}% <-- changed
 \usepackage{caption}
 \floatsetup[figure]{style=plain,subcapbesideposition=top}
 \usepackage{setspace} % for \setstretch
@@ -686,8 +686,43 @@ Due to the attenuation introduced by the PZC filter, the subsequent integrating 
 
 %\newpage
 %%% Chapter : Calibration
-\chapter{??}
+\chapter{Results and Discussion}
 
+\section{Front-End Electronics}
+\subsection{Pulse Shaping}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{images/shaping_chain_trace00001.pdf}
+  \caption[Pulse shaping chain.]{Caption.}
+  \label{fig:shaping_chain}
+\end{figure}
+\subsection{Pulse Sampling}
+
+\section{Validation of the Front-End Electronics}
+Prior to energy calibration of the plastic scintillator detector, the readout electronics were validated using a $5 \times 5 \times 10$~mm CsI(Tl) crystal. The mentioned amplitude sinking in the P\&H circuit is inconsequential if constant, but an amplitude-dependent drop would introduce nonlinearities into the sampling network and would require characterisation or correction. An inorganic scintillator is appropriate for this validation due to its higher density and effective atomic number, which favour photoelectric absorption in the energy range of interest. This produces well-defined photopeaks at energies characteristic of each source. Since scintillation light yield in CsI(Tl) is linear with deposited energy, a linear channel-to-energy mapping is expected, and any significant deviation would be attributable to the front-end electronics~\cite{14}.
+
+The hardware gain was adjusted to accommodate the higher light output of CsI(Tl), and spectra were acquired using the three radioactive sources described previously. The resulting pulse height spectra are shown in (Fig.~\ref{fig:validation_electronics} (a)). All expected spectral features are resolved for each source.
+
+\begin{figure}[H]
+  \centering
+  \subfloat[]{\label{fig:spectra}%
+    \includegraphics[width=\linewidth]{images/spectra.pdf}}\\[1ex]
+  \subfloat[]{\label{fig:calib}%
+    \includegraphics[width=0.48\linewidth]{images/calibration curve.png}}%
+  \hfill%
+  \subfloat[]{\label{fig:co57}%
+    \includegraphics[width=0.48\linewidth]{images/co57_energy_reconstruction.pdf}}
+  \caption[Validation of the Front-End Electronics.]{%
+    \textbf{(a)} Pulse height spectra acquired with the CsI(Tl) crystal for the three calibration sources. Identified spectral features are labelled.
+    \textbf{(b)} Channel-to-energy calibration curve with linear fit.
+    \textbf{(c)} $^{57}$Co spectrum reconstructed in energy units.}
+  \label{fig:validation_electronics}
+\end{figure}
+
+
+The centroid channel of each photopeak was mapped to its known energy value, and a linear fit of the form $E = an + b$ was applied, where $E$ is the energy in keV and $n$ is the channel number (Fig.~\ref{fig:validation_electronics} (b)). The fit yields $R^2 = 0.998$, confirming a linear channel-to-energy relationship up to at least channel 183, corresponding to an input amplitude of approximately 590~mV. This confirms that the P\&H circuit does not introduce amplitude-dependent errors within this bin range.
+
+As a validation of the calibration, the $^{57}$Co spectrum was reconstructed in energy units and is shown in (Fig.~\ref{fig:validation_electronics} (c)). The fitted centroid of the 122~keV photopeak yields $\mu = 121 \pm 1$~keV, consistent with the nominal value within uncertainty. The measured FWHM is $19 \pm 1$~keV, corresponding to an energy resolution of $16 \pm 1$\% at 122~keV, consistent with values reported in the literature for CsI(Tl)~\cite{117,118}. This indicates that the front-end electronics do not degrade the intrinsic energy resolution of the crystal. The front-end is therefore considered validated for proceeding to plastic scintillator measurements.
 
 \section{Energy Calibration}
 

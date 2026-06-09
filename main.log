@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  6 MAY 2026 00:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  9 JUN 2026 18:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,7 +866,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 1
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<uaLogoNew.pdf, id=130, 60.225pt x 75.28125pt>
+<uaLogoNew.pdf, id=146, 60.225pt x 75.28125pt>
 File: uaLogoNew.pdf Graphic file (type pdf)
 <use uaLogoNew.pdf>
 Package pdftex.def Info: uaLogoNew.pdf  used on input line 125.
@@ -1045,7 +1045,7 @@ l.277 \newpage
 
 ]
 Chapter 1.
-<images/interventional radiology setup.png, id=288, 1690.06406pt x 926.71219pt>
+<images/interventional radiology setup.png, id=312, 1690.06406pt x 926.71219pt>
 File: images/interventional radiology setup.png Graphic file (type png)
 <use images/interventional radiology setup.png>
 Package pdftex.def Info: images/interventional radiology setup.png  used on input line 286.
@@ -1053,13 +1053,13 @@ Package pdftex.def Info: images/interventional radiology setup.png  used on inpu
 [2
 
  <./images/interventional radiology setup.png>] [3{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [4{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] (figures/deterministic_stochastic.tex) [5]
-<images/neutron.jpg, id=382, 621.522pt x 468.5505pt>
+<images/neutron.jpg, id=406, 621.522pt x 468.5505pt>
 File: images/neutron.jpg Graphic file (type jpg)
 <use images/neutron.jpg>
 Package pdftex.def Info: images/neutron.jpg  used on input line 446.
 (pdftex.def)             Requested size: 113.2253pt x 85.35826pt.
  [6 <./images/neutron.jpg>] [7]
-<images/dose rates.png, id=430, 1445.4pt x 813.0375pt>
+<images/dose rates.png, id=454, 1445.4pt x 813.0375pt>
 File: images/dose rates.png Graphic file (type png)
 <use images/dose rates.png>
 Package pdftex.def Info: images/dose rates.png  used on input line 509.
@@ -1073,22 +1073,47 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [14]
 Chapter 3.
+<images/shaping_chain_trace00001.pdf, id=626, 753.81625pt x 496.85625pt>
+File: images/shaping_chain_trace00001.pdf Graphic file (type pdf)
+<use images/shaping_chain_trace00001.pdf>
+Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 695.
+(pdftex.def)             Requested size: 442.65375pt x 291.76282pt.
 [15
 
-]
+ <./images/shaping_chain_trace00001.pdf>]
+<images/spectra.pdf, id=665, 839.135pt x 258.9675pt>
+File: images/spectra.pdf Graphic file (type pdf)
+<use images/spectra.pdf>
+Package pdftex.def Info: images/spectra.pdf  used on input line 709.
+(pdftex.def)             Requested size: 442.65375pt x 136.608pt.
+<images/calibration curve.png, id=666, 774.7344pt x 549.252pt>
+File: images/calibration curve.png Graphic file (type png)
+<use images/calibration curve.png>
+Package pdftex.def Info: images/calibration curve.png  used on input line 711.
+(pdftex.def)             Requested size: 212.4719pt x 150.62991pt.
+<images/co57_energy_reconstruction.pdf, id=667, 435.6275pt x 312.16624pt>
+File: images/co57_energy_reconstruction.pdf Graphic file (type pdf)
+<use images/co57_energy_reconstruction.pdf>
+Package pdftex.def Info: images/co57_energy_reconstruction.pdf  used on input line 714.
+(pdftex.def)             Requested size: 212.4719pt x 152.25307pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 718.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 718.
+ [16 <./images/spectra.pdf> <./images/calibration curve.png (PNG copy)> <./images/co57_energy_reconstruction.pdf>] [17]
 Chapter 4.
-(main.bbl [16
+(main.bbl [18
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 92.
- [17
+ [19
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 131.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [18{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+) [20{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 Underfull \hbox (badness 10000) in paragraph at lines 265--269
 []\OT1/lmr/m/n/9 AuntMinnieEurope, ``RaySafe launches new i3 dose plat-form at ECR 2017.''
  []
@@ -1108,7 +1133,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 282--285
 \OT1/lmtt/m/n/9 / / shop . md-[]solutions-[]gmbh . com / en / products / live-[]dosimetry-[]raysafe-[]i3 ? srsltid =
  []
 
-[19]) [20] (main.aux)
+[21] [22]) [23] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1118,20 +1143,20 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2B7F3484ED8A0C0B456015F83981C81B;4680.
+(rerunfilecheck)             Checksum: 89FA7D9BBD8E504D9626CFCFB5E92374;5476.
  ) 
 Here is how much of TeX's memory you used:
- 29845 strings out of 467866
- 600297 string characters out of 5418313
- 969883 words of memory out of 5000000
- 58007 multiletter control sequences out of 15000+600000
- 722219 words of font info for 95 fonts, out of 8000000 for 9000
+ 29917 strings out of 467866
+ 601968 string characters out of 5418313
+ 969420 words of memory out of 5000000
+ 58062 multiletter control sequences out of 15000+600000
+ 727308 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,104p,2436b,1279s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main.pdf (32 pages, 1422259 bytes).
+<C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on main.pdf (35 pages, 2136826 bytes).
 PDF statistics:
- 830 PDF objects out of 1000 (max. 8388607)
- 194 named destinations out of 1000 (max. 500000)
- 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 992 PDF objects out of 1000 (max. 8388607)
+ 208 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

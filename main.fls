@@ -445,13 +445,12 @@ INPUT .\images\spectra.pdf
 INPUT .\images\spectra.pdf
 INPUT .\images\spectra.pdf
 INPUT .\images\spectra.pdf
-INPUT .\images\calibration curve.png
-INPUT .\images\calibration curve.png
-INPUT .\images\calibration curve.png
-INPUT .\images\calibration curve.png
-INPUT .\images\calibration curve.png
-INPUT .\images\calibration curve.png
-INPUT .\images\calibration curve.png
+INPUT .\images\new_linear_fit.pdf
+INPUT .\images\new_linear_fit.pdf
+INPUT .\images\new_linear_fit.pdf
+INPUT .\images\new_linear_fit.pdf
+INPUT .\images\new_linear_fit.pdf
+INPUT .\images\new_linear_fit.pdf
 INPUT .\images\co57_energy_reconstruction.pdf
 INPUT .\images\co57_energy_reconstruction.pdf
 INPUT .\images\co57_energy_reconstruction.pdf
@@ -467,6 +466,18 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT .\images\bremsstrahlung_fits.pdf
+INPUT .\images\bremsstrahlung_fits.pdf
+INPUT .\images\bremsstrahlung_fits.pdf
+INPUT .\images\bremsstrahlung_fits.pdf
+INPUT .\images\bremsstrahlung_fits.pdf
+INPUT .\images\bremsstrahlung_fits.pdf
+INPUT .\images\linear_fit_prediction.pdf
+INPUT .\images\linear_fit_prediction.pdf
+INPUT .\images\linear_fit_prediction.pdf
+INPUT .\images\linear_fit_prediction.pdf
+INPUT .\images\linear_fit_prediction.pdf
+INPUT .\images\linear_fit_prediction.pdf
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl

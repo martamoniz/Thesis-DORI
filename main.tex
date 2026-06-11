@@ -687,7 +687,7 @@ Due to the attenuation introduced by the PZC filter, the subsequent integrating 
 %\newpage
 %%% Chapter : Calibration
 \chapter{Results and Discussion}
-
+X-ray tube and gamma sources description. 
 \section{Front-End Electronics}
 \subsection{Pulse Shaping}
 \begin{figure}[H]
@@ -708,10 +708,10 @@ The hardware gain was adjusted to accommodate the higher light output of CsI(Tl)
   \subfloat[]{\label{fig:spectra}%
     \includegraphics[width=\linewidth]{images/spectra.pdf}}\\[1ex]
   \subfloat[]{\label{fig:calib}%
-    \includegraphics[width=0.48\linewidth]{images/calibration curve.png}}%
+    \includegraphics[width=0.47\linewidth]{images/new_linear_fit.pdf}}%
   \hfill%
   \subfloat[]{\label{fig:co57}%
-    \includegraphics[width=0.48\linewidth]{images/co57_energy_reconstruction.pdf}}
+    \includegraphics[width=0.50\linewidth]{images/co57_energy_reconstruction.pdf}}
   \caption[Validation of the Front-End Electronics.]{%
     \textbf{(a)} Pulse height spectra acquired with the CsI(Tl) crystal for the three calibration sources. Identified spectral features are labelled.
     \textbf{(b)} Channel-to-energy calibration curve with linear fit.
@@ -722,9 +722,28 @@ The hardware gain was adjusted to accommodate the higher light output of CsI(Tl)
 
 The centroid channel of each photopeak was mapped to its known energy value, and a linear fit of the form $E = an + b$ was applied, where $E$ is the energy in keV and $n$ is the channel number (Fig.~\ref{fig:validation_electronics} (b)). The fit yields $R^2 = 0.998$, confirming a linear channel-to-energy relationship up to at least channel 183, corresponding to an input amplitude of approximately 590~mV. This confirms that the P\&H circuit does not introduce amplitude-dependent errors within this bin range.
 
-As a validation of the calibration, the $^{57}$Co spectrum was reconstructed in energy units and is shown in (Fig.~\ref{fig:validation_electronics} (c)). The fitted centroid of the 122~keV photopeak yields $\mu = 121 \pm 1$~keV, consistent with the nominal value within uncertainty. The measured FWHM is $19 \pm 1$~keV, corresponding to an energy resolution of $16 \pm 1$\% at 122~keV, consistent with values reported in the literature for CsI(Tl)~\cite{117,118}. This indicates that the front-end electronics do not degrade the intrinsic energy resolution of the crystal. The front-end is therefore considered validated for proceeding to plastic scintillator measurements.
-
+As a validation of the calibration, the $^{57}$Co spectrum was reconstructed in energy units and is shown in (Fig.~\ref{fig:validation_electronics} (c)). The fitted centroid of the 122~keV photopeak yields $\mu = 121 \pm 1$~keV, consistent with the nominal value within uncertainty. The measured FWHM is $19 \pm 1$~keV, corresponding to an energy resolution of $16 \pm 1$\% at 122~keV, consistent with values reported in the literature for CsI(Tl)~\cite{117,118}. This indicates that the front-end electronics do not degrade the intrinsic energy resolution of the crystal. The hardware is therefore considered validated.
 \section{Energy Calibration}
+For the energy calibration of the plastic scintillator, the channel range, within the validated bins, must be chosen with its resolution in mind. Among the sources used for calibration, only the 59.5~keV photopeak of $^{241}$Am is documented to produce a resolvable photopeak in BC-408~\cite{119,120}. According to Knoll~\cite{14}, the FWHM of a peak should span at least 5 channels for it to be adequately sampled. Given a reported energy resolution of 45-50\% for the 59.5~keV peak, 10 to 11 channels are required. This corresponds to a channel width of approximately 5.36~keV, and a minimum of 28 channels for an energy range up to 150~keV. A channel width of this magnitude would be impractical for spectral characterisation in general. Independently of peak fitting, it would limit the ability to resolve the energy dependence of the spectrum. The intrinsic resolution of BC-408 remains the limiting factor for distinguishing nearby energies, but finer binning still improves the sampling of the spectrum. The gain of the system was therefore empirically set such that the channel width corresponds to at least 1~keV.
+
+Unlike inorganic scintillators, the low atomic number of plastic scintillators results in a negligible photoelectric cross-section across most of the relevant energy range. Although a small photoelectric contribution from the 59.5~keV $^{241}$Am line can be observed, the resulting feature is too broad to provide a reliable calibration point, as discussed. Instead, the standard approach for energy calibration of plastic scintillators relies on the Compton edge of gamma-ray sources~\cite{}. Coincidence techniques exploiting the backscatter peak have been shown to provide accurate energy information~\cite{}. However, these have primarily been demonstrated using $^{22}$Na and $^{137}$Cs, whose Compton edges lie above 200~keV, outside the range relevant to this work. Such methods also assume a linear response across the calibration range, which does not hold at low energies due to the non-proportional light output of plastic scintillators, as discussed in Section~\ref{sec:xxx}.
+
+As a novel approach, the energy response was calibrated using the bremsstrahlung endpoint of an X-ray tube. The detector was positioned outside the beam line, at a distance sufficient to avoid saturation of the front-end electronics. The maximum photon energy of the obtained spectrum equals the kinetic energy of the electrons accelerated in the tube, given by the applied tube voltage in eV. This corresponds to the limiting case in which an electron loses its entire kinetic energy in a single interaction with a nucleus, producing one photon that carries the full electron energy. The tube voltage therefore defines the endpoint energy of the measured spectrum, providing a known reference for calibration.
+
+Bremsstrahlung spectra were acquired for 10 minutes in the energy range 15-50~keV and are shown in Fig.~\ref{fig:bremss_calibration} (a). Background was subtracted, and channels 18 and below were excluded, as their higher count rate would otherwise dominate the vertical scale. The 15~kVp spectrum is not distinguishable from background. At this distance, photons of such low energy are absorbed by the black adhesive tape used for the light-tight wrapping of the photosensitive surface before reaching the scintillator. This absorption establishes the lower detection limit of the front-end electronics at 20~keV.
+\begin{figure}[H]
+  \centering
+  \subfloat[]{\label{fig:bremss_spectra}%
+    \includegraphics[width=0.53\linewidth]{images/bremsstrahlung_fits.pdf}}%
+  \hfill%
+  \subfloat[]{\label{fig:bremss_endpoint}%
+    \includegraphics[width=0.47\linewidth]{images/linear_fit_prediction.pdf}}
+  \caption[Bremsstrahlung-Based Energy Calibration.]{%
+    \textbf{(a)} caption
+    \textbf{(b)} caption
+    }
+  \label{fig:bremss_calibration}
+\end{figure}
 
 \section{Dose Rate Calibration}
 By accounting for discrete energy levels, the accuracy of dose calculations can be improved. The $G(E)$ function provides a method of spectrum-to-dose conversion applied to a pulse height system response. It was first introduced by Moriuchi \emph{et al}. \cite{Moriuchi}, and has since been recommended by the ICRU \cite{ICRU53} in applications when only dose rates are of interest, such as in EPDs \cite{HWANG,100}.

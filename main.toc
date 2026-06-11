@@ -36,6 +36,6 @@
 \contentsline {subsection}{\numberline {3.1.2}Pulse Sampling}{15}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Validation of the Front-End Electronics}{15}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Energy Calibration}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Dose Rate Calibration}{17}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Final Considerations}{18}{chapter.4}%
-\contentsline {chapter}{References}{19}{section.4.1}%
+\contentsline {section}{\numberline {3.4}Dose Rate Calibration}{18}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Final Considerations}{20}{chapter.4}%
+\contentsline {chapter}{References}{21}{section.4.1}%

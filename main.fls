@@ -388,13 +388,13 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
+INPUT .\images\IR.jpg
+INPUT .\images\IR.jpg
+INPUT .\images\IR.jpg
+INPUT .\images\IR.jpg
+INPUT .\images\IR.jpg
+INPUT .\images\IR.jpg
+INPUT .\images\IR.jpg
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx8.tfm
@@ -445,12 +445,12 @@ INPUT .\images\spectra.pdf
 INPUT .\images\spectra.pdf
 INPUT .\images\spectra.pdf
 INPUT .\images\spectra.pdf
-INPUT .\images\new_linear_fit.pdf
-INPUT .\images\new_linear_fit.pdf
-INPUT .\images\new_linear_fit.pdf
-INPUT .\images\new_linear_fit.pdf
-INPUT .\images\new_linear_fit.pdf
-INPUT .\images\new_linear_fit.pdf
+INPUT .\images\fit_csi.pdf
+INPUT .\images\fit_csi.pdf
+INPUT .\images\fit_csi.pdf
+INPUT .\images\fit_csi.pdf
+INPUT .\images\fit_csi.pdf
+INPUT .\images\fit_csi.pdf
 INPUT .\images\co57_energy_reconstruction.pdf
 INPUT .\images\co57_energy_reconstruction.pdf
 INPUT .\images\co57_energy_reconstruction.pdf
@@ -472,12 +472,18 @@ INPUT .\images\bremsstrahlung_fits.pdf
 INPUT .\images\bremsstrahlung_fits.pdf
 INPUT .\images\bremsstrahlung_fits.pdf
 INPUT .\images\bremsstrahlung_fits.pdf
-INPUT .\images\linear_fit_prediction.pdf
-INPUT .\images\linear_fit_prediction.pdf
-INPUT .\images\linear_fit_prediction.pdf
-INPUT .\images\linear_fit_prediction.pdf
-INPUT .\images\linear_fit_prediction.pdf
-INPUT .\images\linear_fit_prediction.pdf
+INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
+INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
+INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
+INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
+INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
+INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
+INPUT .\images\linearity_analysis.pdf
+INPUT .\images\linearity_analysis.pdf
+INPUT .\images\linearity_analysis.pdf
+INPUT .\images\linearity_analysis.pdf
+INPUT .\images\linearity_analysis.pdf
+INPUT .\images\linearity_analysis.pdf
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl

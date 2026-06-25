@@ -10,45 +10,45 @@ Warning--string name "june" is undefined
 Warning--I didn't find a database entry for ""
 Warning--empty journal in 33
 Warning--empty year in 33
-You've used 80 entries,
+You've used 72 entries,
             1876 wiz_defined-function locations,
-            938 strings with 21490 characters,
-and the built_in function-call counts, 23830 in all, are:
-= -- 2175
-> -- 1326
+            893 strings with 20043 characters,
+and the built_in function-call counts, 21359 in all, are:
+= -- 1921
+> -- 1233
 < -- 2
-+ -- 475
-- -- 395
-* -- 1776
-:= -- 3455
-add.period$ -- 95
-call.type$ -- 80
-change.case$ -- 76
++ -- 441
+- -- 369
+* -- 1616
+:= -- 3130
+add.period$ -- 87
+call.type$ -- 72
+change.case$ -- 68
 chr.to.int$ -- 0
-cite$ -- 82
-duplicate$ -- 1152
-empty$ -- 1972
-format.name$ -- 395
-if$ -- 5771
+cite$ -- 74
+duplicate$ -- 1002
+empty$ -- 1765
+format.name$ -- 369
+if$ -- 5141
 int.to.chr$ -- 0
-int.to.str$ -- 80
-missing$ -- 76
-newline$ -- 259
-num.names$ -- 80
-pop$ -- 249
+int.to.str$ -- 72
+missing$ -- 68
+newline$ -- 235
+num.names$ -- 72
+pop$ -- 230
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 952
+skip$ -- 817
 stack$ -- 0
-substring$ -- 1308
-swap$ -- 572
+substring$ -- 1170
+swap$ -- 486
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 170
-width$ -- 82
-write$ -- 770
+while$ -- 152
+width$ -- 74
+write$ -- 688
 (There were 4 warnings)

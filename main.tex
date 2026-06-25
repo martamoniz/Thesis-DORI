@@ -277,13 +277,13 @@ dashboard for real-time visualization.
 \newpage
 %%%% Chapter 1: Basics of X-Ray Physics
 
-\chapter{Radiation in Interventional Radiology}
+\chapter{Radiation in IR}
 
 \section{Interventional Radiology}
 Interventional radiology (IR) is a subspecialty of radiology that utilizes fluoroscopy to perform diagnostic and therapeutic procedures through minimally invasive techniques \cite{8}. Fluoroscopy involves the use of X-rays and an image detection system to visualize internal structures and interventional tools in real-time \cite{11}. The conventional IR equipment configuration is illustrated in Fig.~\ref{fig:interventional_radiology_setup}. The X-rays are produced in an X-ray tube by converting the kinetic energy of electrons into electromagnetic radiation. It consists of two electrodes enclosed in a vacuum-sealed glass envelope. The cathode serves as the electron source, while the anode acts as the positive target. When heated by an electric current, the cathode emits electrons via thermionic emission. The number of electrons produced depends on the current passing through the filament. A high potential difference applied between the cathode and the anode accelerates the electrons toward the anode. The total incident energy delivered to the anode is proportional to both the voltage and the current\cite{5,6}. 
 \begin{figure}[H]
  \centering
-  \includegraphics[width=\linewidth]{images/interventional radiology setup.png}
+  \includegraphics[width=\linewidth]{images/IR.jpg}
  \caption[Interventional Radiology Setup]{Interventional Radiology Setup. The C-arm is positioned in a posteroanterior projection (standard clinical practice) directing the most intense backscatter towards the floor, protecting above-knee radiosensitive organs~\cite{26}. The images shown on the display monitor were reproduced from Refs.~\cite{111,112}.}
 
  \label{fig:interventional_radiology_setup}
@@ -574,21 +574,6 @@ However, there is currently no global consensus on the value of both weighting f
 The major limitation of passive dosimeters lies in their inability to provide dose information in real-time. These devices are typically read at monthly intervals \cite{67}, which prevents identification of excessive exposures or deviations from standard operating conditions in time. As a result, opportunities for real-time corrective action are lost, and staff may remain unaware of elevated exposure levels until the data can be reviewed retrospectively \cite{46,68}. In this context, active personal dosimeters (APDs) have emerged as a complementary solution. APDs are not intended to replace passive dosimeters, which remain the standard for legal dose documentation. By providing real-time feedback on dose rate, APDs support adherence to the ALARA principle by enabling immediate adjustments to operator behaviour or shielding practices \cite{2,3}.
 
 
-%\subsection{Exposure to the Hand}
-%Among the anatomical positions proposed for monitoring in this work, the hands receive substantially higher radiation doses compared to other regions, with reported values up to ten times greater \cite{45,46,47}. This is due to their frequent positioning on the patient’s skin surface or within the area of highest scattered radiation and are often unshielded during manual manipulation of wires or catheters \cite{48}. While hands are generally not within the primary beam, direct exposure would quickly exceed annual dose limits \cite{49}. Lead gloves are commercially available and offer dose reductions ranging from 15\% to 60\%, but their adoption remains limited due to loss of tactile sensitivity and user discomfort \cite{50,51}. These gloves are not suitable when there is a risk of entering the primary beam as the X-ray tube will automatically compensate for attenuation by increasing output, leading to higher exposure~\cite{51}. Monitoring compliance with extremity dose limits is commonly achieved using passive dosimeter rings worn on the fingers \cite{52}. Higher doses are typically recorded on the nondominant hand, most often the left, due to its use in stabilising the patient, while the dominant hand primarily handles instruments. The dose distribution across the hand is heterogeneous, with the region spanning the little to middle fingers receiving the highest exposure \cite{52}. Reported dose rates vary significantly. Values of 265.2~$\mu$Sv/h \cite{46}, 324.96~$\mu$Sv/h \cite{53}, and 7600~$\mu$Sv/h \cite{48} have been documented. Orthopaedic procedures, such as the one represented earlier in Fig.~\ref{fig:scatter} (a), are associated with the highest occupational radiation doses, with a maximum reported rate of 360,000~$\mu$Gy/h \cite{54}.
-
-%\subsection{Exposure to the Lens of the Eye}
-%Fluoroscopy practitioners are exposed to the highest eye radiation doses compared to other radiation workers \cite{55}. Due to the significantly lower dose threshold and the ease with which these limits can be exceeded in fluoroscopy settings \cite{56,57,58}, the use of protective lead glasses has become mandatory in many IR settings \cite{59}. The use of a third dosimeter behind protective eyewear is recommended to assess cumulative lens dose, recorded as $H_p(3)$ \cite{51,56}. Placement can be on the left or right side, or centrally between the eyes. Central positioning provides an approximate average between the two lenses, while lateral placement captures the maximum dose to one side. Documented dose rates include 3.5~$\mu$Sv/h \cite{46}, 20--44~$\mu$Sv/h \cite{62}, and range from 925.2 to 944~$\mu$Sv/h in orthopaedic procedures \cite{63}. Fig.~\ref{fig:anatomical_doses} illustrates reported dose rates from the literature across all proposed monitoring body regions.
-
-%\begin{figure}[H]
-  %\centering
-  %\includegraphics[width=\linewidth]{images/anatomical_DR.png}
-  %\caption[Reported dose rates to the hand, eye, thorax and thyroid in IR.]{Reported dose rates to the hand, eye, thorax and thyroid in IR~\cite{34,46,53,54,63}. Hand exposures consistently exceeds those to other anatomical positions. Eye doses are orders of magnitude lower when compared other body regions . In orthopaedic procedures dose rates are significantly higher.}
-
-  %\label{fig:anatomical_doses}
-%\end{figure}
-
-%\section{Personnel Monitoring}
 \section{Real-Time Dosimetry}
 The concept of real-time radiation monitoring in occupational settings was first established through the use of APDs, which have been widely adopted in the nuclear industry as a standard safety practice \cite{69}. However, it was only within the last 15 years that their use in IR began to be critically evaluated \cite{2,38,69,70}. As previously discussed, the IR environment is characterised by pulsed radiation, lower photon energies, and predominantly scattered fields, which differ significantly from the conditions under which the APDs available at the time were originally developed \cite{70}. Although several studies \cite{20,69,70} explored the possibility of adapting existing devices for IR, it was Sánchez \emph{et al}. \cite{2}, working as part of an early development initiative at Philips, who introduced the first APD specifically engineered for interventional use. Unlike existing APDs that provided exclusively auditory feedback, this prototype included a visual interface displaying real-time dose data to staff in the procedure room. It became the first generation of the DoseAware system, which started being distributed commercially in 2010 \cite{71}. Later, Philips and Unfors RaySafe signed a joint development agreement in 2012 and, in 2017, the third-generation system, RaySafe i3, was introduced at the European Congress of Radiology \cite{76}. 
 
@@ -606,7 +591,7 @@ Other staff members, including nurses and technicians, also benefited from dose 
 
 \newpage
 %%% Chapter 3: DORI
-\chapter{Detection System}
+\chapter{DORI - Hardware Development}
 \section{Scintillator}
 \section{Photodetector}
 \section{Front-End Electronics}
@@ -656,40 +641,6 @@ Due to the attenuation introduced by the PZC filter, the subsequent integrating 
 \end{equation}
 \section{Readout Logic}
 
-
-
-
-
-%\begin{figure}[H]
-  %%\centering
-  %\includegraphics[width=\linewidth]{images/dose_red.png}
-  %\caption[Occupational dose reduction following introduction of an ADP.]{Occupational dose reduction following introduction of an ADP (live screen). \textbf{(a)} Dose rate per staff role (Adapted from Ref.~\cite{86}). 
-    %\textbf{(b)} Radiation dose by experience (Adapted from Ref.~\cite{83}).
-  %}
-
-  %\label{fig:dose_red}
-%\end{figure}
-
-
-%\section{Assessment of Dose Rates Thresholds}
-%An important consideration in real-time dosimetry is the establishment of dose rate thresholds that delineate acceptable, elevated, and excessively high exposure levels. The current APD generation incorporates a colour-code scale, where green indicates dose rates below 200~$\mu$Sv/h, yellow represents exposures between 200 and 2000~$\mu$Sv/h, and red designates rates from 2000 to 20000~$\mu$Sv/h, at chest height. According to the manufacturer, frequent exposure to the yellow or red zones should prompt the operator to take immediate protective actions \cite{75}. Nevertheless, consistent green readings may create a false sense of security, potentially overlooking further opportunities for dose reduction. In line with the ALARA principle, efforts to minimise exposure should continue even when readings fall within the lowest threshold, as optimisation of protection remains essential regardless of apparent safety \cite{88}. This can be addressed by implementing a graduated display scale. However, the scientific basis for selecting these ranges is not explicitly detailed in the literature. It remains unclear whether the dose rates were empirically derived from procedural data in IR or adopted from general radiation protection guidance. Moreover, the applicability of these thresholds across different anatomical regions has not been evaluated. In the context of the multi-channel dosimetry system proposed in this work, it is plausible that threshold values should be adjusted according to the anatomical position being monitored. To assess the applicability of existing thresholds, a bar graph was constructed (Fig.~\ref{fig:annual_limit}) by applying the DoseAware scale to estimated annual fluoroscopy times (FTs) in cardiology \cite{90} and the five most frequent general interventional procedures \cite{91}. As can be seen, the lower threshold (green) remains within safe boundaries under current fluoroscopy usage. Consistent exposure within the yellow range results in annual dose limit exceedance in higher FT procedures. Sustained readings within the upper threshold (red) would only be acceptable if FTs were drastically lower than normal.
-%\begin{figure}[H]
-  %\centering
-  %\includegraphics[width=\linewidth]{images/annual limit.png}
-  %\caption[Estimated annual occupational exposure according to dose rate thresholds.]{Estimated annual occupational doses at chest level for selected fluoroscopic procedures~\cite{90,91}, categorized according to real-time dose thresholds applied in the current used ADPs, and contextualized against the annual dose limit.}
-  %\label{fig:annual_limit}
-%\end{figure}
-%According to the dose rates discussed in Chapter~2, typical values measured at chest level during most procedures fall within the lower threshold, excluding high-exposure procedures. Thresholds for hand exposure require revision based on reported dose rates and the higher occupational limit. Eye dose rates are typically more than an order of magnitude lower than those at chest level. Khan \emph{et al}.\ \cite{92} proposed threshold levels for an eye dosimeter, with the lowest set at 0.5 to 50~$\mu$Sv/h, above normal from 50--500~$\mu$Sv/h, and elevated exposure between 500 to 1000~$\mu$Sv/h.
-
-%\section{Proposed Prototype}
-%APDs’ response should be energy independent in the spectrum previously outlined in Table~\ref{tab:ir_parameters}. Their angular response should be minimal. The device must be sufficiently sensitive to detect low dose rates, especially those associated with eyes monitoring, and maintain linearity over the expected dose range. A resolution of at least 1~$\mu$Sv is required to detect variations in exposure. It must remain stable under environmental influences such as temperature shifts and electromagnetic interference. Battery capacity should support uninterrupted operation over extended periods and data integrity needs to be assured~\cite{51,80}.
-
-%\newpage
-%%% Chapter : Calibration
-\chapter{Results and Discussion}
-X-ray tube and gamma sources description. 
-\section{Front-End Electronics}
-\subsection{Pulse Shaping}
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth]{images/shaping_chain_trace00001.pdf}
@@ -708,7 +659,7 @@ The hardware gain was adjusted to accommodate the higher light output of CsI(Tl)
   \subfloat[]{\label{fig:spectra}%
     \includegraphics[width=\linewidth]{images/spectra.pdf}}\\[1ex]
   \subfloat[]{\label{fig:calib}%
-    \includegraphics[width=0.47\linewidth]{images/new_linear_fit.pdf}}%
+    \includegraphics[width=0.47\linewidth]{images/fit_csi.pdf}}%
   \hfill%
   \subfloat[]{\label{fig:co57}%
     \includegraphics[width=0.50\linewidth]{images/co57_energy_reconstruction.pdf}}
@@ -720,74 +671,57 @@ The hardware gain was adjusted to accommodate the higher light output of CsI(Tl)
 \end{figure}
 
 
-The centroid channel of each photopeak was mapped to its known energy value, and a linear fit of the form $E = an + b$ was applied, where $E$ is the energy in keV and $n$ is the channel number (Fig.~\ref{fig:validation_electronics} (b)). The fit yields $R^2 = 0.998$, confirming a linear channel-to-energy relationship up to at least channel 183, corresponding to an input amplitude of approximately 590~mV. This confirms that the P\&H circuit does not introduce amplitude-dependent errors within this bin range.
+The centroid channel of each photopeak was mapped to its known energy value, and a linear fit of the form $E = an + b$ was applied, where $E$ is the energy in keV and $n$ is the channel number (Fig.~\ref{fig:validation_electronics} (b)). The fit yields $R^2 = 0.999$, confirming a linear channel-to-energy relationship up to at least channel 183, corresponding to an input amplitude of approximately 590~mV. This confirms that the P\&H circuit does not introduce amplitude-dependent errors within this bin range.
 
-As a validation of the calibration, the $^{57}$Co spectrum was reconstructed in energy units and is shown in (Fig.~\ref{fig:validation_electronics} (c)). The fitted centroid of the 122~keV photopeak yields $\mu = 121 \pm 1$~keV, consistent with the nominal value within uncertainty. The measured FWHM is $19 \pm 1$~keV, corresponding to an energy resolution of $16 \pm 1$\% at 122~keV, consistent with values reported in the literature for CsI(Tl)~\cite{117,118}. This indicates that the front-end electronics do not degrade the intrinsic energy resolution of the crystal. The hardware is therefore considered validated.
+As a validation of the calibration, the $^{57}$Co spectrum was reconstructed in energy units and is shown in (Fig.~\ref{fig:validation_electronics} (c)). The fitted centroid of the 122~keV photopeak yields $\mu = 121 \pm 1$~keV, consistent with the nominal value within uncertainty. The measured FWHM is $19 \pm 1$~keV, corresponding to an energy resolution of $16 \pm 1$\% at 122~keV, consistent with values reported in the literature for CsI(Tl)~\cite{117,118}. This indicates that the front-end electronics do not degrade the intrinsic energy resolution of the crystal. The DORI hardware is therefore considered validated.
+\chapter{DORI - Calibration}
 \section{Energy Calibration}
-For the energy calibration of the plastic scintillator, the channel range, within the validated bins, must be chosen with its resolution in mind. Among the sources used for calibration, only the 59.5~keV photopeak of $^{241}$Am is documented to produce a resolvable photopeak in BC-408~\cite{119,120}. According to Knoll~\cite{14}, the FWHM of a peak should span at least 5 channels for it to be adequately sampled. Given a reported energy resolution of 45-50\% for the 59.5~keV peak, 10 to 11 channels are required. This corresponds to a channel width of approximately 5.36~keV, and a minimum of 28 channels for an energy range up to 150~keV. A channel width of this magnitude would be impractical for spectral characterisation in general. Independently of peak fitting, it would limit the ability to resolve the energy dependence of the spectrum. The intrinsic resolution of BC-408 remains the limiting factor for distinguishing nearby energies, but finer binning still improves the sampling of the spectrum. The gain of the system was therefore empirically set such that the channel width corresponds to at least 1~keV.
+By accounting for discrete energy levels, the accuracy of dose calculations can be improved. Unlike inorganic scintillators, the low atomic number of plastic results in a negligible photoelectric cross-section across the relevant energy range. The standard approach for energy calibration of plastic scintillators relies on the Compton edge of gamma-ray sources~\cite{}. Coincidence techniques using the backscatter peak have been shown to improve calibration accuracy~\cite{}. However, these have primarily been demonstrated using \textsuperscript{22}Na and \textsuperscript{137}Cs, whose Compton edges lie outside the range relevant to this work. Such methods also assume a linear response across the calibration range, which does not hold at low energies due to the non-proportional light output of plastic scintillators, as discussed in Section~\ref{sec:nonproportionality}.
 
-Unlike inorganic scintillators, the low atomic number of plastic scintillators results in a negligible photoelectric cross-section across most of the relevant energy range. Although a small photoelectric contribution from the 59.5~keV $^{241}$Am line can be observed, the resulting feature is too broad to provide a reliable calibration point, as discussed. Instead, the standard approach for energy calibration of plastic scintillators relies on the Compton edge of gamma-ray sources~\cite{}. Coincidence techniques exploiting the backscatter peak have been shown to provide accurate energy information~\cite{}. However, these have primarily been demonstrated using $^{22}$Na and $^{137}$Cs, whose Compton edges lie above 200~keV, outside the range relevant to this work. Such methods also assume a linear response across the calibration range, which does not hold at low energies due to the non-proportional light output of plastic scintillators, as discussed in Section~\ref{sec:xxx}.
+As a novel approach for plastic scintillators, the energy response was calibrated using the bremsstrahlung endpoint of an X-ray tube. The maximum X-ray photon energy produced corresponds to the scenario in which the accelerated electron transfers all its kinetic energy in a single interaction with the anode nucleus. The maximum energy detected, i.e., the endpoint of the acquired spectrum, is therefore equal to the tube voltage, which serves as the energy reference for calibration. Since the bremsstrahlung spectrum near the endpoint is approximately linear~\cite{}, this abscissa can be determined as the $x$-intercept of a least-squares fit to that region.
 
-As a novel approach, the energy response was calibrated using the bremsstrahlung endpoint of an X-ray tube. The detector was positioned outside the beam line, at a distance sufficient to avoid saturation of the front-end electronics. The maximum photon energy of the obtained spectrum equals the kinetic energy of the electrons accelerated in the tube, given by the applied tube voltage in eV. This corresponds to the limiting case in which an electron loses its entire kinetic energy in a single interaction with a nucleus, producing one photon that carries the full electron energy. The tube voltage therefore defines the endpoint energy of the measured spectrum, providing a known reference for calibration.
+The detector was positioned outside the beam line, at a distance sufficient to avoid saturation of the front-end electronics. Bremsstrahlung spectra were acquired over 5-minute intervals for tube voltages of 15--50~kVp and tube currents of 0.050--0.250~mA, and are shown in Fig.~\ref{fig:bremss_calibration} (a) and (b), respectively. Background was subtracted, and channels 18 and below were excluded, as their elevated count rate would otherwise dominate the vertical scale. As shown in Fig.~\ref{fig:bremss_calibration} (a), the 15~kVp spectrum is indistinguishable from background. At this distance and fluence, photons of such low energy are absorbed by the black adhesive tape used for light-wrapping of the photosensitive detector element. This establishes the lower detection limit of the front-end electronics at 20~keV.
 
-Bremsstrahlung spectra were acquired for 10 minutes in the energy range 15-50~keV and are shown in Fig.~\ref{fig:bremss_calibration} (a). Background was subtracted, and channels 18 and below were excluded, as their higher count rate would otherwise dominate the vertical scale. The 15~kVp spectrum is not distinguishable from background. At this distance, photons of such low energy are absorbed by the black adhesive tape used for the light-tight wrapping of the photosensitive surface before reaching the scintillator. This absorption establishes the lower detection limit of the front-end electronics at 20~keV.
+The linear region of each bremsstrahlung spectrum was selected interactively, and a least-squares regression was applied to the points within that window. The $x$-intercept of the fitted line gives the endpoint channel. Since tube current affects only photon fluence and not the spectral endpoint, the five acquisitions per voltage produce five independent estimates (see Fig.~\ref{fig:bremss_calibration} (b)). The mean and standard deviation were computed for each of the seven voltages from 20 to 50~kVp. A weighted least-squares fit was applied to account for differences in uncertainty across the energy range, reflected in the error bars of Fig.~\ref{fig:bremss_calibration} (c). At 20~keV, even though photoelectric absorption remains more probable than Compton scattering in plastic at this energy, the uncertainty is dominated by counting statistics. The near-invisible error bars between 30 and 45~keV indicate that in this region both the photoelectric cross-section and the photon fluence are sufficient for the endpoint to be determined with better precision. Above 45~keV, the photoelectric cross-section in plastic drops below 0.5\% and pileup begins to distort the spectral shape near the endpoint, both contributing to increasing uncertainty in the endpoint estimate. The pileup distortion is visible as a non-linear tail in the higher-energy spectra of Fig.~\ref{fig:bremss_calibration} (a), which is not characteristic of filtered bremsstrahlung. The weighted fit ensures that better-determined points contribute more strongly to the calibration. The uncertainties in the endpoint estimates propagate into the calibration coefficients, which is necessary given the known poor energy resolution of plastic scintillators. The calibration fit takes the form:
+%
+\begin{equation}
+    C = aE + b,
+    \label{eq:calibration}
+\end{equation}
+%
+where $C$ is the channel number and $E$ is the energy in keV, with $R^2 = 0.985$, confirming a linear channel-to-energy relationship across the calibrated range of 20 to 50~keV.
 \begin{figure}[H]
   \centering
-  \subfloat[]{\label{fig:bremss_spectra}%
-    \includegraphics[width=0.53\linewidth]{images/bremsstrahlung_fits.pdf}}%
+  \begin{minipage}[c]{0.40\linewidth}
+    \centering
+    \subfloat[]{\label{fig:bremss_spectra}%
+      \includegraphics[width=\linewidth]{images/bremsstrahlung_fits.pdf}}\\
+    \subfloat[]{\label{fig:bremss_endpoint}%
+      \includegraphics[width=\linewidth]{images/bremsstrahlung_40kVp_vs_current.pdf}}
+  \end{minipage}%
   \hfill%
-  \subfloat[]{\label{fig:bremss_endpoint}%
-    \includegraphics[width=0.47\linewidth]{images/linear_fit_prediction.pdf}}
+  \begin{minipage}[c]{0.55\linewidth}
+    \centering
+    \subfloat[]{\label{fig:linearity_analysis}%
+      \includegraphics[width=\linewidth]{images/linearity_analysis.pdf}}
+  \end{minipage}
   \caption[Bremsstrahlung-Based Energy Calibration.]{%
     \textbf{(a)} caption
     \textbf{(b)} caption
+    \textbf{(c)} caption
     }
   \label{fig:bremss_calibration}
 \end{figure}
 
+
+
 \section{Dose Rate Calibration}
-By accounting for discrete energy levels, the accuracy of dose calculations can be improved. The $G(E)$ function provides a method of spectrum-to-dose conversion applied to a pulse height system response. It was first introduced by Moriuchi \emph{et al}. \cite{Moriuchi}, and has since been recommended by the ICRU \cite{ICRU53} in applications when only dose rates are of interest, such as in EPDs \cite{HWANG,100}.
-
-It is assumed that for a monoenergetic photon fluence rate $\phi(E_0)$, the absorbed dose rate at the scintillator is expressed as~\cite{HWANG}:
-\begin{equation}
-    D_0 = \phi(E_0)\, h(E_0)
-    \label{eq:fluence_dose}
-\end{equation}
-where $h(E_0)$ is the fluence-to-dose conversion coefficient.
-
-Equation \eqref{eq:fluence_dose} can be rewritten by incorporating the $G(E)$ function~\cite{Moriuchi}:
-\begin{equation}
-    D_0 = \int_{0}^{E_0} f(E,\, E_0)\, G(E)\, \mathrm{d}E
-    \label{eq:mono_dose}
-\end{equation}
-with $f(E, E_0)$ being the detector response function for an incident photon of energy $E_0$ that deposits energy $E$.
-
-As the measured spectrum, $F(E)$, of a complex radiation field is simply the combination of monoenergetic responses, with $N_i$ photons incident at energy $E_i$ across $n$ total channels defined by the ADC::
-\begin{equation}
-    F(E) = \sum_{i=1}^{n} N_i\, f(E,\, E_i)
-    \label{eq:total_spectrum}
-\end{equation}
-
-
-Within the target energy range and substituting into Eq.~\eqref{eq:mono_dose}, the total dose rate is:
-\begin{equation}
-    D = \int_{E_{\min}}^{E_{\max}} F(E)\, G(E)\, \mathrm{d}E
-    \label{eq:total_dose}
-\end{equation}
-
-Recently, Hwang \emph{et al}. \cite{HWANG} validated the use of the $G(E)$ function for plastic scintillators. Mathematically, it is expressed as the following polynomial expression~\cite{HWANG}:
-\begin{equation}
-    G(E_n) = \sum_{k=1}^{K_{\max}} A_k \left(\log_{10} (E_n)\right)^{k-m-1}
-    \label{eq:G_function}
-\end{equation}
-where $K_{\max}$ is the number of polynomial terms, $m$ can be set to 0~\cite{102}, and $A_k$ are coefficients determined by least-squares fitting to a reference spectrum~\cite{103,HWANG}; obtained either from measurements with known sources or Monte Carlo simulation~\cite{101,100}. 
-%The precision of the G(E) function is very dependent on the number of input response spectra, and it is desirable to obtain as manyresponse gamma-ray spectra as possible at appropriately homogeneous energy intervals(
-\newpage
 
 
 
-%%%% Chapter 6: Final Considerations
-\chapter{Final Considerations}
+\chapter{DORI - Final Prototype}
+\section{Future Work}
+\chapter{Conclusions}
 
 
 

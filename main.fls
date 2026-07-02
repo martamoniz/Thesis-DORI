@@ -368,6 +368,7 @@ OUTPUT main.toc
 INPUT .\main.lof
 INPUT .\main.lof
 INPUT main.lof
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri10.tfm
 OUTPUT main.lof
 INPUT .\main.lot
 INPUT .\main.lot
@@ -378,7 +379,6 @@ INPUT .\lista_acronimos.tex
 INPUT .\lista_acronimos.tex
 INPUT .\lista_acronimos.tex
 INPUT lista_acronimos.tex
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri10.tfm
 INPUT .\lista_simbolos.tex
 INPUT .\lista_simbolos.tex
 INPUT .\lista_simbolos.tex
@@ -388,13 +388,13 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
-INPUT .\images\IR.jpg
-INPUT .\images\IR.jpg
-INPUT .\images\IR.jpg
-INPUT .\images\IR.jpg
-INPUT .\images\IR.jpg
-INPUT .\images\IR.jpg
-INPUT .\images\IR.jpg
+INPUT .\images\interventional radiology setup.png
+INPUT .\images\interventional radiology setup.png
+INPUT .\images\interventional radiology setup.png
+INPUT .\images\interventional radiology setup.png
+INPUT .\images\interventional radiology setup.png
+INPUT .\images\interventional radiology setup.png
+INPUT .\images\interventional radiology setup.png
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx8.tfm
@@ -478,12 +478,25 @@ INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
 INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
 INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
 INPUT .\images\bremsstrahlung_40kVp_vs_current.pdf
-INPUT .\images\linearity_analysis.pdf
-INPUT .\images\linearity_analysis.pdf
-INPUT .\images\linearity_analysis.pdf
-INPUT .\images\linearity_analysis.pdf
-INPUT .\images\linearity_analysis.pdf
-INPUT .\images\linearity_analysis.pdf
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri10.tfm
+INPUT .\images\plastic_Am-241.pdf
+INPUT .\images\plastic_Am-241.pdf
+INPUT .\images\plastic_Am-241.pdf
+INPUT .\images\plastic_Am-241.pdf
+INPUT .\images\plastic_Am-241.pdf
+INPUT .\images\plastic_Am-241.pdf
+INPUT .\images\plastic_Co-57_fit.pdf
+INPUT .\images\plastic_Co-57_fit.pdf
+INPUT .\images\plastic_Co-57_fit.pdf
+INPUT .\images\plastic_Co-57_fit.pdf
+INPUT .\images\plastic_Co-57_fit.pdf
+INPUT .\images\plastic_Co-57_fit.pdf
+INPUT .\images\energy.pdf
+INPUT .\images\energy.pdf
+INPUT .\images\energy.pdf
+INPUT .\images\energy.pdf
+INPUT .\images\energy.pdf
+INPUT .\images\energy.pdf
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl

@@ -1,3 +1,14 @@
+------ Para a secção do Cintilador -----
+By accounting for discrete energy levels, the accuracy of dose calculations can be improved. Unlike inorganic scintillators, the low atomic number of plastic results in a negligible photoelectric cross-section across the relevant energy range. The standard approach for energy calibration of plastic scintillators relies on the Compton edge of gamma-ray sources. Coincidence techniques using the backscatter peak have been shown to improve calibration accuracy. However, these have primarily been demonstrated using \textsuperscript{22}Na and \textsuperscript{137}Cs~\cite{122,123}, whose Compton edges lie outside the range relevant to this work. Such methods also assume a linear response across the calibration range, which does not hold at low energies due to the non-proportional light output of plastic scintillators, as discussed in Section~\ref{sec:Scintillator}.
+
+
+
+
+
+
+
+
+
 %\subsection{Exposure to the Hand}
 %Among the anatomical positions proposed for monitoring in this work, the hands receive substantially higher radiation doses compared to other regions, with reported values up to ten times greater \cite{45,46,47}. This is due to their frequent positioning on the patient’s skin surface or within the area of highest scattered radiation and are often unshielded during manual manipulation of wires or catheters \cite{48}. While hands are generally not within the primary beam, direct exposure would quickly exceed annual dose limits \cite{49}. Lead gloves are commercially available and offer dose reductions ranging from 15\% to 60\%, but their adoption remains limited due to loss of tactile sensitivity and user discomfort \cite{50,51}. These gloves are not suitable when there is a risk of entering the primary beam as the X-ray tube will automatically compensate for attenuation by increasing output, leading to higher exposure~\cite{51}. Monitoring compliance with extremity dose limits is commonly achieved using passive dosimeter rings worn on the fingers \cite{52}. Higher doses are typically recorded on the nondominant hand, most often the left, due to its use in stabilising the patient, while the dominant hand primarily handles instruments. The dose distribution across the hand is heterogeneous, with the region spanning the little to middle fingers receiving the highest exposure \cite{52}. Reported dose rates vary significantly. Values of 265.2~$\mu$Sv/h \cite{46}, 324.96~$\mu$Sv/h \cite{53}, and 7600~$\mu$Sv/h \cite{48} have been documented. Orthopaedic procedures, such as the one represented earlier in Fig.~\ref{fig:scatter} (a), are associated with the highest occupational radiation doses, with a maximum reported rate of 360,000~$\mu$Gy/h \cite{54}.
 

@@ -409,4 +409,44 @@ H.~Kim, H.~Ahn, S.~Kim, E.~Won, T.~Kim, Y.~Kim, M.~Lee, J.~Chai, and J.~Ha,
   Spectrometers, Detectors and Associated Equipment}, vol.~457, no.~3,
   pp.~471--475, 2001.
 
+\bibitem{121}
+M.~C. Silva, S.~B. Herdade, P.~Lammoglia, P.~R. Costa, and R.~A. Terini,
+  ``Determination of the voltage applied to x‐ray tubes from the
+  bremsstrahlung spectrum obtained with a silicon pin photodiode,'' {\em
+  Medical Physics}, vol.~27, p.~2617–2623, Nov. 2000.
+
+\bibitem{124}
+{National Institute of Standards and Technology}, ``Xcom: Photon cross section
+  database (version 1.2).'' \url{https://physics.nist.gov/xcom}, 1999.
+\newblock Accessed: 2026-07-02.
+
+\bibitem{125}
+P.~Bevington and D.~Robinson, {\em Data Reduction and Error Analysis for the
+  Physical Sciences}.
+\newblock McGraw-Hill Education, 2003.
+
+\bibitem{119}
+S.~M. Tajudin, Y.~Namito, T.~Sanami, and H.~Hirayama, ``Response of plastic
+  scintillator to gamma sources,'' {\em Applied Radiation and Isotopes},
+  vol.~159, p.~109086, 2020.
+
+\bibitem{126}
+N.~N.~T. Tran, S.~Sasaki, T.~Sanami, Y.~Kishimoto, and E.~Shibamura, ``Some
+  properties of plastic scintillators to construct a let spectrometer,'' in
+  {\em Proceedings of the Second International Symposium on Radiation Detectors
+  and Their Uses (ISRD2018)}, Journal of the Physical Society of Japan, Jan.
+  2019.
+
+\bibitem{127}
+L.~Swiderski, R.~Marcinkowski, M.~Moszynski, W.~Czarnacki, M.~Szawlowski,
+  T.~Szczesniak, G.~Pausch, C.~Plettner, and K.~Roemer, ``Electron response of
+  some low-z scintillators in wide energy range,'' {\em Journal of
+  Instrumentation}, vol.~7, no.~06, p.~P06011–P06011, 2012.
+
+\bibitem{122}
+L.~Swiderski, M.~Moszynski, W.~Czarnacki, J.~Iwanowska, A.~Syntfeld-Kauch,
+  T.~Szczesniak, G.~Pausch, C.~Plettner, and K.~Roemer, ``Measurement of
+  compton edge position in low-z scintillators,'' {\em Radiation Measurements},
+  vol.~45, p.~605–607, Mar. 2010.
+
 \end{thebibliography}

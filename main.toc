@@ -25,16 +25,17 @@
 \contentsline {chapter}{\numberline {2}DORI - Hardware Development}{13}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Scintillator}{13}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Photodetector}{13}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Front-End Electronics}{13}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Charge-Sensitive Amplifier}{13}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Pole-Zero Cancellation}{14}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Shaping Amplifier}{14}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Readout Logic}{15}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Validation of the Front-End Electronics}{15}{section.2.5}%
-\contentsline {chapter}{\numberline {3}DORI - Calibration}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Energy Calibration}{17}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Dose Rate Calibration}{20}{section.3.2}%
-\contentsline {chapter}{\numberline {4}DORI - Final Prototype}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Future Work}{21}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusions}{22}{chapter.5}%
-\contentsline {chapter}{References}{23}{section.5.1}%
+\contentsline {subsection}{\numberline {2.2.1}SiPM Power Supply}{13}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Front-End Electronics}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Charge-Sensitive Amplifier}{15}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Pole-Zero Cancellation}{15}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Shaping Amplifier}{15}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Readout Logic}{16}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Validation of the Front-End Electronics}{16}{section.2.5}%
+\contentsline {chapter}{\numberline {3}DORI - Calibration}{18}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Energy Calibration}{18}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Dose Rate Calibration}{21}{section.3.2}%
+\contentsline {chapter}{\numberline {4}DORI - Final Prototype}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Future Work}{22}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Conclusions}{23}{chapter.5}%
+\contentsline {chapter}{References}{24}{section.5.1}%

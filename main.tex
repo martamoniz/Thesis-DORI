@@ -586,16 +586,62 @@ The collaboration between Philips and RaySafe enabled the integration of badge-d
 \subsection{Reported Benefits}
 The development and clinical integration of the APDs described above enabled structured evaluation of their practical impact in IR. Since their introduction, a number of studies have compared conditions with and without real-time feedback~\cite{4,68,72,82,83,85,86,87,88,114,115,116}. A common finding is a general decrease in staff dose when feedback is available. This effect appears across various professional roles, though the degree of reduction can vary. In a study led by Baumann \emph{et al}~\cite{86} dose reduction was observed in almost every staff group~\cite{86}. Further analysis reveals a pattern seen across multiple studies, where the most significant reductions are recorded in the main radiologist, who is positioned closest to the patient. In some studies, this group was the only one to show a statistically significant change in radiation exposure~\cite{72,86,87,88}. This may be explained by findings from Baumgartner \emph{et al}\ \cite{72}, which showed that procedural contexts associated with higher radiation exposure tend to demonstrate the most pronounced reductions following the introduction of APDs \cite{72}. This is consistent with reports that the effectiveness of APDs depends on baseline conditions. Operators who initially demonstrated poor radiation safety habits were able to significantly reduce their dose after the introduction of APDs through simple corrective actions. In contrast, those already practising good protection strategies had less room to improve and showed minimal change \cite{82,87,115}. These baseline variations are also associated with the operator’s level of experience, as discussed in section~1.4, and were recently studied by Koch \emph{et al}~\cite{83}. A pronounced decrease in dose was registered among the least experiences group, while operators with over ten years of experience show, in this case, even a slight increase in dose. Experienced operators may rely on ingrained habits and confidence in their technique, whereas less experienced users appear to adjust more readily when confronted with live feedback \cite{83}. It has been reported that younger operators tend to show less concern for radiation safety \cite{89}. These results suggest that APDs may be especially valuable as educational tools for junior staff, helping them build good radiation safety practices \cite{83}. 
 
-Consistent with these findings, James \emph{et al}~\cite{115} reported a reduction in red events over time. They argued that, while these events serve as prompts for immediate dose adjustment, they also function as a reflective tool for operators. This enables professionals to identify specific maneuvers, projection angles, and procedural choices associated with increased radiation exposure. Consequently, such practices can be replaced by lower-exposure alternatives and operators can adopt safer procedural habits more permanently. Ultimately, it also contributes to a reduction in radiation dose to the patient~\cite{115,116}.
+Consistent with these findings, James \emph{et al}~\cite{115}, reported a reduction in red events over time. They argued that, while these events serve as prompts for immediate dose adjustment, they also function as a reflective tool for operators. This enables professionals to identify specific maneuvers, projection angles, and procedural choices associated with increased radiation exposure. Consequently, such practices can be replaced by lower-exposure alternatives and operators can adopt safer procedural habits more permanently. Ultimately, it also contributes to a reduction in radiation dose to the patient~\cite{115,116}.
 
-Other staff members, including nurses and technicians, also benefited from dose reductions \cite{82,83,85,86,88,115}. In these cases, dose reductions were primarily attributed to individual awareness and simple adjustments, such as changes in positioning. Some studies further emphasised the collaborative value of these systems, noting that when all staff members wear APDs with visible displays, teams can collectively monitor exposure. This practice creates an environment of mutual accountability, where individuals not only adjust their own behaviour but also remain aware of their colleagues’ exposure, promoting safer team dynamics \cite{86,87,115}.
+Other staff members, including nurses and technicians, also benefited from dose reductions \cite{82,83,85,86,88,115}. In these cases, it was primarily attributed to individual awareness and simple adjustments, such as changes in positioning. Some studies further emphasised the collaborative value of these systems, noting that when all staff members wear APDs with visible displays, teams can collectively monitor exposure. This practice creates an environment of mutual accountability, where individuals not only adjust their own behaviour but also remain aware of their colleagues’ exposure, promoting safer team dynamics \cite{86,87,115}.
 
 \newpage
-%%% Chapter 3: DORI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Chapter 2: DORI - Hardware Development
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{DORI - Hardware Development}
 \section{Scintillator}
 \label{sec:scintillator}
 \section{Photodetector}
+To detect the scintillation light and convert it into an electrical signal, a SiPM from Broadcom (AFBR-S4N66P014M) was optically coupled to the scintillator. Its $6\times6$~mm\textsuperscript{2} active area matches the scintillator cross section, maximizing light collection.
+
+A SiPM consists of a parallel array of avalanche photodiodes operated in Geiger mode. Each cell is reverse biased above its breakdown voltage, so a single absorbed photon is sufficient to trigger a self-sustaining avalanche. The photons produced by a scintillation event fire many cells simultaneously, each of which contributes one identical pulse. The summed output current is proportional to the number of fired cells, and therefore to the energy deposited in the scintillator. As represented in Fig.~\ref{fig:sipm} (a), the photon detection efficiency (PDE) of the AFBR-S4N66P014M peaks near the emission maximum of BC-408, ensuring efficient detection of the scintillation light. The number of available microcells (22\,428) fulfills the requirements given the photons produced per scintillation event. The SiPM has a breakdown voltage of 33~V and supports overvoltages of up to 16~V.
+\begin{figure}[H]
+  \centering
+  \newlength{\panelheight}
+  \setlength{\panelheight}{5.2cm}% adjust once, both panels follow
+  \subfloat[]{\label{fig:sipm_pde}%
+    \includegraphics[height=\panelheight]{images/Emission.png}}
+  \hfill
+  \subfloat[]{\label{fig:bias}%
+    \resizebox{!}{\panelheight}{\input{figures/MAX1932}}}
+  \caption[SiPM spectral response and bias supply.]{%
+    \textbf{(a)} caption
+    \textbf{(b)} MAX1932 feedback network with the NTC thermistor $R_T$ for temperature compensation of the SiPM bias.
+  }
+  \label{fig:sipm}
+\end{figure}
+
+\subsection{SiPM Power Supply}
+
+The SiPM operating voltage was set to 37~V. Although gain increases with overvoltage, so do the dark count rate and crosstalk probability, which in excess mask the low-energy end of the spectrum. For the 20 to 100~keV range, an overvoltage of 4~V provides enough gain for these events to sit above noise levels. The bias is generated by a MAX1932 and its output is programmed through a Serial Peripheral Interface (SPI) by the MCU, which writes an eight-bit code to the internal DAC of the power supply.
+
+A fixed 37~V output does not account for the variation of the breakdown voltage with temperature, which increases at 30~mV/$^\circ$C. Since gain depends on the overvoltage, a constant bias means the gain decreases as temperature rises. The same deposited energy then produces a different pulse amplitude, affecting the energy calibration and the derived dose.
+
+To compensate for this, an NTC thermistor was added to the feedback network, as recommended in the MAX1932 datasheet and shown in Fig.~\ref{fig:sipm} (b). The total resistance between the FB node and ground is:
+\begin{equation}
+R_\text{total}(T) = R_8 + \frac{R_9\,R_T(T)}{R_9 + R_T(T)},
+\label{eq:rtotal}
+\end{equation}
+The output voltage is therefore:
+\begin{equation}
+V_\text{OUT} = 1.25\left(1 + \frac{R_5}{R_\text{total}(T)}\right) + \frac{R_5}{R_6}\left(1.25 - V_\text{DAC}\right),
+\label{eq:vout_max}
+\end{equation}
+where $V_\text{DAC}$ is the DAC output voltage. The compensation condition requires the derivative of Eq.~\ref{eq:vout_max} to equal the temperature coefficient of the breakdown voltage over the operating range of 18 to 25~$^\circ$C:
+\begin{equation}
+\frac{dV_\text{OUT}}{dT} = \frac{1.25\,R_5}{R_\text{total}^2}\left(\frac{R_9}{R_9 + R_T}\right)^2 \frac{\beta}{T^2}\,R_T = 30~\text{mV/}^\circ\text{C}.
+\label{eq:slope}
+\end{equation}
+Solving this condition together with Eqs.~\ref{eq:rtotal} and \ref{eq:vout_max} and the component selection equations of the datasheet yields $R_5 = 91$~k$\Omega$, $R_6 = 27$~k$\Omega$, $R_8 = 2.4$~k$\Omega$, and $R_9 = 910$~$\Omega$.
+
+
+
 \section{Front-End Electronics}
 \begin{figure}[H]
   \centering
@@ -711,6 +757,7 @@ The detector was positioned outside the beam line, at a distance sufficient to a
 \end{figure}
 
 The linear region of each \emph{Bremsstrahlung} spectrum was selected interactively, and a least-squares regression was applied to the points within that window. The $x$-intercept of the fitted line gives the endpoint channel. Since tube current affects only photon fluence and not the spectral endpoint, the five acquisitions per voltage produce five independent estimates (see Fig.~\ref{fig:bremss_calibration} (b)). The resulting values are summarized in Table~\ref{tab:endpoints}.
+
 % Small vertical space after surrounding text
 \vspace{1em}
 
@@ -747,31 +794,11 @@ The linear region of each \emph{Bremsstrahlung} spectrum was selected interactiv
     \bottomrule
   \end{tabular}
 \end{table}
-To extend the calibration beyond the range of the X-ray tube, spectra of the reference sources were acquired with the plastic scintillator over 90 min intervals. Of the three sources, the only features available are the $^{241}$Am photopeak at 59.5 keV, and the Compton edge of the 122 keV line of $^{57}$Co, at 39.46 keV, shown in Fig.~\ref{fig:energy_calibration} (a) and (b) respectively. The latter is treated as a validation of the \emph{Bremsstrahlung} method, as it falls within the energy range provided by the tube. The photopeak is, therefore, included as a calibration point at that energy.
-\begin{figure}[H]
-  \centering
-  \begin{minipage}[c]{0.40\linewidth}
-    \centering
-    \subfloat[]{\label{fig:Am-241}%
-      \includegraphics[width=\linewidth]{images/plastic_Am-241.pdf}}\\
-    \subfloat[]{\label{fig:Co-57}%
-      \includegraphics[width=\linewidth]{images/plastic_Co-57_fit.pdf}}
-  \end{minipage}%
-  \hfill%
-  \begin{minipage}[c]{0.60\linewidth}
-    \centering
-    \subfloat[]{\label{fig:Fit}%
-      \includegraphics[width=\linewidth]{images/energy.pdf}}
-  \end{minipage}
-  \caption[\emph{Bremsstrahlung}-Based Energy Calibration.]{%
-    \textbf{(a)} caption
-    \textbf{(b)} caption
-    \textbf{(c)} caption
-    }
-  \label{fig:energy_calibration}
-\end{figure}
+Although 20 and 25 keV lie in the boundary at which photoeletric absorption ceases to dominate in BC408~\cite{124}, the associated uncertainty is dominated by counting statistics. The associated error improves between 30 and 45 keV, indicating that in this region both the photoelectric cross-section and the photon fluence are sufficient for the endpoint to be determined with good precision. At 50 keV, the photoelectric absorption in the scintillator drops below 0.5\%, and consequently the uncertainty increases. As full energy transfer becomes less probable, the spectrum compresses toward a lower and less reliable endpoint. Additionally, pileup further distorts the spectral shape near the abscissa. The pileup distortion is visible as a non-linear tail in the higher energy spectra of Fig.~\ref{fig:bremss_calibration} (a), which is not characteristic of filtered \emph{Bremsstrahlung}. At higher count rates, the baseline does not recover between successive pulses, causing them to superimpose and producing the observed tail. These are the fundamental limitations of the endpoint method at higher energies, as the associated uncertainty is expected to grow accordingly.
 
-The mean and standard deviation were computed for each of the seven relevant voltages, from 20 to 50 kVp, and for the $^{241}$Am centroid. A weighted least-squares fit was applied to account for the differences in uncertainty across the energy range and is shown in Fig.~\ref{fig:energy_calibration} (c). For the \emph{Bremsstrahlung} endpoints, the uncertainty at the lower voltages is dominated by counting statistics. These energies lie in the boundary at which photoelectric absorption ceases to dominate over Compton scattering in BC408~\cite{124}. The near-invisible error bars between 30 and 40 keV indicate that in this region both the photoelectric cross-section and the photon fluence are sufficient for the endpoint to be determined with good precision. Although the 45 keV error bar remains small, both the 45 and 50 keV endpoints fall below the calibration line, beyond their uncertainties. This underestimation reflects the reduced photoelectric cross-section, which drops below 0.5\% in the scintillator at 50 keV. As full energy transfer becomes less probable, the spectrum compresses toward a lower and less reliable endpoint. Additionally, pileup further distorts the spectral shape near the abscissa. The pileup distortion is visible as a non-linear tail in the higher energy spectra of Fig.~\ref{fig:bremss_calibration} (a), which is not characteristic of filtered \emph{Bremsstrahlung}. At higher count rates, the baseline does not recover between successive pulses, causing them to superimpose and producing the observed tail. These are the fundamental limitations of the endpoint method at higher energies, as the associated uncertainty is expected to grow accordingly. In contrast, the $^{241}$Am centroid falls on the calibration line with an uncertainty smaller than that of the highest-energy endpoint estimate. Although the peak is not as sharp as that obtained with the CsI crystal in Section~\ref{sec:frontend-validation}, the centroid position is reproducible across acquisitions.
+To extend the calibration beyond the range of the X-ray tube, spectra of the reference sources were acquired with the plastic scintillator five times, each over a 90 min interval. Of the three sources, the only features available are the $^{241}$Am photopeak at 59.5 keV, and the Compton edge of the 122 keV line of $^{57}$Co, at 39.46 keV, shown in Fig.~\ref{fig:energy_calibration} (a) and (b) respectively. The latter is treated as a validation of the \emph{Bremsstrahlung} method, as it falls within the energy range provided by the tube. The photopeak is, therefore, included as a calibration point at that energy.
+
+A weighted least-squares fit was applied to account for the differences in uncertainty across the energy range and is shown in Fig.~\ref{fig:energy_calibration} (c). Although the 45 keV uncertainty is small, both the 45 and 50 keV endpoints fall below the calibration line, beyond their uncertainties. This underestimation is consistent with the compression of the spectrum discussed above. In contrast, the $^{241}$Am centroid falls on the calibration line with an uncertainty smaller than that of the highest-energy endpoint estimate. Although the peak is not as sharp as that obtained with the CsI crystal in Section~\ref{sec:frontend-validation}, the centroid position is reproducible across acquisitions.
 
 The weighted fit ensures that these better-determined points contribute more to the calibration, and the uncertainties in each estimate propagate into the calibration coefficients~\cite{121}. The fit is of the form:
 \begin{equation}
@@ -788,9 +815,32 @@ where $C$ is the channel number and $E$ is the energy in keV. With $R^2 = 0.989$
     \label{eq:energy_uncertainty}
 \end{equation}
 
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[c]{0.40\linewidth}
+    \centering
+    \subfloat[]{\label{fig:Am-241}%
+      \includegraphics[width=\linewidth]{images/plastic_Am-241.pdf}}\\
+    \subfloat[]{\label{fig:Co-57}%
+      \includegraphics[width=\linewidth]{images/plastic_Co-57_fit.pdf}}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[c]{0.60\linewidth}
+    \centering
+    \subfloat[]{\label{fig:Fit}%
+      \includegraphics[width=\linewidth]{images/energy.pdf}}
+  \end{minipage}
+ \caption[ Energy calibration of the DORI prototype.]{%
+  \textbf{(a)} $^{241}$Am spectrum, background subtracted, with the Gaussian fit to the 59.5~keV photopeak. The annotated centroid and FWHM are the mean of five acquisitions, with the maximum deviation from the mean as uncertainty.
+  \textbf{(b)} $^{57}$Co spectrum in the region of the Compton edge of the 122~keV line. The band marks the channel at which the calibration predicts the 39.46~keV edge, within its propagated uncertainty. 
+  \textbf{(c)} Weighted least-squares calibration fit to the seven \emph{Bremsstrahlung} endpoints and the $^{241}$Am photopeak centroid.
+}
+  \label{fig:energy_calibration}
+\end{figure}
+ 
 As the only available photopeak, the $^{241}$Am centroid is used to calculate the energy resolution of a plastic scintillator system at 59.5 keV~\cite{119,126}. Although $R$ is dimensionless and, in principle, independent of the channel-to-energy conversion, the non-zero intercept $b$ shifts the centroid without contributing to the FWHM. Consequently, the resolution differs between channel and energy space and these parameters must be converted to energy using Eqs.~\ref{eq:energy_conversion} and \ref{eq:energy_uncertainty}. With the values in Fig.~\ref{fig:energy_calibration} (a), DORI has an energy resolution of $R = (29 \pm 5)$\% at 59.5 keV, consistent with values reported in literature for BC408 plastic scintillators~\cite{126,127}.
 
-As for the Compton edge of the 122 keV line of $^{57}$Co, the feature was extracted as the channel of maximum counts. As introduced in Section~\ref{sec:compton_scattering}, this corresponds to the maximum energy transfer at the scattering angle of 180$^\circ$. Its uncertainty is larger than that of the $^{241}$Am photopeak, due to the less defined nature of the feature. Swiderski \emph{et al}.~\cite{122} have shown that, owing to the finite resolution of plastic, the Compton edge may not coincide with the counts maximum. The relative shift is larger at lower energies and can be resolved with the previously mentioned coincidence techniques using the backscatter peak~\cite{122}. Within these limitations, and as represented in Fig.~\ref{fig:energy_calibration} (b), the extracted channel $C_E$ falls, within its own uncertainty, inside the band at which the calibration predicts the 39.46 keV edge. The calibration therefore correctly locates an independent energy reference. The edge was nevertheless excluded from the calibration itself, since the 40 kVp \emph{Bremsstrahlung} endpoint provides a more reliable point at a close energy.
+As for the Compton edge of the 122 keV line of $^{57}$Co, the feature was extracted as the channel of maximum counts. As introduced in Section~\ref{sec:compton_scattering}, this corresponds to the maximum energy transfer at the scattering angle of 180$^\circ$. Its uncertainty is larger than that of the $^{241}$Am photopeak, due to the less defined nature of the feature. Swiderski \emph{et al}.~\cite{122} have shown that, owing to the finite resolution of plastic, the Compton edge may not coincide with the counts maximum. The relative shift is larger at lower energies and can be resolved with the previously mentioned coincidence techniques using the backscatter peak~\cite{122}. Within these limitations, and as represented in Fig.~\ref{fig:energy_calibration} (b), the extracted channel, $C_E$, falls, within its own uncertainty, inside the band at which the calibration predicts the 39.46 keV edge. The calibration therefore correctly locates an independent energy reference. The edge was nevertheless excluded from the calibration itself, since the 40 kVp \emph{Bremsstrahlung} endpoint provides a more reliable point at a close energy.
 
 Interpolation within 20 to 60 keV is therefore justified, whereas extrapolation beyond it is not. Extension of the linear fit to 100 keV cannot be assumed, as it would span the non-proportional region of the plastic response discussed in Section~\ref{sec:scintillator}. In the absence of additional calibration points, the gap between 60 and 100 keV is acknowledged as a limitation of the present calibration. Within these limits, the DORI prototype is considered validated in energy across the 20 to 60 keV range. The following dose calibration is performed within this interval.
 \section{Dose Rate Calibration}

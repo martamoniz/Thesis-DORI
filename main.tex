@@ -275,8 +275,10 @@ radiation exposure at four anatomical regions: eyes, neck, thorax (chest) and ha
 dashboard for real-time visualization. 
 
 \newpage
-%%%% Chapter 1: Basics of X-Ray Physics
-
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Chapter 1:  Radiation in IR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Radiation in IR}
 
 \section{Interventional Radiology}
@@ -329,6 +331,7 @@ The X-rays transmitted through the patient strike the image detection system, mo
 \end{table}
 
  \section{Photon Interaction with Matter}
+ \label{sec:Photon Interaction with Matter}
 X-rays interact with matter through four physical mechanisms: Rayleigh and Compton scattering, the photoelectric effect and pair production. Rayleigh scattering involves the elastic interaction of a photon with the entire atom, resulting in a slightly deflected scattered photon with the same energy. Its contribution to overall interactions in the context of IR is negligible. Additionally, pair production requires photon energies exceeding 1.02 MeV, which are not present in diagnostic X-ray procedures \cite{6}. Therefore, only the photoelectric effect and Compton scattering are considered in detail.
 \subsection{Compton Scattering}
 \label{sec:compton_scattering}
@@ -597,33 +600,30 @@ Other staff members, including nurses and technicians, also benefited from dose 
 \chapter{DORI - Hardware Development}
 \section{Scintillator}
 \label{sec:scintillator}
+The detection of the scattered radiation is based on a plastic scintillator (PS). PSs are organic materials that emit photons in the near ultraviolet to visible range when excited by ionising radiation. The selected scintillator is a $5 \times 5 \times 5$~mm$^3$ BC-408 cube. BC-408 consists of a polyvinyltoluene base doped with fluorophore compounds that shift the emission to a peak wavelength of 425~nm~\cite{128}.
+ 
+The main advantage of PSs is their tissue equivalence. Their $Z_\mathrm{eff}$ is also lower than that of the materials used in passive dosimeters or in solid-state diodes. The energy absorbed in the scintillator therefore approximates the dose to soft tissue without requiring further corrections~\cite{129}. However, as a drawback, the same tissue equivalence implies that, as in soft tissue, Compton scattering predominates over the photoelectric effect at the photon energies of the scattered field. From an energy calibration perspective, the acquired spectrum reduces to a Compton continuum without photopeaks, and the standard identification of gamma-emitting radionuclides is not possible (recall Section~\ref{sec:Photon Interaction with Matter}). Consequently, the energy resolution of these detectors is poor. The only identifiable spectral feature is the Compton edge (CE), corresponding to the maximum energy transfer at a scattering angle of $\theta = 180^{\circ}$, whose energy is well known for a given source, as described. Nonetheless, owing to the poor energy resolution at the energies of interest, the CE may not coincide with the channel of maximum counts. To resolve this ambiguity, Compton coincidence techniques are employed, in which the backscattered photon from a CE event is detected in coincidence with a reference detector. However, these have primarily been demonstrated using $^{22}$Na and $^{137}$Cs, whose CEs lie outside the range relevant to this work~\cite{127}.
+ 
+Such methods also assume a linear response in energy, which does not hold at low energies. Ideally, the scintillation efficiency of a dosimeter should be independent of energy. For most scintillators, the light output is not proportional to the deposited energy at low energies. This behaviour originates from ionisation quenching, in which slow electrons deposit their energy with higher ionisation density, and part of the excitation is dissipated without the emission of light. However, for PSs, the response to electrons is linear only above approximately 125~keV~\cite{130}. In the present work, the electrons produced in the PS fall below this region. The pulse height of the detected events is therefore not proportional to the deposited energy. As a consequence, the energy response cannot be described by a single linear relationship and must instead be characterised locally, with any calibration valid only within the region where it is established.
 \section{Photodetector}
-To detect the scintillation light and convert it into an electrical signal, a SiPM from Broadcom (AFBR-S4N66P014M) was optically coupled to the scintillator. Its $6\times6$~mm\textsuperscript{2} active area matches the scintillator cross section, maximizing light collection.
+To detect the scintillation light and convert it into an electrical signal, a SiPM from Broadcom (AFBR-S4N66P014M) was optically coupled to the scintillator. Its $6\times6$~mm\textsuperscript{2} active area matches the scintillator cross section, maximizing light collection. Additionally, the photon detection efficiency of the SiPM peaks at 420~nm, close to the peak emission of the PS used~\cite{131}.
 
-A SiPM consists of a parallel array of avalanche photodiodes operated in Geiger mode. Each cell is reverse biased above its breakdown voltage, so a single absorbed photon is sufficient to trigger a self-sustaining avalanche. The photons produced by a scintillation event fire many cells simultaneously, each of which contributes one identical pulse. The summed output current is proportional to the number of fired cells, and therefore to the energy deposited in the scintillator. As represented in Fig.~\ref{fig:sipm} (a), the photon detection efficiency (PDE) of the AFBR-S4N66P014M peaks near the emission maximum of BC-408, ensuring efficient detection of the scintillation light. The number of available microcells (22\,428) fulfills the requirements given the photons produced per scintillation event. The SiPM has a breakdown voltage of 33~V and supports overvoltages of up to 16~V.
-\begin{figure}[H]
-  \centering
-  \newlength{\panelheight}
-  \setlength{\panelheight}{5.2cm}% adjust once, both panels follow
-  \subfloat[]{\label{fig:sipm_pde}%
-    \includegraphics[height=\panelheight]{images/Emission.png}}
-  \hfill
-  \subfloat[]{\label{fig:bias}%
-    \resizebox{!}{\panelheight}{\input{figures/MAX1932}}}
-  \caption[SiPM spectral response and bias supply.]{%
-    \textbf{(a)} caption
-    \textbf{(b)} MAX1932 feedback network with the NTC thermistor $R_T$ for temperature compensation of the SiPM bias.
-  }
-  \label{fig:sipm}
-\end{figure}
+A SiPM consists of a parallel array of avalanche photodiodes operated in Geiger mode. Each cell is reverse biased above its breakdown voltage, so a single absorbed photon is sufficient to trigger a self-sustaining avalanche. The photons produced by a scintillation event fire many pixels simultaneously, each of which contributes one identical pulse. The summed output current is proportional to the number of fired cells, and therefore to the energy deposited in the PS~\cite{14}. The number of available microcells (22\,428) fulfills the requirements given the photons produced per scintillation event. The SiPM has a breakdown voltage of 33~V and supports overvoltages of up to 16~V~\cite{131}.
 
 \subsection{SiPM Power Supply}
 
-The SiPM operating voltage was set to 37~V. Although gain increases with overvoltage, so do the dark count rate and crosstalk probability, which in excess mask the low-energy end of the spectrum. For the 20 to 100~keV range, an overvoltage of 4~V provides enough gain for these events to sit above noise levels. The bias is generated by a MAX1932 and its output is programmed through a Serial Peripheral Interface (SPI) by the MCU, which writes an eight-bit code to the internal DAC of the power supply.
+The SiPM operating voltage was set to 37~V. Although gain increases with overvoltage, so do the dark count rate and crosstalk probability, which in excess mask the low-energy end of the spectrum. For the 20 to 100~keV range, an overvoltage of 4~V provides enough gain for these events to sit above noise levels. The bias is generated by a MAX1932 and its output is programmed through a Serial Peripheral Interface (SPI) by the MCU, which writes an eight-bit code to the internal DAC of the power supply~\cite{132}.
 
 A fixed 37~V output does not account for the variation of the breakdown voltage with temperature, which increases at 30~mV/$^\circ$C. Since gain depends on the overvoltage, a constant bias means the gain decreases as temperature rises. The same deposited energy then produces a different pulse amplitude, affecting the energy calibration and the derived dose.
 
-To compensate for this, an NTC thermistor was added to the feedback network, as recommended in the MAX1932 datasheet and shown in Fig.~\ref{fig:sipm} (b). The total resistance between the FB node and ground is:
+To compensate for this, an NTC thermistor was added to the feedback network, as recommended in the MAX1932 datasheet and shown in Fig.~\ref{fig:bias}~\cite{131}. 
+\begin{figure}[H]
+  \centering
+  \resizebox{!}{5.2cm}{\input{figures/MAX1932}}
+  \caption[SiPM bias supply.]{MAX1932 feedback network with the NTC thermistor $R_T$ for temperature compensation of the SiPM bias. Pin labels on the left correspond to SPI connections.}
+  \label{fig:bias}
+\end{figure}
+\noindent The total resistance between the FB node and ground is:
 \begin{equation}
 R_\text{total}(T) = R_8 + \frac{R_9\,R_T(T)}{R_9 + R_T(T)},
 \label{eq:rtotal}
@@ -649,7 +649,7 @@ Solving this condition together with Eqs.~\ref{eq:rtotal} and \ref{eq:vout_max} 
   \caption[Architecture]{Architecture of the detection system.}
   \label{fig:architecture}
 \end{figure}
-\subsection{Charge-Sensitive Amplifier}
+\subsection{Pulse Shaping Chain}
 The current pulse produced by the SiPM delivers a quantity of charge, $Q$, that must be converted into a measurable voltage signal in the preamplifier~\cite{105}:
 \begin{equation}
     Q = \int I(t)\, dt, \quad \text{unit: } [\mathrm{C}]
@@ -672,7 +672,7 @@ The charge gain of the CSA, $G$,  depends exclusively on $C_f$ and is therefore~
     G = \frac{V_{\text{out}}}{Q} = -\frac{1}{C_f}, \quad \text{unit: } [\mathrm{V/C}]
     \label{eq:gain}
 \end{equation}
-\subsection{Pole-Zero Cancellation}
+
 To preserve the pulse amplitude, which carries the energy information of the detected event, additional signal conditioning stages were implemented. Given the high event count rate expected in IR, a Semi-Gaussian shaper was adopted in order to improve the signal-to-noise ratio and prevent baseline drift. It consists of a CR differentiator followed by $n$ RC integrator stages. Increasing $n$ produces a more symmetric output pulse, which returns to baseline faster but introduces a longer peaking time~\cite{14}. For this work, a simple CR-RC ($n=1$) network was used.
 
 The finite decay time constant of the CSA causes an undershoot at the shaper output~\cite{107}. If the signal has not recovered before the next event arrives, the subsequent pulse is superimposed on this undershoot, reducing its measured amplitude. To mitigate this effect, a Pole-Zero Cancellation (PZC) configuration was implemented. $C_{\text{diff}}$ and $R_{\text{diff}}$ form the CR differentiation network. A resistor $R_{\text{pz}}$, placed in parallel with $C_{\text{diff}}$, introduces a zero that compensates the pole produced by the CSA. Proper cancellation occurs when the following condition is satisfied~\cite{108,14,110}:
@@ -681,7 +681,6 @@ The finite decay time constant of the CSA causes an undershoot at the shaper out
     \label{eq:pzc}
 \end{equation}
 
-\subsection{Shaping Amplifier}
 Due to the attenuation introduced by the PZC filter, the subsequent integrating stage must also provide amplification. The RC stage was implemented as an inverting active low-pass filter, similar to the CSA configuration, but with an input resistor $R_S$ added to set the gain. The voltage gain of the shaper, $A_s$, is given by~\cite{109}:
 \begin{equation}
     A_s = -\frac{R_g}{R_S}, \quad
@@ -840,7 +839,7 @@ where $C$ is the channel number and $E$ is the energy in keV. With $R^2 = 0.989$
  
 As the only available photopeak, the $^{241}$Am centroid is used to calculate the energy resolution of a plastic scintillator system at 59.5 keV~\cite{119,126}. Although $R$ is dimensionless and, in principle, independent of the channel-to-energy conversion, the non-zero intercept $b$ shifts the centroid without contributing to the FWHM. Consequently, the resolution differs between channel and energy space and these parameters must be converted to energy using Eqs.~\ref{eq:energy_conversion} and \ref{eq:energy_uncertainty}. With the values in Fig.~\ref{fig:energy_calibration} (a), DORI has an energy resolution of $R = (29 \pm 5)$\% at 59.5 keV, consistent with values reported in literature for BC408 plastic scintillators~\cite{126,127}.
 
-As for the Compton edge of the 122 keV line of $^{57}$Co, the feature was extracted as the channel of maximum counts. As introduced in Section~\ref{sec:compton_scattering}, this corresponds to the maximum energy transfer at the scattering angle of 180$^\circ$. Its uncertainty is larger than that of the $^{241}$Am photopeak, due to the less defined nature of the feature. Swiderski \emph{et al}.~\cite{122} have shown that, owing to the finite resolution of plastic, the Compton edge may not coincide with the counts maximum. The relative shift is larger at lower energies and can be resolved with the previously mentioned coincidence techniques using the backscatter peak~\cite{122}. Within these limitations, and as represented in Fig.~\ref{fig:energy_calibration} (b), the extracted channel, $C_E$, falls, within its own uncertainty, inside the band at which the calibration predicts the 39.46 keV edge. The calibration therefore correctly locates an independent energy reference. The edge was nevertheless excluded from the calibration itself, since the 40 kVp \emph{Bremsstrahlung} endpoint provides a more reliable point at a close energy.
+As for the Compton edge of the 122 keV line of $^{57}$Co, the feature was extracted as the channel of maximum counts. Its uncertainty is larger than that of the $^{241}$Am photopeak, due to the less defined nature of the feature. Within these limitations presented in Section~\ref{sec:scintillator}, and as represented in Fig.~\ref{fig:energy_calibration} (b), the extracted channel, $C_E$, falls, within its own uncertainty, inside the band at which the calibration predicts the 39.46 keV edge. The calibration therefore correctly locates an independent energy reference. The edge was nevertheless excluded from the calibration itself, since the 40 kVp \emph{Bremsstrahlung} endpoint provides a more reliable point at a close energy.
 
 Interpolation within 20 to 60 keV is therefore justified, whereas extrapolation beyond it is not. Extension of the linear fit to 100 keV cannot be assumed, as it would span the non-proportional region of the plastic response discussed in Section~\ref{sec:scintillator}. In the absence of additional calibration points, the gap between 60 and 100 keV is acknowledged as a limitation of the present calibration. Within these limits, the DORI prototype is considered validated in energy across the 20 to 60 keV range. The following dose calibration is performed within this interval.
 \section{Dose Rate Calibration}

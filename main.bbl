@@ -356,6 +356,38 @@ L.~Faggioni, F.~Paolicchi, L.~Bastiani, D.~Guido, and D.~Caramella, ``Awareness
   hospital: Results of a comprehensive survey,'' {\em European Journal of
   Radiology}, vol.~86, pp.~135--142, 1 2017.
 
+\bibitem{128}
+Luxium Solutions, {\em BC-400, BC-404, BC-408, BC-412, BC-416 Premium Plastic
+  Scintillators}.
+\newblock Accessed: 2026-07-18.
+
+\bibitem{129}
+F.~Lessard, L.~Archambault, M.~Plamondon, P.~Després, F.~Therriault‐Proulx,
+  S.~Beddar, and L.~Beaulieu, ``Validating plastic scintillation detectors for
+  photon dosimetry in the radiologic energy range,'' {\em Medical Physics},
+  vol.~39, p.~5308–5316, Aug. 2012.
+
+\bibitem{127}
+L.~Swiderski, R.~Marcinkowski, M.~Moszynski, W.~Czarnacki, M.~Szawlowski,
+  T.~Szczesniak, G.~Pausch, C.~Plettner, and K.~Roemer, ``Electron response of
+  some low-z scintillators in wide energy range,'' {\em Journal of
+  Instrumentation}, vol.~7, no.~06, p.~P06011–P06011, 2012.
+
+\bibitem{130}
+J.~F. Williamson, J.~F. Dempsey, A.~S. Kirov, J.~I. Monroe, W.~R. Binns, and
+  H.~Hedtj\"{a}rn, ``Plastic scintillator response to low-energy photons,''
+  {\em Physics in Medicine and Biology}, vol.~44, p.~857–871, Jan. 1999.
+
+\bibitem{131}
+{Broadcom Inc.}, {\em {AFBR-S4N66P014M: NUV-MT Silicon Photomultiplier}}, 2023.
+\newblock High-Sensitivity NUV Silicon Photomultiplier Single SiPM ($6 \times
+  6$ mm$^2$).
+
+\bibitem{132}
+Maxim Integrated, {\em MAX1932: Digitally Controlled, 0.5\% Accurate, Safest
+  APD Bias Supply}, 2023.
+\newblock Rev. 2.
+
 \bibitem{105}
 A.~Rivetti, {\em CMOS Front-End Electronics for Radiation Sensors}.
 \newblock Boca Raton, FL: CRC Press, 1~ed., 2015.
@@ -436,17 +468,5 @@ N.~N.~T. Tran, S.~Sasaki, T.~Sanami, Y.~Kishimoto, and E.~Shibamura, ``Some
   {\em Proceedings of the Second International Symposium on Radiation Detectors
   and Their Uses (ISRD2018)}, Journal of the Physical Society of Japan, Jan.
   2019.
-
-\bibitem{127}
-L.~Swiderski, R.~Marcinkowski, M.~Moszynski, W.~Czarnacki, M.~Szawlowski,
-  T.~Szczesniak, G.~Pausch, C.~Plettner, and K.~Roemer, ``Electron response of
-  some low-z scintillators in wide energy range,'' {\em Journal of
-  Instrumentation}, vol.~7, no.~06, p.~P06011–P06011, 2012.
-
-\bibitem{122}
-L.~Swiderski, M.~Moszynski, W.~Czarnacki, J.~Iwanowska, A.~Syntfeld-Kauch,
-  T.~Szczesniak, G.~Pausch, C.~Plettner, and K.~Roemer, ``Measurement of
-  compton edge position in low-z scintillators,'' {\em Radiation Measurements},
-  vol.~45, p.~605–607, Mar. 2010.
 
 \end{thebibliography}

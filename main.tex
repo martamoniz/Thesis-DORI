@@ -598,15 +598,31 @@ Other staff members, including nurses and technicians, also benefited from dose 
 %%% Chapter 2: DORI - Hardware Development
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{DORI - Hardware Development}
+This chapter describes the development of the DORI (\textit{DOs\'imetro para Radiologia de Interven\c{c}\~ao}) prototype, designed in response to the previously identified limitations. The conceptual design of the system is shown in Fig.~\ref{fig:DORI}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{images/DORI.pdf}
+  \caption[Conceptual design of the DORI system.]{Conceptual design of the DORI system. The wearable unit (exploded
+view) is worn over the protective apron and comprises the scintillator,
+photodetector, readout circuit, MCU and LiPo battery. Data are sent to a
+Raspberry Pi, which displays the real-time and history interfaces.}
+  \label{fig:DORI}
+\end{figure}
+DORI consists of a compact wearable unit, worn over the protective apron, which integrates the full detection, pulse processing and transmission chain. Each stage is described in detail in the following sections. In general terms, scattered radiation interacts with a scintillator, and the resulting light is converted into an electrical signal by a photodetector.
+The detector operates in pulse mode, where each interaction is registered as an individual event. The corresponding pulse is conditioned by a readout board, which preserves the amplitude and thereby the energy deposited in each event. By accounting for the energy of individual events, rather than integrating total charge, the accuracy of the dose calculation can be improved.
+
+The chain is controlled by an microcontroller unit (MCU) with wireless communication capabilities. The ESP32-C3 was selected for being compact, lightweight and low-cost. It supports 2.4~GHz Wi-Fi and Bluetooth\textsuperscript{\textregistered} Low Energy (BLE)~5~\cite{134}, the latter being the adopted communication protocol. Unlike Wi-Fi, BLE establishes a direct link with the receiver and requires no external router, reducing system complexity. In addition, BLE~5 offers extended range and increased data throughput relative to previous versions, meeting the requirements of continuous dose transmission. The unit is powered by a rechargeable lithium polymer (LiPo) battery, the AKYGA LP103040~\cite{135}, whose 1200~mAh capacity supports uninterrupted operation over extended periods. The selected Seeed Studio XIAO ESP32-C3 board already incorporates a charging circuit for the battery via its USB-C port~\cite{133}. Accordingly, the front-end electronics operate at a 3.3~V logic level.
+
+To preserve battery life, the wearable unit does not compute dose. The MCU accumulates the amplitude information of the detected events and transmits it via BLE at a one-second rate to a Raspberry Pi. Since the Raspberry Pi is permanently powered, it handles all data processing, from pulse amplitude to energy and, ultimately, to dose. A real-time interface then displays the dose rate with a complementary colour-coded scale, updated at the same one-second rate. The scale is replicated on an LED integrated in the wearable unit, with the corresponding colour level sent back to the badge via BLE. All measured data are also stored in an internal database, from which a second interface builds retrospective summaries of the recorded exposure.
 \section{Scintillator}
 \label{sec:scintillator}
 The detection of the scattered radiation is based on a plastic scintillator (PS). PSs are organic materials that emit photons in the near ultraviolet to visible range when excited by ionising radiation. The selected scintillator is a $5 \times 5 \times 5$~mm$^3$ BC-408 cube. BC-408 consists of a polyvinyltoluene base doped with fluorophore compounds that shift the emission to a peak wavelength of 425~nm~\cite{128}.
  
-The main advantage of PSs is their tissue equivalence. Their $Z_\mathrm{eff}$ is also lower than that of the materials used in passive dosimeters or in solid-state diodes. The energy absorbed in the scintillator therefore approximates the dose to soft tissue without requiring further corrections~\cite{129}. However, as a drawback, the same tissue equivalence implies that, as in soft tissue, Compton scattering predominates over the photoelectric effect at the photon energies of the scattered field. From an energy calibration perspective, the acquired spectrum reduces to a Compton continuum without photopeaks, and the standard identification of gamma-emitting radionuclides is not possible (recall Section~\ref{sec:Photon Interaction with Matter}). Consequently, the energy resolution of these detectors is poor. The only identifiable spectral feature is the Compton edge (CE), corresponding to the maximum energy transfer at a scattering angle of $\theta = 180^{\circ}$, whose energy is well known for a given source, as described. Nonetheless, owing to the poor energy resolution at the energies of interest, the CE may not coincide with the channel of maximum counts. To resolve this ambiguity, Compton coincidence techniques are employed, in which the backscattered photon from a CE event is detected in coincidence with a reference detector. However, these have primarily been demonstrated using $^{22}$Na and $^{137}$Cs, whose CEs lie outside the range relevant to this work~\cite{127}.
- 
-Such methods also assume a linear response in energy, which does not hold at low energies. Ideally, the scintillation efficiency of a dosimeter should be independent of energy. For most scintillators, the light output is not proportional to the deposited energy at low energies. This behaviour originates from ionisation quenching, in which slow electrons deposit their energy with higher ionisation density, and part of the excitation is dissipated without the emission of light. However, for PSs, the response to electrons is linear only above approximately 125~keV~\cite{130}. In the present work, the electrons produced in the PS fall below this region. The pulse height of the detected events is therefore not proportional to the deposited energy. As a consequence, the energy response cannot be described by a single linear relationship and must instead be characterised locally, with any calibration valid only within the region where it is established.
+The main advantage of PSs is their tissue equivalence. Their $Z_\mathrm{eff}$ is also lower than that of the materials used in passive dosimeters or in solid-state diodes. The energy absorbed in the scintillator therefore approximates the dose to soft tissue without requiring further corrections~\cite{129}. However, as a drawback, the same tissue equivalence implies that, as in soft tissue, Compton scattering predominates over the photoelectric effect at the photon energies of the scattered field. From an energy calibration perspective, the acquired spectrum reduces to a Compton continuum without photopeaks, and the standard identification of gamma-emitting radionuclides is not possible (recall Section~\ref{sec:Photon Interaction with Matter}). Consequently, the energy resolution of these detectors is poor. The only identifiable spectral feature is the Compton edge (CE), corresponding to the maximum energy transfer at a scattering angle of $\theta = 180^{\circ}$, whose energy is well known for a given source. Nonetheless, owing to the poor energy resolution at the energies of interest, the CE may not coincide with the channel of maximum counts. To resolve this ambiguity, Compton coincidence techniques are employed, in which the backscattered photon from a CE event is detected in coincidence with a reference detector. However, these have primarily been demonstrated using $^{22}$Na and $^{137}$Cs, whose CEs lie outside the range relevant to this work~\cite{127}.
+
+Such methods also assume a proportional response, meaning a light output that scales linearly with the deposited energy. However, below approximately 125~keV, the light output of PSs is non-proportional due to ionisation quenching. Slow (lower energy) electrons ionise the medium more densely, and part of the excitation is dissipated without the emission of light~\cite{130}. The Compton electrons produced in the PS in this work fall below this threshold. The pulse height of the detected events is therefore not a linear measure of the deposited energy, and the response must instead be characterised locally, with any calibration valid only within the region where it is established.
 \section{Photodetector}
-To detect the scintillation light and convert it into an electrical signal, a SiPM from Broadcom (AFBR-S4N66P014M) was optically coupled to the scintillator. Its $6\times6$~mm\textsuperscript{2} active area matches the scintillator cross section, maximizing light collection. Additionally, the photon detection efficiency of the SiPM peaks at 420~nm, close to the peak emission of the PS used~\cite{131}.
+To detect the scintillation light and convert it into an electrical signal, a SiPM from Broadcom (AFBR-S4N66P014M) was optically coupled to the scintillator. Its $6\times6$~mm\textsuperscript{2} active area matches the PS cross section, maximizing light collection. Additionally, the photon detection efficiency of the SiPM peaks at 420~nm, close to the peak emission of BC-408~\cite{131}.
 
 A SiPM consists of a parallel array of avalanche photodiodes operated in Geiger mode. Each cell is reverse biased above its breakdown voltage, so a single absorbed photon is sufficient to trigger a self-sustaining avalanche. The photons produced by a scintillation event fire many pixels simultaneously, each of which contributes one identical pulse. The summed output current is proportional to the number of fired cells, and therefore to the energy deposited in the PS~\cite{14}. The number of available microcells (22\,428) fulfills the requirements given the photons produced per scintillation event. The SiPM has a breakdown voltage of 33~V and supports overvoltages of up to 16~V~\cite{131}.
 
@@ -649,7 +665,7 @@ Solving this condition together with Eqs.~\ref{eq:rtotal} and \ref{eq:vout_max} 
   \caption[Architecture]{Architecture of the detection system.}
   \label{fig:architecture}
 \end{figure}
-\subsection{Pulse Shaping Chain}
+\subsection{Pulse Shaping}
 The current pulse produced by the SiPM delivers a quantity of charge, $Q$, that must be converted into a measurable voltage signal in the preamplifier~\cite{105}:
 \begin{equation}
     Q = \int I(t)\, dt, \quad \text{unit: } [\mathrm{C}]
@@ -692,7 +708,9 @@ Due to the attenuation introduced by the PZC filter, the subsequent integrating 
   \caption[Pulse shaping chain.]{Caption.}
   \label{fig:shaping_chain}
 \end{figure}
-\section{Readout Logic}
+\subsection{Pulse Discrimination}
+
+\subsection{Pulse Sampling}
 
 
 \section{Validation of the Front-End Electronics}

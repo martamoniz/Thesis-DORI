@@ -356,6 +356,22 @@ L.~Faggioni, F.~Paolicchi, L.~Bastiani, D.~Guido, and D.~Caramella, ``Awareness
   hospital: Results of a comprehensive survey,'' {\em European Journal of
   Radiology}, vol.~86, pp.~135--142, 1 2017.
 
+\bibitem{134}
+{Espressif Systems}, {\em ESP32-C3 Series Datasheet}.
+\newblock Espressif Systems, version 2.4~ed., 2026.
+\newblock Accessed: 2026-07-19.
+
+\bibitem{135}
+{Akyga Battery}, {\em Specification Approval Sheet: Polymer Lithium-Ion Battery
+  LP103040 (AKY0663)}.
+\newblock Akyga Battery, 2024.
+\newblock 3.7 V, 1200 mAh Li-Po battery. Accessed: 2026-07-19.
+
+\bibitem{133}
+{Seeed Studio}, ``{Seeed Studio XIAO ESP32C3} getting started.''
+  \url{https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/}, 2026.
+\newblock Accessed: 2026-07-19.
+
 \bibitem{128}
 Luxium Solutions, {\em BC-400, BC-404, BC-408, BC-412, BC-416 Premium Plastic
   Scintillators}.

@@ -424,6 +424,17 @@ INPUT .\images\dose rates.png
 INPUT .\images\dose rates.png
 INPUT .\images\dose rates.png
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\eurosym\feymr10.tfm
+INPUT .\images\DORI.pdf
+INPUT .\images\DORI.pdf
+INPUT .\images\DORI.pdf
+INPUT .\images\DORI.pdf
+INPUT .\images\DORI.pdf
+INPUT .\images\DORI.pdf
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr8.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT .\figures\MAX1932
 INPUT .\figures\MAX1932
 INPUT figures\MAX1932
@@ -509,11 +520,7 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi9.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy9.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr9.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

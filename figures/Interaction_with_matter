@@ -1,0 +1,202 @@
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,376); %set diagram left start at 0, and has height of 376
+
+%Straight Lines [id:da8331732947253031] 
+\draw    (411.51,297.75) -- (411.51,301.12) ;
+%Curve Lines [id:da07614960912817714] 
+\draw [color={rgb, 255:red, 26; green, 111; blue, 223 }  ,draw opacity=1 ,line width=1.2pt]   (136.37,298.53) .. controls (145.24,303.36) and (142.94,169.32) .. (145.57,181.81) .. controls (148.20,194.31) and (145.66,302.94) .. (153.27,298.53) ;
+%Flowchart: Connector [id:dp8698816436973303] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 241; green, 74; blue, 73 }  ,fill opacity=1 ] (134.92,106.24) .. controls (134.92,103.11) and (137.65,100.58) .. (141.02,100.58) .. controls (144.38,100.58) and (147.11,103.11) .. (147.11,106.24) .. controls (147.11,109.36) and (144.38,111.89) .. (141.02,111.89) .. controls (137.65,111.89) and (134.92,109.36) .. (134.92,106.24) -- cycle ;
+%Flowchart: Connector [id:dp6016939388166955] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 55; green, 173; blue, 107 }  ,fill opacity=1 ] (128.82,106.24) .. controls (128.82,103.11) and (131.55,100.58) .. (134.92,100.58) .. controls (138.29,100.58) and (141.02,103.11) .. (141.02,106.24) .. controls (141.02,109.36) and (138.29,111.89) .. (134.92,111.89) .. controls (131.55,111.89) and (128.82,109.36) .. (128.82,106.24) -- cycle ;
+%Flowchart: Connector [id:dp870797524157706] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 241; green, 74; blue, 73 }  ,fill opacity=1 ] (116.62,106.24) .. controls (116.62,103.11) and (119.35,100.58) .. (122.72,100.58) .. controls (126.09,100.58) and (128.82,103.11) .. (128.82,106.24) .. controls (128.82,109.36) and (126.09,111.89) .. (122.72,111.89) .. controls (119.35,111.89) and (116.62,109.36) .. (116.62,106.24) -- cycle ;
+%Flowchart: Connector [id:dp627542696245496] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 55; green, 173; blue, 107 }  ,fill opacity=1 ] (122.72,100.58) .. controls (122.72,97.46) and (125.45,94.93) .. (128.82,94.93) .. controls (132.19,94.93) and (134.92,97.46) .. (134.92,100.58) .. controls (134.92,103.71) and (132.19,106.24) .. (128.82,106.24) .. controls (125.45,106.24) and (122.72,103.71) .. (122.72,100.58) -- cycle ;
+%Flowchart: Connector [id:dp5375054085427382] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 241; green, 74; blue, 73 }  ,fill opacity=1 ] (122.72,106.24) .. controls (122.72,103.11) and (125.45,100.58) .. (128.82,100.58) .. controls (132.19,100.58) and (134.92,103.11) .. (134.92,106.24) .. controls (134.92,109.36) and (132.19,111.89) .. (128.82,111.89) .. controls (125.45,111.89) and (122.72,109.36) .. (122.72,106.24) -- cycle ;
+%Flowchart: Connector [id:dp6739507849361118] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 241; green, 74; blue, 73 }  ,fill opacity=1 ] (128.82,100.58) .. controls (128.82,97.46) and (131.55,94.93) .. (134.92,94.93) .. controls (138.29,94.93) and (141.02,97.46) .. (141.02,100.58) .. controls (141.02,103.71) and (138.29,106.24) .. (134.92,106.24) .. controls (131.55,106.24) and (128.82,103.71) .. (128.82,100.58) -- cycle ;
+%Flowchart: Connector [id:dp9087568392075522] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 55; green, 173; blue, 107 }  ,fill opacity=1 ] (122.72,111.89) .. controls (122.72,108.77) and (125.45,106.24) .. (128.82,106.24) .. controls (132.19,106.24) and (134.92,108.77) .. (134.92,111.89) .. controls (134.92,115.02) and (132.19,117.55) .. (128.82,117.55) .. controls (125.45,117.55) and (122.72,115.02) .. (122.72,111.89) -- cycle ;
+%Shape: Ellipse [id:dp1297425550381317] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}][line width=0.75]  (101.26,104.9) .. controls (101.26,87.54) and (114.91,73.47) .. (131.75,73.47) .. controls (148.59,73.47) and (162.24,87.54) .. (162.24,104.9) .. controls (162.24,122.25) and (148.59,136.32) .. (131.75,136.32) .. controls (114.91,136.32) and (101.26,122.25) .. (101.26,104.9) -- cycle ;
+%Flowchart: Connector [id:dp40302674860328336] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (168.34,41.42) .. controls (168.34,37.95) and (171.07,35.14) .. (174.43,35.14) .. controls (177.8,35.14) and (180.53,37.95) .. (180.53,41.42) .. controls (180.53,44.89) and (177.8,47.71) .. (174.43,47.71) .. controls (171.07,47.71) and (168.34,44.89) .. (168.34,41.42) -- cycle ;
+%Straight Lines [id:da35943405234098036] 
+\draw    (173.21,41.42) -- (175.65,41.42) ;
+
+%Flowchart: Connector [id:dp10370279850528152] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (146.87,125.89) .. controls (146.87,122.42) and (149.6,119.6) .. (152.97,119.6) .. controls (156.34,119.6) and (159.07,122.42) .. (159.07,125.89) .. controls (159.07,129.36) and (156.34,132.17) .. (152.97,132.17) .. controls (149.6,132.17) and (146.87,129.36) .. (146.87,125.89) -- cycle ;
+%Straight Lines [id:da06119747239594853] 
+\draw    (151.75,125.89) -- (154.19,125.89) ;
+
+%Shape: Ellipse [id:dp7627265983861747] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}] (82.66,104.9) .. controls (82.66,76.96) and (104.63,54.31) .. (131.75,54.31) .. controls (158.86,54.31) and (180.84,76.96) .. (180.84,104.9) .. controls (180.84,132.84) and (158.86,155.49) .. (131.75,155.49) .. controls (104.63,155.49) and (82.66,132.84) .. (82.66,104.9) -- cycle ;
+%Flowchart: Connector [id:dp3142676074212202] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (126.62,53.74) .. controls (126.62,50.27) and (129.35,47.46) .. (132.72,47.46) .. controls (136.09,47.46) and (138.82,50.27) .. (138.82,53.74) .. controls (138.82,57.21) and (136.09,60.03) .. (132.72,60.03) .. controls (129.35,60.03) and (126.62,57.21) .. (126.62,53.74) -- cycle ;
+%Straight Lines [id:da768025997880133] 
+\draw    (131.5,53.74) -- (133.94,53.74) ;
+
+%Flowchart: Connector [id:dp30873589422672376] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (131.75,154.55) .. controls (131.75,151.08) and (134.48,148.26) .. (137.84,148.26) .. controls (141.21,148.26) and (143.94,151.08) .. (143.94,154.55) .. controls (143.94,158.02) and (141.21,160.83) .. (137.84,160.83) .. controls (134.48,160.83) and (131.75,158.02) .. (131.75,154.55) -- cycle ;
+%Straight Lines [id:da5075421281910572] 
+\draw    (136.62,154.55) -- (139.06,154.55) ;
+
+%Flowchart: Connector [id:dp9894655460576032] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (174.68,104.77) .. controls (174.68,101.3) and (177.41,98.49) .. (180.78,98.49) .. controls (184.14,98.49) and (186.87,101.3) .. (186.87,104.77) .. controls (186.87,108.24) and (184.14,111.06) .. (180.78,111.06) .. controls (177.41,111.06) and (174.68,108.24) .. (174.68,104.77) -- cycle ;
+%Straight Lines [id:da05474544120457914] 
+\draw    (179.56,104.77) -- (182,104.77) ;
+
+%Flowchart: Connector [id:dp20786805194406444] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (75.89,104.52) .. controls (75.89,101.05) and (78.62,98.24) .. (81.99,98.24) .. controls (85.35,98.24) and (88.08,101.05) .. (88.08,104.52) .. controls (88.08,107.99) and (85.35,110.81) .. (81.99,110.81) .. controls (78.62,110.81) and (75.89,107.99) .. (75.89,104.52) -- cycle ;
+%Straight Lines [id:da7674178608151936] 
+\draw    (80.77,104.52) -- (83.21,104.52) ;
+
+%Shape: Wave [id:dp474546160014903] 
+\draw  [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ] (13.86,51) .. controls (13.97,52.65) and (14.07,54.42) .. (14.17,56.21) .. controls (14.56,63.44) and (14.95,70.33) .. (16.59,70.6) .. controls (18.22,70.87) and (20.65,64.44) .. (23.2,57.68) .. controls (25.75,50.93) and (28.18,44.5) .. (29.82,44.76) .. controls (31.45,45.03) and (31.84,51.92) .. (32.24,59.16) .. controls (32.63,66.39) and (33.02,73.28) .. (34.65,73.55) .. controls (36.29,73.82) and (38.72,67.39) .. (41.27,60.63) .. controls (43.82,53.88) and (46.25,47.44) .. (47.89,47.71) .. controls (49.52,47.98) and (49.91,54.87) .. (50.31,62.11) .. controls (50.7,69.34) and (51.09,76.23) .. (52.72,76.5) .. controls (54.36,76.77) and (56.79,70.34) .. (59.34,63.58) .. controls (61.89,56.82) and (64.32,50.39) .. (65.96,50.66) .. controls (67.59,50.93) and (67.98,57.82) .. (68.38,65.05) .. controls (68.77,72.29) and (69.16,79.18) .. (70.79,79.45) .. controls (72.43,79.71) and (74.86,73.28) .. (77.41,66.53) .. controls (79.96,59.77) and (82.39,53.34) .. (84.03,53.61) .. controls (85.66,53.88) and (86.05,60.77) .. (86.44,68) .. controls (86.84,75.24) and (87.23,82.13) .. (88.86,82.4) .. controls (90.5,82.66) and (92.93,76.23) .. (95.48,69.48) .. controls (98.03,62.72) and (100.46,56.29) .. (102.1,56.56) .. controls (103.73,56.83) and (104.12,63.72) .. (104.51,70.95) .. controls (104.91,78.19) and (105.3,85.08) .. (106.93,85.35) .. controls (107.07,85.37) and (107.22,85.34) .. (107.38,85.27) ;
+%Straight Lines [id:da09662168337589572] 
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ]   (107.35,85.42) -- (107.35,79.13) ;
+%Straight Lines [id:da40413281525437117] 
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ]   (101.26,85.42) -- (107.35,85.42) ;
+%Flowchart: Connector [id:dp3409834935203596] 
+\draw  [color={rgb, 255:red, 81; green, 81; blue, 81 }  ,draw opacity=1 ] (100.77,84.91) .. controls (100.77,81.44) and (103.5,78.63) .. (106.87,78.63) .. controls (110.23,78.63) and (112.96,81.44) .. (112.96,84.91) .. controls (112.96,88.38) and (110.23,91.2) .. (106.87,91.2) .. controls (103.5,91.2) and (100.77,88.38) .. (100.77,84.91) -- cycle ;
+%Straight Lines [id:da7723098018749724] 
+\draw [color={rgb, 255:red, 81; green, 81; blue, 81 }  ,draw opacity=1 ]   (111.87,80.85) -- (165.75,49.23) ;
+\draw [shift={(168.34,47.71)}, rotate = 149.59] [fill={rgb, 255:red, 81; green, 81; blue, 81 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+%Straight Lines [id:da9869604236883974] 
+\draw    (51.87,180.79) -- (51.87,298.53) ;
+%Straight Lines [id:da20854584514519992] 
+\draw    (211.87,298.53) -- (51.87,298.53) ;
+%Straight Lines [id:da41959801968635146] 
+\draw    (144.95,297.75) -- (144.95,301.12) ;
+%Flowchart: Connector [id:dp6310073854804854] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 241; green, 74; blue, 73 }  ,fill opacity=1 ] (376.25,106.24) .. controls (376.25,103.11) and (378.98,100.58) .. (382.35,100.58) .. controls (385.72,100.58) and (388.45,103.11) .. (388.45,106.24) .. controls (388.45,109.36) and (385.72,111.89) .. (382.35,111.89) .. controls (378.98,111.89) and (376.25,109.36) .. (376.25,106.24) -- cycle ;
+%Flowchart: Connector [id:dp39267799657551583] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 55; green, 173; blue, 107 }  ,fill opacity=1 ] (370.15,106.24) .. controls (370.15,103.11) and (372.88,100.58) .. (376.25,100.58) .. controls (379.62,100.58) and (382.35,103.11) .. (382.35,106.24) .. controls (382.35,109.36) and (379.62,111.89) .. (376.25,111.89) .. controls (372.88,111.89) and (370.15,109.36) .. (370.15,106.24) -- cycle ;
+%Flowchart: Connector [id:dp14092271577156879] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 241; green, 74; blue, 73 }  ,fill opacity=1 ] (357.96,106.24) .. controls (357.96,103.11) and (360.69,100.58) .. (364.05,100.58) .. controls (367.42,100.58) and (370.15,103.11) .. (370.15,106.24) .. controls (370.15,109.36) and (367.42,111.89) .. (364.05,111.89) .. controls (360.69,111.89) and (357.96,109.36) .. (357.96,106.24) -- cycle ;
+%Flowchart: Connector [id:dp8127563473641457] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 55; green, 173; blue, 107 }  ,fill opacity=1 ] (364.05,100.58) .. controls (364.05,97.46) and (366.78,94.93) .. (370.15,94.93) .. controls (373.52,94.93) and (376.25,97.46) .. (376.25,100.58) .. controls (376.25,103.71) and (373.52,106.24) .. (370.15,106.24) .. controls (366.78,106.24) and (364.05,103.71) .. (364.05,100.58) -- cycle ;
+%Flowchart: Connector [id:dp09273924272981682] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 241; green, 74; blue, 73 }  ,fill opacity=1 ] (364.05,106.24) .. controls (364.05,103.11) and (366.78,100.58) .. (370.15,100.58) .. controls (373.52,100.58) and (376.25,103.11) .. (376.25,106.24) .. controls (376.25,109.36) and (373.52,111.89) .. (370.15,111.89) .. controls (366.78,111.89) and (364.05,109.36) .. (364.05,106.24) -- cycle ;
+%Flowchart: Connector [id:dp6929198511708652] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 241; green, 74; blue, 73 }  ,fill opacity=1 ] (370.15,100.58) .. controls (370.15,97.46) and (372.88,94.93) .. (376.25,94.93) .. controls (379.62,94.93) and (382.35,97.46) .. (382.35,100.58) .. controls (382.35,103.71) and (379.62,106.24) .. (376.25,106.24) .. controls (372.88,106.24) and (370.15,103.71) .. (370.15,100.58) -- cycle ;
+%Flowchart: Connector [id:dp8157286495010628] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 55; green, 173; blue, 107 }  ,fill opacity=1 ] (364.05,111.89) .. controls (364.05,108.77) and (366.78,106.24) .. (370.15,106.24) .. controls (373.52,106.24) and (376.25,108.77) .. (376.25,111.89) .. controls (376.25,115.02) and (373.52,117.55) .. (370.15,117.55) .. controls (366.78,117.55) and (364.05,115.02) .. (364.05,111.89) -- cycle ;
+%Shape: Ellipse [id:dp1141053197734968] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}][line width=0.75]  (342.59,104.9) .. controls (342.59,87.54) and (356.24,73.47) .. (373.08,73.47) .. controls (389.92,73.47) and (403.57,87.54) .. (403.57,104.9) .. controls (403.57,122.25) and (389.92,136.32) .. (373.08,136.32) .. controls (356.24,136.32) and (342.59,122.25) .. (342.59,104.9) -- cycle ;
+%Flowchart: Connector [id:dp8557285268222675] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (344.16,85.71) .. controls (344.16,82.24) and (346.89,79.43) .. (350.25,79.43) .. controls (353.62,79.43) and (356.35,82.24) .. (356.35,85.71) .. controls (356.35,89.19) and (353.62,92) .. (350.25,92) .. controls (346.89,92) and (344.16,89.19) .. (344.16,85.71) -- cycle ;
+%Straight Lines [id:da01445687001502638] 
+\draw    (349.03,85.71) -- (351.47,85.71) ;
+
+%Flowchart: Connector [id:dp20086904687368046] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (388.2,125.89) .. controls (388.2,122.42) and (390.93,119.6) .. (394.3,119.6) .. controls (397.67,119.6) and (400.4,122.42) .. (400.4,125.89) .. controls (400.4,129.36) and (397.67,132.17) .. (394.3,132.17) .. controls (390.93,132.17) and (388.2,129.36) .. (388.2,125.89) -- cycle ;
+%Straight Lines [id:da08132089429841816] 
+\draw    (393.08,125.89) -- (395.52,125.89) ;
+
+%Shape: Ellipse [id:dp17959503253055542] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}] (323.99,104.9) .. controls (323.99,76.96) and (345.97,54.31) .. (373.08,54.31) .. controls (400.19,54.31) and (422.17,76.96) .. (422.17,104.9) .. controls (422.17,132.84) and (400.19,155.49) .. (373.08,155.49) .. controls (345.97,155.49) and (323.99,132.84) .. (323.99,104.9) -- cycle ;
+%Flowchart: Connector [id:dp8596218928969531] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=0.6 ] (435.99,16.28) .. controls (435.99,12.81) and (438.72,10) .. (442.08,10) .. controls (445.45,10) and (448.18,12.81) .. (448.18,16.28) .. controls (448.18,19.76) and (445.45,22.57) .. (442.08,22.57) .. controls (438.72,22.57) and (435.99,19.76) .. (435.99,16.28) -- cycle ;
+%Straight Lines [id:da7792467522503302] 
+\draw [fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ]   (440.86,16.28) -- (443.3,16.28) ;
+
+%Flowchart: Connector [id:dp5944048003755892] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (373.08,154.55) .. controls (373.08,151.08) and (375.81,148.26) .. (379.18,148.26) .. controls (382.54,148.26) and (385.28,151.08) .. (385.28,154.55) .. controls (385.28,158.02) and (382.54,160.83) .. (379.18,160.83) .. controls (375.81,160.83) and (373.08,158.02) .. (373.08,154.55) -- cycle ;
+%Straight Lines [id:da5094092143544011] 
+\draw    (377.96,154.55) -- (380.4,154.55) ;
+
+%Flowchart: Connector [id:dp25370789836759255] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (416.01,104.77) .. controls (416.01,101.3) and (418.74,98.49) .. (422.11,98.49) .. controls (425.48,98.49) and (428.21,101.3) .. (428.21,104.77) .. controls (428.21,108.24) and (425.48,111.06) .. (422.11,111.06) .. controls (418.74,111.06) and (416.01,108.24) .. (416.01,104.77) -- cycle ;
+%Straight Lines [id:da3975424553701957] 
+\draw    (420.89,104.77) -- (423.33,104.77) ;
+
+%Flowchart: Connector [id:dp6026128553013897] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (317.22,104.52) .. controls (317.22,101.05) and (319.95,98.24) .. (323.32,98.24) .. controls (326.69,98.24) and (329.42,101.05) .. (329.42,104.52) .. controls (329.42,107.99) and (326.69,110.81) .. (323.32,110.81) .. controls (319.95,110.81) and (317.22,107.99) .. (317.22,104.52) -- cycle ;
+%Straight Lines [id:da07091145425299261] 
+\draw    (322.1,104.52) -- (324.54,104.52) ;
+
+%Shape: Wave [id:dp5645383185480752] 
+\draw  [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ] (281.48,18.63) .. controls (281.6,20.28) and (281.69,22.05) .. (281.79,23.83) .. controls (282.19,31.07) and (282.58,37.96) .. (284.21,38.23) .. controls (285.85,38.49) and (288.28,32.06) .. (290.83,25.31) .. controls (293.38,18.55) and (295.81,12.12) .. (297.44,12.39) .. controls (299.08,12.66) and (299.46,19.55) .. (299.86,26.78) .. controls (300.26,34.02) and (300.65,40.91) .. (302.28,41.18) .. controls (303.92,41.44) and (306.35,35.01) .. (308.9,28.26) .. controls (311.45,21.5) and (313.88,15.07) .. (315.51,15.34) .. controls (317.15,15.61) and (317.53,22.5) .. (317.93,29.73) .. controls (318.33,36.97) and (318.71,43.86) .. (320.35,44.13) .. controls (321.98,44.39) and (324.42,37.96) .. (326.97,31.21) .. controls (329.52,24.45) and (331.95,18.02) .. (333.58,18.29) .. controls (335.22,18.55) and (335.6,25.44) .. (336,32.68) .. controls (336.4,39.92) and (336.78,46.81) .. (338.42,47.07) .. controls (340.05,47.34) and (342.49,40.91) .. (345.04,34.16) .. controls (347.58,27.4) and (350.02,20.97) .. (351.65,21.24) .. controls (353.29,21.5) and (353.67,28.39) .. (354.07,35.63) .. controls (354.47,42.87) and (354.85,49.76) .. (356.49,50.02) .. controls (358.12,50.29) and (360.56,43.86) .. (363.11,37.1) .. controls (365.65,30.35) and (368.09,23.92) .. (369.72,24.19) .. controls (371.36,24.45) and (371.74,31.34) .. (372.14,38.58) .. controls (372.54,45.82) and (372.92,52.71) .. (374.56,52.97) .. controls (374.7,53) and (374.85,52.97) .. (375,52.89) ;
+%Straight Lines [id:da6427099840786794] 
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ]   (374.98,53.04) -- (374.98,46.76) ;
+%Straight Lines [id:da2353595007481072] 
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ]   (368.88,53.04) -- (374.98,53.04) ;
+
+%Flowchart: Connector [id:dp9925474283239817] 
+\draw  [color={rgb, 255:red, 81; green, 81; blue, 81 }  ,draw opacity=1 ] (366.98,53.99) .. controls (366.98,50.52) and (369.71,47.71) .. (373.08,47.71) .. controls (376.45,47.71) and (379.18,50.52) .. (379.18,53.99) .. controls (379.18,57.46) and (376.45,60.28) .. (373.08,60.28) .. controls (369.71,60.28) and (366.98,57.46) .. (366.98,53.99) -- cycle ;
+%Straight Lines [id:da5937124302933622] 
+\draw [color={rgb, 255:red, 81; green, 81; blue, 81 }  ,draw opacity=1 ]   (379.91,52.8) -- (433.79,21.17) ;
+\draw [shift={(436.37,19.65)}, rotate = 149.59] [fill={rgb, 255:red, 81; green, 81; blue, 81 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+%Straight Lines [id:da17810682657532795] 
+\draw    (293.20,180.79) -- (293.20,298.53) ;
+%Straight Lines [id:da5578294252550887] 
+\draw    (453.20,298.53) -- (293.20,298.53) ;
+%Shape: Wave [id:dp9337341777233824] 
+\draw  [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ] (380.08,54.03) .. controls (379.86,54.78) and (379.6,55.57) .. (379.34,56.37) .. controls (378.27,59.6) and (377.26,62.68) .. (378.48,63.39) .. controls (379.69,64.11) and (382.8,62.26) .. (386.06,60.31) .. controls (389.33,58.36) and (392.44,56.51) .. (393.65,57.23) .. controls (394.87,57.94) and (393.86,61.02) .. (392.79,64.25) .. controls (391.73,67.48) and (390.72,70.56) .. (391.93,71.28) .. controls (393.15,71.99) and (396.26,70.14) .. (399.52,68.19) .. controls (402.78,66.25) and (405.89,64.4) .. (407.11,65.11) .. controls (408.33,65.82) and (407.32,68.9) .. (406.25,72.14) .. controls (405.19,75.37) and (404.18,78.45) .. (405.39,79.16) .. controls (406.61,79.87) and (409.72,78.02) .. (412.98,76.08) .. controls (416.24,74.13) and (419.35,72.28) .. (420.57,72.99) .. controls (421.79,73.71) and (420.78,76.79) .. (419.71,80.02) .. controls (418.64,83.25) and (417.63,86.33) .. (418.85,87.05) .. controls (420.07,87.76) and (423.18,85.91) .. (426.44,83.96) .. controls (429.7,82.01) and (432.81,80.16) .. (434.03,80.88) .. controls (435.25,81.59) and (434.24,84.67) .. (433.17,87.9) .. controls (432.1,91.13) and (431.09,94.22) .. (432.31,94.93) .. controls (433.53,95.64) and (436.64,93.79) .. (439.9,91.84) .. controls (443.16,89.9) and (446.27,88.05) .. (447.49,88.76) .. controls (448.71,89.47) and (447.69,92.55) .. (446.63,95.79) .. controls (445.56,99.02) and (444.55,102.1) .. (445.77,102.81) .. controls (445.87,102.87) and (445.99,102.92) .. (446.13,102.94) ;
+%Straight Lines [id:da2050591433935821] 
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ]   (446.08,103) -- (447.28,100.32) ;
+%Straight Lines [id:da2470996576202531] 
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ]   (441.35,100.76) -- (446.08,103) ;
+
+%Curve Lines [id:da6436628789406832] 
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ,line width=1.2pt]   (293.73,251.37) .. controls (299.06,257.58) and (298.44,223.93) .. (303.96,229.78) .. controls (309.48,235.63) and (310.50,237.57) .. (316.49,238.61) .. controls (322.48,239.65) and (348.10,234) .. (361.89,233.76) .. controls (375.67,233.52) and (398.28,221.69) .. (401.83,217.79) ;
+%Straight Lines [id:da3888660698437256] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (379.56,53.78) -- (475.09,53.78) ;
+%Curve Lines [id:da5532996040671078] 
+\draw    (414.1,54.64) .. controls (422.3,56.51) and (420.73,64.17) .. (413.58,66.12) ;
+\draw [shift={(410.68,66.56)}, rotate = 357.54] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+%Curve Lines [id:da2737259089424122] 
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ,line width=1.2pt ]   (401.83,217.79) .. controls (408.89,230.68) and (411.62,290) .. (411.51,298.53) ;
+
+% Text Node
+\draw (180.97,45.2) node [anchor=north west][inner sep=0.75pt] [font=\scriptsize] [align=left] {$E_{\text{pe}} = E_0 - E_b$};
+% Text Node
+\draw (38.8,77.54) node [anchor=north west][inner sep=0.75pt] [font=\scriptsize] [align=left] {\textcolor[rgb]{0.8,0.6,0}{$E_0$}};
+% Text Node
+\draw (121.87,120.51) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=left] {1};
+% Text Node
+\draw (121.87,140.62) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=left] {2};
+% Text Node
+\draw (140.1,301.16) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {$E_0$};
+% Text Node
+\draw (298.43,42.84) node [anchor=north west][inner sep=0.75pt] [font=\scriptsize] [align=left] {\textcolor[rgb]{0.8,0.6,0}{$E_0$}};
+% Text Node
+\draw (363.2,120.51) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=left] {1};
+% Text Node
+\draw (363.2,140.62) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=left] {2};
+% Text Node
+\draw (422.89,107.77) node [anchor=north west][inner sep=0.75pt] [font=\scriptsize] [align=left] {$E_c = \dfrac{E_0}{1 + \frac{E_0}{511}\left(1 - \cos\theta\right)}$};
+% Text Node
+\draw (77.11,162.08) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {\textbf{Photoelectric Effect}};
+% Text Node
+\draw (317.89,163.15) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {\textbf{Compton Scattering}};
+% Text Node
+\draw (421.94,58.74) node [anchor=north west][inner sep=0.75pt] [font=\scriptsize] [align=left] {$\theta$};
+% Text Node
+\draw (340.12,242.93) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=center] {Compton\\Continuum};
+% Text Node
+\draw (305,217.5) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=center] {Backscatter};
+% Text Node
+\draw (395.57,199.87) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=center] {Compton\\Edge};
+% Text Node
+\draw (387.5,301.16) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {$\theta = 180^\circ$};
+% Text Node
+\draw (38.68,252.57) node [anchor=north west][inner sep=0.75pt] [font=\small] [rotate=-268.25] [align=center] {Counts};
+% Text Node
+\draw (280.01,252.57) node [anchor=north west][inner sep=0.75pt] [font=\small] [rotate=-268.25] [align=center] {Counts};
+% Text Node
+\draw (207.1,301.16) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=center] {$E$};
+% Text Node
+\draw (448.41,301.16) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=center] {$E$};
+% Text Node
+\draw (121,322) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {\textbf{(a)}};
+% Text Node
+\draw (361,322) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {\textbf{(b)}};
+
+
+\end{tikzpicture}

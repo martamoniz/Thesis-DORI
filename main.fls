@@ -388,16 +388,32 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
-INPUT .\images\interventional radiology setup.png
+INPUT .\images\interventional radiology setup.pdf
+INPUT .\images\interventional radiology setup.pdf
+INPUT .\images\interventional radiology setup.pdf
+INPUT .\images\interventional radiology setup.pdf
+INPUT .\images\interventional radiology setup.pdf
+INPUT .\images\interventional radiology setup.pdf
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx8.tfm
+INPUT .\figures\Interaction_with_matter
+INPUT .\figures\Interaction_with_matter
+INPUT figures\Interaction_with_matter
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
@@ -438,20 +454,6 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT .\figures\MAX1932
 INPUT .\figures\MAX1932
 INPUT figures\MAX1932
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT .\figures\Architecture.tex
 INPUT .\figures\Architecture.tex
 INPUT figures\Architecture.tex
@@ -578,6 +580,8 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy6.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy6.pfb
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy7.pfb
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy7.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy9.pfb

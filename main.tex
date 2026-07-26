@@ -279,7 +279,7 @@ dashboard for real-time visualization.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Chapter 1:  Radiation in IR
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Radiation in IR}
+\chapter{Introduction}
 
 \section{Interventional Radiology}
 Interventional radiology (IR) is a subspecialty of radiology that utilizes fluoroscopy to perform diagnostic and therapeutic procedures through minimally invasive techniques \cite{8}. Fluoroscopy involves the use of X-rays and an image detection system to visualize internal structures and interventional tools in real-time \cite{11}. The conventional IR equipment configuration is illustrated in Fig.~\ref{fig:interventional_radiology_setup}. The X-rays are produced in an X-ray tube by converting the kinetic energy of electrons into electromagnetic radiation. It consists of two electrodes enclosed in a vacuum-sealed glass envelope. The cathode serves as the electron source, while the anode acts as the positive target. When heated by an electric current, the cathode emits electrons via thermionic emission. The number of electrons produced depends on the current passing through the filament. A high potential difference applied between the cathode and the anode accelerates the electrons toward the anode. The total incident energy delivered to the anode is proportional to both the voltage and the current\cite{5,6}. 
@@ -332,41 +332,35 @@ The X-rays transmitted through the patient strike the image detection system, mo
 
  \section{Photon Interaction with Matter}
  \label{sec:Photon Interaction with Matter}
-X-rays interact with matter through four physical mechanisms: Rayleigh and Compton scattering, the photoelectric effect and pair production. Rayleigh scattering involves the elastic interaction of a photon with the entire atom, resulting in a slightly deflected scattered photon with the same energy. Its contribution to overall interactions in the context of IR is negligible. Additionally, pair production requires photon energies exceeding 1.02 MeV, which are not present in diagnostic X-ray procedures \cite{6}. Therefore, only the photoelectric effect and Compton scattering are considered in detail.
+X-rays interact with matter through four physical mechanisms: the photoelectric effect, Compton scattering, Rayleigh dispersion and pair production. The latter two are not relevant in IR~\cite{14}. Therefore, only the photoelectric effect and Compton scattering are considered in detail. Both processes are shown schematically in Fig.~\ref{fig:interaction}.
 \begin{figure}[H]
   \centering
   \input{figures/Interaction_with_matter}
-  \caption[Deterministic and stochastic effets.]{\textbf{(a)} Deterministic effects exhibit a threshold dose below which no effect occurs. Above the threshold, severity increases with dose. Thresholds are expressed in Gy (absorbed dose) as deterministic effects depend only on how much energy is deposited.
-    \textbf{(b)} Stochastic effects have no threshold; the probability of occurrence increases with dose, but severity is independent of exposure. The individual either develops the condition or not \cite{13}.}
+  \caption[Photon interactions in IR]{Schematic representation of the photoelectric effect \textbf{(a)} and Compton scattering \textbf{(b)}, and the resulting energy spectrum.}
 
-  \label{fig:effects}
+  \label{fig:interaction}
 \end{figure}
-\subsection{Compton Scattering}
-\label{sec:compton_scattering}
-Compton scattering is an inelastic interaction in which an 
-incident photon interacts with a free outer-shell electron, 
-transferring part of its energy. As a result, 
-the electron is ejected as a recoil (Compton) electron. 
-In accordance with the conservation of energy and momentum, 
-the photon is deflected at an angle $\theta$, dependent on the energy 
-transferred. The energy of the scattered photon $E_c$
-is described \cite{6}:
 
-\begin{equation}
-E_c = \frac{E_0}{1 + \frac{E_0}{511} (1 - \cos\theta)},\ \text{unit: } [\mathrm{keV}]
-\label{eq:compton}
-\end{equation}
-where $E_0$ is the energy of the incident photon. The maximum energy transfer to the electron occurs at the maximum permissible angle, when $\theta = 180^\circ$.
-
-At photon energies typical of diagnostic radiology, the scattered photon retains most of the initial energy and remains sufficiently energetic to penetrate tissue. Within this energy range, Compton scattering predominates over the photoelectric effect in materials such as soft tissue, water and air. The interaction probability is proportional to the physical density of the material, but it is independent of the atomic number due to the uniform electron density across soft 
-tissues~\cite{5,6}.
 \subsection{Photoelectric Effect}
-The photoelectric effect occurs when an incident photon transfers all of its energy to a bound electron within an atom, resulting in the complete absorption of the photon and the ejection of the electron from its orbital. This process preferentially involves inner-shell electrons due to their greater electron density. The incident photon energy is expended to overcome the binding energy of the electron ($E_b$), and any remaining energy is converted into the kinetic energy of the ejected photoelectron ($E_{\text{pe}}$), expressed as~\cite{5,6}:
+The photoelectric effect occurs when an incident photon transfers all of its energy to a bound electron within an atom, resulting in the ejection of the electron from its orbital. This process preferentially involves inner-shell electrons due to their greater electron density. The incident photon energy ($E_0$) is expended to overcome the binding energy of the electron ($E_b$), and any remaining energy is converted into the kinetic energy of the ejected photoelectron ($E_{\text{pe}}$), expressed as~\cite{5,6}:
 \begin{equation}
 E_{\text{pe}} = E_0 - E_b,\ \text{unit: } [\mathrm{keV}]
 \label{eq:photoeletric}
 \end{equation}
-\indent The probability of photoelectric interaction is predominant at lower energies ($<$50 keV). It is also dependent on atomic number, increasing with higher-$Z$ materials, which provides contrast in X-ray imaging. As a result, lower-energy X-ray beams produce higher contrast but also increase photon absorption in the patient, leading to a higher dose. In interventional planning, beam quality is therefore optimised to balance image quality and patient dose, as higher photon energies reduce patient absorption but increase the contribution of Compton scattering, leading to greater noise and poorer contrast~\cite{6}.
+\indent 
+The vacancy is filled by an outer electron, with the release of a characteristic X-ray or an Auger electron. When these emissions are reabsorbed within the detector, the total deposited energy equals $E_0$, recorded as the photopeak. As the emissions are monoenergetic, the photopeak would be a Dirac delta. However, and as shown in Fig.~\ref{fig:interaction} (a), the peak has a finite width, set by the energy resolution of the detector and is a property of the instrument~\cite{14}.
+
+The probability of photoelectric interaction is predominant at lower energies ($<$50 keV). It is also dependent on atomic number, increasing with higher-$Z$ materials, which provides contrast in X-ray imaging. As a result, lower-energy X-ray beams produce higher contrast but also increase photon absorption in the patient, leading to a higher dose. In interventional planning, beam quality is therefore optimised to balance image quality and patient dose, as higher photon energies reduce patient absorption but increase the contribution of Compton scattering, leading to greater noise and poorer contrast~\cite{6}.
+\subsection{Compton Scattering} 
+\label{sec:compton_scattering} 
+Compton scattering is an inelastic interaction in which an incident photon interacts with a free outer-shell electron, transferring part of its energy. As a result, the electron is ejected as a recoil (Compton) electron. In accordance with the conservation of energy and momentum, the photon is deflected at an angle $\theta$, dependent on the energy transferred. The energy of the scattered photon $E_c$ is described as~\cite{6}:
+\begin{equation} 
+E_c = \frac{E_0}{1 + \frac{E_0}{511} (1 - \cos\theta)},\ \text{unit: } [\mathrm{keV}] \label{eq:compton}
+\end{equation}
+
+ Within the detector, all scattering angles are permitted, from $0^\circ$ to $180^\circ$. This creates a Compton continuum, bounded by the two extremes. The maximum energy transfer to the electron occurs at $\theta = 180^\circ$, the Compton Edge (CE). At the same angle, a photon scattered in the surrounding material may enter the detector and be absorbed, forming the backscatter peak shown in Fig.~\ref{fig:interaction} (b)~\cite{14}.
+
+ At photon energies typical of diagnostic radiology, the scattered photon retains most of the initial energy and remains sufficiently energetic to penetrate tissue. Within this energy range, Compton scattering predominates over the photoelectric effect in materials such as soft tissue, water and air. The interaction probability is proportional to the physical density of the material, but it is independent of the atomic number due to the uniform electron density across soft tissues~\cite{5,6}.
 
 \section{Dosimetry Fundamentals}
 

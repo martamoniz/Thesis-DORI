@@ -418,13 +418,13 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbxi10.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT .\figures\deterministic_stochastic.tex
 INPUT .\figures\deterministic_stochastic.tex
 INPUT .\figures\deterministic_stochastic.tex
 INPUT .\figures\deterministic_stochastic.tex
 INPUT figures\deterministic_stochastic.tex
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr9.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT .\images\neutron.jpg
 INPUT .\images\neutron.jpg
 INPUT .\images\neutron.jpg

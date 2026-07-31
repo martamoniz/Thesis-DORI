@@ -9,47 +9,48 @@ Warning--string name "june" is undefined
 --line 175 of file Bibliografia.bib
 Warning--string name "june" is undefined
 --line 623 of file Bibliografia.bib
+Warning--I didn't find a database entry for "lt1711"
 Warning--empty journal in 33
 Warning--empty year in 33
-You've used 86 entries,
+You've used 85 entries,
             1876 wiz_defined-function locations,
-            963 strings with 22490 characters,
-and the built_in function-call counts, 24732 in all, are:
-= -- 2274
-> -- 1380
+            959 strings with 22401 characters,
+and the built_in function-call counts, 24567 in all, are:
+= -- 2259
+> -- 1372
 < -- 2
-+ -- 497
-- -- 411
-* -- 1794
-:= -- 3565
-add.period$ -- 111
-call.type$ -- 86
++ -- 494
+- -- 409
+* -- 1786
+:= -- 3541
+add.period$ -- 109
+call.type$ -- 85
 change.case$ -- 77
 chr.to.int$ -- 0
-cite$ -- 88
-duplicate$ -- 1210
-empty$ -- 2050
-format.name$ -- 411
-if$ -- 6002
+cite$ -- 87
+duplicate$ -- 1201
+empty$ -- 2030
+format.name$ -- 409
+if$ -- 5960
 int.to.chr$ -- 0
-int.to.str$ -- 86
-missing$ -- 76
-newline$ -- 287
-num.names$ -- 83
-pop$ -- 278
+int.to.str$ -- 85
+missing$ -- 74
+newline$ -- 283
+num.names$ -- 82
+pop$ -- 272
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 999
+skip$ -- 997
 stack$ -- 0
 substring$ -- 1274
-swap$ -- 604
+swap$ -- 603
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 168
-width$ -- 88
-write$ -- 826
-(There were 4 warnings)
+while$ -- 167
+width$ -- 87
+write$ -- 817
+(There were 5 warnings)

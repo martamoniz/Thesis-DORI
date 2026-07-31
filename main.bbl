@@ -440,9 +440,17 @@ P.~Grybos, P.~Maj, and R.~Szczygiel, ``Comparison of two pole-zero cancellation
   2007 14th International Conference on Mixed Design of Integrated Circuits and
   Systems}, p.~243–246, IEEE, 2007.
 
-\bibitem{109}
-P.~Horowitz and W.~Hill, {\em {The art of electronics}}.
-\newblock Cambridge: Cambridge University Press, 2015.
+\bibitem{119}
+S.~M. Tajudin, Y.~Namito, T.~Sanami, and H.~Hirayama, ``Response of plastic
+  scintillator to gamma sources,'' {\em Applied Radiation and Isotopes},
+  vol.~159, p.~109086, 2020.
+
+\bibitem{126}
+N.~N.~T. Tran, S.~Sasaki, T.~Sanami, Y.~Kishimoto, and E.~Shibamura, ``Some
+  properties of plastic scintillators to construct a let spectrometer,'' in
+  {\em Proceedings of the Second International Symposium on Radiation Detectors
+  and Their Uses (ISRD2018)}, Journal of the Physical Society of Japan, Jan.
+  2019.
 
 \bibitem{117}
 P.~Saengkaew, S.~Sanorpim, M.~Jitpukdee, K.~Cheewajaroen, C.~Yenchai,
@@ -472,17 +480,5 @@ M.~C. Silva, S.~B. Herdade, P.~Lammoglia, P.~R. Costa, and R.~A. Terini,
 P.~Bevington and D.~Robinson, {\em Data Reduction and Error Analysis for the
   Physical Sciences}.
 \newblock McGraw-Hill Education, 2003.
-
-\bibitem{119}
-S.~M. Tajudin, Y.~Namito, T.~Sanami, and H.~Hirayama, ``Response of plastic
-  scintillator to gamma sources,'' {\em Applied Radiation and Isotopes},
-  vol.~159, p.~109086, 2020.
-
-\bibitem{126}
-N.~N.~T. Tran, S.~Sasaki, T.~Sanami, Y.~Kishimoto, and E.~Shibamura, ``Some
-  properties of plastic scintillators to construct a let spectrometer,'' in
-  {\em Proceedings of the Second International Symposium on Radiation Detectors
-  and Their Uses (ISRD2018)}, Journal of the Physical Society of Japan, Jan.
-  2019.
 
 \end{thebibliography}

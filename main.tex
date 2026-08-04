@@ -668,6 +668,28 @@ to the MCU. Each stage is detailed in the following sections.
   \label{fig:architecture}
 \end{figure}
 The front-end electronics were assembled on a printed circuit board (PCB), which also integrates the ESP32-C3, the MAX1932 bias supply and the SiPM described previously. The DORI-test board is shown in Fig.~\ref{fig:pcb}.
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[c]{0.52\linewidth}
+    \centering
+    \subfloat[]{\label{fig:pcb_test}%
+      \resizebox{\linewidth}{!}{\input{figures/dori_teste}}}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[c]{0.48\linewidth}
+    \centering
+    \subfloat[]{\label{fig:dori_case}%
+      \resizebox{\linewidth}{!}{\input{figures/Dori_box}}}
+  \end{minipage}
+  \caption[DORI prototype hardware.]{%
+    DORI prototype hardware;
+    \textbf{(a)} printed circuit board with the main functional blocks identified,
+    together with the signal test points used for characterisation;
+    \textbf{(b)} assembled prototype inside the 3D printed test box, showing the
+    sealed source holder aligned with the scintillator and SiPM.
+  }
+  \label{fig:dori_hardware}
+\end{figure}
 \subsection{Pulse Shaping}
 The current pulse produced by the SiPM delivers a quantity of charge, $Q$, that must be converted into a measurable voltage signal in the preamplifier~\cite{105}:
 \begin{equation}
@@ -787,13 +809,26 @@ V_{ref} = \frac{R_2}{R_1 + R_2} \cdot 3.3, \text{ unit: [V]}
 
 \noindent where $R_1$ is the resistor connecting the node to the supply, and $R_2$ the resistor between the divider node and ground.
 
-The threshold was set to 10 mV. This value was established from the comparator input acquired under dark count conditions of the SiPM. The amplitudes of these events lie predominantly below 10 mV, so a threshold placed at this level rejects most spurious triggers without suppressing the low-energy end of the spectrum. The condition is satisfied by $R_1 = 33$ k$\Omega$ and $R_2 = 100$ $\Omega$.
+The threshold was set to 10 mV. This value was established from the comparator input acquired under dark count conditions of the SiPM. The amplitudes of these events lie predominantly below 10 mV. The condition is satisfied by $R_1 = 33$ k$\Omega$ and $R_2 = 100$ $\Omega$.
 
 A dedicated pin of the ESP32-C3 is connected to the logic output of the comparator and configured as an interrupt. Whenever the input exceeds $V_{ref}$, the comparator output switches to the logic high level. The pin is monitored continuously by dedicated hardware within the MCU, so the transition is registered as soon as it occurs. Detection initiates the readout loop, and the interrupt is detached for its duration, so that no further triggers are accepted while the event is being processed. It is reattached once the loop has terminated.
 
+Simultaneously, the shaper output is fed to a Peak-and-Hold (P\&H) circuit. A P\&H captures the maximum of the input signal and sustains it after the pulse has decayed, extending the interval over which the peak amplitude remains available. The analogue conversion can then be performed more accurately. Given the small amplitude of the events, a configuration based on a precision rectifier is required. The adopted circuit is shown in Fig.~\ref{fig:peak_and_hold}. Two feedback paths are available to OA1. The outer path includes $D_2$ and runs from the $C_H$ through the buffer OA2 and the resistor $R$ to the inverting input. The local path runs directly from the output of OA1 through $D_1$ to the same node. The two diodes are oppositely oriented, so only one path is closed at any instant, and the transition between them is determined by the position of the output of OA1 relative to the inverting input.
+
+With $C_H$ discharged and the shaped pulse rising, OA1 drives its output upwards. The anode of $D_2$ rises above its cathode, which is held at the capacitor voltage, so the diode becomes forward biased and conducts. Charge flows into $C_H$ and the capacitor voltage rises with the input. That voltage is read by the buffer OA2, whose input draws negligible current, and is returned through $R$ to the inverting input of OA1. The amplifier therefore compares the shaped pulse against the stored voltage and continues to drive its output until the two coincide. $D_1$ is consequently reverse biased and its path is closed. This is the track mode, which is maintained until the pulse begins to decay.
+\begin{figure}[H]
+  \centering
+  \input{figures/P&H}
+  \caption[Caption.]{Caption.}
+  \label{fig:peak_and_hold}
+\end{figure}
+
+Once the maximum has passed, OA1 drives its output downwards. $D_2$ becomes reverse biased and the track loop is broken. At the same instant, the output of OA1 falls below the inverting input, $D_1$ becomes forward biased and establishes the local feedback path. Without this branch the amplifier would be left without feedback and driven into saturation against the negative supply, and recovery at the arrival of the following event would be governed by the slew rate. With $D_2$ reverse biased, the stored charge has no drain path through it. The remaining connections to the node are the input of OA2 and the reset path, which is held open throughout the interval. The peak value is therefore retained. This is the hold mode.
+
+With no reset path, the capacitor would only ever accumulate charge. Once a maximum has been stored, a subsequent event of lower amplitude cannot forward bias $D_2$. The output would therefore converge to the largest amplitude ever received rather than to the amplitude of each individual event. A discharge path is therefore required, and it must be opened and closed under control so that $C_H$ is emptied between events. This function is performed by an N-channel MOSFET placed in series with $R_{H}$ across the capacitor, driven by a logic level from the MCU. When held low, the path between drain and source is open and the stored charge is retained. At the 3.3 V logic high level the channel is established and the capacitor discharges through $R_H$ with a time constant $\tau = R_H C_H$. The gate is therefore held low by default, so that the circuit is always ready to capture the maximum of the signal. Detection of a valid pulse raises the interrupt described above, after which a delay of 2~$\mu$s is imposed to allow the held value to stabilise before the sampling logic is applied. The gate is then driven high for an interval longer than $\tau$, sufficient for $C_H$ to discharge completely, and returned low.
+
+The output of the pulse discrimination network is shown in Fig.~\ref{fig:}
 \subsection{Pulse Sampling}
-
-
 \section{Validation of the Front-End Electronics}
 \label{sec:frontend-validation}
 Prior to energy calibration of the plastic scintillator detector, the readout electronics were validated using a $5 \times 5 \times 10$~mm CsI(Tl) crystal. The mentioned amplitude sinking in the P\&H circuit is inconsequential if constant, but an amplitude-dependent drop would introduce nonlinearities into the sampling network and would require characterisation or correction. An inorganic scintillator is appropriate for this validation due to its higher density and effective atomic number, which favour photoelectric absorption in the energy range of interest. This produces well-defined photopeaks at energies characteristic of each source. Since scintillation light yield in CsI(Tl) is linear with deposited energy, a linear channel-to-energy mapping is expected, and any significant deviation would be attributable to the front-end electronics~\cite{14}.

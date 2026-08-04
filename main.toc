@@ -29,12 +29,12 @@
 \contentsline {section}{\numberline {2.3}Front-End Electronics}{16}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Pulse Shaping}{17}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Pulse Discrimination}{20}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Pulse Sampling}{20}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Validation of the Front-End Electronics}{20}{section.2.4}%
-\contentsline {chapter}{\numberline {3}DORI - Calibration}{22}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Energy Calibration}{22}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Dose Rate Calibration}{25}{section.3.2}%
-\contentsline {chapter}{\numberline {4}DORI - Final Prototype}{26}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Future Work}{26}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusions}{27}{chapter.5}%
-\contentsline {chapter}{References}{28}{section.5.1}%
+\contentsline {subsection}{\numberline {2.3.3}Pulse Sampling}{22}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Validation of the Front-End Electronics}{22}{section.2.4}%
+\contentsline {chapter}{\numberline {3}DORI - Calibration}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Energy Calibration}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Dose Rate Calibration}{27}{section.3.2}%
+\contentsline {chapter}{\numberline {4}DORI - Final Prototype}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Future Work}{28}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Conclusions}{29}{chapter.5}%
+\contentsline {chapter}{References}{30}{section.5.1}%

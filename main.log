@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  31 JUL 2026 11:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  4 AUG 2026 22:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1049,7 +1049,7 @@ l.277 \newpage
 
 ]
 Chapter 1.
-<images/interventional radiology setup.pdf, id=323, 1682.285pt x 894.34125pt>
+<images/interventional radiology setup.pdf, id=327, 1682.285pt x 894.34125pt>
 File: images/interventional radiology setup.pdf Graphic file (type pdf)
 <use images/interventional radiology setup.pdf>
 Package pdftex.def Info: images/interventional radiology setup.pdf  used on input line 288.
@@ -1067,13 +1067,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Underfull \vbox (badness 5189) has occurred while \output is active []
 
  [3{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [4] (figures/deterministic_stochastic.tex) [5{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [6]
-<images/neutron.jpg, id=442, 621.522pt x 468.5505pt>
+<images/neutron.jpg, id=446, 621.522pt x 468.5505pt>
 File: images/neutron.jpg Graphic file (type jpg)
 <use images/neutron.jpg>
 Package pdftex.def Info: images/neutron.jpg  used on input line 452.
 (pdftex.def)             Requested size: 113.2253pt x 85.35826pt.
  [7 <./images/neutron.jpg>]
-<images/dose rates.png, id=478, 1445.4pt x 813.0375pt>
+<images/dose rates.png, id=482, 1445.4pt x 813.0375pt>
 File: images/dose rates.png Graphic file (type png)
 <use images/dose rates.png>
 Package pdftex.def Info: images/dose rates.png  used on input line 515.
@@ -1083,7 +1083,7 @@ Underfull \vbox (badness 1383) has occurred while \output is active []
 
  [9 <./images/dose rates.png (PNG copy)>] [10] [11] [12]
 Chapter 2.
-<images/DORI.pdf, id=616, 3814.25pt x 2057.6875pt>
+<images/DORI.pdf, id=620, 3814.25pt x 2057.6875pt>
 File: images/DORI.pdf Graphic file (type pdf)
 <use images/DORI.pdf>
 Package pdftex.def Info: images/DORI.pdf  used on input line 606.
@@ -1097,79 +1097,101 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 LaTeX Warning: Reference `fig:pcb' on page 16 undefined on input line 670.
 
-[16]
+(figures/dori_teste
+<images/pcb_teste.jpg, id=679, 613.54219pt x 453.19313pt>
+File: images/pcb_teste.jpg Graphic file (type jpg)
+<use images/pcb_teste.jpg>
+Package pdftex.def Info: images/pcb_teste.jpg  used on input line 10.
+(pdftex.def)             Requested size: 186.00198pt x 126.99693pt.
+) (figures/Dori_box
+<images/dori_case.jpg, id=680, 750.55406pt x 422.32782pt>
+File: images/dori_case.jpg Graphic file (type jpg)
+<use images/dori_case.jpg>
+Package pdftex.def Info: images/dori_case.jpg  used on input line 10.
+(pdftex.def)             Requested size: 199.99532pt x 127.09886pt.
+) [16] [17 <./images/pcb_teste.jpg> <./images/dori_case.jpg>]
 
-LaTeX Warning: Reference `annex:sources' on page 17 undefined on input line 706.
+LaTeX Warning: Reference `annex:sources' on page 18 undefined on input line 728.
 
-[17]
-<images/shaping_chain_trace00001.pdf, id=720, 754.82pt x 494.84875pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+<images/shaping_chain_trace00001.pdf, id=734, 754.82pt x 494.84875pt>
 File: images/shaping_chain_trace00001.pdf Graphic file (type pdf)
 <use images/shaping_chain_trace00001.pdf>
-Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 749.
+Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 771.
 (pdftex.def)             Requested size: 442.65375pt x 290.1989pt.
- [18] [19 <./images/shaping_chain_trace00001.pdf>]
+ [19 <./images/shaping_chain_trace00001.pdf>]
 
-LaTeX Warning: Citation `lt1711' on page 20 undefined on input line 781.
+LaTeX Warning: Citation `lt1711' on page 20 undefined on input line 803.
 
-<images/spectra.pdf, id=769, 860.21375pt x 260.975pt>
+[20] (figures/P&H) [21]
+
+LaTeX Warning: Reference `fig:' on page 22 undefined on input line 830.
+
+<images/spectra.pdf, id=787, 860.21375pt x 260.975pt>
 File: images/spectra.pdf Graphic file (type pdf)
 <use images/spectra.pdf>
-Package pdftex.def Info: images/spectra.pdf  used on input line 806.
+Package pdftex.def Info: images/spectra.pdf  used on input line 841.
 (pdftex.def)             Requested size: 442.65375pt x 134.29411pt.
-<images/fit_csi.pdf, id=770, 451.6875pt x 328.22626pt>
+<images/fit_csi.pdf, id=788, 451.6875pt x 328.22626pt>
 File: images/fit_csi.pdf Graphic file (type pdf)
 <use images/fit_csi.pdf>
-Package pdftex.def Info: images/fit_csi.pdf  used on input line 808.
+Package pdftex.def Info: images/fit_csi.pdf  used on input line 843.
 (pdftex.def)             Requested size: 208.04779pt x 151.18623pt.
-<images/co57_energy_reconstruction.pdf, id=771, 442.65375pt x 314.17375pt>
+<images/co57_energy_reconstruction.pdf, id=789, 442.65375pt x 314.17375pt>
 File: images/co57_energy_reconstruction.pdf Graphic file (type pdf)
 <use images/co57_energy_reconstruction.pdf>
-Package pdftex.def Info: images/co57_energy_reconstruction.pdf  used on input line 811.
+Package pdftex.def Info: images/co57_energy_reconstruction.pdf  used on input line 846.
 (pdftex.def)             Requested size: 221.32687pt x 157.08649pt.
-[20] [21 <./images/spectra.pdf> <./images/fit_csi.pdf> <./images/co57_energy_reconstruction.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22] [23 <./images/spectra.pdf> <./images/fit_csi.pdf> <./images/co57_energy_reconstruction.pdf>]
 Chapter 3.
-<images/bremsstrahlung_fits.pdf, id=898, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_fits.pdf, id=915, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_fits.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_fits.pdf>
-Package pdftex.def Info: images/bremsstrahlung_fits.pdf  used on input line 841.
+Package pdftex.def Info: images/bremsstrahlung_fits.pdf  used on input line 876.
 (pdftex.def)             Requested size: 212.4719pt x 144.886pt.
-<images/bremsstrahlung_40kVp_vs_current.pdf, id=899, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_40kVp_vs_current.pdf, id=916, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_40kVp_vs_current.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_40kVp_vs_current.pdf>
-Package pdftex.def Info: images/bremsstrahlung_40kVp_vs_current.pdf  used on input line 847.
+Package pdftex.def Info: images/bremsstrahlung_40kVp_vs_current.pdf  used on input line 882.
 (pdftex.def)             Requested size: 212.4719pt x 144.886pt.
-[22
+[24
 
  <./images/bremsstrahlung_fits.pdf> <./images/bremsstrahlung_40kVp_vs_current.pdf>]
-<images/plastic_Am-241.pdf, id=980, 354.32375pt x 247.92625pt>
+<images/plastic_Am-241.pdf, id=997, 354.32375pt x 247.92625pt>
 File: images/plastic_Am-241.pdf Graphic file (type pdf)
 <use images/plastic_Am-241.pdf>
-Package pdftex.def Info: images/plastic_Am-241.pdf  used on input line 921.
+Package pdftex.def Info: images/plastic_Am-241.pdf  used on input line 956.
 (pdftex.def)             Requested size: 177.05879pt x 123.89093pt.
-<images/plastic_Co-57_fit.pdf, id=981, 354.32375pt x 247.92625pt>
+<images/plastic_Co-57_fit.pdf, id=998, 354.32375pt x 247.92625pt>
 File: images/plastic_Co-57_fit.pdf Graphic file (type pdf)
 <use images/plastic_Co-57_fit.pdf>
-Package pdftex.def Info: images/plastic_Co-57_fit.pdf  used on input line 923.
+Package pdftex.def Info: images/plastic_Co-57_fit.pdf  used on input line 958.
 (pdftex.def)             Requested size: 177.05879pt x 123.89093pt.
-<images/energy.pdf, id=982, 445.665pt x 322.20375pt>
+<images/energy.pdf, id=999, 445.665pt x 322.20375pt>
 File: images/energy.pdf Graphic file (type pdf)
 <use images/energy.pdf>
-Package pdftex.def Info: images/energy.pdf  used on input line 929.
+Package pdftex.def Info: images/energy.pdf  used on input line 964.
 (pdftex.def)             Requested size: 265.59494pt x 192.02087pt.
- [23] [24 <./images/plastic_Am-241.pdf> <./images/plastic_Co-57_fit.pdf> <./images/energy.pdf>] [25]
+ [25] [26 <./images/plastic_Am-241.pdf> <./images/plastic_Co-57_fit.pdf> <./images/energy.pdf>] [27]
 Chapter 4.
-[26
+[28
 
 ]
 Chapter 5.
-(main.bbl [27
+(main.bbl [29
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 92.
- [28
+ [30
 
-] [29]
+] [31]
 Underfull \hbox (badness 10000) in paragraph at lines 265--269
 []\OT1/lmr/m/n/9 AuntMinnieEurope, ``RaySafe launches new i3 dose plat-form at ECR 2017.''
  []
@@ -1189,7 +1211,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 282--285
 \OT1/lmtt/m/n/9 / / shop . md-[]solutions-[]gmbh . com / en / products / live-[]dosimetry-[]raysafe-[]i3 ? srsltid =
  []
 
-[30] [31]) [32] (main.aux)
+[32] [33]) [34] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1205,17 +1227,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8FA99690B81378E26D766F723D4A7979;5123.
  ) 
 Here is how much of TeX's memory you used:
- 30064 strings out of 467866
- 605412 string characters out of 5418313
- 973842 words of memory out of 5000000
- 58169 multiletter control sequences out of 15000+600000
+ 30153 strings out of 467866
+ 607368 string characters out of 5418313
+ 979127 words of memory out of 5000000
+ 58243 multiletter control sequences out of 15000+600000
  731898 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,104p,2436b,1279s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main.pdf (44 pages, 2107477 bytes).
+Output written on main.pdf (46 pages, 2338132 bytes).
 PDF statistics:
- 1375 PDF objects out of 1440 (max. 8388607)
- 241 named destinations out of 1000 (max. 500000)
- 355 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1393 PDF objects out of 1440 (max. 8388607)
+ 247 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

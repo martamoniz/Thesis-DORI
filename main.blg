@@ -6,51 +6,50 @@ The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: Bibliografia.bib
 Warning--string name "june" is undefined
---line 175 of file Bibliografia.bib
+--line 271 of file Bibliografia.bib
 Warning--string name "june" is undefined
---line 623 of file Bibliografia.bib
-Warning--I didn't find a database entry for "lt1711"
+--line 719 of file Bibliografia.bib
 Warning--empty journal in 33
 Warning--empty year in 33
-You've used 85 entries,
+You've used 90 entries,
             1876 wiz_defined-function locations,
-            959 strings with 22401 characters,
-and the built_in function-call counts, 24567 in all, are:
-= -- 2259
-> -- 1372
-< -- 2
-+ -- 494
-- -- 409
-* -- 1786
-:= -- 3541
-add.period$ -- 109
-call.type$ -- 85
-change.case$ -- 77
+            982 strings with 23081 characters,
+and the built_in function-call counts, 25319 in all, are:
+= -- 2343
+> -- 1396
+< -- 1
++ -- 505
+- -- 415
+* -- 1817
+:= -- 3648
+add.period$ -- 123
+call.type$ -- 90
+change.case$ -- 79
 chr.to.int$ -- 0
-cite$ -- 87
-duplicate$ -- 1201
-empty$ -- 2030
-format.name$ -- 409
-if$ -- 5960
+cite$ -- 92
+duplicate$ -- 1237
+empty$ -- 2121
+format.name$ -- 415
+if$ -- 6152
 int.to.chr$ -- 0
-int.to.str$ -- 85
-missing$ -- 74
-newline$ -- 283
-num.names$ -- 82
-pop$ -- 272
+int.to.str$ -- 90
+missing$ -- 78
+newline$ -- 307
+num.names$ -- 87
+pop$ -- 295
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 997
+skip$ -- 1005
 stack$ -- 0
 substring$ -- 1274
-swap$ -- 603
-text.length$ -- 2
+swap$ -- 610
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 167
-width$ -- 87
-write$ -- 817
-(There were 5 warnings)
+while$ -- 172
+width$ -- 92
+write$ -- 871
+(There were 4 warnings)

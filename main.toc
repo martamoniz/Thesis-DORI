@@ -4,7 +4,7 @@
 \contentsline {chapter}{List of Tables}{iii}{section.0.3}%
 \contentsline {chapter}{List of Abbreviations}{iv}{section.0.4}%
 \contentsline {chapter}{List of Symbols}{v}{section.0.5}%
-\contentsline {chapter}{Motivation and Contextualization}{1}{section.0.6}%
+\contentsline {chapter}{Contextualization and Motivation}{1}{section.0.6}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Interventional Radiology}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Photon Interaction with Matter}{3}{section.1.2}%
@@ -28,13 +28,15 @@
 \contentsline {subsection}{\numberline {2.2.1}SiPM Power Supply}{15}{subsection.2.2.1}%
 \contentsline {section}{\numberline {2.3}Front-End Electronics}{16}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Pulse Shaping}{17}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Pulse Discrimination}{20}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Pulse Sampling}{22}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Validation of the Front-End Electronics}{22}{section.2.4}%
-\contentsline {chapter}{\numberline {3}DORI - Calibration}{24}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Energy Calibration}{24}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Dose Rate Calibration}{27}{section.3.2}%
-\contentsline {chapter}{\numberline {4}DORI - Final Prototype}{28}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Future Work}{28}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusions}{29}{chapter.5}%
-\contentsline {chapter}{References}{30}{section.5.1}%
+\contentsline {subsubsection}{Transient Response}{19}{section*.25}%
+\contentsline {subsection}{\numberline {2.3.2}Pulse Discrimination}{21}{subsection.2.3.2}%
+\contentsline {subsubsection}{Transient Response}{23}{section*.29}%
+\contentsline {subsection}{\numberline {2.3.3}Pulse Sampling}{24}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Validation of the Front-End Electronics}{25}{section.2.4}%
+\contentsline {chapter}{\numberline {3}DORI - Calibration}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Energy Calibration}{27}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Dose Rate Calibration}{30}{section.3.2}%
+\contentsline {chapter}{\numberline {4}DORI - Final Prototype}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Future Work}{31}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Conclusions}{32}{chapter.5}%
+\contentsline {chapter}{References}{33}{section.5.1}%

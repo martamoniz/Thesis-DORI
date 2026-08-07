@@ -408,10 +408,11 @@ Maxim Integrated, {\em MAX1932: Digitally Controlled, 0.5\% Accurate, Safest
 A.~Rivetti, {\em CMOS Front-End Electronics for Radiation Sensors}.
 \newblock Boca Raton, FL: CRC Press, 1~ed., 2015.
 
-\bibitem{LTC6228}
-{Analog Devices Inc.}, ``Ltc6228/ltc6229: Low noise, 730 mhz rail-to-rail
-  output operational amplifiers with shutdown,'' Datasheet LTC6228/LTC6229 Rev.
-  B, Analog Devices, 2016.
+\bibitem{LT6202_LT6203_LT6204}
+{Linear Technology Corporation}, ``{LT6202/LT6203/LT6204: Single/Dual/Quad
+  100MHz, Rail-to-Rail Input and Output, Ultralow 1.9nV/$\sqrt{Hz}$ Noise, Low
+  Power Op Amps}.'' Datasheet, 2011.
+\newblock Available from Linear Technology Corporation.
 
 \bibitem{106}
 H.~Spieler, {\em {Semiconductor detector systems}}.
@@ -451,6 +452,33 @@ N.~N.~T. Tran, S.~Sasaki, T.~Sanami, Y.~Kishimoto, and E.~Shibamura, ``Some
   {\em Proceedings of the Second International Symposium on Radiation Detectors
   and Their Uses (ISRD2018)}, Journal of the Physical Society of Japan, Jan.
   2019.
+
+\bibitem{LT1711_LT1712}
+{Linear Technology Corporation}, {\em {LT1711/LT1712: Single/Dual 4.5ns,
+  3V/5V/$\pm$5V, Rail-to-Rail Comparators}}.
+\newblock Linear Technology Corporation, 2001.
+\newblock Datasheet.
+
+\bibitem{Franco2015}
+S.~Franco, {\em Design with Operational Amplifiers and Analog Integrated
+  Circuits}.
+\newblock New York, NY, USA: McGraw-Hill Education, 4~ed., 2015.
+
+\bibitem{OPA354}
+{Texas Instruments}, {\em {OPAx354 250-MHz, Rail-to-Rail I/O, CMOS Operational
+  Amplifiers}}.
+\newblock Texas Instruments, Apr. 2018.
+\newblock Datasheet, Rev. G.
+
+\bibitem{Horowitz2015}
+P.~Horowitz and W.~Hill, {\em The Art of Electronics}.
+\newblock Cambridge, U.K.: Cambridge University Press, 3~ed., 2015.
+
+\bibitem{ADS7883}
+{Texas Instruments}, {\em {ADS7883 12-Bit, 3-MSPS, Micropower, Miniature SAR
+  Analog-to-Digital Converter}}.
+\newblock Texas Instruments, July 2008.
+\newblock Datasheet, SLAS594.
 
 \bibitem{117}
 P.~Saengkaew, S.~Sanorpim, M.~Jitpukdee, K.~Cheewajaroen, C.~Yenchai,

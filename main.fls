@@ -487,6 +487,12 @@ INPUT .\images\shaping_chain_trace00001.pdf
 INPUT .\figures\P&H
 INPUT .\figures\P&H
 INPUT figures\P&H
+INPUT .\images\7.5k_notitle.pdf
+INPUT .\images\7.5k_notitle.pdf
+INPUT .\images\7.5k_notitle.pdf
+INPUT .\images\7.5k_notitle.pdf
+INPUT .\images\7.5k_notitle.pdf
+INPUT .\images\7.5k_notitle.pdf
 INPUT .\images\spectra.pdf
 INPUT .\images\spectra.pdf
 INPUT .\images\spectra.pdf
@@ -573,6 +579,8 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi7.p
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi7.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi9.pfb
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi9.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr5.pfb

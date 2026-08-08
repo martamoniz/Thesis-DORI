@@ -149,6 +149,24 @@
   \par\vspace*{40mm}}
 
 %
+% Like \HEADER, but with no colored bar and a larger logo. Used for a plain
+% "inner cover" page (e.g. title + submission text, no bar). Ported from the
+% official UA thesis template's \INNERHEADER, adapted to this file's macro
+% names/sizes (\ua@font@size0 matches \HEADER's normal-text tier here, and
+% \ua@logo picks up whichever logo file this package was loaded with).
+%
+\long\def\INNERHEADER#1#2{\vspace*{5mm}\noindent\ua@font@size0\rlap{\parbox{\textwidth}{%
+    \ua@font@size0\hspace*{77mm}#1\textsf{\textbf{Universidade de Aveiro}}\space\space
+      \ua@above{\ua@textA}{\ua@textB}%
+    \vskip -0.3pt
+    \nointerlineskip
+    \ua@font@size0\hspace*{77mm}\rlap{\ua@font@size0\textsf{\textbf{\strut #2}}}%
+      \hphantom{\ua@font@size0\textsf{\textbf{Universidade de Aveiro}}}\space\space
+      \ua@below{\ua@textC}{\ua@textD}}}\par
+  \ua@font@size0\vspace*{-10.8mm}\noindent\hspace*{63.56mm}\includegraphics[height=15.88mm]{\ua@logo}%
+  \par\vspace*{40mm}}
+
+%
 % Used to put the thesis title in the page. Must be placed immediately after
 % the \HEADER macro. The first argument is the author's name and the second
 % argument is the thesis title.

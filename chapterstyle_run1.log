@@ -1,0 +1,563 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo))
+(uaThesis.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/a4wide\a4wide.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/ntgclass\a4.sty)))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/eurosym\eurosym.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel
+-english.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+df))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty)))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/floatrow\floatrow.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/acronym\acronym.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/bigfoot\suffix.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex))
+) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/notoccite\notoccite.sty
+) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/overpic\overpic.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/eepic\epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+))
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def) (main.aux)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg)) (main.out) (main.out)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-english.trsl)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/floatrow\fr-subfig.sty)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd) [1{C:/Us
+ers/marta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/marta/AppD
+ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <./uaLogoNew.pdf>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.136 \EndTitlePage
+                    [1]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.165 \EndTitlePage
+                    [1]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.180 \EndTitlePage
+                    [1]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.203 \EndTitlePage
+                    [1]
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.210 \EndTitlePage
+                    [1{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/d
+vips/lm/lm-rmtt.enc}]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.219 \EndTitlePage
+                    [1]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.230 \EndTitlePage
+                    [1] (main.toc) [1] (main.lof) [2] (main.lot) [3]
+(lista_acronimos.tex
+
+LaTeX Warning: Hyper reference `acro:ALARA' on page iv undefined on input line 
+6.
+
+
+LaTeX Warning: Hyper reference `acro:ALARA' on page iv undefined on input line 
+6.
+
+
+LaTeX Warning: Hyper reference `acro:APD' on page iv undefined on input line 7.
+
+
+
+LaTeX Warning: Hyper reference `acro:APD' on page iv undefined on input line 7.
+
+
+
+LaTeX Warning: Hyper reference `acro:FOV' on page iv undefined on input line 8.
+
+
+
+LaTeX Warning: Hyper reference `acro:FOV' on page iv undefined on input line 8.
+
+
+
+LaTeX Warning: Hyper reference `acro:FT' on page iv undefined on input line 9.
+
+
+LaTeX Warning: Hyper reference `acro:FT' on page iv undefined on input line 9.
+
+
+LaTeX Warning: Hyper reference `acro:GUI' on page iv undefined on input line 10
+.
+
+
+LaTeX Warning: Hyper reference `acro:GUI' on page iv undefined on input line 10
+.
+
+
+LaTeX Warning: Hyper reference `acro:ICRP' on page iv undefined on input line 1
+1.
+
+
+LaTeX Warning: Hyper reference `acro:ICRP' on page iv undefined on input line 1
+1.
+
+
+LaTeX Warning: Hyper reference `acro:IR' on page iv undefined on input line 12.
+
+
+
+LaTeX Warning: Hyper reference `acro:IR' on page iv undefined on input line 12.
+
+
+
+LaTeX Warning: Hyper reference `acro:KERMA' on page iv undefined on input line 
+13.
+
+
+LaTeX Warning: Hyper reference `acro:KERMA' on page iv undefined on input line 
+13.
+
+
+LaTeX Warning: Hyper reference `acro:LET' on page iv undefined on input line 14
+.
+
+
+LaTeX Warning: Hyper reference `acro:LET' on page iv undefined on input line 14
+.
+
+
+LaTeX Warning: Hyper reference `acro:MCU' on page iv undefined on input line 15
+.
+
+
+LaTeX Warning: Hyper reference `acro:MCU' on page iv undefined on input line 15
+.
+
+
+LaTeX Warning: Hyper reference `acro:MPPC' on page iv undefined on input line 1
+6.
+
+
+LaTeX Warning: Hyper reference `acro:MPPC' on page iv undefined on input line 1
+6.
+
+
+LaTeX Warning: Hyper reference `acro:OSLD' on page iv undefined on input line 1
+7.
+
+
+LaTeX Warning: Hyper reference `acro:OSLD' on page iv undefined on input line 1
+7.
+
+
+LaTeX Warning: Hyper reference `acro:PMMA' on page iv undefined on input line 1
+8.
+
+
+LaTeX Warning: Hyper reference `acro:PMMA' on page iv undefined on input line 1
+8.
+
+
+LaTeX Warning: Hyper reference `acro:PSOF' on page iv undefined on input line 1
+9.
+
+
+LaTeX Warning: Hyper reference `acro:PSOF' on page iv undefined on input line 1
+9.
+
+
+LaTeX Warning: Hyper reference `acro:SiPM' on page iv undefined on input line 2
+0.
+
+
+LaTeX Warning: Hyper reference `acro:SiPM' on page iv undefined on input line 2
+0.
+
+
+LaTeX Warning: Hyper reference `acro:TLD' on page iv undefined on input line 21
+.
+
+
+LaTeX Warning: Hyper reference `acro:TLD' on page iv undefined on input line 21
+.
+
+) [4] (lista_simbolos.tex) [5{C:/Users/marta/AppData/Local/Programs/MiKTeX/font
+s/enc/dvips/lm/lm-mathit.enc}] (chapters/contextualization.tex)
+(chapters/chapter1.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \newpage
+             [1]
+Chapter 1.
+[2 <./images/interventional radiology setup.pdf>]
+(figures/Interaction_with_matter)
+Underfull \vbox (badness 1874) has occurred while \output is active [3{C:/Users
+/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+[4] (figures/deterministic_stochastic.tex) [5{C:/Users/marta/AppData/Local/Prog
+rams/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [6] [7 <./images/neutron.jpg>]
+[8]
+Underfull \vbox (badness 1383) has occurred while \output is active [9 <./image
+s/dose rates.png (PNG copy)>] [10] [11]) (chapters/chapter2.tex [12]
+Chapter 2.
+(C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd) [13{C:/Us
+ers/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./image
+s/DORI.pdf>] [14] (figures/MAX1932)
+Underfull \vbox (badness 10000) has occurred while \output is active [15]
+
+LaTeX Warning: Reference `annex:sources' on page 16 undefined on input line 67.
+
+
+(figures/Architecture.tex) [16] (figures/dori_teste) (figures/Dori_box)
+Underfull \vbox (badness 10000) has occurred while \output is active [17]
+[18 <./images/pcb_teste.jpg> <./images/dori_case.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active [19]
+Underfull \vbox (badness 10000) has occurred while \output is active [20]
+[21 <./images/shaping_chain_trace00001.pdf>] (figures/P&H) [22] [23] [24 <./ima
+ges/7.5k_notitle.pdf>] [25]) (chapters/chapter3.tex [26 <./images/spectra.pdf> 
+<./images/fit_csi.pdf> <./images/co57_energy_reconstruction.pdf>]
+Chapter 3.
+[27 <./images/bremsstrahlung_fits.pdf> <./images/bremsstrahlung_40kVp_vs_curren
+t.pdf>] [28] [29 <./images/plastic_Am-241.pdf> <./images/plastic_Co-57_fit.pdf>
+ <./images/energy.pdf>]) (chapters/chapter4.tex [30]
+Chapter 4.
+) (chapters/chapter-conclusions.tex [31]
+Chapter 5.
+) (main.bbl [32] [33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 265--269
+[]\OT1/lmr/m/n/9 AuntMinnieEurope, ``RaySafe launches new i3 dose plat-form at 
+ECR 2017.''
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--269
+[]$\OT1/lmtt/m/n/9 https : / / www . auntminnieeurope . com / resources / confe
+rences / article / 15650794 /
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--285
+[]\OT1/lmr/m/n/9 MD So-lu-tions GmbH, ``Live Dosime-try: RaySafe i3 -- MD So-lu
+-tions GmbH.'' []$\OT1/lmtt/m/n/9 https :
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--285
+\OT1/lmtt/m/n/9 / / shop . md-[]solutions-[]gmbh . com / en / products / live-[
+]dosimetry-[]raysafe-[]i3 ? srsltid =
+[35] [36]) [37] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{section.5.1} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.0.6} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.0.5} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.0.4} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.0.3} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.0.2} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.0.1} has been referenced but does not exist
+, replaced by a fixed one
+
+<C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr1
+0.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx1
+0.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx1
+2.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8
+.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.
+pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10
+.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10
+.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10
+.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.
+pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.p
+fb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pf
+b><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb
+><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb>
+<C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
+C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:
+/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/U
+sers/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Use
+rs/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users
+/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/m
+arta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/m
+arta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/ma
+rta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/ma
+rta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/mar
+ta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/m
+arta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users
+/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/User
+s/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/User
+s/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users
+/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/
+marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/m
+arta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/ma
+rta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/ma
+rta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on main.pdf (50 pages, 2396406 bytes).
+Transcript written on main.log.

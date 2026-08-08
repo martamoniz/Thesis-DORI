@@ -347,6 +347,10 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmssbx
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmssbo10.tfm
 INPUT C:\Users\marta\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri10.tfm
+INPUT .\uaLogoNew.pdf
+INPUT .\uaLogoNew.pdf
+INPUT .\uaLogoNew.pdf
 INPUT .\uaLogoNew.pdf
 INPUT .\uaLogoNew.pdf
 INPUT .\uaLogoNew.pdf
@@ -368,7 +372,6 @@ OUTPUT main.toc
 INPUT .\main.lof
 INPUT .\main.lof
 INPUT main.lof
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri10.tfm
 OUTPUT main.lof
 INPUT .\main.lot
 INPUT .\main.lot
@@ -385,8 +388,16 @@ INPUT .\lista_simbolos.tex
 INPUT .\lista_simbolos.tex
 INPUT lista_simbolos.tex
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT .\chapters\contextualization.tex
+INPUT .\chapters\contextualization.tex
+INPUT .\chapters\contextualization.tex
+INPUT .\chapters\contextualization.tex
+INPUT chapters\contextualization.tex
+INPUT .\chapters\chapter1.tex
+INPUT .\chapters\chapter1.tex
+INPUT .\chapters\chapter1.tex
+INPUT .\chapters\chapter1.tex
+INPUT chapters\chapter1.tex
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT .\images\interventional radiology setup.pdf
 INPUT .\images\interventional radiology setup.pdf
@@ -397,6 +408,8 @@ INPUT .\images\interventional radiology setup.pdf
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx8.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT .\figures\Interaction_with_matter
 INPUT .\figures\Interaction_with_matter
 INPUT figures\Interaction_with_matter
@@ -414,8 +427,6 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbxi10.tfm
 INPUT .\figures\deterministic_stochastic.tex
@@ -440,6 +451,11 @@ INPUT .\images\dose rates.png
 INPUT .\images\dose rates.png
 INPUT .\images\dose rates.png
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\eurosym\feymr10.tfm
+INPUT .\chapters\chapter2.tex
+INPUT .\chapters\chapter2.tex
+INPUT .\chapters\chapter2.tex
+INPUT .\chapters\chapter2.tex
+INPUT chapters\chapter2.tex
 INPUT .\images\DORI.pdf
 INPUT .\images\DORI.pdf
 INPUT .\images\DORI.pdf
@@ -511,6 +527,11 @@ INPUT .\images\co57_energy_reconstruction.pdf
 INPUT .\images\co57_energy_reconstruction.pdf
 INPUT .\images\co57_energy_reconstruction.pdf
 INPUT .\images\co57_energy_reconstruction.pdf
+INPUT .\chapters\chapter3.tex
+INPUT .\chapters\chapter3.tex
+INPUT .\chapters\chapter3.tex
+INPUT .\chapters\chapter3.tex
+INPUT chapters\chapter3.tex
 INPUT .\images\bremsstrahlung_fits.pdf
 INPUT .\images\bremsstrahlung_fits.pdf
 INPUT .\images\bremsstrahlung_fits.pdf
@@ -542,6 +563,16 @@ INPUT .\images\energy.pdf
 INPUT .\images\energy.pdf
 INPUT .\images\energy.pdf
 INPUT .\images\energy.pdf
+INPUT .\chapters\chapter4.tex
+INPUT .\chapters\chapter4.tex
+INPUT .\chapters\chapter4.tex
+INPUT .\chapters\chapter4.tex
+INPUT chapters\chapter4.tex
+INPUT .\chapters\chapter-conclusions.tex
+INPUT .\chapters\chapter-conclusions.tex
+INPUT .\chapters\chapter-conclusions.tex
+INPUT .\chapters\chapter-conclusions.tex
+INPUT chapters\chapter-conclusions.tex
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
@@ -552,6 +583,11 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy9.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr9.tfm
+INPUT .\chapters\appendix-sources.tex
+INPUT .\chapters\appendix-sources.tex
+INPUT .\chapters\appendix-sources.tex
+INPUT .\chapters\appendix-sources.tex
+INPUT chapters\appendix-sources.tex
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
@@ -583,6 +619,10 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi9.p
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi9.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr17.pfb
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr17.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr5.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr5.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb

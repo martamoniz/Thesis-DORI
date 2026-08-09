@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1786215563.5856 "main.aux" "main.bbl" "main" 1786215689.29123 0
+["bibtex main"] 1786283781.06948 "main.aux" "main.bbl" "main" 1786283784.20099 0
   "./Bibliografia.bib" 1786200157 173984 1e0e884133e419bd843fe26c3da01815 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "main.aux" 1786215688 20243 93a9e32abc71df07b5dab41571ce79a1 "pdflatex"
+  "main.aux" 1786283783 20813 ddbec1c790f0f85b00e3c56b276edb9d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1786215686.66423 "c:/Users/marta/Documents/GitHub/Thesis-DORI/main.tex" "main.pdf" "main" 1786215689.29166 0
+["pdflatex"] 1786283781.31987 "c:/Users/marta/Documents/GitHub/Thesis-DORI/main.tex" "main.pdf" "main" 1786283784.20146 0
   "C:/Users/marta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1786200927 82705 9cc9f144eacd499bc23a611703921467 ""
   "C:/Users/marta/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1773578131 13333849 716dca93cbf002d9cbc14f6ce967af17 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1256929440 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -254,10 +254,10 @@
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/marta/Documents/GitHub/Thesis-DORI/main.tex" 1786215422 13592 3fb16c77b4b722e715278446064043f8 ""
-  "chapters/appendix-sources.tex" 1786215415 1163 cc913e5bc2651d295603ec471b0ce561 ""
+  "c:/Users/marta/Documents/GitHub/Thesis-DORI/main.tex" 1786275961 14367 f3c1957c1a57059f466fa8d1cbb369d8 ""
+  "chapters/appendix-sources.tex" 1786275968 1142 99c07d3b9f908ad217e9a8f3f7360f0a ""
   "chapters/chapter-conclusions.tex" 1786204697 24 ff4a4d8e29b7b2a563f9897615c403d2 ""
-  "chapters/chapter1.tex" 1786215495 34596 5820a03dcc9d26ef699b51ed48d796e9 ""
+  "chapters/chapter1.tex" 1786283777 32244 52b8823d4250ca34417cd24fd5ce736e ""
   "chapters/chapter2.tex" 1786215686 37460 0d9bff845125afa3f52d796d46375bcf ""
   "chapters/chapter3.tex" 1786215296 11011 0836313767606ab10510082425bc93d5 ""
   "chapters/chapter4.tex" 1786215296 48 29ca5335bbdaf34f6521e13fc79d02e4 ""
@@ -279,7 +279,6 @@
   "images/energy.pdf" 1784988579 22482 a049dbc4f17e443d167d3ece352d7796 ""
   "images/fit_csi.pdf" 1786200157 35424 7a7da13383efb0533c0489fa82e5df0c ""
   "images/interventional radiology setup.pdf" 1784988579 404841 6da89858b2b39a56bbaf5215995ed365 ""
-  "images/neutron.jpg" 1780233592 63995 4adb5e98313a311f03b57f7b716bb842 ""
   "images/pcb_teste.jpg" 1786200157 142599 4de8e272769292f183a10765dd9b0ef5 ""
   "images/plastic_Am-241.pdf" 1784988579 39268 0202b46eb11e661333b13dfc1ab10c54 ""
   "images/plastic_Co-57_fit.pdf" 1784988579 26800 262f48717b517a04a078bed276ee045e ""
@@ -287,15 +286,15 @@
   "images/spectra.pdf" 1784988579 78319 dd61fdbda0bb972f1a1e787b9fa6c410 ""
   "lista_acronimos.tex" 1780233592 854 e0f44b4d4b1827bb92445f0e5ff356ac ""
   "lista_simbolos.tex" 1780233592 1082 913d0af5b40fe41644a9fdfbedd5c7da ""
-  "main.aux" 1786215688 20243 93a9e32abc71df07b5dab41571ce79a1 "pdflatex"
-  "main.bbl" 1786215563 22373 ff1733bec2e1d78440b1e7fdeb787f4b "bibtex main"
-  "main.lof" 1786215688 2498 40d574f7cd816e193b38c1b07625ce45 "pdflatex"
-  "main.lot" 1786215688 981 b57a5c7d011ca84104d5edb8472b1d69 "pdflatex"
-  "main.out" 1786215688 4269 0cc6194770ee68ac22ce253e5c257952 "pdflatex"
-  "main.tex" 1786215422 13592 3fb16c77b4b722e715278446064043f8 ""
-  "main.toc" 1786215688 2777 8cdb6bd69163867f69b89c215bc5dc34 "pdflatex"
+  "main.aux" 1786283783 20813 ddbec1c790f0f85b00e3c56b276edb9d "pdflatex"
+  "main.bbl" 1786283781 22373 022f2c77b48dc29de6f66ce0fd25c0cf "bibtex main"
+  "main.lof" 1786283783 2618 e542a6355f0ca7b9501e9b938086d373 "pdflatex"
+  "main.lot" 1786283783 917 1d7b729383afc864ea961dded11a08c5 "pdflatex"
+  "main.out" 1786283783 4999 1b1394ed3efa50cd468cc08902da8526 "pdflatex"
+  "main.tex" 1786275961 14367 f3c1957c1a57059f466fa8d1cbb369d8 ""
+  "main.toc" 1786283783 3126 08bc4e0c7c39b7486f62badf841fe702 "pdflatex"
   "uaLogoNew.pdf" 1780233592 2911 e3fb8f77330f913af87495e8c6b0dc02 ""
-  "uaThesis.sty" 1786205354 10243 f39ec239e78b23a5b6c8c2f20d123de6 ""
+  "uaThesis.sty" 1786276154 10181 7d94e4a7d9ab9d309049f6710075a466 ""
   (generated)
   "main.aux"
   "main.lof"

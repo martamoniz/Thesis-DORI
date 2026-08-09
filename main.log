@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.15)  8 AUG 2026 20:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.15)  9 AUG 2026 14:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -775,7 +775,7 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@cols=\count389
 \TX@ftn=\toks43
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 113.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 128.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -784,24 +784,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count391
@@ -821,7 +821,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 113.
+Package hyperref Info: Link coloring OFF on input line 128.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -829,7 +829,7 @@ Package hyperref Info: Link coloring OFF on input line 113.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 113.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 128.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -838,66 +838,61 @@ Package: fr-subfig 2007/12/24 v0.1g (beta) floatrow: additions for subfig
 \FBsc@max=\skip82
 \FBso@max=\skip83
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 122.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 137.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 122.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 137.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 122.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 137.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 122.
+(Font)              <10.95> on input line 137.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 122.
+(Font)              <8> on input line 137.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 122.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 122.
+(Font)              <6> on input line 137.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 137.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 122.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 137.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 122.
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 137.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<uaLogoNew.pdf, id=118, 60.225pt x 75.28125pt>
+<uaLogoNew.pdf, id=142, 60.225pt x 75.28125pt>
 File: uaLogoNew.pdf Graphic file (type pdf)
 <use uaLogoNew.pdf>
-Package pdftex.def Info: uaLogoNew.pdf  used on input line 122.
+Package pdftex.def Info: uaLogoNew.pdf  used on input line 137.
 (pdftex.def)             Requested size: 20.48633pt x 25.60747pt.
  [1
 
 {C:/Users/marta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <./uaLogoNew.pdf>]
 File: uaLogoNew.pdf Graphic file (type pdf)
 <use uaLogoNew.pdf>
-Package pdftex.def Info: uaLogoNew.pdf  used on input line 134.
+Package pdftex.def Info: uaLogoNew.pdf  used on input line 149.
 (pdftex.def)             Requested size: 20.48633pt x 25.60747pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.139 \EndTitlePage
+l.154 \EndTitlePage
                     [1]
 File: uaLogoNew.pdf Graphic file (type pdf)
 <use uaLogoNew.pdf>
-Package pdftex.def Info: uaLogoNew.pdf  used on input line 144.
+Package pdftex.def Info: uaLogoNew.pdf  used on input line 159.
 (pdftex.def)             Requested size: 36.14813pt x 45.18298pt.
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <14.4> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 148.
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 163.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.168 \EndTitlePage
-                    [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -906,29 +901,34 @@ l.183 \EndTitlePage
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.206 \EndTitlePage
+l.198 \EndTitlePage
                     [1]
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 211.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.221 \EndTitlePage
+                    [1]
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 226.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.213 \EndTitlePage
+l.228 \EndTitlePage
                     [1{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}]
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 220.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 235.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.222 \EndTitlePage
+l.237 \EndTitlePage
                     [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.233 \EndTitlePage
+l.248 \EndTitlePage
                     [1] (main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1057,7 +1057,7 @@ l.1 \newpage
 
 ]
 Chapter 1.
-<images/interventional radiology setup.pdf, id=301, 1682.285pt x 894.34125pt>
+<images/interventional radiology setup.pdf, id=330, 1682.285pt x 894.34125pt>
 File: images/interventional radiology setup.pdf Graphic file (type pdf)
 <use images/interventional radiology setup.pdf>
 Package pdftex.def Info: images/interventional radiology setup.pdf  used on input line 12.
@@ -1071,21 +1071,15 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 165.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 165.
-) [3{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [4] (figures/deterministic_stochastic.tex) [5{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [6]
-<images/neutron.jpg, id=426, 621.522pt x 468.5505pt>
-File: images/neutron.jpg Graphic file (type jpg)
-<use images/neutron.jpg>
-Package pdftex.def Info: images/neutron.jpg  used on input line 179.
-(pdftex.def)             Requested size: 113.2253pt x 85.35826pt.
- [7 <./images/neutron.jpg>]
-<images/dose rates.png, id=461, 1445.4pt x 813.0375pt>
+) [3{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [4] (figures/deterministic_stochastic.tex) [5{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [6] [7]
+<images/dose rates.png, id=484, 1445.4pt x 813.0375pt>
 File: images/dose rates.png Graphic file (type png)
 <use images/dose rates.png>
-Package pdftex.def Info: images/dose rates.png  used on input line 242.
+Package pdftex.def Info: images/dose rates.png  used on input line 178.
 (pdftex.def)             Requested size: 442.65375pt x 248.98715pt.
- [8] [9 <./images/dose rates.png (PNG copy)>] [10] [11]) (chapters/chapter2.tex [12]
+ [8 <./images/dose rates.png (PNG copy)>] [9] [10]) (chapters/chapter2.tex [11] [12]
 Chapter 2.
-<images/DORI.pdf, id=600, 3814.25pt x 2057.6875pt>
+<images/DORI.pdf, id=617, 3814.25pt x 2057.6875pt>
 File: images/DORI.pdf Graphic file (type pdf)
 <use images/DORI.pdf>
 Package pdftex.def Info: images/DORI.pdf  used on input line 9.
@@ -1096,53 +1090,53 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [13
 
  <./images/DORI.pdf>] [14{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] (figures/MAX1932) [15] (figures/Architecture.tex) [16] (figures/dori_teste
-<images/pcb_teste.jpg, id=672, 613.54219pt x 453.19313pt>
+<images/pcb_teste.jpg, id=689, 613.54219pt x 453.19313pt>
 File: images/pcb_teste.jpg Graphic file (type jpg)
 <use images/pcb_teste.jpg>
 Package pdftex.def Info: images/pcb_teste.jpg  used on input line 10.
 (pdftex.def)             Requested size: 186.00198pt x 126.99693pt.
 ) (figures/Dori_box
-<images/dori_case.jpg, id=673, 750.55406pt x 422.32782pt>
+<images/dori_case.jpg, id=690, 750.55406pt x 422.32782pt>
 File: images/dori_case.jpg Graphic file (type jpg)
 <use images/dori_case.jpg>
 Package pdftex.def Info: images/dori_case.jpg  used on input line 10.
 (pdftex.def)             Requested size: 199.99532pt x 127.09886pt.
 ) [17 <./images/pcb_teste.jpg> <./images/dori_case.jpg>] [18] [19]
-<images/shaping_chain_trace00001.pdf, id=728, 754.82pt x 494.84875pt>
+<images/shaping_chain_trace00001.pdf, id=745, 754.82pt x 494.84875pt>
 File: images/shaping_chain_trace00001.pdf Graphic file (type pdf)
 <use images/shaping_chain_trace00001.pdf>
 Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 178.
 (pdftex.def)             Requested size: 442.65375pt x 290.1989pt.
  [20 <./images/shaping_chain_trace00001.pdf>] (figures/P&H) [21] [22]
-<images/7.5k_notitle.pdf, id=791, 497.86pt x 268.00125pt>
+<images/7.5k_notitle.pdf, id=808, 497.86pt x 268.00125pt>
 File: images/7.5k_notitle.pdf Graphic file (type pdf)
 <use images/7.5k_notitle.pdf>
 Package pdftex.def Info: images/7.5k_notitle.pdf  used on input line 244.
 (pdftex.def)             Requested size: 442.65375pt x 238.28725pt.
  [23] [24 <./images/7.5k_notitle.pdf>]
-<images/spectra.pdf, id=846, 860.21375pt x 260.975pt>
+<images/spectra.pdf, id=863, 860.21375pt x 260.975pt>
 File: images/spectra.pdf Graphic file (type pdf)
 <use images/spectra.pdf>
 Package pdftex.def Info: images/spectra.pdf  used on input line 300.
 (pdftex.def)             Requested size: 442.65375pt x 134.29411pt.
-<images/fit_csi.pdf, id=847, 451.6875pt x 338.26375pt>
+<images/fit_csi.pdf, id=864, 451.6875pt x 338.26375pt>
 File: images/fit_csi.pdf Graphic file (type pdf)
 <use images/fit_csi.pdf>
 Package pdftex.def Info: images/fit_csi.pdf  used on input line 302.
 (pdftex.def)             Requested size: 208.04779pt x 155.80966pt.
-<images/co57_energy_reconstruction.pdf, id=848, 442.65375pt x 312.16624pt>
+<images/co57_energy_reconstruction.pdf, id=865, 442.65375pt x 312.16624pt>
 File: images/co57_energy_reconstruction.pdf Graphic file (type pdf)
 <use images/co57_energy_reconstruction.pdf>
 Package pdftex.def Info: images/co57_energy_reconstruction.pdf  used on input line 305.
 (pdftex.def)             Requested size: 221.32687pt x 156.08273pt.
 ) (chapters/chapter3.tex [25] [26 <./images/spectra.pdf> <./images/fit_csi.pdf> <./images/co57_energy_reconstruction.pdf>]
 Chapter 3.
-<images/bremsstrahlung_fits.pdf, id=1005, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_fits.pdf, id=1022, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_fits.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_fits.pdf>
 Package pdftex.def Info: images/bremsstrahlung_fits.pdf  used on input line 12.
 (pdftex.def)             Requested size: 212.4719pt x 144.886pt.
-<images/bremsstrahlung_40kVp_vs_current.pdf, id=1006, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_40kVp_vs_current.pdf, id=1023, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_40kVp_vs_current.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_40kVp_vs_current.pdf>
 Package pdftex.def Info: images/bremsstrahlung_40kVp_vs_current.pdf  used on input line 18.
@@ -1150,17 +1144,17 @@ Package pdftex.def Info: images/bremsstrahlung_40kVp_vs_current.pdf  used on inp
 [27
 
  <./images/bremsstrahlung_fits.pdf> <./images/bremsstrahlung_40kVp_vs_current.pdf>] [28]
-<images/plastic_Am-241.pdf, id=1094, 354.32375pt x 247.92625pt>
+<images/plastic_Am-241.pdf, id=1111, 354.32375pt x 247.92625pt>
 File: images/plastic_Am-241.pdf Graphic file (type pdf)
 <use images/plastic_Am-241.pdf>
 Package pdftex.def Info: images/plastic_Am-241.pdf  used on input line 92.
 (pdftex.def)             Requested size: 177.05879pt x 123.89093pt.
-<images/plastic_Co-57_fit.pdf, id=1095, 354.32375pt x 247.92625pt>
+<images/plastic_Co-57_fit.pdf, id=1112, 354.32375pt x 247.92625pt>
 File: images/plastic_Co-57_fit.pdf Graphic file (type pdf)
 <use images/plastic_Co-57_fit.pdf>
 Package pdftex.def Info: images/plastic_Co-57_fit.pdf  used on input line 94.
 (pdftex.def)             Requested size: 177.05879pt x 123.89093pt.
-<images/energy.pdf, id=1096, 445.665pt x 322.20375pt>
+<images/energy.pdf, id=1113, 445.665pt x 322.20375pt>
 File: images/energy.pdf Graphic file (type pdf)
 <use images/energy.pdf>
 Package pdftex.def Info: images/energy.pdf  used on input line 100.
@@ -1175,7 +1169,7 @@ Chapter 5.
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 88.
+(Font)              <9> on input line 92.
  [33
 
 ] [34]
@@ -1212,20 +1206,20 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0CC6194770EE68AC22CE253E5C257952;4269.
+(rerunfilecheck)             Checksum: 1B1394ED3EFA50CD468CC08902DA8526;4999.
  ) 
 Here is how much of TeX's memory you used:
- 30229 strings out of 467867
- 609775 string characters out of 5418334
- 978723 words of memory out of 5000000
+ 30231 strings out of 467867
+ 609701 string characters out of 5418334
+ 978637 words of memory out of 5000000
  58286 multiletter control sequences out of 15000+600000
  725989 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,104p,2462b,1281s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,16n,104p,2462b,1279s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main.pdf (51 pages, 2437912 bytes).
+Output written on main.pdf (51 pages, 2373005 bytes).
 PDF statistics:
- 1503 PDF objects out of 1728 (max. 8388607)
- 256 named destinations out of 1000 (max. 500000)
- 322 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1520 PDF objects out of 1728 (max. 8388607)
+ 258 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

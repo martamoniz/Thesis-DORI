@@ -130,14 +130,11 @@
 \long\def\HEADER#1#2{\vspace*{5mm}\noindent\ua@font@size0\rlap{\parbox{\textwidth}{%
     \ua@font@size0\hspace*{77mm}#1\textsf{\textbf{Universidade de Aveiro}}\space\space
       \ua@above{\ua@textA}{\ua@textB}%
-    \iffalse
-      \hrule width \textwidth height .3pt depth 0mm\relax
-    \else
-      % pdflatex apparently draws the logo before the hrule (why?), so we need to split the hrule in two
-      \hrule width 66mm height 0.3pt depth 0mm\relax
-      \vskip -0.3pt
-      \nointerlineskip\moveright 75.2mm\vbox{\hrule width 134.8mm height 0.3pt depth 0mm}\nointerlineskip
-    \fi
+      % rule made invisible (height 0pt) instead of removed, so the
+      % \nointerlineskip spacing that keeps the year aligned is unchanged
+      \hrule width 66mm height 0pt depth 0mm\relax
+      \vskip 0pt
+      \nointerlineskip\moveright 75.2mm\vbox{\hrule width 134.8mm height 0pt depth 0mm}\nointerlineskip
     \ua@font@size0\hspace*{77mm}\rlap{\ua@font@size0\textsf{\textbf{\strut #2}}}%
       \hphantom{\ua@font@size0\textsf{\textbf{Universidade de Aveiro}}}\space\space
       \ua@below{\ua@textC}{\ua@textD}}}\par

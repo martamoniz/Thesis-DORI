@@ -42,6 +42,8 @@
 \raggedbottom % keep the gap above each chapter heading identical everywhere,
               % instead of \flushbottom stretching each page differently
 \makeatletter
+\newif\ifua@notoc@
+\ua@notoc@false
 \newlength{\ua@chapnumheight}
 \setlength{\ua@chapnumheight}{18mm}
 \def\@makechapterhead#1{%
@@ -67,6 +69,19 @@
     \interlinepenalty\@M
     \Huge\bfseries #1\par\nobreak
     \vskip 20\p@
+    \ifua@notoc@\else
+      % Add unnumbered chapters (References, List of Figures/Tables,
+      % List of Abbreviations, List of Symbols, Contextualization and
+      % Motivation) to the table of contents, mirroring uaThesis.sty's
+      % default \@makeschapterhead — needed because the custom heading
+      % style above replaces that definition. \tableofcontents itself
+      % sets \ua@notoc@true around its own \chapter* call so it does not
+      % list itself.
+      \refstepcounter{section}%
+      \addcontentsline{toc}{chapter}{#1}%
+      \addtocontents{lof}{\protect\addvspace{10\p@}}%
+      \addtocontents{lot}{\protect\addvspace{10\p@}}%
+    \fi
   }}
 \makeatother
 \usepackage[abs]{overpic}
@@ -240,9 +255,11 @@ necessários à aprovação na unidade curricular de Laboratórios Avançados de
 
 \pagenumbering{roman}
 
+\makeatletter\ua@notoc@true\makeatother
 \begin{spacing}{0.85} % or try 0.8, 0.7 for tighter spacing
 \tableofcontents
 \end{spacing}
+\makeatletter\ua@notoc@false\makeatother
 
 \newpage
 \listoffigures

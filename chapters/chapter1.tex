@@ -6,7 +6,7 @@
 \chapter{Introduction}
 
 \section{Interventional Radiology}
-Interventional radiology (IR) is a subspecialty of radiology that utilizes fluoroscopy to perform diagnostic and therapeutic procedures through minimally invasive techniques \cite{8}. Fluoroscopy involves the use of X-rays and an image detection system to visualize internal structures and interventional tools in real-time \cite{11}. 
+Interventional radiology (IR) is a subspecialty of radiology that utilizes fluoroscopy to perform diagnostic and therapeutic procedures through minimally invasive techniques \cite{8}. Fluoroscopy involves the use of X-rays and an image detection system to visualize internal structures and interventional tools in real-time \cite{11}. The conventional IR equipment configuration is illustrated in Fig.~\ref{fig:interventional_radiology_setup}. The X-rays are produced in an X-ray tube by converting the kinetic energy of electrons into electromagnetic radiation. It consists of two electrodes enclosed in a vacuum-sealed glass envelope. The cathode serves as the electron source, while the anode acts as the positive target. When heated by an electric current, the cathode emits electrons via thermionic emission. The number of electrons produced depends on the current passing through the filament. A high potential difference applied between the cathode and the anode accelerates the electrons toward the anode. The total incident energy delivered to the anode is proportional to both the voltage and the current\cite{5,6}.
 \begin{figure}[H]
  \centering
   \includegraphics[width=\linewidth]{images/interventional radiology setup.pdf}
@@ -14,7 +14,6 @@ Interventional radiology (IR) is a subspecialty of radiology that utilizes fluor
 
  \label{fig:interventional_radiology_setup}
 \end{figure}
-The conventional IR equipment configuration is illustrated in Fig.~\ref{fig:interventional_radiology_setup}. The X-rays are produced in an X-ray tube by converting the kinetic energy of electrons into electromagnetic radiation. It consists of two electrodes enclosed in a vacuum-sealed glass envelope. The cathode serves as the electron source, while the anode acts as the positive target. When heated by an electric current, the cathode emits electrons via thermionic emission. The number of electrons produced depends on the current passing through the filament. A high potential difference applied between the cathode and the anode accelerates the electrons toward the anode. The total incident energy delivered to the anode is proportional to both the voltage and the current\cite{5,6}.
 
 The X-rays transmitted through the patient strike the image detection system, mounted opposing the X-ray tube on a C-arm gantry. In the standard configuration, the X-ray tube is positioned beneath the patient table and the detector above, capitalising on the anisotropic distribution of scattered radiation to minimise occupational exposure~\cite{21,22}. The detector converts incident X-rays into visible light, which is optically transmitted to a camera system and displayed on a monitor to guide interventions in real-time. For continuous fluoroscopy, a steady tube current is supplied and images are acquired at 30 frames per second to maintain the perception of smooth motion~\cite{16}. Table~\ref{tab:ir_parameters} outlines common technical parameters used in IR procedures \cite{20}.
 % Small vertical space after surrounding text
@@ -140,90 +139,27 @@ Radiation effects on humans vary due to differences in bio\-logical response and
 
 
 \subsubsection{Equivalent Dose}
-The stochastic effects of radiation depend on the type of particles involved, as they interact with matter in distinct ways, exhibiting different patterns of ionization along their paths~\cite{12}. This variation is described by the linear energy transfer (LET) function, which represents the rate at which energy is deposited along a particle’s trajectory through a medium. Low-LET radiation produces ionization over longer paths, whereas high-LET radiation transfers energy more densely over shorter distances, enhancing its potential for biological damage per unit of absorbed dose~\cite{6}.
-
+The stochastic effects of radiation depend on the type of particles involved, as they interact with matter in distinct ways, exhibiting different patterns of ionization along their paths~\cite{12}. This variation is described by the linear energy transfer (LET) function, which represents the rate at which energy is deposited along a particle's trajectory through a medium. Low-LET radiation produces ionization over longer paths, whereas high-LET radiation transfers energy more densely over shorter distances, enhancing its potential for biological damage per unit of absorbed dose~\cite{6}.
+ 
 To account for these differences in LET, the International Commission on Radiological Protection (ICRP) introduced the concept of equivalent dose. This measure applies an empirical and dimensionless radiation weighting factor, $w_R$, to the absorbed dose, to reflect the relative biological effectiveness of different types of radiation~\cite{6,14}:
-
+ 
 \begin{equation}
 H_T = \sum_R D_{T,R} \cdot w_R,\ \text{unit: } [\mathrm{Sv}]
 \label{eq:equivalent_dose}
 \end{equation}
-
-\noindent The sievert (Sv) is dimensionally equivalent to joules per kilogram (J/kg) and gray (Gy), but specifically used for radiological protection to distinguish it from the physical quantity $D$~\cite{6}.
-
-As shown in Table \ref{tab:wr_factors}, fast electrons, X-rays and $\gamma$-rays have a weighting factor $w_R$ of one, meaning that absorbed dose and equivalent dose are numerically equal~\cite{14}. In contrast, $\alpha$ particles have a $w_R$ of 20 due to their higher ionization density. Thus, $\alpha$ particles can produce the same biological outcome as X-rays at only 5\% of the absorbed dose~\cite{13,14}.
-
-% Right before the table environment
-% Small vertical space after surrounding text
-\vspace{1em}
-% Manual table title, numbered and added to LoT
-\refstepcounter{table}
-\label{tab:wr_factors}
-\noindent\textbf{Table~\thetable.} Radiation weighting factors. Adapted from Ref.~\cite{15}.%
-\addcontentsline{lot}{table}{\protect\numberline{\thetable}Radiation weighting factors.}
-
-
-\vspace{0.1em} % Small space between title and table
-\begin{table}[H]
-\centering
-\begin{tabular}{c c}
-\toprule
-\textbf{Radiation type} & \textbf{Radiation weighting factor, $w_R$} \\
-\midrule
-X-rays, $\gamma$-rays and Electrons & 1 \\
-Protons & 2 \\
-$\alpha$ and Heavy Particles & 20 \\
-Neutrons &
-\begin{minipage}[c][3.5cm][c]{0.4\textwidth}
-\centering
-\includegraphics[height=3cm]{images/neutron.jpg} \\
-\footnotesize {Continuous function of neutron energy}
-\end{minipage} \\
-\bottomrule
-\end{tabular}
-
-\end{table}
+ 
+\noindent The sievert (Sv) is dimensionally equivalent to joules per kilogram (J/kg) and gray (Gy), but specifically used for radiological protection to distinguish it from the physical quantity $D$~\cite{6}. Within radiology settings, for X-rays, $w_R = 1$, so equivalent and absorbed dose are numerically equal~\cite{15}.
 
 \subsubsection{Effective Dose}
-Effective dose extends the concept of equivalent dose by incorporating tissue weighting factors, $w_T$. These factors quantify the relative contribution of specific organs and tissues to the overall radiation detriment, and are represented in Table \ref{tab:wt_factors}. The values are derived from epidemiological and radiobiological data and reflect averaged population risk, making $E$ a comparative metric rather than an indicator of individual risk. Effective dose is defined as the sum of the equivalent doses received by individual organs and tissues, each weighted by its respective factor~\cite{6,13,14}:
-
+Effective dose extends the concept of equivalent dose by incorporating tissue weighting factors, $w_T$, which quantify the relative contribution of specific organs and tissues to the overall radiation detriment. It is defined as the sum of the equivalent doses received by individual organs and tissues, each weighted by its respective factor~\cite{6,13,14}:
+ 
 \begin{equation}
 E = \sum_T H_T \cdot w_T,\ \text{unit: } [\mathrm{Sv}]
 \label{eq:effective_dose}
 \end{equation}
+ 
+\noindent The values of $w_T$ are normalised to unity and derived from epidemiological and radiobiological data, reflecting averaged population risk. Effective dose is therefore a comparative metric rather than an indicator of individual risk. 
 
-% Small vertical space after surrounding text
-\vspace{1em}
-
-% Manual table title, numbered and added to LoT
-\refstepcounter{table}
-\label{tab:wt_factors}
-\noindent\textbf{Table~\thetable.} Tissue weighting factors for each organ/tissue. Adapted from Ref.~\cite{15}.%
-\addcontentsline{lot}{table}{\protect\numberline{\thetable}Tissue weighting factors for each organ/tissue.}
-
-% Small space between title and table
-\vspace{0.1em}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{p{0.58\textwidth} c c}
-    \toprule
-    \textbf{Tissues and Organs} & \textbf{Weighting Factor,$w_T$} & \textbf{$\sum w_T$} \\
-    \midrule
-    Red bone marrow, Colon, Lung, Stomach, Breast, Remaining tissues* & 0.12 & 0.72 \\
-    Gonads & 0.08 & 0.08 \\
-    Bladder, Esophagus, Liver, Thyroid & 0.04 & 0.16 \\
-    Bone surface, Brain, Salivary glands, Skin & 0.01 & 0.04 \\
-    \midrule
-    & \textit{Total} & \textbf{1.00} \\
-    \bottomrule
-  \end{tabular}
-
-  \vspace{0.3em}
-  {\footnotesize *Adrenals, Extrathoracic region,
-Gall bladder, Heart, Kidneys, Lymphatic nodes, Muscle, Oral
-mucosa, Pancreas, Prostate, Small intestine, Spleen, Thymus, Uterus/cervix}
-\end{table}
 \subsection{Operational Quantity}
 In operational dosimetry, equivalent and effective dose cannot be measured directly~\cite{13}. Personal dosimetry is the applied science of using individual monitoring devices to estimate dose from occupational exposure. These devices are calibrated in terms of the personal dose equivalent, $H_p(d)$, defined as the dose equivalent in soft tissue at a depth $d$~mm beneath a specified point on the body and is expressed in Sv. At 10 mm, $H_p(10)$ is used to estimate effective dose from deeply penetrating radiation and is the principal quantity for assessing whole-body exposure. Dosimeters intended to measure Hp(10) are calibrated using reference radiation qualities defined in ISO 4037-1~\cite{113}. During calibration, the dosimeter is mounted on a polymethyl methacrylate (PMMA) phantom, and the field is characterized in terms of \emph{air KERMA}. For each radiation energy $E$ and angle of incidence $\alpha$, the International Commission on Radiation Units and Measurements (ICRU) provides conversion coefficients $h_{pK}(10; E, \alpha)$, which relate \emph{air KERMA} to $H_p(10)$~\cite{ICRU53}:
 \begin{equation}

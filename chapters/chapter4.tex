@@ -1,2 +1,68 @@
 \chapter{Final Prototype}
-\section{Future Work}
+
+The current DORI prototype is shown in Fig.~\ref{fig:prototype}.
+A new PCB was designed with emphasis on a more compact footprint, correcting the layout errors identified in the DORI-test board and optimised for wireless operation. In comparison with the previous PCB, the colour-coded LED was integrated, and a power switch was added to disconnect the LiPo battery from the circuit. Additionally, all oscilloscope test points were removed and the SiPM is now soldered directly onto the board.
+\begin{figure}[H]
+  \centering
+  \resizebox{0.85\linewidth}{!}{\input{figures/Final.tex}}
+  \caption[Final DORI prototype.]{Final DORI prototype.}
+  \label{fig:prototype}
+\end{figure}
+
+To obtain a portable version of the system, and to ensure that no ambient light reaches the photosensitive elements, a two-part 3D printed case was designed. The lower layer contains a dedicated compartment for the LiPo battery (Fig.~\ref{fig:prototype}~(a)) and is enclosed by the PCB. As shown in Fig.~\ref{fig:prototype}~(b), the PS was wrapped in several layers of Teflon tape, covering all non-exiting surfaces of the cube. Optical silicone grease() was applied as coupling between the SiPM and the PS. The friction it creates, together with dedicated holes in the top layer of the case, keep the PS in place and aligned with the SiPM. Apertures are provided for the LED and the power switch (Fig.~\ref{fig:prototype}~(c)). The top layer is closed tightly against the bottom one with four screws. A loop was drawn on the top to hold a standard badge clip, allowing the unit to be worn over clothing. As represented, the current DORI unit measures 6.3~cm in width, 7.2~cm in height and 2.5~cm in thickness, with a total mass of 100~g. The enclosure was printed at 100\% infill to guarantee that no ambient light reaches the photosensitive elements. This choice increases the mass of the unit, which is higher than desirable for a badge worn over clothing. If light-tightness can be preserved, a reduction can be achieved with a lower infill density, or different printing methods with other materials.
+
+
+
+
+\section{Channel Response}
+\label{sec:channel_response}
+
+Although the readout circuit is the one described in Section~\ref{sec:front_end}, the response of the new prototype cannot be assumed to be that of the DORI-test board. Component values are specified within tolerance bands, and the parasitic contributions and noise coupling introduced by a board are a property of its layout. Both act on the final amplitude at the sampling stage, and consequently on the channel at which a given deposited energy is recorded. Characterising this response allows the front-end design to be treated as transferable and scalable to different board dimensions and formats. If the response of a new board can be related to that of the fully characterised DORI-test board, then the same readout can be used in whatever format each proposed monitoring position demands. 
+
+To verify this, the \emph{Bremsstrahlung} endpoint procedure of Section~\ref{sec:energy_calibration} was repeated. Spectra were acquired over 5-minute intervals for tube voltages of 20 to 50~kVp, at tube currents of 0.100, 0.150 and 0.200~mA, and the endpoint channel was extracted from each acquisition as before. The detector was again positioned outside the beam line, although at a distance different from the one used previously. The change was required to prevent saturation of the front-end electronics across the full range of tube voltages, and it is the reason why no spectrum was obtained at 20~kVp. At this distance and fluence the counts registered at that voltage remain within the excluded background. A shorter distance or a higher tube current would recover the point at the cost of saturating the front end at the upper voltages. Additionally, the 3D printed case adds absorption, most significantly at the lower energies. The resulting endpoint channels are summarised in Table~\ref{tab:endpoints_prototype}. The uncertainty on the individual endpoints follows the pattern already described for the energy calibration. At 25~keV it is dominated by counting statistics, it decreases towards the middle of the interval. It increases again towards 50~keV, where photoelectric absorption in the scintillator drops and pile-up distorts the spectral shape near the abscissa.
+% Requires \usepackage{tabularx} in the preamble
+
+% Small vertical space after surrounding text
+\vspace{1em}
+
+% Manual table title, numbered and added to LoT
+\refstepcounter{table}
+\label{tab:endpoints_prototype}
+\noindent\textbf{Table~\thetable.} \emph{Bremsstrahlung} endpoint channel for each tube voltage, obtained with the final prototype. Values are the mean of three acquisitions with the maximum deviation from the mean.
+\addcontentsline{lot}{table}{\protect\numberline{\thetable}\emph{Bremsstrahlung} endpoint channel for each tube voltage, obtained with the final prototype.}
+
+% Small space between title and table
+\vspace{0.1em}
+
+\begin{table}[H]
+  \centering
+  \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}m{0.18\textwidth}
+                               *{6}{>{\centering\arraybackslash}X}}
+    \toprule
+    \scriptsize \textbf{Tube Voltage (kVp)} & \scriptsize \textbf{25} & \scriptsize \textbf{30} & \scriptsize \textbf{35} & \scriptsize \textbf{40} & \scriptsize \textbf{45} & \scriptsize \textbf{50} \\
+    \midrule
+    \scriptsize \textbf{Endpoint Channel (a.u.)}
+    & \scriptsize $30.2 \pm 1.3$
+    & \scriptsize $33.5 \pm 0.5$
+    & \scriptsize $36.3 \pm 0.1$
+    & \scriptsize $39.2 \pm 0.5$
+    & \scriptsize $40.7 \pm 0.5$
+    & \scriptsize $42.0 \pm 0.6$ \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+ The endpoints obtained with the final prototype are presented against those of the test board at the same tube voltages in Fig.~\ref{fig:channel_response}. A linear fit was applied, and with $R^2 = 0.998$ a correspondence between the two boards can be expressed. The slope of the fit is $1.01 \pm 0.02$. This parameter translates the gain of the readout chain. If the two boards differed in gain, every channel would be scaled by a common factor, different from one, as the energy increased. The slope obtained is one within its uncertainty, so the gain is preserved on the new board, within the tolerance of the components that set it. The fit does not, however, pass through the origin. Comparing the endpoints of Tables~\ref{tab:endpoints_prototype} and~\ref{tab:endpoints} directly, the final prototype records every event $3.0 \pm 0.2$ channels below the test board, consistent with the intercept of the fit. With a unit slope, this displacement is the same at every energy of the interval. A difference that does not grow with the signal is additive, and corresponds to a baseline shift, in which all pulses are sampled from a level slightly lower than on the test board. With a channel width of 3.2~mV, three channels correspond to approximately 9.6~mV of shift, introduced at some point at the output of the shaper. The consequence for the calibration is direct as only the intercept changes. The slope of Eq.~\ref{eq:energy_conversion} is retained, since the gain is preserved, and $b$ is displaced by the constant offset. The calibration established for the DORI-test board therefore applies to the final prototype, and the energy of an event can be obtained from its channel simply through a conversion factor.
+
+ \begin{figure}[H]
+  \centering
+  \includegraphics[width=0.78\linewidth]{images/channel_transfer.pdf}
+  \caption[Channel response of the DORI prototype.]{%
+    Least-squares fit channel response of the DORI prototype
+  }
+  \label{fig:channel_response}
+\end{figure}
+
+
+
+

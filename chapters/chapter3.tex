@@ -1,9 +1,9 @@
 \chapter{Calibration}
 \section{Energy Calibration}
+\label{sec:energy_calibration}
+As a novel approach for PSs, the energy response was calibrated using the \emph{Bremsstrahlung} endpoint of an X-ray tube. The maximum X-ray photon energy produced corresponds to the scenario in which the accelerated electron transfers all its kinetic energy in a single interaction with the anode nucleus. The maximum energy detected, i.e., the endpoint of the acquired spectrum, is therefore equal to the tube voltage, which serves as the energy reference for calibration. Since the \emph{Bremsstrahlung} spectrum near the endpoint is approximately linear, this abscissa can be determined as the $x$-intercept of a least-squares fit to that region~\cite{121}.
 
-As a novel approach for plastic scintillators, the energy response was calibrated using the \emph{Bremsstrahlung} endpoint of an X-ray tube. The maximum X-ray photon energy produced corresponds to the scenario in which the accelerated electron transfers all its kinetic energy in a single interaction with the anode nucleus. The maximum energy detected, i.e., the endpoint of the acquired spectrum, is therefore equal to the tube voltage, which serves as the energy reference for calibration. Since the \emph{Bremsstrahlung} spectrum near the endpoint is approximately linear, this abscissa can be determined as the $x$-intercept of a least-squares fit to that region~\cite{121}.
-
-The detector was positioned outside the beam line, at a distance sufficient to avoid saturation of the front-end electronics. \emph{Bremsstrahlung} spectra were acquired over 5-minute intervals for tube voltages of 15--50~kVp and tube currents of 0.050--0.250~mA, and are shown in Fig.~\ref{fig:bremss_calibration} (a) and (b), respectively. Background was subtracted, and channels 18 and below were excluded, as their elevated count rate would otherwise dominate the vertical scale. As represented in Fig.~\ref{fig:bremss_calibration} (a), the 15~kVp spectrum is not visible, as it sits within the excluded background. At this distance and fluence, photons of such low energy are absorbed by the black adhesive tape used for light-wrapping of the photosensitive detector element. This establishes the lower detection limit of the front-end electronics at 20~keV.
+The detector was positioned outside the beam line, at a distance sufficient to avoid saturation of the front-end electronics. \emph{Bremsstrahlung} spectra were acquired over 5-minute intervals for tube voltages of 15--50~kVp and tube currents of 0.050--0.250~mA, and are shown in Fig.~\ref{fig:bremss_calibration} (a) and (b), respectively. Background was subtracted, and channels 18 and below were again excluded. As represented in Fig.~\ref{fig:bremss_calibration} (a), the 15~kVp spectrum is not visible, as it sits within the excluded background. At this distance and fluence, photons of such low energy are absorbed by the black adhesive tape used for light-wrapping of the photosensitive detector element. This establishes the lower detection limit of the front-end electronics at 20~keV.
 \begin{figure}[H]
   \centering
   \begin{minipage}[c]{0.48\linewidth}
@@ -52,24 +52,44 @@ The linear region of each \emph{Bremsstrahlung} spectrum was selected interactiv
     \toprule
     \scriptsize \textbf{Tube Voltage (kVp)} & \scriptsize \textbf{20} & \scriptsize \textbf{25} & \scriptsize \textbf{30} & \scriptsize \textbf{35} & \scriptsize \textbf{40} & \scriptsize \textbf{45} & \scriptsize \textbf{50} \\
     \midrule
-    \scriptsize \textbf{Endpoint Channel $\times 10^{-1}$ (a.u.)}
-    & \scriptsize $310 \pm 10$
-    & \scriptsize $334 \pm 9$
-    & \scriptsize $366 \pm 4$
-    & \scriptsize $393 \pm 3$
-    & \scriptsize $419 \pm 4$
-    & \scriptsize $433 \pm 5$
-    & \scriptsize $451 \pm 8$ \\
+    \scriptsize \textbf{Endpoint Channel (a.u.)}
+    & \scriptsize $31.0 \pm 1.0$
+    & \scriptsize $33.4 \pm 0.9$
+    & \scriptsize $36.6 \pm 0.4$
+    & \scriptsize $39.3 \pm 0.3$
+    & \scriptsize $41.9 \pm 0.4$
+    & \scriptsize $43.3 \pm 0.5$
+    & \scriptsize $45.1 \pm 0.8$ \\
     \bottomrule
   \end{tabular}
 \end{table}
-Although 20 and 25 keV lie in the boundary at which photoeletric absorption ceases to dominate in BC408~\cite{124}, the associated uncertainty is dominated by counting statistics. The associated error improves between 30 and 45 keV, indicating that in this region both the photoelectric cross-section and the photon fluence are sufficient for the endpoint to be determined with good precision. At 50 keV, the photoelectric absorption in the scintillator drops below 0.5\%, and consequently the uncertainty increases. As full energy transfer becomes less probable, the spectrum compresses toward a lower and less reliable endpoint. Additionally, pileup further distorts the spectral shape near the abscissa. The pileup distortion is visible as a non-linear tail in the higher energy spectra of Fig.~\ref{fig:bremss_calibration} (a), which is not characteristic of filtered \emph{Bremsstrahlung}. At higher count rates, the baseline does not recover between successive pulses, causing them to superimpose and producing the observed tail. These are the fundamental limitations of the endpoint method at higher energies, as the associated uncertainty is expected to grow accordingly.
+Although 20 and 25 keV lie in the boundary at which photoeletric absorption ceases to dominate in BC408 (see Appendix~B), the associated uncertainty is dominated by counting statistics. The associated error improves between 30 and 45 keV, indicating that in this region both the photoelectric cross-section and the photon fluence are sufficient for the endpoint to be determined with good precision. At 50 keV, the photoelectric absorption in the scintillator drops below 0.5\%, and consequently the uncertainty increases. As full energy transfer becomes less probable, the spectrum compresses toward a lower and less reliable endpoint. Additionally, pileup further distorts the spectral shape near the abscissa. The pileup distortion is visible as a non-linear tail in the higher energy spectra of Fig.~\ref{fig:bremss_calibration} (a), which is not characteristic of filtered \emph{Bremsstrahlung}. At higher count rates, the baseline does not recover between successive pulses, causing them to superimpose and producing the observed tail. These are the fundamental limitations of the endpoint method at higher energies, as the associated uncertainty is expected to grow accordingly.
 
-To extend the calibration beyond the range of the X-ray tube, spectra of the reference sources were acquired with the plastic scintillator five times, each over a 90 min interval. Of the three sources, the only features available are the $^{241}$Am photopeak at 59.5 keV, and the Compton edge of the 122 keV line of $^{57}$Co, at 39.46 keV, shown in Fig.~\ref{fig:energy_calibration} (a) and (b) respectively. The latter is treated as a validation of the \emph{Bremsstrahlung} method, as it falls within the energy range provided by the tube. The photopeak is, therefore, included as a calibration point at that energy.
+To extend the calibration beyond the range of the X-ray tube, spectra of the reference sources were acquired with the PS five times, each over a 90 min interval. Of the three sources, the only features available are the $^{241}$Am photopeak at 59.5 keV, and the Compton edge of the 122 keV line of $^{57}$Co, at 39.46 keV, shown in Fig.~\ref{fig:source_spectra} (a) and (b) respectively. 
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[c]{0.50\linewidth}
+    \centering
+    \subfloat[]{\label{fig:Am-241}%
+      \includegraphics[width=\linewidth]{images/plastic_Am-241.pdf}}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[c]{0.50\linewidth}
+    \centering
+    \subfloat[]{\label{fig:Co-57}%
+      \includegraphics[width=\linewidth]{images/plastic_Co-57_fit.pdf}}
+  \end{minipage}
+  \caption[Reference source spectra.]{%
+    Reference source spectra, background subtracted. Annotated values are the mean of five acquisitions with the maximum deviation from the mean as uncertainty.
+    \textbf{(a)} $^{241}$Am, with the Gaussian fit to the 59.5~keV photopeak.
+    \textbf{(b)} $^{57}$Co's Compton Edge at 39.46~keV.
+  }
+  \label{fig:source_spectra}
+\end{figure}
 
-A weighted least-squares fit was applied to account for the differences in uncertainty across the energy range and is shown in Fig.~\ref{fig:energy_calibration} (c). Although the 45 keV uncertainty is small, both the 45 and 50 keV endpoints fall below the calibration line, beyond their uncertainties. This underestimation is consistent with the compression of the spectrum discussed above. In contrast, the $^{241}$Am centroid falls on the calibration line with an uncertainty smaller than that of the highest-energy endpoint estimate. Although the peak is not as sharp as that obtained with the CsI crystal in Section~\ref{sec:frontend-validation}, the centroid position is reproducible across acquisitions.
+The $^{241}$Am photopeak is fully resolved and was described by a Gaussian fit, whereas the $^{57}$Co CE was extracted as the channel of maximum counts. Despite the lower number of counts accumulated in the photopeak, it has the smaller uncertainty of the two features, and although it is not as sharp as the one obtained with the CsI crystal in Section~\ref{sec:frontend-validation}, the centroid position is reproducible across acquisitions. The broadening of the $^{57}$Co feature is a consequence of the energy dependence of the resolution and its degradation at lower energies. The photopeak is therefore included as a calibration point at 59.5~keV, whereas the edge, falling within the interval already covered by the tube, is treated as an independent validation of the \emph{Bremsstrahlung} method.
 
-The weighted fit ensures that these better-determined points contribute more to the calibration, and the uncertainties in each estimate propagate into the calibration coefficients~\cite{121}. The fit is of the form:
+A weighted least-squares fit was applied to account for the differences in uncertainty across the energy range and is shown in Fig.~\ref{fig:energy_calibration}. Although the 45 keV uncertainty is small, both the 45 and 50 keV endpoints fall below the calibration line, beyond their uncertainties. This underestimation is consistent with the compression of the spectrum discussed above. In contrast, the $^{241}$Am centroid falls on the calibration line with an uncertainty smaller than that of the highest-energy endpoint estimate. The weighted fit ensures that these better-determined points contribute more to the calibration, and the uncertainties in each estimate propagate into the calibration coefficients~\cite{121}. The fit is of the form:
 \begin{equation}
     C = aE + b,
     \label{eq:calibration}
@@ -84,33 +104,18 @@ where $C$ is the channel number and $E$ is the energy in keV. With $R^2 = 0.989$
     \label{eq:energy_uncertainty}
 \end{equation}
 
+
+ 
 \begin{figure}[H]
   \centering
-  \begin{minipage}[c]{0.40\linewidth}
-    \centering
-    \subfloat[]{\label{fig:Am-241}%
-      \includegraphics[width=\linewidth]{images/plastic_Am-241.pdf}}\\
-    \subfloat[]{\label{fig:Co-57}%
-      \includegraphics[width=\linewidth]{images/plastic_Co-57_fit.pdf}}
-  \end{minipage}%
-  \hfill%
-  \begin{minipage}[c]{0.60\linewidth}
-    \centering
-    \subfloat[]{\label{fig:Fit}%
-      \includegraphics[width=\linewidth]{images/energy.pdf}}
-  \end{minipage}
- \caption[ Energy calibration of the DORI prototype.]{%
-  \textbf{(a)} $^{241}$Am spectrum, background subtracted, with the Gaussian fit to the 59.5~keV photopeak. The annotated centroid and FWHM are the mean of five acquisitions, with the maximum deviation from the mean as uncertainty.
-  \textbf{(b)} $^{57}$Co spectrum in the region of the Compton edge of the 122~keV line. The band marks the channel at which the calibration predicts the 39.46~keV edge, within its propagated uncertainty.
-  \textbf{(c)} Weighted least-squares calibration fit to the seven \emph{Bremsstrahlung} endpoints and the $^{241}$Am photopeak centroid.
-}
+  \includegraphics[width=0.78\linewidth]{images/energy.pdf}
+  \caption[Energy calibration of the DORI prototype.]{%
+    Weighted least-squares energy calibration of the DORI prototype, obtained from the seven \emph{Bremsstrahlung} endpoints and the $^{241}$Am photopeak centroid. The $^{57}$Co Compton edge is superimposed for validation.
+  }
   \label{fig:energy_calibration}
 \end{figure}
+ 
 
-As the only available photopeak, the $^{241}$Am centroid is used to calculate the energy resolution of a plastic scintillator system at 59.5 keV~\cite{119,126}. Although $R$ is dimensionless and, in principle, independent of the channel-to-energy conversion, the non-zero intercept $b$ shifts the centroid without contributing to the FWHM. Consequently, the resolution differs between channel and energy space and these parameters must be converted to energy using Eqs.~\ref{eq:energy_conversion} and \ref{eq:energy_uncertainty}. With the values in Fig.~\ref{fig:energy_calibration} (a), DORI has an energy resolution of $R = (29 \pm 5)$\% at 59.5 keV, consistent with values reported in literature for BC408 plastic scintillators~\cite{126,127}.
-
-As for the Compton edge of the 122 keV line of $^{57}$Co, the feature was extracted as the channel of maximum counts. Its uncertainty is larger than that of the $^{241}$Am photopeak, due to the less defined nature of the feature. Within these limitations presented in Section~\ref{sec:scintillator}, and as represented in Fig.~\ref{fig:energy_calibration} (b), the extracted channel, $C_E$, falls, within its own uncertainty, inside the band at which the calibration predicts the 39.46 keV edge. The calibration therefore correctly locates an independent energy reference. The edge was nevertheless excluded from the calibration itself, since the 40 kVp \emph{Bremsstrahlung} endpoint provides a more reliable point at a close energy.
-
-Interpolation within 20 to 60 keV is therefore justified, whereas extrapolation beyond it is not. Extension of the linear fit to 100 keV cannot be assumed, as it would span the non-proportional region of the plastic response discussed in Section~\ref{sec:scintillator}. In the absence of additional calibration points, the gap between 60 and 100 keV is acknowledged as a limitation of the present calibration. Within these limits, the DORI prototype is considered validated in energy across the 20 to 60 keV range. The following dose calibration is performed within this interval.
+As the only available photopeak, the $^{241}$Am centroid is used to calculate the energy resolution of DORI system at 59.5 keV. Although $R$ is dimensionless and, in principle, independent of the channel-to-energy conversion, the non-zero intercept $b$ shifts the centroid without contributing to the FWHM. Consequently, the resolution differs between channel and energy space and these parameters must be converted to energy using Eqs.~\ref{eq:energy_conversion} and \ref{eq:energy_uncertainty}. With the values in Fig.~\ref{fig:source_spectra} (a), DORI has an energy resolution of $R = (29 \pm 5)$\% at 59.5 keV, consistent with values reported in literature, and previously discussed, for BC408 PSs. As for the CE of the 122~keV line of $^{57}$Co, the extracted channel falls below the calibration line, outside of it even within its own uncertainty. This discrepancy is attributed to the extraction method rather than to the calibration itself. According to Swiderski~\emph{et al.}~\cite{127}, and as mentioned in Section~\ref{sec:scintillator}, the finite resolution of PSs causes the channel of maximum counts not to coincide with the true position of the edge. The CE lies at a channel above that of maximum counts, and the offset grows as the resolution degrades. Taking CE as the maximum of the distribution therefore introduces a systematic and observed underestimation. The deviation is thus not evidence of a failure of the \emph{Bremsstrahlung} calibration, although the extraction method does not allow it to be validated either. Additionally, extension of the linear fit to 100 keV cannot be assumed, as it would span the non-proportional region of the plastic response discussed in Section~\ref{sec:scintillator}. In the absence of additional calibration points, the gap between 60 and 100 keV is acknowledged as a limitation of the present calibration. Within these limits, the DORI prototype response across the 20 to 60 keV range is characterized and the following dose calibration is performed within this interval.
 \section{Dose Rate Calibration}
 

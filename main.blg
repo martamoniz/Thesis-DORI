@@ -11,45 +11,45 @@ Warning--string name "june" is undefined
 --line 719 of file Bibliografia.bib
 Warning--empty journal in 33
 Warning--empty year in 33
-You've used 90 entries,
+You've used 88 entries,
             1876 wiz_defined-function locations,
-            982 strings with 23081 characters,
-and the built_in function-call counts, 25319 in all, are:
-= -- 2343
-> -- 1396
+            973 strings with 22756 characters,
+and the built_in function-call counts, 24802 in all, are:
+= -- 2290
+> -- 1378
 < -- 1
-+ -- 505
-- -- 415
-* -- 1817
-:= -- 3648
-add.period$ -- 123
-call.type$ -- 90
-change.case$ -- 79
++ -- 498
+- -- 410
+* -- 1785
+:= -- 3578
+add.period$ -- 120
+call.type$ -- 88
+change.case$ -- 77
 chr.to.int$ -- 0
-cite$ -- 92
-duplicate$ -- 1237
-empty$ -- 2121
-format.name$ -- 415
-if$ -- 6152
+cite$ -- 90
+duplicate$ -- 1214
+empty$ -- 2070
+format.name$ -- 410
+if$ -- 6021
 int.to.chr$ -- 0
-int.to.str$ -- 90
-missing$ -- 78
-newline$ -- 307
-num.names$ -- 87
-pop$ -- 295
+int.to.str$ -- 88
+missing$ -- 77
+newline$ -- 300
+num.names$ -- 85
+pop$ -- 287
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1005
+skip$ -- 985
 stack$ -- 0
-substring$ -- 1274
-swap$ -- 610
+substring$ -- 1238
+swap$ -- 599
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 172
-width$ -- 92
-write$ -- 871
+while$ -- 168
+width$ -- 90
+write$ -- 851
 (There were 4 warnings)

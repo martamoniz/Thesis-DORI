@@ -32,11 +32,13 @@
 \contentsline {subsubsection}{Transient Response}{22}{section*.29}%
 \contentsline {subsection}{\numberline {2.3.3}Pulse Sampling}{24}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Validation of the Front-End Electronics}{24}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Calibration}{27}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Results}{27}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Energy Calibration}{27}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Dose Rate Calibration}{30}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Final Prototype}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Channel Response}{32}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusions}{34}{chapter.5}%
-\contentsline {chapter}{References}{35}{section.5.1}%
-\contentsline {chapter}{Appendix}{40}{section.Alph0.1}%
+\contentsline {subsection}{\numberline {3.2.1}Setup}{30}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Methods and Results}{31}{subsection.3.2.2}%
+\contentsline {chapter}{\numberline {4}Final Prototype}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Channel Response}{34}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Conclusions}{36}{chapter.5}%
+\contentsline {chapter}{References}{37}{section.5.1}%
+\contentsline {chapter}{Appendix}{42}{section.Alph0.1}%

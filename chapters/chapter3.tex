@@ -1,4 +1,4 @@
-\chapter{Calibration}
+\chapter{Results}
 \section{Energy Calibration}
 \label{sec:energy_calibration}
 As a novel approach for PSs, the energy response was calibrated using the \emph{Bremsstrahlung} endpoint of an X-ray tube. The maximum X-ray photon energy produced corresponds to the scenario in which the accelerated electron transfers all its kinetic energy in a single interaction with the anode nucleus. The maximum energy detected, i.e., the endpoint of the acquired spectrum, is therefore equal to the tube voltage, which serves as the energy reference for calibration. Since the \emph{Bremsstrahlung} spectrum near the endpoint is approximately linear, this abscissa can be determined as the $x$-intercept of a least-squares fit to that region~\cite{121}.
@@ -117,5 +117,75 @@ where $C$ is the channel number and $E$ is the energy in keV. With $R^2 = 0.989$
  
 
 As the only available photopeak, the $^{241}$Am centroid is used to calculate the energy resolution of DORI system at 59.5 keV. Although $R$ is dimensionless and, in principle, independent of the channel-to-energy conversion, the non-zero intercept $b$ shifts the centroid without contributing to the FWHM. Consequently, the resolution differs between channel and energy space and these parameters must be converted to energy using Eqs.~\ref{eq:energy_conversion} and \ref{eq:energy_uncertainty}. With the values in Fig.~\ref{fig:source_spectra} (a), DORI has an energy resolution of $R = (29 \pm 5)$\% at 59.5 keV, consistent with values reported in literature, and previously discussed, for BC408 PSs. As for the CE of the 122~keV line of $^{57}$Co, the extracted channel falls below the calibration line, outside of it even within its own uncertainty. This discrepancy is attributed to the extraction method rather than to the calibration itself. According to Swiderski~\emph{et al.}~\cite{127}, and as mentioned in Section~\ref{sec:scintillator}, the finite resolution of PSs causes the channel of maximum counts not to coincide with the true position of the edge. The CE lies at a channel above that of maximum counts, and the offset grows as the resolution degrades. Taking CE as the maximum of the distribution therefore introduces a systematic and observed underestimation. The deviation is thus not evidence of a failure of the \emph{Bremsstrahlung} calibration, although the extraction method does not allow it to be validated either. Additionally, extension of the linear fit to 100 keV cannot be assumed, as it would span the non-proportional region of the plastic response discussed in Section~\ref{sec:scintillator}. In the absence of additional calibration points, the gap between 60 and 100 keV is acknowledged as a limitation of the present calibration. Within these limits, the DORI prototype response across the 20 to 60 keV range is characterized and the following dose calibration is performed within this interval.
-\section{Dose Rate Calibration}
 
+\section{Dose Rate Calibration}
+\label{sec:dose_rate_calibration}
+
+As introduced, an individual monitoring device is calibrated in personal dose equivalent, $H_p(10)$, units. These devices are calibrated in certified laboratories, which have reference instruments and ensure the reproducibility and traceability of the measurements. The available reference fields include radionuclide sources, mono-energetic X radiation and continuous filtered X-ray beams of defined quality, and conversion coefficients are provided for all of them. The calibration presented here follows the ISO 4037 series~\cite{113,ISO2,ISO3} for the conversion of \emph{air KERMA} to $H_p(10)$, using filtered X-ray beams of the narrow (N) series. The protocol was adapted to the instrumentation available with the intention of demonstrating the methodology and showing that DORI can be calibrated as a prototype.
+
+\subsection{Setup}
+The production of the radiation quality needed depends on the tube potential, the total filtration and the properties of the anode. Given the X-ray tube available and the energy calibration, only radiation qualities with energies in the 20 to 50~keV range can be used. In the N-series that corresponds to N-25, N-30 and N-40, as the N-20 spectrum falls outside the calibrated energy range. N-series beams are produced with tungsten-target X-ray tubes with beryllium window filtration plus series-specific additional filtration. The anode of the tube available is molybdenum, whose characteristic lines fall below the validated range. The tungsten lines at 57.98 and 59.32~keV, which contribute to the mean energy of the higher N-series qualities, fall equally outside it. The \emph{Bremsstrahlung} continuum produced will therefore not meaningfully differ at the same tube potential and filtration. Additionally and, according to ISO 4037-2 (Table 8)~\cite{ISO2}, the inherent filtration of the tube falls within the maximum permitted deviation across the full calibration range~\cite{ISO2}. The conditions to produce the N-series qualities can thus be achieved by placing the additional filtration required at the tube exit window, and the tabulated conversion values can be used. The parameters defining each of the three qualities, together with the corresponding conversion coefficients, are listed in Table~\ref{tab:nseries}.
+% Small vertical space after surrounding text
+\vspace{1em}
+
+% Manual table title, numbered and added to LoT
+\refstepcounter{table}
+\label{tab:nseries}
+\noindent\textbf{Table~\thetable.} N-series radiation qualities. Coefficients correspond to the ISO slab phantom at 1-meter normal incidence. Adapted from Refs.~\cite{113,ISO3}.%
+\addcontentsline{lot}{table}{\protect\numberline{\thetable}N-series radiation qualities.}
+
+% Small space between title and table
+\vspace{0.1em}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc@{}}
+    \toprule
+    \textbf{\begin{tabular}[b]{@{}c@{}}Radiation\\Quality\end{tabular}} &
+    \textbf{\begin{tabular}[b]{@{}c@{}}Tube Potential\\(kVp)\end{tabular}} &
+    \textbf{\begin{tabular}[b]{@{}c@{}}Added\\Filtration\end{tabular}} &
+    \begin{tabular}[b]{@{}c@{}}$\bm{h_{pK}(10)}$\\\textbf{(Sv/Gy)}\end{tabular} \\
+    \midrule
+    \textbf{N-25} & 25 & 2 mm Al & 0.574 \\
+    \textbf{N-30} & 30 & 4 mm Al & 0.815 \\
+    \textbf{N-40} & 40 & 4 mm Al + 0.21 mm Cu & 1.210 \\
+    \bottomrule
+  \end{tabular*}
+\end{table}
+As introduced, the dosimeter must be placed on a PMMA phantom during the calibration. For $H_p(10)$ the ISO water slab phantom is used, since it
+reproduces the backscatter of the trunk of the body and therefore the conditions under which the dosimeter is worn. It consists of a PMMA shell of 30 $\times$ 30 $\times$ 15~cm, with a 2.5~mm front wall and 10~mm remaining walls, filled with water~\cite{ISO3}. A phantom replicating these dimensions was built for this work, but it was not filled with water due to the risk of leakage. The DORI test board was taped to the front wall of the phantom, with its photosensitive area aligned with the centre of the tube. Custom 3D-printed supports were made to hold the filters, and these sit on an alignment rail together with the phantom. The setup is shown in Fig.~\ref{fig:setup}. The centre of the plastic scintillator entrance face is placed 1~m away from the tube, and this position is taken as the reference measurement point, marked by the red star in the figure. The \emph{air KERMA} was measured with the transparent detector of the RaySafe Xi~\cite{raysafe}. The instrument was last calibrated in October 2013 and the product has since been discontinued, however, it was the only reference available. For these measurements the phantom and the dosimeter are removed from the rail and the centre of the ion chamber is placed at the reference point. All acquisitions were made at a tube current of 0.5~mA for 120~s, and the spectrum and average \emph{air KERMA} rate from DORI and the ion chamber were recorded, respectively. 
+
+
+
+
+\subsection{Methods and Results}
+The absorbed dose increases with the energy deposited, so counts registered at different energies do not produce the same biological effect. $H_p(10)$ can therefore be written as a sum over the spectrum, each count contributing according to the energy at which it was detected:
+\begin{equation}
+H_p(10) = \sum_{i=1}^{m} w_i N_i ,
+\label{eq:bin_model}
+\end{equation}
+where $N_i$ is the number of counts and $w_i$ the dose per count, in Sv/count. Calibrating the dosimeter in dose corresponds to determining the set of weights $w_i$.
+
+For each radiation quality, DORI produces a pulse height spectrum with an associated $H_p(10)$ rate.  Since the radiation is not monoenergetic, the weights cannot be assigned to individual energies. The spectrum must instead be grouped into $m$ bins, each covering a range of energies which will carry the same weight. The number of bins that can be resolved is limited by the number of radiation qualities available, as each quality provides one equation of the form of Eq.~\ref{eq:bin_model}. For $q$ radiation qualities, the measurements can be written as:
+\begin{equation}
+\begin{bmatrix}
+H_1 \\ H_2 \\ \vdots \\ H_q
+\end{bmatrix}
+=
+\begin{bmatrix}
+N_{11} & N_{12} & \cdots & N_{1m} \\
+N_{21} & N_{22} & \cdots & N_{2m} \\
+\vdots & \vdots  & \ddots & \vdots \\
+N_{q1} & N_{q2} & \cdots & N_{qm}
+\end{bmatrix}
+\begin{bmatrix}
+w_1 \\ w_2 \\ \vdots \\ w_m
+\end{bmatrix},
+\label{eq:system}
+\end{equation}
+where each row of $\mathbf{A}$ holds the counts per bin measured for one quality, $\mathbf{H}$ is the measured $H_p(10)$ and $\mathbf{w}$ the unknown weights. For $q > m$ the system is overdetermined and is solved by the least-squares method~\cite{portable}:
+\begin{equation}
+\mathbf{w} = \left(\mathbf{A}^{\!\top}\mathbf{A}\right)^{-1}
+\mathbf{A}^{\!\top}\mathbf{H} .
+\label{eq:lsq}
+\end{equation}

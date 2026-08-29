@@ -118,7 +118,7 @@ where $C$ is the channel number and $E$ is the energy in keV. With $R^2 = 0.989$
 
 As the only available photopeak, the $^{241}$Am centroid is used to calculate the energy resolution of DORI system at 59.5 keV. Although $R$ is dimensionless and, in principle, independent of the channel-to-energy conversion, the non-zero intercept $b$ shifts the centroid without contributing to the FWHM. Consequently, the resolution differs between channel and energy space and these parameters must be converted to energy using Eqs.~\ref{eq:energy_conversion} and \ref{eq:energy_uncertainty}. With the values in Fig.~\ref{fig:source_spectra} (a), DORI has an energy resolution of $R = (29 \pm 5)$\% at 59.5 keV, consistent with values reported in literature, and previously discussed, for BC408 PSs. As for the CE of the 122~keV line of $^{57}$Co, the extracted channel falls below the calibration line, outside of it even within its own uncertainty. This discrepancy is attributed to the extraction method rather than to the calibration itself. According to Swiderski~\emph{et al.}~\cite{127}, and as mentioned in Section~\ref{sec:scintillator}, the finite resolution of PSs causes the channel of maximum counts not to coincide with the true position of the edge. The CE lies at a channel above that of maximum counts, and the offset grows as the resolution degrades. Taking CE as the maximum of the distribution therefore introduces a systematic and observed underestimation. The deviation is thus not evidence of a failure of the \emph{Bremsstrahlung} calibration, although the extraction method does not allow it to be validated either. Additionally, extension of the linear fit to 100 keV cannot be assumed, as it would span the non-proportional region of the plastic response discussed in Section~\ref{sec:scintillator}. In the absence of additional calibration points, the gap between 60 and 100 keV is acknowledged as a limitation of the present calibration. Within these limits, the DORI prototype response across the 20 to 60 keV range is characterized and the following dose calibration is performed within this interval.
 
-\section{Dose Rate Calibration}
+\section{Dose Calibration}
 \label{sec:dose_rate_calibration}
 
 As introduced, an individual monitoring device is calibrated in personal dose equivalent, $H_p(10)$, units. These devices are calibrated in certified laboratories, which have reference instruments and ensure the reproducibility and traceability of the measurements. The available reference fields include radionuclide sources, mono-energetic X radiation and continuous filtered X-ray beams of defined quality, and conversion coefficients are provided for all of them. The calibration presented here follows the ISO 4037 series~\cite{113,ISO2,ISO3} for the conversion of \emph{air KERMA} to $H_p(10)$, using filtered X-ray beams of the narrow (N) series. The protocol was adapted to the instrumentation available with the intention of demonstrating the methodology and showing that DORI can be calibrated as a prototype.
@@ -152,13 +152,39 @@ The production of the radiation quality needed depends on the tube potential, th
     \bottomrule
   \end{tabular*}
 \end{table}
-As introduced, the dosimeter must be placed on a PMMA phantom during the calibration. For $H_p(10)$ the ISO water slab phantom is used, since it
-reproduces the backscatter of the trunk of the body and therefore the conditions under which the dosimeter is worn. It consists of a PMMA shell of 30 $\times$ 30 $\times$ 15~cm, with a 2.5~mm front wall and 10~mm remaining walls, filled with water~\cite{ISO3}. A phantom replicating these dimensions was built for this work, but it was not filled with water due to the risk of leakage. The DORI test board was taped to the front wall of the phantom, with its photosensitive area aligned with the centre of the tube. Custom 3D-printed supports were made to hold the filters, and these sit on an alignment rail together with the phantom. The setup is shown in Fig.~\ref{fig:setup}. The centre of the plastic scintillator entrance face is placed 1~m away from the tube, and this position is taken as the reference measurement point, marked by the red star in the figure. The \emph{air KERMA} was measured with the transparent detector of the RaySafe Xi~\cite{raysafe}. The instrument was last calibrated in October 2013 and the product has since been discontinued, however, it was the only reference available. For these measurements the phantom and the dosimeter are removed from the rail and the centre of the ion chamber is placed at the reference point. All acquisitions were made at a tube current of 0.5~mA for 120~s, and the spectrum and average \emph{air KERMA} rate from DORI and the ion chamber were recorded, respectively. 
+As introduced, the dosimeter must be placed on a PMMA phantom during the calibration. For $H_p(10)$ the ISO water slab phantom is used, since it reproduces the backscatter of the trunk of the body and therefore the conditions under which the dosimeter is worn. It consists of a PMMA shell of 30 $\times$ 30 $\times$ 15~cm, with a 2.5~mm front wall and 10~mm remaining walls, filled with water~\cite{ISO3}. A phantom replicating these dimensions was built for this work, but it was not filled with water due to the risk of leakage. The DORI test board was taped to the front wall of the phantom, with its photosensitive area aligned with the centre of the tube. Custom 3D-printed supports were made to hold the filters, and these sit on an alignment rail together with the phantom. The setup is shown in Fig.~\ref{fig:setup}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{images/dose.pdf}
+  \caption[Dose calibration setup.]{Dose calibration setup. The beam quality is defined by the placement of one filter, or two in the case of N-40, at the exit window of the X-ray tube. The DORI-test board is placed at the reference measurement point (red star), in contact with the front wall of the built slab phantom. The RaySafe Xi detector is positioned at the same point of test free in air, with the phantom removed, and the \emph{air KERMA} values are read on its view unit.}
+  \label{fig:setup}
+\end{figure}
+ The centre of the PS entrance face is placed 1~meter away from the tube, and this position is taken as the reference measurement point, marked by the red star in the figure. The \emph{air KERMA} was measured with the transparent detector of the RaySafe Xi~\cite{raysafe}. The instrument was last calibrated in October 2013 and the product has since been discontinued, however, it was the only reference available. For these measurements the phantom and the dosimeter are removed from the rail and the centre of the ion chamber is placed at the reference point. All acquisitions were made at a tube current of 0.5~mA for 2 minutes, and the spectrum and average \emph{air KERMA} rate from DORI and the ion chamber were recorded, respectively. 
+
+The spectra acquired for the three qualities are shown in Fig.~\ref{fig:dose}~(a). Counts below the lower limit of the validated energy calibration and above the endpoint energy of the respective beam were excluded. Each spectrum is therefore confined to its expected energy bin, and noise and pile-up events are rejected. The effect of the filtration can be seen, since all acquisitions were made at the same tube current and for the same duration. Without filtration, the count rate would scale approximately with the square of the tube potential. The N-series filtration is designed to narrow the spectrum by suppressing its low-energy component. The lower count rate registered at the lower energies for N-40 is a direct consequence of the copper filter. This is not seen for N-30. N-30 requires twice the aluminium of N-25 and yet exceeds it at every energy the two share, since the higher output of the harder beam compensates the additional attenuation. The low-energy component of N-40 is nevertheless not completely suppressed. The detected counts originate from Compton interactions in the PS and from photons scattered by the slab phantom, which is itself intended to produce scattering. As a consequence, the mean energy of each distribution falls progressively below the value tabulated by ISO for the corresponding quality.
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[c]{0.50\linewidth}
+    \centering
+    \subfloat[]{\label{fig:dose_spectra}%
+      \includegraphics[width=\linewidth]{images/fig1_spectra.pdf}}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[c]{0.50\linewidth}
+    \centering
+    \subfloat[]{\label{fig:hp_10}%
+      \includegraphics[width=\linewidth]{images/fig2_reference.pdf}}
+  \end{minipage}
+  \caption[ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.]{ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.
+    \textbf{(a)} Energy spectra;
+    \textbf{(b)} reference $\dot{H}_p(10)$.
+  }
+  \label{fig:dose}
+\end{figure}
+The reference $\dot{H}_p(10)$ obtained for each quality is shown in Fig.~\ref{fig:dose}~(b), calculated from the measured \emph{air KERMA} rate and the conversion coefficients of Table~\ref{tab:nseries}. The values increase with tube potential, as both terms of the product grow with beam energy. The relative uncertainty decreases with tube potential, from $14.1\%$ at N-25 to $7.7\%$ at N-40. The \emph{air KERMA} rates of N-30 and N-40 sit above the trigger level of the detector ($>100$~nGy~s$^{-1}$)~\cite{specs}, while that of N-25 is flagged as a low signal, contributing to the higher uncertainty. 
 
 
-
-
-\subsection{Methods and Results}
+\subsection{Methods}
 The absorbed dose increases with the energy deposited, so counts registered at different energies do not produce the same biological effect. $H_p(10)$ can therefore be written as a sum over the spectrum, each count contributing according to the energy at which it was detected:
 \begin{equation}
 H_p(10) = \sum_{i=1}^{m} w_i N_i ,
@@ -189,3 +215,86 @@ where each row of $\mathbf{A}$ holds the counts per bin measured for one quality
 \mathbf{A}^{\!\top}\mathbf{H} .
 \label{eq:lsq}
 \end{equation}
+
+With three radiation qualities available, $q = 3$ and the system of Eq.~\ref{eq:system} admits at most three unknowns. Solving it with $m = 3$ fits the three measurements exactly, leaving no redundancy with which to verify the solution and making no use of the uncertainties of the reference values. Choosing $m = 2$ leaves one degree of freedom, which allows a weighted solution and leaves a residual against which the quality of the fit can be assessed. The sample remains small, but it is limited by the number of radiation qualities available. Two bins were therefore adopted, and Eq.~\ref{eq:bin_model} reduces to:
+\begin{equation}
+H_p(10) = w_1 N_1 + w_2 N_2 ,
+\label{eq:two_bin}
+\end{equation}
+
+From the eleven channels covered by the 20 to 40~keV range, ten boundary positions are possible. All of them were tested, and the result is shown in Fig.~\ref{fig:scan}. For a given position, the counts of every quality are summed into the two bins, and the system of Eq.~\ref{eq:system} is solved for $w_1$ and $w_2$. The weights obtained are then used to recompute $H_p(10)$ for each of the three qualities, and each result is compared with its reference $\dot{H}_p(10)$ value. This gives three relative differences, and the largest is taken as the maximum deviation:
+\begin{equation}
+\delta_{\max} = \max_{q} \left| \frac{H_p(10)_q^{\,\mathrm{calc}}}{H_p(10)_q^{\,\mathrm{ref}}} - 1 \right| .
+\label{eq:maxdev}
+\end{equation}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{images/fig6_boundary_scan.pdf}
+  \caption[Maximum deviation as a function of the bin boundary energy.]{%
+    Maximum deviation, $\delta_{\max}$, for each admissible
+  boundary position within the calibrated 20 to 40~keV window.
+  }
+  \label{fig:scan}
+\end{figure}
+The minimum, $0.07\%$, occurs at $24.5$~keV. This is the calibrated energy of the channel at which N-25 ends. At this boundary N-25 contributes to the lower bin alone and fixes $w_1$ by itself, while N-30 and N-40 both contribute to the upper bin and determine $w_2$. Every quality is used, and no weight is constrained twice, that would happen at the natural equal-width division at 30 keV. For this specific scenario, N-25 and N-30 both contribute exclusively to the lower bin, with incompatible values of $w_1$, $93.6$ and $139.0$~pSv/count, respectively. The solution is therefore a compromise between the two with a represented maximum deviation of $23.6\%$. The bins are therefore defined as $N_1 \in \left[20,25\right]$~keV and $N_2 \in \left]25,40\right]$~keV, and the resulting count rates are listed in Table~\ref{tab:matrix}.
+
+\vspace{1em}
+\refstepcounter{table}
+\label{tab:matrix}
+\noindent\textbf{Table~\thetable.} Count rates per bin and reference
+$\dot{H}_p(10)$ for the three radiation qualities.
+\addcontentsline{lot}{table}{\protect\numberline{\thetable}Count rates per bin and reference
+$\dot{H}_p(10)$ for the three radiation qualities.}
+ 
+\vspace{0.1em}
+\begin{table}[H]
+  \centering
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc@{}}
+    \toprule
+    \textbf{\begin{tabular}[b]{@{}c@{}}Radiation\\Quality\end{tabular}} &
+    \textbf{\begin{tabular}[b]{@{}c@{}}$\bm{{N}_1}$\\(s$^{-1}$)\end{tabular}} &
+    \textbf{\begin{tabular}[b]{@{}c@{}}$\bm{{N}_2}$\\(s$^{-1}$)\end{tabular}} &
+    \textbf{\begin{tabular}[b]{@{}c@{}}$\bm{\dot{H}_p(10)}$\\(nSv s$^{-1}$)\end{tabular}} \\
+    \midrule
+    \textbf{N-25} &  370 &    0 & $35 \pm 5$  \\
+    \textbf{N-30} &  923 &  283 & $168 \pm 16$ \\
+    \textbf{N-40} &  469 & 1033 & $341 \pm 26$ \\
+    \bottomrule
+  \end{tabular*}
+\end{table}
+
+With these values, solving Eq.~\ref{eq:lsq} while weighting the uncertainty of each measurementgives: 
+\begin{equation}
+w_1 = 93.4 \pm 18.4, \qquad w_2 = 287.9 \pm 29.3,\ \text{unit: } \left[\frac{\mathrm{pSv}}{\mathrm{count}}\right]
+\label{eq:weights}
+\end{equation}
+\noindent A count registered in the upper bin therefore carries $3.1$ times the dose of a count registered in the lower bin, which translates the effect of higher energy on the dose delivered. It should be noted that a 15~keV bin is broad considering the available range, but it is again a consequence of the small number of radiation qualities that can be used. A tube capable of higher potentials would provide additional qualities and allow finer divisions. Given a measured spectrum, the personal dose equivalent is therefore obtained as:
+\begin{equation}
+    H_p(10) = 93.4\,N_1 + 287.9\,N_2 ,
+    \label{eq:dose_conversion}
+\end{equation}
+\begin{equation}
+    \sigma_{H_p(10)} = \sqrt{\left(18.4\,N_1\right)^2 + \left(29.3\,N_2\right)^2} ,
+    \label{eq:dose_uncertainty}
+\end{equation}
+
+The response of DORI after calibration is shown in Fig.~\ref{fig:dose_calibration}. The already mentioned maximum deviation of $0.07\%$ (blue bars) means that the calibration reproduces the measurements from which it was derived. Additionally, a leave-one-out test was performed (green bars), where the weights are recomputed from two qualities and used to predict the $\dot{H}_p(10)$ of the third by reconstructing the dose from its own bin counts. The most interesting result is the case of N-25. As mentioned, it is the only direct measurement of $w_1$. When excluded, $w_1$ can only be inferred from the different proportions in which N-30 and N-40 divide their counts between the two bins. As can be seen, the reconstructed dose differs by approximately $0.3\%$, indicating that $w_1$ is well determined by the available measurements and is not an artefact of the single quality that defines it. 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{images/dose_calibration.pdf}
+  \caption[Maximum deviation as a function of the bin boundary energy.]{%
+    Maximum deviation, $\delta_{\max}$, for each admissible
+  boundary position within the calibrated 20 to 40~keV window.
+  }
+  \label{fig:dose_calibration}
+\end{figure}
+
+Additionally, with the low number of measurements, the values of Table~\ref{tab:matrix} allow the solution to be verified without resorting to the least-squares fit. As mentioned, since N-25 has no counts in the upper bin, its measurement determines $w_1$ on its own, giving $93.6$~pSv/count. Subtracting the corresponding contribution from the remaining two measurements leaves $w_2$ determined separately by each of them, giving $287.1$~pSv/count from N-30 and $287.8$~pSv/count from N-40. The two independent radiation qualities therefore return the same weight, within the uncertainty of the fit. This reasoning is the three-bin solution itself. Dividing the range at 25, 30 and 40~keV makes the system square, and each quality determines one weight in turn, giving $93.6 \pm 13.2$, $287.1 \pm 72.0$ and $288.8 \pm 116.9$~pSv/count. The uncertainties of the two upper weights increase to $25\%$ and $40\%$ against $10\%$ in the two-bin solution. The increase expected for the third weight lies only within its uncertainty. Additionally, the uncertainty is large enough that the three-bin solution loses robustness.
+
+These results support the two-bin model and the position of its boundary, and indicate that, with the three measurements available, this was the best division that could be made. The precision of the calibration is limited not only by the number of qualities, but also by the uncertainty of the reference dose values, which is dominated by the RaySafe Xi for the reasons already given. It should be emphasised that a formal calibration was never the purpose. The goal of demonstrating that a prototype of this kind can be calibrated in dose from its own spectrum has been achieved, and the methodology is shown to be workable. A significant part of the future work will therefore be to extend the energy calibration to higher energies and to obtain more reliable $H_p(10)$ reference values.
+
+
+
+
+
+

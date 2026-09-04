@@ -61,6 +61,12 @@ G.~Christopoulos, A.~C. Papayannis, M.~Alomar, A.~Kotsia, T.~T. Michael, B.~V.
   real-time monitoring study,'' {\em Circulation: Cardiovascular
   Interventions}, vol.~7, pp.~744--750, 12 2014.
 
+\bibitem{129}
+F.~Lessard, L.~Archambault, M.~Plamondon, P.~Després, F.~Therriault‐Proulx,
+  S.~Beddar, and L.~Beaulieu, ``Validating plastic scintillation detectors for
+  photon dosimetry in the radiologic energy range,'' {\em Medical Physics},
+  vol.~39, p.~5308–5316, Aug. 2012.
+
 \bibitem{8}
 M.~Y.~M. Chen, T.~L. Pope, and D.~J. Ott, {\em Basic radiology}.
 \newblock McGraw Hill Medical, 2nd~ed., 2011.
@@ -269,22 +275,22 @@ R.~Baumgartner, K.~Libuit, D.~Ren, O.~Bakr, N.~Singh, U.~Kandemir, M.~T.
   real-time dosimetry,'' {\em Journal of Orthopaedic Trauma}, vol.~30,
   pp.~53--58, Feb. 2016.
 
-\bibitem{81}
-RaySafe, ``Raysafe i3 {U}ser {M}anual,'' {U}ser {M}anual, RaySafe, 2017.
-\newblock Accessed: Apr. 29, 2025.
+\bibitem{raysafe_i3}
+{Unfors RaySafe}, ``Real-time dosimetry product catalog,'' Product Catalog
+  G21378, Rev C, Unfors RaySafe AB, Billdal, Sweden, June 2025.
 
-\bibitem{79}
-{MD Solutions GmbH}, ``{Live Dosimetry: RaySafe i3 -- MD Solutions GmbH}.''
-  \url{https://shop.md-solutions-gmbh.com/en/products/live-dosimetry-raysafe-i3?srsltid=AfmBOoozcYh80exjarSV7caDcS-SnAQ7nRhV2ZmBL2m1qS-WlOHRnRjl}.
-\newblock [Accessed 01-06-2025].
+\bibitem{115}
+R.~F. James, K.~J. Wainwright, H.~A. Kanaan, S.~Hudson, M.~E. Wainwright, J.~H.
+  Hightower, and J.~J. Delaney, ``Analysis of occupational radiation exposure
+  during cerebral angiography utilizing a new real time radiation dose
+  monitoring system,'' {\em Journal of NeuroInterventional Surgery}, vol.~7,
+  no.~7, pp.~503--508, 2015.
 
-\bibitem{80}
-U.~O'Connor, E.~Carinou, I.~Clairand, O.~Ciraj-Bjelac, F.~{De Monte},
-  J.~Domienik-Andrzejewska, P.~Ferrari, M.~Ginjaume, H.~Hršak, O.~Hupe,
-  {\v{Z}}.~Kne{\v{z}}evi{\'c}, M.~{Sans Merce}, S.~Sarmento, T.~Siiskonen, and
-  F.~Vanhavere, ``Recommendations for the use of active personal dosemeters
-  (apds) in interventional workplaces in hospitals,'' {\em Physica Medica},
-  vol.~87, pp.~131--135, 2021.
+\bibitem{Ger2025}
+N.~Ger, A.~Ku, J.~Lopez, N.~R. Bennett, J.~Wang, G.~Ateka, E.~Anyenda,
+  M.~Rosezky, P.~Kilavi, A.~S. Wang, and K.~Shaker, ``Opendosimeter: Open
+  hardware personal x-ray dosimeter,'' {\em Communications Engineering},
+  vol.~4, Dec. 2025.
 
 \bibitem{82}
 D.~Murat, C.~Wilken-Tergau, U.~Gottwald, O.~Nemitz, T.~Uher, and E.~Schulz,
@@ -331,13 +337,6 @@ W.~Upamai and A.~Senkhaw, ``A study of radiation exposure and the effects of
   procedures,'' {\em American Journal of Neuroradiology}, p.~ajnr.A9353, Apr.
   2026.
 
-\bibitem{115}
-R.~F. James, K.~J. Wainwright, H.~A. Kanaan, S.~Hudson, M.~E. Wainwright, J.~H.
-  Hightower, and J.~J. Delaney, ``Analysis of occupational radiation exposure
-  during cerebral angiography utilizing a new real time radiation dose
-  monitoring system,'' {\em Journal of NeuroInterventional Surgery}, vol.~7,
-  no.~7, pp.~503--508, 2015.
-
 \bibitem{116}
 M.~Müller, K.~Welle, A.~Strauss, P.~Naehle, P.~Pennekamp, O.~Weber, and
   C.~Burger, ``Real-time dosimetry reduces radiation exposure of orthopaedic
@@ -371,12 +370,6 @@ L.~Faggioni, F.~Paolicchi, L.~Bastiani, D.~Guido, and D.~Caramella, ``Awareness
 Luxium Solutions, {\em BC-400, BC-404, BC-408, BC-412, BC-416 Premium Plastic
   Scintillators}.
 \newblock Accessed: 2026-07-18.
-
-\bibitem{129}
-F.~Lessard, L.~Archambault, M.~Plamondon, P.~Després, F.~Therriault‐Proulx,
-  S.~Beddar, and L.~Beaulieu, ``Validating plastic scintillation detectors for
-  photon dosimetry in the radiologic energy range,'' {\em Medical Physics},
-  vol.~39, p.~5308–5316, Aug. 2012.
 
 \bibitem{127}
 L.~Swiderski, R.~Marcinkowski, M.~Moszynski, W.~Czarnacki, M.~Szawlowski,

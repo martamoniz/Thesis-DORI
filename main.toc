@@ -32,13 +32,15 @@
 \contentsline {subsubsection}{Transient Response}{22}{section*.29}%
 \contentsline {subsection}{\numberline {2.3.3}Pulse Sampling}{24}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Validation of the Front-End Electronics}{24}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Results}{27}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Calibration of the DORI Prototype}{27}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Energy Calibration}{27}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Dose Calibration}{30}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Setup}{30}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Methods}{33}{subsection.3.2.2}%
-\contentsline {chapter}{\numberline {4}Final Prototype}{37}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Channel Response}{38}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusions}{40}{chapter.5}%
-\contentsline {chapter}{References}{41}{section.5.1}%
-\contentsline {chapter}{Appendix}{46}{section.Alph0.1}%
+\contentsline {section}{\numberline {3.3}Dose Rate Reconstruction}{36}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Final Prototype}{38}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Channel Response}{39}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Power Consumption}{41}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusions}{43}{chapter.5}%
+\contentsline {chapter}{References}{44}{section.5.1}%
+\contentsline {chapter}{Appendix}{49}{section.Alph0.1}%

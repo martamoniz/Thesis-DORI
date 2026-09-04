@@ -1,6 +1,6 @@
 %% Motivation and Contextualization
 \chapter*{Contextualization and Motivation}
-Interventional radiology refers to image-guided therapeutic procedures
+Interventional radiology (IR) refers to image-guided therapeutic procedures
 performed under real-time X-ray visualization \cite{6}. The number of these procedures has
 increased over the past two decades worldwide. Interventional radiologists
 and their teams are the most exposed group of medical radiation workers due to the prolonged
@@ -11,11 +11,27 @@ using passive dosimeters, which are worn either above or below the lead apron. T
 are read \emph{a posteriori}, in the best-case scenario, once a month. As a result, there is no
 immediate feedback during procedures and exposure incidents cannot be prevented \cite{46,67}.
 
-Active personal dosimeters offer a complementary solution by providing real-time auditory and/or visual feedback. The main benefit
+Active personal dosimeters (APDs) offer a complementary solution by providing real-time auditory and/or visual feedback. The main benefit
 of these devices in IR is not to prevent exceedance of annual dose limits, which have been extensively studied and are rarely
-surpassed under standard conditions. Instead, ADPs support
+surpassed under standard conditions. Instead, APDs support
 the principle of keeping exposure {\it as low as reasonably achievable }(ALARA) \cite{1,2,3}. These systems alert personnel to high-dose situations, promoting behavioural adjustments to reduce avoidable exposure. Adjustments may include reducing fluoroscopy time and frame rate, optimizing patient and operator positioning, and improve radiation shielding placement \cite{4}.
 
-The proposed project explores the development of an APD system for IR, capable of monitoring
-radiation exposure at four anatomical regions: eyes, neck, thorax (chest) and hands. The system will transmit dose data wirelessly to an external
-dashboard for real-time visualization.
+This dissertation explores the development of an APD system for IR, DORI
+(\textit{DOs\'imetro para Radiologia de Interven\c{c}\~ao}), based on a plastic
+scintillator coupled to a silicon photomultiplier. The primary goal is to design,
+assemble and validate a pulse-mode front-end for this detector, in an architecture that can
+be replicated to monitor several anatomical regions, namely the eyes, neck, thorax and
+hands. Each unit is intended to be compact and fully wireless, so that it can be worn
+unobtrusively. Taking advantage of the tissue equivalence of plastic scintillators~\cite{129}, a second
+goal is to evaluate their use for personal dosimetry, through the implementation and validation
+of methodologies for energy and dose calibration in the field of diagnostic radiology.
+
+This document is structured in five chapters. Chapter 1 introduces the principles of IR and
+the physics of radiation interaction and dosimetry. It also characterises IR as a high
+occupational exposure environment and reviews APDs and their benefits. The next chapter introduces
+the DORI concept and describes the design and validation of the front-end electronics.
+The third chapter covers the methodology used for the energy and dose calibration of the detector,
+along with the corresponding results and discussion. Chapter 4 shows the current DORI
+prototype, resulting from successive design iterations, and reviews its wireless
+communication and autonomy. In the last chapter, the global conclusions of the work are
+presented and future work is discussed.

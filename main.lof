@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Photon interactions in IR}}{4}{figure.caption.10}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Deterministic and stochastic effets.}}{6}{figure.caption.14}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Scatter radiation distribution in IR environment.}}{8}{figure.caption.17}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Reported changes following introduction of an active personal dosimeter in interventional radiology.}}{12}{figure.caption.19}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Reported changes following introduction of an active personal dosimeter in interventional radiology.}}{11}{figure.caption.19}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6}{\ignorespaces Conceptual design of DORI.}}{13}{figure.caption.20}%
 \contentsline {figure}{\numberline {7}{\ignorespaces SiPM bias supply.}}{16}{figure.caption.21}%
@@ -32,15 +32,17 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{28}{subfigure.15.1}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{28}{subfigure.15.2}%
 \contentsline {figure}{\numberline {16}{\ignorespaces Energy calibration of the DORI prototype.}}{29}{figure.caption.35}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Dose calibration setup.}}{31}{figure.caption.37}%
-\contentsline {figure}{\numberline {18}{\ignorespaces ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.}}{32}{figure.caption.38}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}{subfigure.18.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}{subfigure.18.2}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Dose calibration setup.}}{32}{figure.caption.37}%
+\contentsline {figure}{\numberline {18}{\ignorespaces ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.}}{33}{figure.caption.38}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{subfigure.18.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{subfigure.18.2}%
 \contentsline {figure}{\numberline {19}{\ignorespaces Maximum deviation as a function of the bin boundary energy.}}{34}{figure.caption.39}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Maximum deviation as a function of the bin boundary energy.}}{35}{figure.caption.41}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Maximum deviation as a function of the bin boundary energy.}}{36}{figure.caption.41}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Reconstructed $H_p(10)$ rate as a function of tube current.}}{37}{figure.caption.42}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {21}{\ignorespaces Final DORI prototype.}}{37}{figure.caption.42}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Channel response of the DORI prototype.}}{39}{figure.caption.44}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Final DORI prototype.}}{39}{figure.caption.43}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Endpoint channel correspondence between the DORI-test board and the final prototype.}}{41}{figure.caption.45}%
+\contentsline {figure}{\numberline {24}{\ignorespaces DORI discharge curve during continuous operation at 100 interrupts/second.}}{42}{figure.caption.46}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

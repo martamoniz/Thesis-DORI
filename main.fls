@@ -383,11 +383,11 @@ INPUT .\main.lof
 INPUT .\main.lof
 INPUT main.lof
 OUTPUT main.lof
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT .\main.lot
 INPUT .\main.lot
 INPUT main.lot
 OUTPUT main.lot
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT .\lista_acronimos.tex
 INPUT .\lista_acronimos.tex
 INPUT .\lista_acronimos.tex
@@ -464,7 +464,11 @@ INPUT .\images\dose rates.png
 INPUT .\images\dose rates.png
 INPUT .\images\dose rates.png
 INPUT .\images\dose rates.png
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\eurosym\feymr10.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr10.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT .\images\fig_apd_benefits.pdf
 INPUT .\images\fig_apd_benefits.pdf
 INPUT .\images\fig_apd_benefits.pdf
@@ -482,11 +486,7 @@ INPUT .\images\DORI.pdf
 INPUT .\images\DORI.pdf
 INPUT .\images\DORI.pdf
 INPUT .\images\DORI.pdf
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr8.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT .\figures\MAX1932.tex
 INPUT .\figures\MAX1932.tex
 INPUT .\figures\MAX1932.tex
@@ -630,6 +630,12 @@ INPUT .\images\dose_calibration.pdf
 INPUT .\images\dose_calibration.pdf
 INPUT .\images\dose_calibration.pdf
 INPUT .\images\dose_calibration.pdf
+INPUT .\images\dose_rate_linearity.pdf
+INPUT .\images\dose_rate_linearity.pdf
+INPUT .\images\dose_rate_linearity.pdf
+INPUT .\images\dose_rate_linearity.pdf
+INPUT .\images\dose_rate_linearity.pdf
+INPUT .\images\dose_rate_linearity.pdf
 INPUT .\chapters\chapter4.tex
 INPUT .\chapters\chapter4.tex
 INPUT .\chapters\chapter4.tex
@@ -665,6 +671,12 @@ INPUT .\images\channel_transfer.pdf
 INPUT .\images\channel_transfer.pdf
 INPUT .\images\channel_transfer.pdf
 INPUT .\images\channel_transfer.pdf
+INPUT .\images\battery.pdf
+INPUT .\images\battery.pdf
+INPUT .\images\battery.pdf
+INPUT .\images\battery.pdf
+INPUT .\images\battery.pdf
+INPUT .\images\battery.pdf
 INPUT .\chapters\chapter-conclusions.tex
 INPUT .\chapters\chapter-conclusions.tex
 INPUT .\chapters\chapter-conclusions.tex
@@ -705,8 +717,6 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmib10.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmmib8.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cmextra\cmmib8.pfb
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\eurosym\feymr10.pfb
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\eurosym\feymr10.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb

@@ -33,11 +33,11 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{28}{subfigure.15.2}%
 \contentsline {figure}{\numberline {16}{\ignorespaces Energy calibration of the DORI prototype.}}{29}{figure.caption.35}%
 \contentsline {figure}{\numberline {17}{\ignorespaces Dose calibration setup.}}{32}{figure.caption.37}%
-\contentsline {figure}{\numberline {18}{\ignorespaces ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.}}{33}{figure.caption.38}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{subfigure.18.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{subfigure.18.2}%
+\contentsline {figure}{\numberline {18}{\ignorespaces ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.}}{32}{figure.caption.38}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}{subfigure.18.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}{subfigure.18.2}%
 \contentsline {figure}{\numberline {19}{\ignorespaces Maximum deviation as a function of the bin boundary energy.}}{34}{figure.caption.39}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Maximum deviation as a function of the bin boundary energy.}}{36}{figure.caption.41}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Fit residuals and leave-one-out deviations per radiation quality.}}{36}{figure.caption.41}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Reconstructed $H_p(10)$ rate as a function of tube current.}}{37}{figure.caption.42}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {22}{\ignorespaces Final DORI prototype.}}{39}{figure.caption.43}%

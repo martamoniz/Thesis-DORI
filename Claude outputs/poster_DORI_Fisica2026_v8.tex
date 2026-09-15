@@ -1,0 +1,509 @@
+% =====================================================================
+%  DORI  |  Poster for Fisica 2026
+%  A0 portrait, 84.0 cm (width) x 118.8 cm (height), margins included.
+%  Compile with pdfLaTeX (LaTeX Workshop in VS Code works out of the box).
+%  Figures come from ../images/ and ../figures/ in the thesis repository.
+%
+%  SKELETON ONLY. Every block is empty and every block has a fixed height,
+%  so the poster always fits on exactly one page no matter what you type.
+%  Write inside the blocks where the comments say so. If a block runs out of
+%  room, raise its height in section 5 and lower another one by the same amount.
+%
+%  VERTICAL BUDGET (set in sections 1 and 5)
+%    title band          15.6 cm  painted, flush with the top edge
+%    gap                  1.0 cm
+%    active area         93.2 cm  = \textheight
+%       abstract frame    4.5 cm  full width, about three lines
+%       gap               1.6 cm
+%       row 1            26.0 cm  introduction | concept figure
+%       gap               1.6 cm
+%       row 2            59.0 cm  methods | results | discussion etc.
+%    gap                  1.0 cm
+%    logo band            8.0 cm  painted, logos left, acknowledgements right
+% =====================================================================
+
+\documentclass{article}
+
+% ---------------------------------------------------------------------
+%  1. PAPER SIZE AND MARGINS
+%  "top" must be larger than \bannerhgt and "bottom" larger than \footerhgt,
+%  otherwise the text runs over the painted bands.
+% ---------------------------------------------------------------------
+\usepackage[
+  paperwidth  = 84.0cm,
+  paperheight = 118.8cm,
+  left        = 3cm,
+  right       = 3cm,
+  top         = 16.6cm,   % 15.6 cm title band + 1 cm gap
+  bottom      = 9cm       %  8 cm logo band  + 1 cm gap
+]{geometry}
+
+% ---------------------------------------------------------------------
+%  2. PACKAGES
+% ---------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{anyfontsize}      % allows arbitrary font sizes (needed on A0)
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage[table]{xcolor}    % the "table" option enables \rowcolor
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}             % needed by figures/Architecture.tex
+\usetikzlibrary{arrows,shapes,positioning,calc,patterns,decorations.pathreplacing}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{eso-pic}          % paints the title and logo bands onto the sheet
+
+\graphicspath{{images/}{../images/}{../../images/}{./}}
+\pagestyle{empty}
+
+% Sans-serif everywhere (matches the reference template).
+% Comment the next line out if you prefer the serif look of the thesis.
+\renewcommand{\familydefault}{\sfdefault}
+
+% ---------------------------------------------------------------------
+%  3. COLOUR PALETTE
+% ---------------------------------------------------------------------
+\definecolor{doriblue}  {RGB}{ 26,111,223}   % main blue
+\definecolor{doridark}  {HTML}{0C366A}       % title band
+\definecolor{dorigreen} {RGB}{ 55,173,107}   % green   -> accents
+\definecolor{doriyellow}{RGB}{204,153,  0}   % yellow  -> accents
+\definecolor{dorigrey}  {RGB}{ 81, 81, 81}   % grey    -> captions
+\definecolor{dorilight} {RGB}{237,242,250}   % very light blue -> logo band
+
+% Quick switches. Set these and every band, frame and header follows.
+\colorlet{bannerbg}{doridark}                % title band background
+\colorlet{headerbg}{doriblue}                % section header bar background
+\colorlet{headerfg}{white}                   % section header bar text
+\colorlet{absframe}{doridark}                % abstract frame colour
+\colorlet{tablehead}{dorigreen}              % table header row
+\colorlet{subheadbg}{doridark}               % sub-heading bar inside a block
+\colorlet{subheadfg}{white}                  % sub-heading bar text
+
+% ---------------------------------------------------------------------
+%  4. FONT SIZES
+%  All sizes are absolute (the poster is printed at 1:1), so these are the
+%  numbers to touch if the text is too big or too small on the printed sheet.
+% ---------------------------------------------------------------------
+\newcommand{\titlefont}   {\fontsize{104}{120}\selectfont} % poster title
+\newcommand{\authorfont}  {\fontsize{42}{50}\selectfont}   % author list
+\newcommand{\afilfont}    {\fontsize{32}{40}\selectfont}   % affiliation
+\newcommand{\headfont}    {\fontsize{46}{54}\selectfont}   % section headers
+\newcommand{\bodyfont}    {\fontsize{37}{40}\selectfont}   % body text
+\newcommand{\subfont}     {\fontsize{34}{40}\selectfont}   % sub-headings
+\newcommand{\capfont}     {\fontsize{34}{30}\selectfont}   % captions, table
+\newcommand{\smallfont}   {\fontsize{24}{30}\selectfont}   % funding note
+\newcommand{\reffont}     {\fontsize{22}{26}\selectfont}   % reference list
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}       % zero at the top level, so the block heights add
+                                % up exactly; inside a block it is \blockparskip
+\setlength{\topskip}{0pt}
+\newlength{\blockparskip}\setlength{\blockparskip}{5mm}  % gap between paragraphs
+                                                         % inside a block
+
+% ---------------------------------------------------------------------
+%  5. LAYOUT GEOMETRY
+%  Columns. Only \colA, \colB and \colgap are set by hand; \colC is whatever
+%  is left over, so the three columns always fill the text width exactly.
+% ---------------------------------------------------------------------
+\newlength{\colgap}\setlength{\colgap}{1.6cm}           % gap between columns
+\newlength{\colA}  \setlength{\colA}{0.315\textwidth}   % left   column, Methods
+\newlength{\colB}  \setlength{\colB}{0.365\textwidth}   % middle column, Results
+\newlength{\colC}  \setlength{\colC}{\textwidth}
+   \addtolength{\colC}{-\colA}\addtolength{\colC}{-\colB}\addtolength{\colC}{-2\colgap}
+\newlength{\colBC} \setlength{\colBC}{\colB}\addtolength{\colBC}{\colgap}\addtolength{\colBC}{\colC}
+                                                        % \colBC = middle + right,
+                                                        % used by the concept figure
+
+% Heights. Set the first three; \rowtwohgt is whatever is left on the sheet.
+\newlength{\rowgap}   \setlength{\rowgap}{1.6cm}    % vertical gap between blocks
+\newlength{\figgap}   \setlength{\figgap}{0.8cm}    % tighter gap, energy to dose
+\newlength{\abshgt}   \setlength{\abshgt}{4.5cm}    % abstract frame, ~3 lines
+\newlength{\rowonehgt}\setlength{\rowonehgt}{26cm}  % introduction + concept figure
+
+\newlength{\rowtwohgt}\setlength{\rowtwohgt}{\textheight}
+  \addtolength{\rowtwohgt}{-\abshgt}
+  \addtolength{\rowtwohgt}{-\rowonehgt}
+  \addtolength{\rowtwohgt}{-2\rowgap}
+  \addtolength{\rowtwohgt}{-5mm}         % safety slack, keeps it on one page
+
+% Middle column: dose figure and table are fixed, Results takes the rest.
+\newlength{\dosehgt}\setlength{\dosehgt}{17.4cm}
+\newlength{\tabhgt} \setlength{\tabhgt}{13.8cm}
+\newlength{\reshgt} \setlength{\reshgt}{\rowtwohgt}
+  \addtolength{\reshgt}{-\figgap}
+  \addtolength{\reshgt}{-\rowgap}
+  \addtolength{\reshgt}{-\dosehgt}
+  \addtolength{\reshgt}{-\tabhgt}
+
+% Right column: Discussion and References are fixed, Conclusions takes the rest.
+\newlength{\dishgt}\setlength{\dishgt}{24.5cm}
+\newlength{\refhgt}\setlength{\refhgt}{15.5cm}
+\newlength{\conhgt}\setlength{\conhgt}{\rowtwohgt}
+  \addtolength{\conhgt}{-2\rowgap}
+  \addtolength{\conhgt}{-\dishgt}
+  \addtolength{\conhgt}{-\refhgt}
+
+% Top-aligns a column. \begin{minipage}[t] aligns on the first baseline, which
+% differs from block to block; the \vspace{0pt} forces alignment on the top edge.
+\newcommand{\topcol}{\vspace{0pt}}
+
+% Vertical gap between two blocks. LaTeX adds one \baselineskip of its own
+% between stacked boxes, so it is subtracted here; the printed gap is \rowgap
+% and the block heights add up exactly.
+\newcommand{\blockgap}{\par\vspace{\dimexpr\rowgap-\baselineskip\relax}}
+% Same thing with the tighter \figgap, used between the two calibration figures.
+\newcommand{\tightgap}{\par\vspace{\dimexpr\figgap-\baselineskip\relax}}
+
+% ---------------------------------------------------------------------
+%  6. BLOCK STYLES
+%  doriblock     = section with a coloured header bar
+%  dorifig       = plain box, no header bar (figures and the table)
+%  doriabstract  = framed band, no header bar (the abstract)
+%  To put a thin frame around a block, uncomment the "colframe/boxrule" line.
+% ---------------------------------------------------------------------
+\newtcolorbox{doriblock}[2][]{%
+  enhanced, sharp corners, boxrule=0pt, frame hidden,
+  colback     = white,          % block body background
+  colbacktitle= headerbg,       % header bar background
+  coltitle    = headerfg,       % header bar text colour
+  fonttitle   = \headfont\bfseries,
+  title       = {#2},
+  toptitle=6mm, bottomtitle=6mm, lefttitle=10mm, righttitle=10mm,
+  left=8mm, right=8mm, top=8mm, bottom=4mm,
+  before upper={\justifying\setlength{\parindent}{0pt}%
+                \setlength{\parskip}{\blockparskip}},
+  % colframe=dorigrey!30, boxrule=1mm,   % <-- uncomment for a thin frame
+  #1
+}
+
+\newtcolorbox{dorifig}[1][]{%
+  enhanced, sharp corners, boxrule=0pt, frame hidden,
+  colback = white,
+  left=8mm, right=8mm, top=6mm, bottom=4mm,
+  before upper={\justifying\setlength{\parindent}{0pt}%
+                \setlength{\parskip}{\blockparskip}},
+  % colframe=dorigrey!30, boxrule=1mm,   % <-- uncomment for a thin frame
+  #1
+}
+
+\newtcolorbox{doriabstract}[1][]{%
+  enhanced, sharp corners,
+  colback  = white,
+  colframe = absframe,          % frame colour
+  boxrule  = 3mm,               % frame thickness
+  left=12mm, right=12mm, top=8mm, bottom=8mm,
+  before upper={\justifying\setlength{\parindent}{0pt}%
+                \setlength{\parskip}{\blockparskip}},
+  #1
+}
+
+% Sub-heading inside a block: a smaller version of the section header bar, in
+% the title-band colour. Usage:  \subhead{Energy Calibration}
+\newlength{\subheadhgt} \setlength{\subheadhgt}{2.0cm}   % bar height
+\newlength{\subheadgap} \setlength{\subheadgap}{5mm}     % space above the bar
+\newlength{\subheadskip}\setlength{\subheadskip}{4mm}    % space below the bar
+\newcommand{\subhead}[1]{%
+  \par\vspace{\subheadgap}%
+  \noindent{\setlength{\fboxsep}{0pt}%
+    \colorbox{subheadbg}{%
+      \parbox[c][\subheadhgt][c]{\linewidth}{%
+        \hspace{8mm}\textcolor{subheadfg}{\subfont\bfseries #1}}}}%
+  \par\vspace{\subheadskip}%
+}
+
+% Captions. Numbers are written by hand so that reordering blocks is harmless.
+\newcommand{\figcap}[2]{%
+  \par\vspace{3mm}{\capfont\color{dorigrey}\textbf{Figure #1.}~#2\par}}
+\newcommand{\tabcap}[2]{%
+  {\capfont\color{dorigrey}\textbf{Table #1.}~#2\par}\vspace{4mm}}
+
+% Bullet list for use inside the blocks:
+%   \begin{dorilist} \item ... \item ... \end{dorilist}
+\newlist{dorilist}{itemize}{1}
+\setlist[dorilist]{leftmargin=12mm, itemsep=4mm, topsep=3mm, parsep=0pt,
+                   label=\textcolor{doriblue}{\rule[0.25ex]{9mm}{2.5pt}}}
+
+% Centred, equal-width column type for the table.
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% ---------------------------------------------------------------------
+%  7. TITLE BAND AND LOGO BAND
+%  Both are painted directly onto the sheet, flush with the top and bottom
+%  edges, so they never move when the content in between changes.
+%  Keep them consistent with the margins set in section 1.
+% ---------------------------------------------------------------------
+\newlength{\sidemargin}\setlength{\sidemargin}{3cm}   % = left/right margin
+\newlength{\bannerhgt} \setlength{\bannerhgt}{15.6cm} % height of the title band
+\newlength{\footerhgt} \setlength{\footerhgt}{8cm}    % height of the logo band
+
+\newlength{\bannerpad}  \setlength{\bannerpad}{2.5cm}  % side padding inside a band
+\newlength{\bannerwidth}\setlength{\bannerwidth}{\paperwidth}
+  \addtolength{\bannerwidth}{-2\bannerpad}
+
+% --- title band -------------------------------------------------------
+\AddToShipoutPictureBG*{%   the star restricts the band to the first page
+  \AtPageUpperLeft{%
+    \raisebox{-\bannerhgt}[0pt][0pt]{%
+      \setlength{\fboxsep}{0pt}%
+      \colorbox{bannerbg}{%
+        \parbox[b][\bannerhgt][c]{\paperwidth}{%
+          \centering
+          \begin{minipage}{\bannerwidth}
+            \centering\color{white}
+            {\titlefont\bfseries
+              Development of a Wireless Active Personal\\[4mm]
+              Dosimeter for Interventional Radiology\par}
+            \vspace{8mm}
+            {\authorfont
+              M.\, Moniz\textsuperscript{1},
+              P.\,M.\,M. Correia\textsuperscript{1},
+              A.\,L.\,M. Silva\textsuperscript{1},
+              J.\,F.\,C.\,A. Veloso\textsuperscript{1},
+              C.\,D.\,R. Azevedo\textsuperscript{1}\par}
+            \vspace{5mm}
+            {\afilfont\color{white!85}
+              \textsuperscript{1}i3N, Departamento de F\'isica,
+              Universidade de Aveiro, 3810-193 Aveiro, Portugal\par}
+          \end{minipage}%
+        }%
+      }%
+    }%
+  }%
+}
+
+% --- logo band: logos on the left, acknowledgements on the right ------
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    \setlength{\fboxsep}{0pt}%
+    \colorbox{dorilight}{%                      <-- band background colour
+      \parbox[b][\footerhgt][c]{\paperwidth}{%
+        \hspace*{\sidemargin}%
+        \begin{minipage}[c]{0.46\bannerwidth}
+          \centering
+          % --- LOGOS ----------------------------------------------------
+          % Replace each placeholder with the real file, for example:
+          %   \includegraphics[height=6cm]{uaLogoNew.pdf}\hspace{2cm}%
+          %   \includegraphics[height=6cm]{logos/i3n.pdf}
+          \textcolor{dorigrey!60}{\afilfont
+            [logo 1]\hspace{2cm}[logo 2]\hspace{2cm}[logo 3]\\[8mm]
+            [logo 4]\hspace{2cm}[logo 5]\hspace{2cm}[logo 6]}%
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[c]{0.50\bannerwidth}
+          \smallfont\justifying\color{dorigrey}
+          \textbf{Acknowledgements.}
+          This work is partially supported by the project
+          COMPETE2030-FEDER-00785100. This work is funded by national funds
+          through FCT -- Funda\c{c}\~ao para a Ci\^encia e a Tecnologia, I.P.,
+          under the projects UID/50025/2025, UID/PRR/50025/2025,
+          UID/PRR2/50025/2025 and the Associate Laboratory
+          i3N -- LA/P/0037/2020.
+        \end{minipage}%
+        \hspace*{\sidemargin}%
+      }%
+    }%
+  }%
+}
+
+% =====================================================================
+\begin{document}
+\bodyfont
+
+% =====================================================================
+%  ABSTRACT  |  full width, framed, height \abshgt
+% =====================================================================
+\noindent
+\begin{doriabstract}[height=\abshgt]
+  \textbf{Abstract:}
+  % >>> your abstract here, about three lines <<<
+\end{doriabstract}
+
+\blockgap
+
+% =====================================================================
+%  ROW 1  |  Introduction (left)  +  DORI concept figure (middle + right)
+%  Both boxes are forced to \rowonehgt, so the row reads as a single band.
+% =====================================================================
+\noindent
+\begin{minipage}[t]{\colA}\topcol
+  \begin{doriblock}[height=\rowonehgt]{INTRODUCTION}
+
+Interventional radiology is the medical specialty subject to the highest
+occupational exposure to ionising radiation [1]. Currently, occupational monitoring relies on
+passive dosimeters, which report retrospective dose information at monthly
+intervals at best. The ability to
+anticipate and to act upon unnecessary exposure is therefore limited [2].
+ 
+This work explores the development of DORI (\textbf{\textit{DO}}símetro para 
+\textbf{\textit{R}}adiologia de \textbf{\textit{I}}ntervenção), a personal and active solution for real-time dose monitoring. DORI targets the detection
+of scattered radiation through a low-cost unit that can be replicated for
+monitoring at chest, neck, hand and eye level.
+
+  \end{doriblock}
+\end{minipage}%
+\hspace{\colgap}%
+\begin{minipage}[t]{\colBC}\topcol
+  \begin{dorifig}[height=\rowonehgt, valign=center]
+    \centering
+    \includegraphics[width=0.9\linewidth]{DORI.pdf}   % <-- adjust the width
+    \figcap{1}{Conceptual design of DORI.}
+  \end{dorifig}
+\end{minipage}
+
+\blockgap
+
+% =====================================================================
+%  ROW 2  |  three columns, all starting at the same height
+%  LEFT   : Methods, with the architecture figure
+%  MIDDLE : Results, with the energy figure, the dose figure and Table 1
+%  RIGHT  : Discussion, Conclusions, References
+% =====================================================================
+\noindent
+% ---------------------------- LEFT COLUMN ----------------------------
+\begin{minipage}[t]{\colA}\topcol
+
+  \begin{doriblock}[height=\rowtwohgt]{METHODS}
+
+    \subhead{Hardware}
+
+    Each unit has a 5\,$\times$\,5\,$\times$\,5\,mm$^3$ plastic scintillator
+    (Eljen EJ-200 equivalent) optically coupled to a Broadcom AFBR-S4N66P014M
+    silicon photomultiplier (SiPM). The readout electronics is controlled by an
+    ESP32-C3 powered by a rechargeable Li-Po battery.
+
+    % Signal-chain figure. \input pulls in the TikZ picture; \resizebox sets its
+    % printed width. 0.72 is the largest that still fits the column; raising it
+    % pushes the block past the bottom of the sheet.
+    \begin{center}
+      \resizebox{0.72\linewidth}{!}{\input{architecture_blocks.tex}}
+    \end{center}
+    \figcap{2}{Signal chain of the DORI readout.}
+
+    \subhead{Energy Calibration}
+
+    Bremsstrahlung endpoints acquired between 20 and 50\,kVp, combined with the
+    $^{241}$Am photopeak at 59.5\,keV in a weighted least-squares fit. The
+    $^{57}$Co Compton edge was used as an independent validation point.
+
+    \subhead{Dose Calibration}
+
+    Calibration followed ISO 4037, using the narrow-spectrum qualities N-25,
+    N-30 and N-40 and the prescribed protocol for $H_p(10)$ [3,4]. The dose is
+    reconstructed as
+
+    \[ H_p(10) = w_1 N_1 + w_2 N_2 , \]
+
+    with $N_i$ the counts in each energy bin and $w_i$ the fitted weights.
+
+  \end{doriblock}
+
+\end{minipage}%
+\hspace{\colgap}%
+% --------------------------- MIDDLE COLUMN ---------------------------
+\begin{minipage}[t]{\colB}\topcol
+
+  \begin{doriblock}[height=\reshgt]{RESULTS}
+
+    
+
+    \centering
+    \includegraphics[width=1\linewidth]{energy_poster.pdf}   % <-- adjust the width
+    \figcap{3}{Energy calibration.}
+  \end{doriblock}
+
+  \tightgap
+
+  \begin{dorifig}[height=\dosehgt, valign=center]
+    \centering
+    \includegraphics[width=1\linewidth]{dose_calibration_poster.pdf} % <-- width
+    \figcap{4}{Dose calibration results.}
+  \end{dorifig}
+
+  \blockgap
+
+  \begin{dorifig}[height=\tabhgt]
+    \tabcap{1}{Characteristics of the DORI prototype.}
+    \fontsize{32}{32}\selectfont      % <-- table font size
+    \renewcommand{\arraystretch}{1.15}
+    \begin{tabularx}{\linewidth}{@{}Y Y@{}}   % both columns centred
+      \rowcolor{tablehead}
+      \textcolor{headerfg}{\textbf{Parameter}} &
+      \textcolor{headerfg}{\textbf{Value}} \\
+      \midrule
+      Dead time        & 17.8 $\pm$ 0.4~$\mu$s \\
+      Energy range     & 20 to 60~keV \\
+      Operational unit & $H_p(10)$ \\
+      Dose range       & N-25 to N-40 \\
+      Dimensions       & 6.3 $\times$ 7.2 $\times$ 2.5~cm \\
+      Mass             & 141~g \\
+      Autonomy         & 8.6~h \\                     % <-- EDIT: confirm the unit
+      % Rows you may want to add, uncomment as needed:
+      % Scintillator      & BC-408 plastic \\
+      % Photodetector     & Silicon photomultiplier \\
+      % Energy resolution & (30 $\pm$ 5)\,\% at 59.5~keV \\
+      % Communication     & Bluetooth Low Energy \\
+      \bottomrule
+    \end{tabularx}
+  \end{dorifig}
+
+\end{minipage}%
+\hspace{\colgap}%
+% ---------------------------- RIGHT COLUMN ---------------------------
+\begin{minipage}[t]{\colC}\topcol
+
+  \begin{doriblock}[height=\dishgt]{DISCUSSION}
+
+    The energy response is linear from 20 to 60\,keV. The $^{57}$Co point falls
+    off the line, owing to the poor energy resolution at this energy.
+
+    The dose results support the two-bin division, given the few radiation
+    qualities available.
+
+    DORI supports count rates up to $(56 \pm 1) \times 10^{3}$ counts per second.
+    The designed architecture is scalable to other formats, and its current
+    autonomy, dimensions and mass allow unobtrusive operation, with room for
+    improvement in future iterations.
+
+  \end{doriblock}
+
+  \blockgap
+
+  \begin{doriblock}[height=\conhgt]{CONCLUSIONS}
+
+    A functional wireless active personal dosimeter was built and characterised.
+    The plastic scintillator is a feasible detector, and both calibration methods
+    were shown to work.
+
+    Future work will extend both calibrations to a wider energy range and to more
+    reliable calibration points.
+
+  \end{doriblock}
+
+  \blockgap
+
+  \begin{doriblock}[height=\refhgt]{REFERENCES}
+    \reffont
+  [1] B.\,A. Schueler and K.\,A. Fetterly, ``Eye protection in interventional
+procedures,'' \emph{British Journal of Radiology}, vol.~94, p.~20210436, 2021.
+ 
+[2] K. Kromp\ss{}a\ss{} \emph{et al.}, ``Real-time dosimetry in interventional
+radiology: comparing the occupational radiation exposure in fluoroscopy guided
+lower extremity and abdominal procedures,'' \emph{European Radiology}, 2025.\
+
+[3] ISO 4037-1:2019, \emph{Radiation characteristics and production methods},
+ISO, Geneva, 2019.\
+
+[4] ISO 4037-3:2019, \emph{Calibration of area and personal dosemeters},
+ISO, Geneva, 2019.\
+
+  \end{doriblock}
+
+\end{minipage}
+
+\end{document}

@@ -1,0 +1,86 @@
+% =====================================================================
+%  Draft section text for the DORI poster, as it stood before the blocks
+%  were emptied. Paste each piece into the matching block.
+%
+%  TWO NUMBERS ARE STALE. This draft says a dead time of 18 us and an energy
+%  range of 20-50 keV. Your table now says 17.8 +/- 0.4 us and 20 to 60 keV.
+%  Fix them wherever they appear below before using it.
+% =====================================================================
+
+
+% --------------------------------------------------------- INTRODUCTION
+Interventional radiology is the medical specialty subject to the highest
+occupational exposure to ionising radiation, since it relies on
+fluoroscopy-guided techniques [1]. Occupational monitoring currently rests on
+passive dosimeters, which report dose only \emph{a posteriori}. The ability to
+anticipate and to act upon unnecessary exposure is therefore limited [2].
+
+This work proposes DORI, a personal and active \textbf{DO}simetry system for
+\textbf{R}adiology of \textbf{I}ntervention. DORI targets real-time monitoring
+of scattered radiation through a low-cost unit that can be replicated for
+monitoring at chest, neck, hand and eye level.
+
+
+% -------------------------------------------------------------- METHODS
+Each unit integrates a plastic scintillator, chosen for its soft-tissue
+equivalent properties, coupled to a silicon photomultiplier. Custom readout
+electronics (charge-sensitive amplifier, pole-zero cancellation, shaper and
+peak-and-hold) discriminate and digitise the signal amplitude. Wireless
+communication is handled by a battery-powered microcontroller, keeping the
+assembly compact and unobtrusive to the operator. Dose-rate data are received
+by a Raspberry Pi and streamed in real time to an external visual interface.
+
+\textbf{Energy calibration.} Bremsstrahlung endpoints (Duane--Hunt) acquired
+between 20 and 50\,kVp, combined with the $^{241}$Am photopeak at 59.5\,keV in
+a weighted least-squares fit. The $^{57}$Co Compton edge was reserved as an
+independent validation point.
+
+\textbf{Dose calibration.} ISO 4037 narrow-spectrum qualities N-25, N-30 and
+N-40, with $\dot{H}_p(10)$ reconstructed from the measured spectrum through a
+bin-weighted least-squares fit.
+
+
+% -------------------------------------------------------------- RESULTS
+The readout electronics were characterised and present a dead time of
+18\,$\mu$s. DORI is calibrated over the energy range relevant to this
+application (20--50\,keV), where it shows linear behaviour:
+\[
+  \mathrm{channel} = a\,E + b
+\]
+\vspace{-8mm}
+\[
+  a = (51\pm2)\times10^{-2}~\mathrm{channel\,keV^{-1}},\quad
+  b = 21\pm1,\quad R^2 = 0.989 .
+\]
+
+
+% ----------------------------------------------------------- DISCUSSION
+The response is linear over the energy range relevant to fluoroscopy-guided
+procedures, so a single pair of calibration parameters describes the whole
+working range. The dead time of 18\,$\mu$s is short compared with the count
+rates expected from scattered radiation at the operator position.
+
+The largest deviation occurs at N-25, the quality with the lowest air kerma
+rate and therefore the largest measurement uncertainty.
+
+
+% ---------------------------------------------------------- CONCLUSIONS
+\begin{dorilist}
+  \item Active, wireless and low-cost personal dosimetry is feasible with a
+        plastic scintillator read out by a silicon photomultiplier.
+  \item The prototype is calibrated in energy over 20--50\,keV, with linear
+        response and $R^2 = 0.989$.
+  \item A dead time of 18\,$\mu$s is compatible with the scattered fields
+        found in interventional procedures.
+  \item $\dot{H}_p(10)$ is reconstructed directly from the measured spectrum,
+        without an auxiliary reference instrument.
+\end{dorilist}
+
+
+% ----------------------------------------------------------- REFERENCES
+[1] B.\,A. Schueler and K.\,A. Fetterly, ``Eye protection in interventional
+procedures,'' \emph{British Journal of Radiology}, vol.~94, p.~20210436, 2021.
+
+[2] K. Kromp\ss{}a\ss{} \emph{et al.}, ``Real-time dosimetry in interventional
+radiology: comparing the occupational radiation exposure in fluoroscopy guided
+lower extremity and abdominal procedures,'' \emph{European Radiology}, 2025.

@@ -1,0 +1,42 @@
+% =====================================================================
+%  Panel (b) of figures/Final.tex, extracted as a standalone picture.
+%  Assembled PCB with the Teflon-wrapped scintillator coupled to the SiPM.
+%  The panel letter and the caption were dropped: on the poster the picture
+%  stands on its own and only the callouts carry information.
+%  Image is found through \graphicspath (../images/).
+% =====================================================================
+\begin{tikzpicture}[x=1pt,y=1pt,
+    every node/.style={font=\footnotesize},
+    ah/.style={draw opacity=0,line width=0.08,fill opacity=1},
+    lbl/.style={fill=white,align=center,inner sep=2.5pt,line width=0.6pt},
+    dim/.style={fill=white,align=center,inner sep=2pt,draw=none,font=\scriptsize}]
+
+% ---- Photograph ---------------------------------------------------------
+\node [anchor=south west,inner sep=0] at (0,0)
+  {\includegraphics[width=135.7pt,height=146pt]{meio.jpg}};
+
+% ---- Teflon-wrapped scintillator ---------------------------------------
+\node [lbl,draw={rgb, 255:red, 26; green, 111; blue, 223 },anchor=center]
+      (tefl) at (56.65,126.2) {Teflon-wrapped\\Scintillator};
+\draw [color={rgb, 255:red, 26; green, 111; blue, 223 },line width=1.1pt]
+      ([xshift=9.35pt]tefl.south) -- (79.2,107.0);
+\draw [shift={(86.0,102.8)},rotate=148.2,ah,
+       fill={rgb, 255:red, 26; green, 111; blue, 223 }]
+      (7.85,-3.78) -- (0,0) -- (7.85,3.78) -- cycle ;
+
+% ---- Width dimension (6.3 cm) ------------------------------------------
+\draw [line width=1.1pt,black] (2,-4) -- (123.5,-4);
+\draw [shift={(2,-4)},rotate=0,ah,fill=black]
+      (7.85,-3.78) -- (0,0) -- (7.85,3.78) -- cycle ;
+\draw [shift={(123.5,-4)},rotate=180,ah,fill=black]
+      (7.85,-3.78) -- (0,0) -- (7.85,3.78) -- cycle ;
+\node [dim,anchor=center] at (62.8,-4) {6.3~cm};
+
+% ---- Height dimension (7.2 cm) -----------------------------------------
+\draw [line width=1.1pt,black] (-4,3.5) -- (-4,132.5);
+\draw [shift={(-4,3.5)},rotate=90,ah,fill=black]
+      (7.85,-3.78) -- (0,0) -- (7.85,3.78) -- cycle ;
+\draw [shift={(-4,132.5)},rotate=270,ah,fill=black]
+      (7.85,-3.78) -- (0,0) -- (7.85,3.78) -- cycle ;
+\node [dim,anchor=center,rotate=90] at (-4,68) {7.2~cm};
+\end{tikzpicture}

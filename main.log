@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.15)  6 SEP 2026 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  15 SEP 2026 20:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1103,7 +1103,7 @@ l.1 \newpage
 
 ]
 Chapter 1.
-<images/interventional radiology setup.pdf, id=385, 1682.285pt x 894.34125pt>
+<images/interventional radiology setup.pdf, id=388, 1682.285pt x 894.34125pt>
 File: images/interventional radiology setup.pdf Graphic file (type pdf)
 <use images/interventional radiology setup.pdf>
 Package pdftex.def Info: images/interventional radiology setup.pdf  used on input line 12.
@@ -1118,7 +1118,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 165.
 ) [3{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [4] (figures/deterministic_stochastic.tex) [5{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [6] [7]
-<images/dose rates.png, id=538, 1445.4pt x 813.0375pt>
+<images/dose rates.png, id=541, 1445.4pt x 813.0375pt>
 File: images/dose rates.png Graphic file (type png)
 <use images/dose rates.png>
 Package pdftex.def Info: images/dose rates.png  used on input line 179.
@@ -1127,15 +1127,15 @@ Package pdftex.def Info: images/dose rates.png  used on input line 179.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 247.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [10{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-<images/fig_apd_benefits.pdf, id=630, 643.40375pt x 470.75874pt>
+) [10]
+<images/fig_apd_benefits.pdf, id=631, 643.40375pt x 470.75874pt>
 File: images/fig_apd_benefits.pdf Graphic file (type pdf)
 <use images/fig_apd_benefits.pdf>
 Package pdftex.def Info: images/fig_apd_benefits.pdf  used on input line 253.
 (pdftex.def)             Requested size: 442.65375pt x 323.88289pt.
- [11 <./images/fig_apd_benefits.pdf>]) (chapters/chapter2.tex [12]
+ [11{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./images/fig_apd_benefits.pdf>]) (chapters/chapter2.tex [12]
 Chapter 2.
-<images/DORI.pdf, id=724, 3814.25pt x 2057.6875pt>
+<images/DORI.pdf, id=727, 3814.25pt x 2057.6875pt>
 File: images/DORI.pdf Graphic file (type pdf)
 <use images/DORI.pdf>
 Package pdftex.def Info: images/DORI.pdf  used on input line 10.
@@ -1143,53 +1143,58 @@ Package pdftex.def Info: images/DORI.pdf  used on input line 10.
 [13
 
  <./images/DORI.pdf>] [14] [15] (figures/MAX1932.tex) (figures/Architecture.tex) [16] (figures/dori_teste.tex
-<images/pcb_teste.jpg, id=795, 613.54219pt x 453.19313pt>
+<images/pcb_teste.jpg, id=798, 613.54219pt x 453.19313pt>
 File: images/pcb_teste.jpg Graphic file (type jpg)
 <use images/pcb_teste.jpg>
 Package pdftex.def Info: images/pcb_teste.jpg  used on input line 10.
 (pdftex.def)             Requested size: 186.00198pt x 126.99693pt.
 ) (figures/Dori_box.tex
-<images/dori_case.jpg, id=796, 750.55406pt x 422.32782pt>
+<images/dori_case.jpg, id=799, 750.55406pt x 422.32782pt>
 File: images/dori_case.jpg Graphic file (type jpg)
 <use images/dori_case.jpg>
 Package pdftex.def Info: images/dori_case.jpg  used on input line 10.
 (pdftex.def)             Requested size: 199.99532pt x 127.09886pt.
 ) [17 <./images/pcb_teste.jpg> <./images/dori_case.jpg>] [18] [19]
-<images/shaping_chain_trace00001.pdf, id=851, 754.82pt x 494.84875pt>
+<images/shaping_chain_trace00001.pdf, id=854, 754.82pt x 494.84875pt>
 File: images/shaping_chain_trace00001.pdf Graphic file (type pdf)
 <use images/shaping_chain_trace00001.pdf>
-Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 177.
+Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 176.
 (pdftex.def)             Requested size: 442.65375pt x 290.1989pt.
- [20 <./images/shaping_chain_trace00001.pdf>] (figures/P&H.tex) [21] [22]
-<images/7.5k_notitle.pdf, id=915, 497.86pt x 268.00125pt>
-File: images/7.5k_notitle.pdf Graphic file (type pdf)
-<use images/7.5k_notitle.pdf>
-Package pdftex.def Info: images/7.5k_notitle.pdf  used on input line 244.
-(pdftex.def)             Requested size: 442.65375pt x 238.28725pt.
- [23 <./images/7.5k_notitle.pdf>]
-<images/spectra.pdf, id=959, 860.21375pt x 260.975pt>
+ [20 <./images/shaping_chain_trace00001.pdf>] [21]
+<images/peak_hold_trace17.pdf, id=914, 409.53pt x 216.81pt>
+File: images/peak_hold_trace17.pdf Graphic file (type pdf)
+<use images/peak_hold_trace17.pdf>
+Package pdftex.def Info: images/peak_hold_trace17.pdf  used on input line 231.
+(pdftex.def)             Requested size: 442.65375pt x 234.35973pt.
+ [22 <./images/peak_hold_trace17.pdf>] (figures/firmwareDORI.tex
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 58.
+) [23] [24]
+<images/spectra.pdf, id=964, 860.21375pt x 260.975pt>
 File: images/spectra.pdf Graphic file (type pdf)
 <use images/spectra.pdf>
-Package pdftex.def Info: images/spectra.pdf  used on input line 287.
+Package pdftex.def Info: images/spectra.pdf  used on input line 284.
 (pdftex.def)             Requested size: 442.65375pt x 134.29411pt.
-<images/fit_csi.pdf, id=960, 451.6875pt x 338.26375pt>
+ (figures/decay.tex (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen329
+\pgfarrowlength=\dimen330
+\pgfarrowwidth=\dimen331
+\pgfarrowlinewidth=\dimen332
+)) [25 <./images/spectra.pdf>]
+<images/fit_csi.pdf, id=1014, 451.6875pt x 338.26375pt>
 File: images/fit_csi.pdf Graphic file (type pdf)
 <use images/fit_csi.pdf>
-Package pdftex.def Info: images/fit_csi.pdf  used on input line 289.
-(pdftex.def)             Requested size: 208.04779pt x 155.80966pt.
-<images/co57_energy_reconstruction.pdf, id=961, 442.65375pt x 312.16624pt>
-File: images/co57_energy_reconstruction.pdf Graphic file (type pdf)
-<use images/co57_energy_reconstruction.pdf>
-Package pdftex.def Info: images/co57_energy_reconstruction.pdf  used on input line 292.
-(pdftex.def)             Requested size: 221.32687pt x 156.08273pt.
- [24] [25 <./images/spectra.pdf> <./images/fit_csi.pdf> <./images/co57_energy_reconstruction.pdf>]) (chapters/chapter3.tex [26]
+Package pdftex.def Info: images/fit_csi.pdf  used on input line 306.
+(pdftex.def)             Requested size: 376.25838pt x 281.79112pt.
+) (chapters/chapter3.tex [26 <./images/fit_csi.pdf>]
 Chapter 3.
-<images/bremsstrahlung_fits.pdf, id=1128, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_fits.pdf, id=1087, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_fits.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_fits.pdf>
 Package pdftex.def Info: images/bremsstrahlung_fits.pdf  used on input line 12.
 (pdftex.def)             Requested size: 212.4719pt x 144.886pt.
-<images/bremsstrahlung_40kVp_vs_current.pdf, id=1129, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_40kVp_vs_current.pdf, id=1088, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_40kVp_vs_current.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_40kVp_vs_current.pdf>
 Package pdftex.def Info: images/bremsstrahlung_40kVp_vs_current.pdf  used on input line 18.
@@ -1197,53 +1202,53 @@ Package pdftex.def Info: images/bremsstrahlung_40kVp_vs_current.pdf  used on inp
 [27
 
  <./images/bremsstrahlung_fits.pdf> <./images/bremsstrahlung_40kVp_vs_current.pdf>]
-<images/plastic_Am-241.pdf, id=1205, 354.32375pt x 247.92625pt>
+<images/plastic_Am-241.pdf, id=1164, 354.32375pt x 247.92625pt>
 File: images/plastic_Am-241.pdf Graphic file (type pdf)
 <use images/plastic_Am-241.pdf>
 Package pdftex.def Info: images/plastic_Am-241.pdf  used on input line 74.
 (pdftex.def)             Requested size: 221.32687pt x 154.8703pt.
-<images/plastic_Co-57_fit.pdf, id=1206, 354.32375pt x 247.92625pt>
+<images/plastic_Co-57_fit.pdf, id=1165, 354.32375pt x 247.92625pt>
 File: images/plastic_Co-57_fit.pdf Graphic file (type pdf)
 <use images/plastic_Co-57_fit.pdf>
 Package pdftex.def Info: images/plastic_Co-57_fit.pdf  used on input line 80.
 (pdftex.def)             Requested size: 221.32687pt x 154.8703pt.
  [28 <./images/plastic_Am-241.pdf> <./images/plastic_Co-57_fit.pdf>]
-<images/energy.pdf, id=1302, 445.665pt x 322.20375pt>
+<images/energy.pdf, id=1261, 445.665pt x 322.20375pt>
 File: images/energy.pdf Graphic file (type pdf)
 <use images/energy.pdf>
 Package pdftex.def Info: images/energy.pdf  used on input line 95.
 (pdftex.def)             Requested size: 376.25838pt x 272.0259pt.
  [29 <./images/energy.pdf>] [30]
-<images/dose.pdf, id=1362, 748.03917pt x 354.48723pt>
+<images/dose.pdf, id=1321, 748.03917pt x 354.48723pt>
 File: images/dose.pdf Graphic file (type pdf)
 <use images/dose.pdf>
 Package pdftex.def Info: images/dose.pdf  used on input line 159.
 (pdftex.def)             Requested size: 442.65375pt x 209.76768pt.
  [31]
-<images/fig1_spectra.pdf, id=1373, 355.3275pt x 249.93375pt>
+<images/fig1_spectra.pdf, id=1332, 355.3275pt x 249.93375pt>
 File: images/fig1_spectra.pdf Graphic file (type pdf)
 <use images/fig1_spectra.pdf>
 Package pdftex.def Info: images/fig1_spectra.pdf  used on input line 172.
 (pdftex.def)             Requested size: 221.32687pt x 155.68192pt.
-<images/fig2_reference.pdf, id=1374, 357.335pt x 248.93pt>
+<images/fig2_reference.pdf, id=1333, 357.335pt x 248.93pt>
 File: images/fig2_reference.pdf Graphic file (type pdf)
 <use images/fig2_reference.pdf>
 Package pdftex.def Info: images/fig2_reference.pdf  used on input line 178.
 (pdftex.def)             Requested size: 221.32687pt x 154.18306pt.
  [32 <./images/dose.pdf> <./images/fig1_spectra.pdf> <./images/fig2_reference.pdf>] [33]
-<images/fig6_boundary_scan.pdf, id=1501, 388.45125pt x 245.91875pt>
+<images/fig6_boundary_scan.pdf, id=1460, 388.45125pt x 245.91875pt>
 File: images/fig6_boundary_scan.pdf Graphic file (type pdf)
 <use images/fig6_boundary_scan.pdf>
 Package pdftex.def Info: images/fig6_boundary_scan.pdf  used on input line 239.
 (pdftex.def)             Requested size: 398.38567pt x 252.21468pt.
  [34 <./images/fig6_boundary_scan.pdf>]
-<images/dose_calibration.pdf, id=1552, 442.65375pt x 259.97125pt>
+<images/dose_calibration.pdf, id=1511, 442.65375pt x 259.97125pt>
 File: images/dose_calibration.pdf Graphic file (type pdf)
 <use images/dose_calibration.pdf>
 Package pdftex.def Info: images/dose_calibration.pdf  used on input line 296.
 (pdftex.def)             Requested size: 398.38567pt x 233.98386pt.
  [35]
-<images/dose_rate_linearity.pdf, id=1565, 699.61375pt x 341.275pt>
+<images/dose_rate_linearity.pdf, id=1524, 699.61375pt x 341.275pt>
 File: images/dose_rate_linearity.pdf Graphic file (type pdf)
 <use images/dose_rate_linearity.pdf>
 Package pdftex.def Info: images/dose_rate_linearity.pdf  used on input line 314.
@@ -1251,17 +1256,17 @@ Package pdftex.def Info: images/dose_rate_linearity.pdf  used on input line 314.
  [36 <./images/dose_calibration.pdf>]) (chapters/chapter4.tex [37 <./images/dose_rate_linearity.pdf>]
 Chapter 4.
 (figures/Final.tex
-<images/baixo.jpg, id=1638, 2182.40344pt x 1620.80531pt>
+<images/baixo.jpg, id=1597, 2182.40344pt x 1620.80531pt>
 File: images/baixo.jpg Graphic file (type jpg)
 <use images/baixo.jpg>
 Package pdftex.def Info: images/baixo.jpg  used on input line 13.
 (pdftex.def)             Requested size: 177.7261pt x 136.88866pt.
-<images/meio.jpg, id=1639, 513.41812pt x 594.72188pt>
+<images/meio.jpg, id=1598, 513.41812pt x 594.72188pt>
 File: images/meio.jpg Graphic file (type jpg)
 <use images/meio.jpg>
 Package pdftex.def Info: images/meio.jpg  used on input line 45.
 (pdftex.def)             Requested size: 135.7026pt x 145.99399pt.
-<images/cima.jpg, id=1640, 407.27156pt x 441.14813pt>
+<images/cima.jpg, id=1599, 407.27156pt x 441.14813pt>
 File: images/cima.jpg Graphic file (type jpg)
 <use images/cima.jpg>
 Package pdftex.def Info: images/cima.jpg  used on input line 78.
@@ -1269,13 +1274,13 @@ Package pdftex.def Info: images/cima.jpg  used on input line 78.
 ) [38
 
 ] [39 <./images/baixo.jpg> <./images/meio.jpg> <./images/cima.jpg>] [40]
-<images/channel_transfer.pdf, id=1662, 451.6875pt x 328.22626pt>
+<images/channel_transfer.pdf, id=1621, 451.6875pt x 328.22626pt>
 File: images/channel_transfer.pdf Graphic file (type pdf)
 <use images/channel_transfer.pdf>
 Package pdftex.def Info: images/channel_transfer.pdf  used on input line 63.
 (pdftex.def)             Requested size: 376.25838pt x 273.42938pt.
  [41 <./images/channel_transfer.pdf>]
-<images/battery.pdf, id=1694, 449.68pt x 328.22626pt>
+<images/battery.pdf, id=1653, 449.68pt x 328.22626pt>
 File: images/battery.pdf Graphic file (type pdf)
 <use images/battery.pdf>
 Package pdftex.def Info: images/battery.pdf  used on input line 85.
@@ -1284,10 +1289,7 @@ Package pdftex.def Info: images/battery.pdf  used on input line 85.
 Chapter 5.
 ) (main.bbl [43
 
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 98.
- [44
+] [44
 
 ] [45]
 Underfull \hbox (badness 10000) in paragraph at lines 266--270
@@ -1300,7 +1302,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 266--270
  []
 
 [46] [47]) (chapters/appendix-sources.tex [48]
-<images/bc408.pdf, id=1756, 456.70625pt x 362.35374pt>
+<images/bc408.pdf, id=1714, 456.70625pt x 362.35374pt>
 File: images/bc408.pdf Graphic file (type pdf)
 <use images/bc408.pdf>
 Package pdftex.def Info: images/bc408.pdf  used on input line 39.
@@ -1323,17 +1325,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 4449A0F491C42941E5016BEB3762E13C;5631.
  ) 
 Here is how much of TeX's memory you used:
- 30627 strings out of 467867
- 617189 string characters out of 5418334
- 983629 words of memory out of 5000000
- 58605 multiletter control sequences out of 15000+600000
+ 31074 strings out of 467866
+ 628421 string characters out of 5418313
+ 983527 words of memory out of 5000000
+ 59045 multiletter control sequences out of 15000+600000
  740716 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,21n,104p,2194b,1279s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,21n,104p,2194b,1364s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main.pdf (63 pages, 3868339 bytes).
+Output written on main.pdf (63 pages, 3832933 bytes).
 PDF statistics:
- 2017 PDF objects out of 2073 (max. 8388607)
- 305 named destinations out of 1000 (max. 500000)
- 462 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1975 PDF objects out of 2073 (max. 8388607)
+ 306 named destinations out of 1000 (max. 500000)
+ 457 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,69 @@
+% =====================================================================
+%  Poster version of the DORI architecture figure.
+%
+%  The thesis drawing packs the three stages into one wide picture, so on a
+%  narrow poster column everything ends up small. Here the same drawing is
+%  shown three times, each time clipped to one stage and stacked, so each
+%  stage gets the full width of the column.
+%
+%  Nothing is redrawn: Architecture_body.tex holds the original geometry with
+%  larger label fonts, and each panel is a clipped, scaled view of it.
+%  Because the scopes use "scale" without "transform shape", the geometry of a
+%  panel grows but its text does not, so every label prints at the same size.
+%
+%  Usage in the poster:
+%      \resizebox{\linewidth}{!}{\input{Architecture_poster.tex}}
+%
+%  Panel geometry. For each panel: SRC is the region of the original drawing
+%  to show, S the scale factor, and (X0,Y0) where the top-left of SRC lands.
+%  The shift is then a = X0 - S*x0, b = Y0 - S*y0, which is what the scope
+%  options below use. Change a panel by editing SRC, S and (X0,Y0) and
+%  recomputing those two numbers.
+%
+%    panel 1  Pulse Shaping        SRC ( 50,  0)-(560,195)  S=1.00  at (  0.0,  42.0)
+%    panel 2  Pulse Discrimination SRC (272,188)-(580,375)  S=1.35  at ( 47.1, 320.0)
+%    panel 3  Pulse Sampling       SRC ( 50,228)-(272,360)  S=1.40  at ( 99.6, 655.0)
+% =====================================================================
+
+\tikzset{every picture/.style={line width=1.1pt}}   % chunkier than the thesis
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+
+\useasboundingbox (0,0) rectangle (517,845);
+
+\definecolor{shapecol}{rgb}{0.10,0.44,0.87}
+\definecolor{disccol} {rgb}{0.22,0.68,0.42}
+\definecolor{sampcol} {rgb}{0.80,0.60,0.00}
+\definecolor{flowcol} {RGB}{81,81,81}
+
+% ---------------------------------------------------- panel 1: shaping
+\draw (0,8) node [anchor=north west, inner sep=0pt]
+      {\LARGE\bfseries\color{shapecol} Pulse Shaping};
+\begin{scope}[shift={(-50,42)}, scale=1.0]
+  \clip (50,0) rectangle (560,195);
+  \input{Architecture_body.tex}
+\end{scope}
+
+\draw [flowcol, line width=2pt, -{Latex[length=5mm,width=4mm]}]
+      (255,243) -- (255,278);
+
+% ------------------------------------------- panel 2: discrimination
+\draw (0,284) node [anchor=north west, inner sep=0pt]
+      {\LARGE\bfseries\color{disccol} Pulse Discrimination};
+\begin{scope}[shift={(-320.1,66.2)}, scale=1.35]
+  \clip (272,188) rectangle (580,375);
+  \input{Architecture_body.tex}
+\end{scope}
+
+\draw [flowcol, line width=2pt, -{Latex[length=5mm,width=4mm]}]
+      (255,578) -- (255,613);
+
+% ---------------------------------------------------- panel 3: sampling
+\draw (0,619) node [anchor=north west, inner sep=0pt]
+      {\LARGE\bfseries\color{sampcol} Pulse Sampling};
+\begin{scope}[shift={(29.6,335.8)}, scale=1.4]
+  \clip (50,228) rectangle (272,360);
+  \input{Architecture_body.tex}
+\end{scope}
+
+\end{tikzpicture}

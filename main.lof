@@ -6,7 +6,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1}{\ignorespaces Interventional Radiology Setup}}{2}{figure.caption.8}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Photon interactions in IR}}{4}{figure.caption.10}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Photon interactions in IR.}}{4}{figure.caption.10}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Deterministic and stochastic effets.}}{6}{figure.caption.14}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Scatter radiation distribution in IR environment.}}{8}{figure.caption.17}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Reported changes following introduction of an active personal dosimeter in interventional radiology.}}{11}{figure.caption.19}%
@@ -18,31 +18,29 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{17}{subfigure.9.1}%
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{17}{subfigure.9.2}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Transient response of the pulse shaping chain.}}{20}{figure.caption.26}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Peak-and-Hold circuit.}}{22}{figure.caption.28}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Transient response of the pulse discrimination chain.}}{23}{figure.caption.30}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Validation of the Front-End Electronics.}}{25}{figure.caption.31}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{25}{subfigure.13.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{25}{subfigure.13.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{25}{subfigure.13.3}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Transient response of the pulse discrimination chain.}}{22}{figure.caption.31}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Firmware workflow diagram.}}{24}{figure.caption.32}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Pulse height spectra and decay schemes of the CsI(Tl) calibration sources.}}{25}{figure.caption.33}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Channel-to-energy calibration of the front-end electronics with the CsI(Tl) crystal.}}{26}{figure.caption.34}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {14}{\ignorespaces \emph {Bremsstrahlung} Spectra.}}{27}{figure.caption.32}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{27}{subfigure.14.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{27}{subfigure.14.2}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Reference source spectra.}}{28}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{28}{subfigure.15.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{28}{subfigure.15.2}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Energy calibration of the DORI prototype.}}{29}{figure.caption.35}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Dose calibration setup.}}{32}{figure.caption.37}%
-\contentsline {figure}{\numberline {18}{\ignorespaces ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.}}{32}{figure.caption.38}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}{subfigure.18.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}{subfigure.18.2}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Maximum deviation as a function of the bin boundary energy.}}{34}{figure.caption.39}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Fit residuals and leave-one-out deviations per radiation quality.}}{36}{figure.caption.41}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Reconstructed $H_p(10)$ rate as a function of tube current.}}{37}{figure.caption.42}%
+\contentsline {figure}{\numberline {15}{\ignorespaces \emph {Bremsstrahlung} Spectra.}}{27}{figure.caption.35}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{27}{subfigure.15.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{27}{subfigure.15.2}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Reference source spectra.}}{28}{figure.caption.37}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{28}{subfigure.16.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{28}{subfigure.16.2}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Energy calibration of the DORI prototype.}}{29}{figure.caption.38}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Dose calibration setup.}}{32}{figure.caption.40}%
+\contentsline {figure}{\numberline {19}{\ignorespaces ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.}}{32}{figure.caption.41}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}{subfigure.19.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}{subfigure.19.2}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Maximum deviation as a function of the bin boundary energy.}}{34}{figure.caption.42}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Fit residuals and leave-one-out deviations per radiation quality.}}{36}{figure.caption.44}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Reconstructed $H_p(10)$ rate as a function of tube current.}}{37}{figure.caption.45}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {22}{\ignorespaces Final DORI prototype.}}{39}{figure.caption.43}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Endpoint channel correspondence between the DORI-test board and the final prototype.}}{41}{figure.caption.45}%
-\contentsline {figure}{\numberline {24}{\ignorespaces DORI discharge curve during continuous operation at 100 interrupts/second.}}{42}{figure.caption.46}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Final DORI prototype.}}{39}{figure.caption.46}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Endpoint channel correspondence between the DORI-test board and the final prototype.}}{41}{figure.caption.48}%
+\contentsline {figure}{\numberline {25}{\ignorespaces DORI discharge curve during continuous operation at 100 interrupts/second.}}{42}{figure.caption.49}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

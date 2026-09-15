@@ -1,0 +1,704 @@
+% =====================================================================
+%  DORI  |  Poster for Fisica 2026
+%  A0 portrait, 84.0 cm (width) x 118.8 cm (height), margins included.
+%  Compile with pdfLaTeX (LaTeX Workshop in VS Code works out of the box).
+%  Figures come from ../images/ and ../figures/ ; the prototype pictures are
+%  the two \input files that sit next to this one.
+%
+%  TWO BLOCK STYLES
+%    doriblock    solid header bar on top of the block  -> ABSTRACT,
+%                 CONCLUSIONS, REFERENCES
+%    dorisection  one big frame with the title sitting on the top rule
+%                 -> METHODS, PROTOTYPE, RESULTS
+%
+%  NO CAPTIONS ANYWHERE. The figures stand on their own; the only text
+%  attached to a picture is the one-line note under each RESULTS panel.
+%
+%  VERTICAL BUDGET (set in sections 1 and 5)
+%    title band          15.6 cm  painted, flush with the top edge
+%    gap                  1.0 cm
+%    active area         96.0 cm  = \textheight
+%       row 1            30.5 cm  abstract | methods (concept figure)
+%       gap               1.6 cm
+%       row 2            63.4 cm  prototype | results + conclusions/refs
+%                                (results 53.8, strip 8.0, gap 1.6)
+%    gap                  1.0 cm
+%    logo band            5.2 cm  painted, logos left, acknowledgements right
+%
+%  The PROTOTYPE column measures its own contents and spreads the two gaps
+%  so the column always ends flush with the bottom of the row. Change the
+%  table font or the pictures and the spacing follows on its own.
+% =====================================================================
+
+\documentclass{article}
+
+% ---------------------------------------------------------------------
+%  1. PAPER SIZE AND MARGINS
+%  "top" must be larger than \bannerhgt and "bottom" larger than \footerhgt,
+%  otherwise the text runs over the painted bands.
+% ---------------------------------------------------------------------
+\usepackage[
+  paperwidth  = 84.0cm,
+  paperheight = 118.8cm,
+  left        = 3cm,
+  right       = 3cm,
+  top         = 16.6cm,   % 15.6 cm title band + 1 cm gap
+  bottom      = 6.2cm     %  5.2 cm logo band  + 1 cm gap
+]{geometry}
+
+% ---------------------------------------------------------------------
+%  2. PACKAGES
+% ---------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{anyfontsize}      % allows arbitrary font sizes (needed on A0)
+\usepackage{graphicx}
+\usepackage{adjustbox}        % scales a picture to an exact width
+\usepackage{amsmath,amssymb}
+\usepackage[table]{xcolor}    % the "table" option enables \rowcolor
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}             % needed by the two prototype pictures
+\usetikzlibrary{arrows,arrows.meta,shapes,positioning,calc,patterns,decorations.pathreplacing}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{eso-pic}          % paints the title and logo bands onto the sheet
+
+\graphicspath{{images/}{../images/}{../figures/}{../../images/}{./}}
+\pagestyle{empty}
+
+% Sans-serif everywhere (matches the reference template).
+% Comment the next line out if you prefer the serif look of the thesis.
+\renewcommand{\familydefault}{\sfdefault}
+
+% ---------------------------------------------------------------------
+%  3. COLOUR PALETTE
+% ---------------------------------------------------------------------
+\definecolor{doriblue}  {RGB}{ 26,111,223}   % main blue
+\definecolor{doridark}  {HTML}{0C366A}       % title band
+\definecolor{dorigreen} {RGB}{ 55,173,107}   % green   -> accents
+\definecolor{doriyellow}{RGB}{204,153,  0}   % yellow  -> accents
+\definecolor{dorigrey}  {RGB}{ 81, 81, 81}   % grey    -> notes
+\definecolor{dorilight} {RGB}{237,242,250}   % very light blue -> logo band
+
+% Quick switches. Set these and every band, frame and header follows.
+\colorlet{bannerbg}{doridark}                % title band background
+\colorlet{headerbg}{doriblue}                % header bar and section frame
+\colorlet{headerfg}{white}                   % header bar text
+\colorlet{tablehead}{dorigreen}              % table header row
+\colorlet{resframe}{doriblue}                % frame around a results panel
+\colorlet{arrowcol}{dorigrey}                % arrow between results panels
+
+% ---------------------------------------------------------------------
+%  4. FONT SIZES
+%  All sizes are absolute (the poster is printed at 1:1), so these are the
+%  numbers to touch if the text is too big or too small on the printed sheet.
+% ---------------------------------------------------------------------
+\newcommand{\titlefont}   {\fontsize{104}{120}\selectfont} % poster title
+\newcommand{\authorfont}  {\fontsize{42}{50}\selectfont}   % author list
+\newcommand{\afilfont}    {\fontsize{32}{40}\selectfont}   % affiliation
+\newcommand{\headfont}    {\fontsize{46}{54}\selectfont}   % section headers
+\newcommand{\slimhead}    {\fontsize{30}{36}\selectfont}   % conclusions, references
+\newcommand{\bodyfont}    {\fontsize{34}{41}\selectfont}   % body text
+                                % 37/44 until the Co-57 clause was added to the
+                                % abstract; that pushed the block two lines past
+                                % \rowonehgt and into the PROTOTYPE header.
+                                % Only the abstract is set in \bodyfont.
+\newcommand{\notefont}    {\fontsize{36}{34}\selectfont}   % results one-liners
+\newcommand{\tabfont}     {\fontsize{32}{40}\selectfont}   % table
+\newcommand{\conclfont}   {\fontsize{32}{38}\selectfont}   % conclusions
+\newcommand{\reffont}     {\fontsize{27}{25}\selectfont}   % references
+\newcommand{\ackfont}     {\fontsize{17}{21}\selectfont}   % acknowledgements
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}       % zero at the top level, so the block heights add
+                                % up exactly; inside a block it is \blockparskip
+\setlength{\topskip}{0pt}
+\newlength{\blockparskip}\setlength{\blockparskip}{6mm}  % gap between paragraphs
+                                                         % inside a block
+
+% ---------------------------------------------------------------------
+%  5. LAYOUT GEOMETRY
+%  ROW 1  :  \colA  ABSTRACT   |  \colBC  METHODS (concept figure)
+%  ROW 2  :  \colP  PROTOTYPE  |  \colR   RESULTS, then CONCLUSIONS | REFERENCES
+%  Only the first length of each pair is set by hand; the other is whatever is
+%  left over, so the columns always fill the text width exactly.
+% ---------------------------------------------------------------------
+\newlength{\colgap}\setlength{\colgap}{1.6cm}           % gap between columns
+
+% --- row 1 columns ---
+\newlength{\colA} \setlength{\colA}{0.34\textwidth}     % abstract
+\newlength{\colBC}\setlength{\colBC}{\textwidth}
+  \addtolength{\colBC}{-\colA}\addtolength{\colBC}{-\colgap}
+
+% --- row 2 columns ---
+\newlength{\colP} \setlength{\colP}{0.305\textwidth}    % prototype
+\newlength{\colR} \setlength{\colR}{\textwidth}
+  \addtolength{\colR}{-\colP}\addtolength{\colR}{-\colgap}
+
+% The bottom strip of the results column: conclusions beside references,
+% conclusions twice as wide.
+\newlength{\colWide}\setlength{\colWide}{\colR}
+  \addtolength{\colWide}{-\colgap}
+\newlength{\colNarrow}\setlength{\colNarrow}{0.3333\colWide}
+  \addtolength{\colWide}{-\colNarrow}
+
+% --- padding of a framed section (dorisection) ---
+%  \titleover is how far the boxed title sticks out above the frame; it is
+%  half the height of the title box, so it follows \headfont. If the header
+%  font changes, this is the one number to re-tune (46 pt -> 30 pt).
+\newlength{\titleover}\setlength{\titleover}{30pt}
+\newlength{\secrule}  \setlength{\secrule}{2mm}    % frame thickness
+\newlength{\sectop}   \setlength{\sectop}{16mm}    % clears the title inside
+\newlength{\secbot}   \setlength{\secbot}{6mm}
+\newlength{\secside}  \setlength{\secside}{8mm}
+% Total vertical and horizontal space a framed section spends on itself.
+\newlength{\secover}\setlength{\secover}{\titleover}
+  \addtolength{\secover}{2\secrule}
+  \addtolength{\secover}{\sectop}\addtolength{\secover}{\secbot}
+\newlength{\secsides}\setlength{\secsides}{2\secrule}
+  \addtolength{\secsides}{2\secside}
+
+% --- row heights ---
+\newlength{\rowgap}   \setlength{\rowgap}{1.6cm}     % vertical gap between blocks
+\newlength{\figgap}   \setlength{\figgap}{1.0cm}     % gap inside a block
+\newlength{\rowonehgt}\setlength{\rowonehgt}{30.5cm} % abstract + concept figure
+
+\newlength{\rowtwohgt}\setlength{\rowtwohgt}{\textheight}
+  \addtolength{\rowtwohgt}{-\rowonehgt}
+  \addtolength{\rowtwohgt}{-\rowgap}
+  \addtolength{\rowtwohgt}{-5mm}         % safety slack, keeps it on one page
+
+% Right column: RESULTS on top, CONCLUSIONS | REFERENCES underneath.
+\newlength{\bothgt} \setlength{\bothgt}{8cm}
+\newlength{\reshgt} \setlength{\reshgt}{\rowtwohgt}
+  \addtolength{\reshgt}{-\bothgt}\addtolength{\reshgt}{-\rowgap}
+
+% Height to hand a framed section: the footprint it should occupy minus the
+% part of the boxed title that sticks out above the frame.
+\newlength{\methhgt}  \setlength{\methhgt}{\rowonehgt}
+  \addtolength{\methhgt}{-\titleover}
+\newlength{\protohgt} \setlength{\protohgt}{\rowtwohgt}
+  \addtolength{\protohgt}{-\titleover}
+\newlength{\resfrmhgt}\setlength{\resfrmhgt}{\reshgt}
+  \addtolength{\resfrmhgt}{-\titleover}
+
+% Usable height inside a framed section.
+\newlength{\methcontent}\setlength{\methcontent}{\rowonehgt}
+  \addtolength{\methcontent}{-\secover}
+\newlength{\protocontent}\setlength{\protocontent}{\rowtwohgt}
+  \addtolength{\protocontent}{-\secover}
+\newlength{\rescontent}\setlength{\rescontent}{\reshgt}
+  \addtolength{\rescontent}{-\secover}
+
+% One results panel: two across, two down, inside the RESULTS frame.
+% \panelgap also carries the arrow that runs from the first panel to the
+% second, so it is wider than a plain gutter would need to be. Widening it
+% narrows \panelwid, and every picture is included at width=\linewidth, so
+% the existing PDFs simply scale down; none of them has to be re-exported.
+\newlength{\panelgap}\setlength{\panelgap}{2.4cm}
+\newlength{\panelwid}\setlength{\panelwid}{\colR}
+  \addtolength{\panelwid}{-\secsides}
+  \addtolength{\panelwid}{-\panelgap}
+  \addtolength{\panelwid}{-2mm}            % slack, keeps the pair on one line
+  \setlength{\panelwid}{0.5\panelwid}
+\newlength{\panelhgt}\setlength{\panelhgt}{\rescontent}
+  \addtolength{\panelhgt}{-\figgap}
+  \addtolength{\panelhgt}{-2mm}            % slack for the interline glue
+  \setlength{\panelhgt}{0.5\panelhgt}
+% Picture height inside a panel: what is left after the frame, the padding
+% and the one-line note.
+\newlength{\panelimg}\setlength{\panelimg}{\panelhgt}
+  \addtolength{\panelimg}{-1.8cm}      % room for the one-line note
+
+% The first results panel holds three pictures: one across the top, two side
+% by side underneath. It carries no note, so the three heights add up to the
+% whole panel, \panelhgt, not to \panelimg. Set the two heights and the
+% vertical gap is whatever is left.
+%   top picture    \panelwid x \subtophgt   (24.0 x 13.0 cm)
+%   the two below  \subwid   x \subbothgt   (11.6 x 10.8 cm each)
+\newlength{\subtophgt}\setlength{\subtophgt}{13.0cm}
+\newlength{\subbothgt}\setlength{\subbothgt}{10.8cm}
+\newlength{\subgap}   \setlength{\subgap}{0.7cm}   % gap between the two below
+\newlength{\subwid}   \setlength{\subwid}{\panelwid}
+  \addtolength{\subwid}{-\subgap}
+  \addtolength{\subwid}{-1mm}            % slack, keeps the pair on one line
+  \setlength{\subwid}{0.5\subwid}
+\newlength{\subvgap}  \setlength{\subvgap}{\panelhgt}
+  \addtolength{\subvgap}{-\subtophgt}\addtolength{\subvgap}{-\subbothgt}
+
+% The last results panel is the same idea the other way up: two pictures
+% side by side on top, one across the bottom. It does carry a note, so its
+% three heights add up to \panelimg, not \panelhgt.
+%   the two on top  \subwid   x \revtophgt   (11.6 x 10.0 cm each)
+%   bottom picture  \panelwid x \revbothgt   (24.0 x 12.0 cm)
+\newlength{\revtophgt}\setlength{\revtophgt}{10.0cm}
+\newlength{\revbothgt}\setlength{\revbothgt}{12.0cm}
+\newlength{\revvgap}  \setlength{\revvgap}{\panelimg}
+  \addtolength{\revvgap}{-\revtophgt}\addtolength{\revvgap}{-\revbothgt}
+
+% The arrow that runs from the first results panel to the second. It is
+% drawn centred on \panelgap, so anything beyond \panelgap overhangs into
+% the white margins of the two pictures on either side. Its colour is
+% \arrowcol, set in section 3.
+\newlength{\arrowlen}\setlength{\arrowlen}{2.0cm}   % tip to tail
+\newlength{\arrowwid}\setlength{\arrowwid}{3mm}     % thickness of the shaft
+
+% Top-aligns a column. \begin{minipage}[t] aligns on the first baseline, which
+% differs from block to block; the \vspace{0pt} forces alignment on the top edge.
+\newcommand{\topcol}{\vspace{0pt}}
+
+% Vertical gap between two stacked blocks. \nointerlineskip drops the glue
+% LaTeX would put between them, so the printed gap is exactly \rowgap and the
+% block heights add up to the sheet.
+\newcommand{\blockgap}{\par\nointerlineskip\vspace{\rowgap}}
+
+% ---------------------------------------------------------------------
+%  6. BLOCK STYLES
+% ---------------------------------------------------------------------
+%  doriblock: solid header bar, used by ABSTRACT, CONCLUSIONS, REFERENCES.
+\newtcolorbox{doriblock}[2][]{%
+  enhanced, sharp corners, boxrule=0pt, frame hidden,
+  before skip=0pt, after skip=0pt,   % all vertical spacing is set by hand
+  colback     = white,          % block body background
+  colbacktitle= headerbg,       % header bar background
+  coltitle    = headerfg,       % header bar text colour
+  fonttitle   = \headfont\bfseries,
+  title       = {#2},
+  toptitle=6mm, bottomtitle=6mm, lefttitle=10mm, righttitle=10mm,
+  left=8mm, right=8mm, top=10mm, bottom=4mm,
+  before upper={\justifying\setlength{\parindent}{0pt}%
+                \setlength{\parskip}{\blockparskip}},
+  #1
+}
+
+%  dorisection: one big frame with the title sitting on the top rule.
+%  Used by METHODS, PROTOTYPE and RESULTS. Give it \methhgt, \protohgt or
+%  \resfrmhgt: those already subtract the part of the title that sticks out
+%  above the frame, so the section occupies exactly its share of the sheet.
+\newtcolorbox{dorisection}[2][]{%
+  enhanced, sharp corners,
+  before skip=0pt, after skip=0pt,   % all vertical spacing is set by hand
+  colback   = white,
+  colframe  = headerbg, boxrule = \secrule,
+  coltitle  = headerfg, fonttitle = \headfont\bfseries,
+  attach boxed title to top left={xshift=10mm, yshift=-\tcboxedtitleheight/2},
+  boxed title style={sharp corners, colback=headerbg, boxrule=0pt,
+                     left=6mm, right=6mm, top=4mm, bottom=4mm},
+  top=\sectop, bottom=\secbot, left=\secside, right=\secside,
+  before upper={\justifying\setlength{\parindent}{0pt}%
+                \setlength{\parskip}{\blockparskip}},
+  title = {#2},
+  #1
+}
+
+
+% A slimmer header bar, for the two blocks in the bottom strip.
+\tcbset{slimtitle/.style={fonttitle=\slimhead\bfseries,
+  toptitle=3mm, bottomtitle=3mm, lefttitle=8mm, righttitle=8mm,
+  top=5mm, bottom=3mm}}
+
+% One results panel: no frame, just the picture with one line underneath,
+% the pair centred in its share of the RESULTS block.
+%   \respanel{\respic{file.pdf}}{six or seven words}
+\newcommand{\respanel}[2]{%
+  \parbox[c][\panelhgt][c]{\linewidth}{\centering #1\par\resnote{#2}}}
+
+% Same slot with no line under it, for a figure that speaks for itself. The
+% picture gets the whole slot, so it needs to be \panelwid by \panelhgt
+% (24.6 by 24.5 cm) to fill it edge to edge instead of \panelimg.
+%   \respanelplain{\respicfull{file.pdf}}
+\newcommand{\respicfull}[1]{%
+  \includegraphics[width=\linewidth,height=\panelhgt,keepaspectratio]{#1}}
+\newcommand{\respanelplain}[1]{%
+  \parbox[c][\panelhgt][c]{\linewidth}{\centering #1}}
+
+% The one line under a results picture. Keep it to six or seven words.
+\newcommand{\resnote}[1]{%
+  \par\vspace{3mm}{\notefont\color{black}#1\par}}
+
+% Picture inside a results panel: never wider than the panel, never taller
+% than \panelimg, aspect ratio preserved.
+\newcommand{\respic}[1]{%
+  \includegraphics[width=\linewidth,height=\panelimg,keepaspectratio]{#1}}
+
+% Three pictures in one panel slot: one across the top, two side by side
+% underneath. The heights come from section 5 and add up to \panelhgt, the
+% whole panel, so this goes inside \respanelplain and uses the slot edge to
+% edge. There is no note under it.
+%   \respanelplain{\restriple{top.pdf}{bottom left.pdf}{bottom right.pdf}}
+\newcommand{\subpic}[3]{%
+  \includegraphics[width=#1,height=#2,keepaspectratio]{#3}}
+\newcommand{\restriple}[3]{%
+  \parbox[c][\panelhgt][c]{\linewidth}{%
+    \centering\setlength{\parskip}{0pt}%
+    \subpic{\linewidth}{\subtophgt}{#1}\par
+    \nointerlineskip\vspace{\subvgap}%
+    \subpic{\subwid}{\subbothgt}{#2}\hspace{\subgap}%
+    \subpic{\subwid}{\subbothgt}{#3}}}
+
+% The same the other way up: two side by side on top, one across the bottom.
+% Its heights add up to \panelimg, so it goes inside \respanel and keeps the
+% one-line note under it.
+%   \respanel{\restripleflip{top left.pdf}{top right.pdf}{bottom.pdf}}{note}
+\newcommand{\restripleflip}[3]{%
+  \parbox[c][\panelimg][c]{\linewidth}{%
+    \centering\setlength{\parskip}{0pt}%
+    \subpic{\subwid}{\revtophgt}{#1}\hspace{\subgap}%
+    \subpic{\subwid}{\revtophgt}{#2}\par
+    \nointerlineskip\vspace{\revvgap}%
+    \subpic{\linewidth}{\revbothgt}{#3}}}
+
+% The arrow from the first results panel to the second. The box is zero
+% width, so the arrow sits centred on \panelgap without changing the width
+% of anything around it. Length \arrowlen and thickness \arrowwid are set in
+% section 5, colour \arrowcol in section 3.
+\newcommand{\panelarrow}{%
+  \makebox[0pt]{\begin{tikzpicture}
+    \draw[arrowcol, line width=\arrowwid, -{Stealth[length=9mm,width=10mm]}]
+      (-0.5\arrowlen,0) -- (0.5\arrowlen,0);
+  \end{tikzpicture}}}
+
+% Bullet list for use inside the blocks:
+%   \begin{dorilist} \item ... \item ... \end{dorilist}
+\newlist{dorilist}{itemize}{1}
+\setlist[dorilist]{leftmargin=12mm, itemsep=4mm, topsep=3mm, parsep=0pt,
+                   label=\textcolor{doriblue}{\rule[0.25ex]{9mm}{2.5pt}}}
+
+% Table columns. The value column is a little wider than the parameter column
+% so "6.3 x 7.2 x 2.5 cm" stays on one line; the two factors must add to 2.
+% X columns are p-type, so they top-align. A one-line label beside a
+% two-line value then sits high in the row. m-type centres both vertically.
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\newcolumntype{P}{>{\hsize=1.08\hsize\centering\arraybackslash}X}
+\newcolumntype{V}{>{\hsize=0.92\hsize\centering\arraybackslash}X}
+
+% Boxes used to measure the PROTOTYPE column and spread its two gaps.
+\newsavebox{\protopcb}
+\newsavebox{\protoworn}
+\newsavebox{\prototable}
+\newlength{\protogap}
+
+% ---------------------------------------------------------------------
+%  7. TITLE BAND AND LOGO BAND
+%  Both are painted directly onto the sheet, flush with the top and bottom
+%  edges, so they never move when the content in between changes.
+%  Keep them consistent with the margins set in section 1.
+% ---------------------------------------------------------------------
+\newlength{\sidemargin}\setlength{\sidemargin}{3cm}   % = left/right margin
+\newlength{\bannerhgt} \setlength{\bannerhgt}{15.6cm} % height of the title band
+\newlength{\footerhgt} \setlength{\footerhgt}{5.2cm}  % height of the logo band
+
+\newlength{\bannerpad}  \setlength{\bannerpad}{2.5cm}  % side padding inside a band
+\newlength{\bannerwidth}\setlength{\bannerwidth}{\paperwidth}
+  \addtolength{\bannerwidth}{-2\bannerpad}
+
+% --- title band -------------------------------------------------------
+\AddToShipoutPictureBG*{%   the star restricts the band to the first page
+  \AtPageUpperLeft{%
+    \raisebox{-\bannerhgt}[0pt][0pt]{%
+      \setlength{\fboxsep}{0pt}%
+      \colorbox{bannerbg}{%
+        \parbox[b][\bannerhgt][c]{\paperwidth}{%
+          \centering
+          \begin{minipage}{\bannerwidth}
+            \centering\color{white}
+            {\titlefont\bfseries
+              Development of a Wireless Active Personal\\[4mm]
+              Dosimeter for Interventional Radiology\par}
+            \vspace{8mm}
+            {\authorfont
+              M.\, Moniz,
+              P.\,M.\,M. Correia,
+              A.\,L.\,M. Silva,
+              J.\,F.\,C.\,A. Veloso,
+              C.\,D.\,R. Azevedo\par}
+            \vspace{5mm}
+            {\afilfont\color{white!85}
+              i3N, Department of Physics,
+              University of Aveiro, 3810-193 Aveiro, Portugal\par}
+          \end{minipage}%
+        }%
+      }%
+    }%
+  }%
+}
+
+% --- logo band: logos on the left, acknowledgements on the right ------
+%  The band is 5.2 cm tall. Seven marks now share it, so the logo block takes
+%  0.62 of the width and the acknowledgements 0.355; \ackfont drops to 17 pt
+%  to keep that paragraph inside the band at the narrower measure.
+%  The heights below are not equal on purpose: they are set so the marks read
+%  as the same optical size. A square stacked mark (i3N, ERC) has to be taller
+%  than a wordmark (FCT, UA, EC) to carry the same weight on the sheet.
+%  \logogap is the space between two marks; it is the number to touch if the
+%  row looks crowded or loose.
+\newlength{\logogap}\setlength{\logogap}{1.05cm}
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    \setlength{\fboxsep}{0pt}%
+    \colorbox{dorilight}{%                      <-- band background colour
+      \parbox[b][\footerhgt][c]{\paperwidth}{%
+        \hspace*{\sidemargin}%
+        \begin{minipage}[c]{0.62\bannerwidth}
+          \centering
+          \raisebox{-0.5\height}{\includegraphics[height=2.3cm]{logo_pt.png}}%
+          \hspace{\logogap}%
+          \raisebox{-0.5\height}{\includegraphics[height=2.3cm]{logo_2.png}}%
+          \hspace{\logogap}%
+          \raisebox{-0.5\height}{\includegraphics[height=2.9cm]{logo_3.png}}%
+          \hspace{\logogap}%
+          \raisebox{-0.5\height}{\includegraphics[height=2.0cm]{logo_4.png}}%
+          \hspace{\logogap}%
+          \raisebox{-0.5\height}{\includegraphics[height=1.8cm]{logo_fct.png}}%
+          \hspace{\logogap}%
+          \raisebox{-0.5\height}{\includegraphics[height=2.4cm]{logo_i3n.png}}%
+          \hspace{\logogap}%
+          \raisebox{-0.5\height}{\includegraphics[height=2.0cm]{logo_ua.png}}%
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[c]{0.355\bannerwidth}
+          \ackfont\justifying\color{dorigrey}
+          \textbf{Acknowledgements.}
+           This work is funded by national funds through FCT – Fundação para a Ciência e a Tecnologia, I.P., under the project UID/50025/2025 (doi.org/10.54499/UID/50025/2025), UID/PRR/50025/2025 (doi.org/10.54499/UID/PRR/50025/2025), UID/PRR2/50025/2025 (doi.org/10.54499/UID/PRR2/50025/2025) and the Associate Laboratory I3N – LA/P/0037/2020 (doi.org/10.54499/LA/P/0037/2020)
+        \end{minipage}%
+        \hspace*{\sidemargin}%
+      }%
+    }%
+  }%
+}
+
+% =====================================================================
+\begin{document}
+\bodyfont
+
+% =====================================================================
+%  ROW 1  |  ABSTRACT (left)  +  METHODS, the concept figure (right)
+%  Both boxes occupy \rowonehgt, so the row reads as a single band.
+% =====================================================================
+\noindent
+\begin{minipage}[t]{\colA}\topcol
+  \begin{doriblock}[height=\rowonehgt]{ABSTRACT}
+
+Interventional radiology is the medical specialty subject to the highest
+occupational exposure to ionising radiation. Monitoring still relies on
+passive dosimeters, which report dose retrospectively, so exposure accidents
+cannot be prevented.
+
+This work presents DORI (\textbf{\textit{DO}}s\'imetro para
+\textbf{\textit{R}}adiologia de \textbf{\textit{I}}nterven\c{c}\~ao), a wireless
+active personal dosimeter for real-time monitoring of scattered radiation. The
+sensing element is a 5\,$\times$\,5\,$\times$\,5\,mm$^3$ BC-408 plastic
+scintillator coupled to a Broadcom SiPM with a
+6\,$\times$\,6\,mm$^2$ active area. The readout electronics is controlled by an
+ESP32-C3 powered by a rechargeable Li-Po battery. Energy calibration was
+performed with bremsstrahlung endpoints and the $^{241}$Am photopeak, with the
+$^{57}$Co Compton edge as an independent validation point. The dose response
+followed ISO 4037 narrow spectra in terms of $H_p(10)$. The prototype is
+compact, fully wireless and unobtrusive to wear.
+  \end{doriblock}
+\end{minipage}%
+\hspace{\colgap}%
+\begin{minipage}[t]{\colBC}\topcol
+  \begin{dorisection}[height=\methhgt, valign=center]{METHODS}
+    \centering
+    \includegraphics[width=\linewidth,height=\methcontent,keepaspectratio]%
+      {DORI.pdf}
+  \end{dorisection}
+\end{minipage}
+
+\blockgap
+
+% =====================================================================
+%  ROW 2  |  PROTOTYPE (left)  +  RESULTS over CONCLUSIONS | REFERENCES (right)
+% =====================================================================
+\noindent
+% ---------------------------- LEFT COLUMN ----------------------------
+%  The two pictures are scaled to the full column width; the table is set at
+%  the same width; whatever height is left over is split into the two gaps.
+%  Nothing here needs a hand-set height.
+\begin{minipage}[t]{\colP}\topcol
+
+  \begin{dorisection}[height=\protohgt]{PROTOTYPE}
+
+    % no paragraph skips in here: the three items are spaced by \protogap only
+    \setlength{\parskip}{0pt}
+
+    \sbox{\protopcb}{\adjustbox{width=\linewidth}{\input{prototype_worn.tex}}}
+    \sbox{\protoworn}{\adjustbox{width=\linewidth}{\input{prototype_pcb.tex}}}
+    \sbox{\prototable}{\parbox{\linewidth}{%
+      \tabfont
+      \renewcommand{\arraystretch}{1.25}
+      \setlength{\tabcolsep}{3mm}
+      \begin{tabularx}{\linewidth}{|P|V|}
+        \hline
+        \rowcolor{tablehead}
+        \textcolor{headerfg}{\textbf{Parameter}} &
+        \textcolor{headerfg}{\textbf{Value}} \\
+        \hline
+        Dead time        & 17.8 $\pm$ 0.4~$\mu$s \\
+        \hline
+        Calibrated energy range & 20 to 60~keV \\
+        \hline
+        Operational unit & $H_p(10)$ \\
+        \hline
+        % \newline, not \\, forces the second line: inside an X column \\
+        % would end the table row.
+        Calibrated dose range & N-25 to N-40 \newline
+                                0.063 to 101~$\mu$Sv/h \\
+        \hline
+        Dimensions       & 6.3 $\times$ 7.2 $\times$ 2.5~cm \\
+        \hline
+        Mass             & 141~g \\
+        \hline
+        Autonomy         & 8.6~h \\
+        \hline
+      \end{tabularx}}}
+
+    % leftover height, split into the two gaps
+    \setlength{\protogap}{\protocontent}
+      \addtolength{\protogap}{-4mm}      % safety slack for the interline glue
+      \addtolength{\protogap}{-\ht\protopcb}\addtolength{\protogap}{-\dp\protopcb}
+      \addtolength{\protogap}{-\ht\protoworn}\addtolength{\protogap}{-\dp\protoworn}
+      \addtolength{\protogap}{-\ht\prototable}\addtolength{\protogap}{-\dp\prototable}
+      \setlength{\protogap}{0.5\protogap}
+
+    \centering
+    \usebox{\protopcb}\par
+    \vspace{\protogap}
+    \usebox{\protoworn}\par
+    \vspace{\protogap}
+    \usebox{\prototable}
+
+  \end{dorisection}
+
+\end{minipage}%
+\hspace{\colgap}%
+% ---------------------------- RIGHT COLUMN ---------------------------
+\begin{minipage}[t]{\colR}\topcol
+
+  % --- RESULTS: four panels, two by two, no frames --------------------
+  %  Most panels are a picture with one short line underneath; keep the line
+  %  to six or seven words. Panel 3 speaks for itself, so it uses
+  %  \respanelplain and the picture takes the whole slot.
+  %  Panels 1 and 3 speak for themselves and carry no line at all.
+  %  Panel 1 is three pictures in one slot: the measured spectra that give
+  %  the calibration points. An arrow runs from it to panel 2, which is the
+  %  fit through those points.
+  %  Which script makes which panel, all writing into ../images/ :
+  %    panel 1  brem_sub.pdf   brem_sub.m   (24.0 x 13.0)
+  %             co57_sub.pdf   co57_sub.m   (11.6 x 10.8)
+  %             am241_sub.pdf  am241_sub.m  (11.6 x 10.8)
+  %    panel 2  energy_poster.pdf            energy_poster.m
+  %    panel 3  dose_bins_poster.pdf         dose_bins_poster.m  (no line)
+  %    panel 4  weights2bin25_sub.pdf  weights_sub.m  (11.6 x 10.0, top left)
+  %             weights2bin30_sub.pdf  weights_sub.m  (11.6 x 10.0, top right)
+  %             weights3bin_sub.pdf    weights_sub.m  (24.0 x 12.0, bottom)
+  \begin{dorisection}[height=\resfrmhgt]{RESULTS}
+
+    % no paragraph skips in here: the two rows are spaced by \figgap only
+    \setlength{\parskip}{0pt}
+
+    \noindent
+    \begin{minipage}[t]{\panelwid}\topcol
+      \respanelplain{\restriple{brem_sub.pdf}{co57_sub.pdf}{am241_sub.pdf}}
+    \end{minipage}%
+    \begin{minipage}[t]{\panelgap}\topcol
+      \parbox[c][\panelhgt][c]{\linewidth}{\centering\panelarrow}
+    \end{minipage}%
+    \begin{minipage}[t]{\panelwid}\topcol
+      \respanel{\respic{energy_poster.pdf}}%
+               {Linear channel response between 20 and 60\,keV}
+    \end{minipage}
+
+    \par\nointerlineskip\vspace{\figgap}
+
+    \noindent
+    \begin{minipage}[t]{\panelwid}\topcol
+      \respanelplain{\respicfull{dose_bins_poster.pdf}}
+    \end{minipage}\hspace{\panelgap}%
+    \begin{minipage}[t]{\panelwid}\topcol
+      \respanel{\restripleflip{weights2bin25_sub.pdf}%
+                              {weights2bin30_sub.pdf}%
+                              {weights3bin_sub.pdf}}%
+               {Two-bin model gives the best fit to all three qualities}
+    \end{minipage}
+
+  \end{dorisection}
+
+  \blockgap
+
+  % --- CONCLUSIONS and REFERENCES, side by side -----------------------
+  %  Slim header bars and a tighter body: this strip is half the height it
+  %  used to be, and conclusions is twice the width of references.
+  \noindent
+  \begin{minipage}[t]{\colWide}\topcol
+    \begin{doriblock}[height=\bothgt, slimtitle]{CONCLUSIONS}
+      \conclfont
+
+          A functional, plastic scintillator-based, wireless active personal dosimeter was built and
+      characterised. The scintillator can be calibrated in both energy and dose, despite its known poor energy resolution. Future work will
+      extend both calibrations to a wider energy range and to more reliable
+      dose points, reduce the size of the unit, and scale it to monitor several
+      anatomical regions, such as the chest, eyes, thyroid and hands, in real-time.
+    \end{doriblock}
+  \end{minipage}%
+  \hspace{\colgap}%
+  \begin{minipage}[t]{\colNarrow}\topcol
+    \begin{doriblock}[height=\bothgt, slimtitle]{REFERENCES}
+      \reffont\setlength{\parskip}{2mm}
+
+      [1] https://doi.org/10.1259/bjr.20210436
+
+      [2] https://doi.org/10.1007/s00330-025-11566-5
+
+      [3] ISO 4037-1:2019, \emph{Radiation characteristics and production
+      methods}.
+
+      [4] ISO 4037-3:2019, \emph{Calibration of area and personal dosemeters}.
+
+    \end{doriblock}
+  \end{minipage}
+
+\end{minipage}
+
+\end{document}
+
+% =====================================================================
+%  PARKED TEXT
+%  The old METHODS prose, the signal-chain figure and the DISCUSSION block
+%  are no longer on the sheet. They are kept here so nothing is lost.
+% ---------------------------------------------------------------------
+%  METHODS / Hardware
+%    Each unit has a 5 x 5 x 5 mm^3 plastic scintillator (Eljen EJ-200
+%    equivalent) optically coupled to a Broadcom AFBR-S4N66P014M silicon
+%    photomultiplier. The readout electronics is controlled by an ESP32-C3
+%    powered by a rechargeable Li-Po battery.
+%
+%    \begin{center}
+%      \resizebox{0.98\linewidth}{!}{\input{architecture_blocks.tex}}
+%    \end{center}
+%
+%  METHODS / Energy Calibration
+%    Bremsstrahlung endpoints acquired between 20 and 50 kVp, combined with the
+%    Am-241 photopeak at 59.5 keV in a weighted least-squares fit. The Co-57
+%    Compton edge was used as an independent validation point.
+%
+%  METHODS / Dose Calibration
+%    Calibration followed ISO 4037, using the narrow-spectrum qualities N-25,
+%    N-30 and N-40 and the prescribed protocol for Hp(10) [3,4]. The dose is
+%    reconstructed as  Hp(10) = w1 N1 + w2 N2 , with Ni the counts in each
+%    energy bin and wi the fitted weights.
+%
+%  DISCUSSION
+%    The energy response is linear over the 20 to 60 keV range. The Co-57 point
+%    falls off the line, owing to the poor energy resolution at this energy.
+%    The dose results support the two-bin division, given the small number of
+%    radiation qualities available.
+%    The designed architecture is scalable to other formats, and its current
+%    autonomy, dimensions and mass allow unobtrusive operation, with room for
+%    improvement in future iterations.
+% =====================================================================

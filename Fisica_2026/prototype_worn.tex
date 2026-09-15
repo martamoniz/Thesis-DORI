@@ -1,0 +1,46 @@
+% =====================================================================
+%  Panel (c) of figures/Final.tex, extracted as a standalone picture.
+%  Closed prototype worn over a lab coat: badge clip, power switch, LED.
+%  All x coordinates were shifted by -159.7 pt so the picture starts at
+%  the origin. The panel letter and the caption were dropped.
+%  Image is found through \graphicspath (../images/).
+% =====================================================================
+\begin{tikzpicture}[x=1pt,y=1pt,
+    every node/.style={font=\footnotesize},
+    ah/.style={draw opacity=0,line width=0.08,fill opacity=1},
+    ahs/.style={ah,scale=0.55},
+    lbl/.style={fill=white,align=center,inner sep=2.5pt,line width=0.6pt},
+    dim/.style={fill=white,align=center,inner sep=2pt,draw=none,font=\scriptsize}]
+
+% ---- Photograph ---------------------------------------------------------
+\node [anchor=south west,inner sep=0] at (0,0)
+  {\includegraphics[width=137.1pt,height=146pt]{cima.jpg}};
+
+% ---- LED ----------------------------------------------------------------
+\node [lbl,draw={rgb, 255:red, 204; green, 153; blue, 0 },anchor=center]
+      (led) at (22.05,71.45) {LED On};
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 },line width=1.1pt]
+      (led.east) -- (57.9,61.6);
+\draw [shift={(59.8,60.4)},rotate=151.2,ah,
+       fill={rgb, 255:red, 204; green, 153; blue, 0 }]
+      (7.85,-3.78) -- (0,0) -- (7.85,3.78) -- cycle ;
+
+% ---- Badge clip ---------------------------------------------------------
+\node [lbl,draw={rgb, 255:red, 55; green, 173; blue, 107 },anchor=center]
+      (badge) at (109.7,107.7) {Badge Clip};
+\draw [color={rgb, 255:red, 55; green, 173; blue, 107 },line width=1.1pt]
+      (badge.north) -- (85.6,120.7);
+\draw [shift={(77.8,122.6)},rotate=346.6,ah,
+       fill={rgb, 255:red, 55; green, 173; blue, 107 }]
+      (7.85,-3.78) -- (0,0) -- (7.85,3.78) -- cycle ;
+
+% ---- Power switch -------------------------------------------------------
+\node [lbl,draw={rgb, 255:red, 241; green, 74; blue, 64 },anchor=center]
+      (psw) at (105.45,47) {Power\\Switch};
+\draw [color={rgb, 255:red, 241; green, 74; blue, 64 },line width=1.1pt]
+      (psw.west) -- (80.3,47);
+\draw [shift={(72.3,47)},rotate=0,ah,
+       fill={rgb, 255:red, 241; green, 74; blue, 64 }]
+      (7.85,-3.78) -- (0,0) -- (7.85,3.78) -- cycle ;
+
+\end{tikzpicture}

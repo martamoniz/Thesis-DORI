@@ -33,7 +33,11 @@
 \usepackage{multirow}
 \usepackage{ifthen}
 \usepackage{tikz}
-
+% Preamble
+% \usepackage{tabularx}
+% \usepackage{eurosym}
+\newcolumntype{P}{>{\hsize=0.95\hsize\raggedright\arraybackslash}X}
+\newcolumntype{V}{>{\hsize=1.05\hsize\centering\arraybackslash}X}
 
 % Chapter heading style: ported from memoir's built-in "veelo" chapterstyle
 % (the one the department's newer thesis template uses) — "CHAPTER" label
@@ -164,15 +168,11 @@
         }
   \vspace*{15mm}
   \TEXT{}
-      {Projeto apresentado à Universidade de Aveiro para cumprimento dos requisitos
-necessários à aprovação na unidade curricular de Laboratórios Avançados de Engenharia Biomédica, realizada sob a orientação científica do Doutor Carlos Davide da Rocha Azevedo, professor auxiliar do Departamento de Física da Universidade de Aveiro}
+      {Dissertação apresentada à Universidade de Aveiro para cumprimento dos requisitos necessários à obtenção do grau de Mestre em Engenharia Biomédica, realizada sob a orientação científica do Doutor Carlos Davide da Rocha Azevedo, professor auxiliar do Departamento de Física da Universidade de Aveiro}
 
         \vspace*{60mm}
     \TEXT{}
-{Este trabalho foi apoiado pelas bolsas
-       PTDC/NAN-MAT/3901/2020 e CICECO - Instituto de Materiais de Aveiro  UIDB/50011/2020 e UIDP/50011/2020, financiadas pela Fundação para a Ciência e a Tecnologia/MCTES e pelo projeto ThermoRise, ERC-2019-CoG-865437, financiado pelo Conselho Europeu de Investigação/H2020
-       https://erc.europa.eu/manage-your-project/communicate-your-research
-       https://www.compete2020.gov.pt/sobre-nos/comunicacao
+{Este trabalho foi apoiado pelo projeto ``EasyPET.CT'' -- Implementação do Sistema EasyPET.CT para Imagem Médica Molecular e Morfológica Combinada (CENTRO2030-FEDER-02363500), e por fundos nacionais através da FCT -- Fundação para a Ciência e a Tecnologia, I.P., no âmbito dos projetos UID/50025/2025 (\url{https://doi.org/10.54499/UID/50025/2025}), UID/PRR/50025/2025 (\url{https://doi.org/10.54499/UID/PRR/50025/2025}), UID/PRR2/50025/2025 (\url{https://doi.org/10.54499/UID/PRR2/50025/2025}) e do Laboratório Associado I3N -- LA/P/0037/2020 (\url{https://doi.org/10.54499/LA/P/0037/2020}).
        }
 \vspace*{2mm}
 \begin{figure}[H]
@@ -187,7 +187,7 @@ necessários à aprovação na unidade curricular de Laboratórios Avançados de
 \TitlePage
   \vspace*{55mm}
   \TEXT{}
-       {Aos meus pais.}
+       {\hfill\textit{Aos meus pais.}}
 \EndTitlePage
 % Jury page
 \TitlePage
@@ -229,8 +229,10 @@ necessários à aprovação na unidade curricular de Laboratórios Avançados de
 % \titlepage\ \endtitlepage -> empty page
 \TitlePage
   \vspace*{55mm}
-  \TEXT{\textbf{reconhecimento de uso~/\newline acknowledgement of use}}
-       {I acknowledge the use of Perplexity Pro (\url{https://www.perplexity.ai/}) for linguistic revision and assistance with \LaTeX{} formatting. All original images in this document were created using Canva (\url{https://www.canva.com/}) and PowerPoint (Microsoft 365).}
+  \TEXT{\textbf{Acknowledgement of use
+of AI tools
+}}
+       {a}
 
 \EndTitlePage
 \TitlePage
@@ -270,8 +272,7 @@ necessários à aprovação na unidade curricular de Laboratórios Avançados de
 \listoftables
 \newpage
 \input{lista_acronimos}
-\newpage
-\input{lista_simbolos}
+
 % The chapters (usually written using the isolatin font encoding ...)
 
 

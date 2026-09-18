@@ -1,19 +1,24 @@
 \chapter*{Appendix}
 \label{annex:sources}
 
-% TODO (Marta): fill in the real activity/reference-date/serial-number values for the
-% three sealed sources used throughout the hardware/calibration chapters (referenced
-% as "Annex~\ref{annex:sources}" from the Front-End Electronics section). Placeholder
-% table below.
+% TODO (Marta): the May 2026 activities are filled in; still missing the serial
+% numbers and the initial (certificate) activities for the three sealed sources used
+% throughout the hardware/calibration chapters (referenced as "Annex~\ref{annex:sources}"
+% from the Front-End Electronics section).
 
 \section*{A - Sealed Source Activities}
 
 
 \vspace{1em}
-\refstepcounter{table}
+% Lettered to match the appendix sections (Table A, not Table 12), and deliberately
+% kept out of the List of Tables: \thetable is redefined locally and the global table
+% counter is put back afterwards, so the numbered tables in the chapters are unaffected.
+\begingroup
+\renewcommand{\thetable}{A}
+\refstepcounter{table}\addtocounter{table}{-1}
 \label{tab:sources}
-\noindent\textbf{Table~\thetable.} Reference activity of the sealed sources used in this work.
-\addcontentsline{lot}{table}{\protect\numberline{\thetable}Reference activity of the sealed sources used in this work.}
+\noindent\textbf{Table~\thetable.} Activity of the sealed sources used in this work.
+\endgroup
 \vspace{0.1em}
 
 \begin{table}[H]
@@ -21,11 +26,12 @@
   \renewcommand{\arraystretch}{1.4}
   \begin{tabular}{c c c c}
     \toprule
-    \textbf{Source} & \textbf{Reference Activity} & \textbf{Reference Date} & \textbf{Serial Number} \\
+    \textbf{Source} & \textbf{Serial Number} & \textbf{Initial Activity} &
+    \textbf{Activity in May 2026} \\
     \midrule
-    $^{241}$Am & TODO & TODO & TODO \\
-    $^{109}$Cd & TODO & TODO & TODO \\
-    $^{57}$Co  & TODO & TODO & TODO \\
+    $^{241}$Am & TODO & TODO & 23~kBq  \\
+    $^{109}$Cd & TODO & TODO & 8.3~kBq \\
+    $^{57}$Co  & TODO & TODO & 3.4~kBq \\
     \bottomrule
   \end{tabular}
 \end{table}

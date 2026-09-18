@@ -3,7 +3,7 @@
 The current DORI prototype is shown in Fig.~\ref{fig:prototype}.
 A new PCB was designed with emphasis on a more compact footprint, correcting the layout errors identified in the DORI-test board and optimised for wireless operation. In comparison with the previous PCB, the colour-coded LED was integrated, and a power switch was added to disconnect the LiPo battery from the circuit. Additionally, all oscilloscope test points were removed and the SiPM is now soldered directly onto the board.
 
-To obtain a portable version of the system, and to ensure that no ambient light reaches the photosensitive elements, a two-part 3D printed case was designed. The lower layer contains a dedicated compartment for the LiPo battery (Fig.~\ref{fig:prototype}~(a)) and is enclosed by the PCB. As shown in Fig.~\ref{fig:prototype}~(b), the PS was wrapped in several layers of Teflon tape, covering all non-exiting surfaces of the cube. Optical silicone grease() was applied as coupling between the SiPM and the PS. The friction it creates, together with dedicated holes in the top layer of the case, keep the PS in place and aligned with the SiPM. Apertures are provided for the LED, the power switch (Fig.~\ref{fig:prototype}~(c)) and the USB-C port for charging and firmware uploading. The top layer is closed tightly against the bottom one with four screws. A loop was modelled on the top to hold a standard badge clip, allowing the unit to be worn over clothing. As represented, the current DORI unit measures 6.3~cm in width, 7.2~cm in height and 2.5~cm in thickness, with a total mass of 141~g. For comparison, the RaySafe i3 device measures 4.0 $\times$ 5.8 $\times$ 1.7~cm and has a mass of only 34~g. Although the dimensions are comparable, the DORI PCB still leaves room for improvement in size, through a better use of the PCB's top and bottom layers for component placement. Additionally, the integration of the ESP32-C3 as a bare chip, rather than the prototyping module, would contribute further to the reduction of the footprint. From a wearable point of view, the mass is currently the most likely cause of discomfort. The enclosure was printed at 100\% infill to guarantee that no ambient light reaches the photosensitive elements. This choice increases the mass of the unit, which is higher than desirable for a badge worn over clothing. If light-tightness can be preserved, a reduction can be achieved with a lower infill density, or with different printing methods and materials.
+To obtain a portable version of the system, and to ensure that no ambient light reaches the photosensitive elements, a two-part 3D printed case was designed. The lower layer contains a dedicated compartment for the LiPo battery (Fig.~\ref{fig:prototype}~(a)) and is enclosed by the PCB. As shown in Fig.~\ref{fig:prototype}~(b), the PS was wrapped in several layers of Teflon tape, covering all non-exiting surfaces of the cube. Optical silicone grease(!!!!!!!) was applied as coupling between the SiPM and the PS. The friction it creates, together with dedicated holes in the top layer of the case, keep the PS in place and aligned with the SiPM. Apertures are provided for the LED, the power switch (Fig.~\ref{fig:prototype}~(c)) and the USB-C port for charging and firmware uploading. The top layer is closed tightly against the bottom one with four screws. A loop was modelled on the top to hold a standard badge clip, allowing the unit to be worn over clothing. As represented, the current DORI unit measures 6.3~cm in width, 7.2~cm in height and 2.5~cm in thickness, with a total mass of 141~g. For comparison, the RaySafe i3 device measures 4.0 $\times$ 5.8 $\times$ 1.7~cm and has a mass of only 34~g. Although the dimensions are comparable, the DORI PCB still leaves room for improvement in size, through a better use of the PCB's top and bottom layers for component placement. Additionally, the integration of the ESP32-C3 as a bare chip, rather than the prototyping module, would contribute further to the reduction of the footprint. From a wearable point of view, the mass is currently the most likely cause of discomfort. The enclosure was printed at 100\% infill to guarantee that no ambient light reaches the photosensitive elements. This choice increases the mass of the unit, which is higher than desirable for a badge worn over clothing. If light-tightness can be preserved, a reduction can be achieved with a lower infill density, or with different printing methods and materials.
 
 All design files of the final prototype are made available in a public repository [repository link], so that the system can be reproduced and further developed. These include the CAD models of the enclosure, the PCB layout and schematic, the firmware, the acquisition software and the energy and dose calibration parameters derived in this work. Future work should also include the implementation of the graphical user interface projected in Chapter~\ref{chapter:hardware_development}, for real time visualisation of the dose rate and storage of the acquired data.
 
@@ -72,19 +72,81 @@ Linear fit of the \emph{Bremsstrahlung} endpoint channels recorded by the final
 \section{Power Consumption}
 \label{sec:power_consumption}
 As a final test, and with a PCB optimised for wireless communication, the power consumption of the current DORI electronics and firmware was analysed. The battery was fully charged through the USB-C connector of the ESP32-C3, the end of the charge being indicated by the red LED of the MCU turning off, and a simulation firmware was
-uploaded. One hundred interrupts (events) per second were simulated, and the battery voltage was read with \texttt{analogRead} through a voltage divider connected to the battery terminals. The event data were transmitted over BLE at a one second rate, and the battery voltage was recorded every 15 minutes. A cutoff was added at 3.3 V, at which the MCU is sent into deep sleep in order to preserve the LiPo cell from a full discharge. The discharge curve is shown in Fig.~\ref{fig:battery}.
+uploaded. One hundred interrupts (events) per second were simulated, and the battery voltage was read with \texttt{analogRead} through a voltage divider connected to the battery terminals. The event data were transmitted over BLE at a one second rate, and the battery voltage was recorded every 15 minutes. A cutoff was added at 3.3 V, at which the MCU is sent into deep sleep in order to preserve the LiPo cell from a full discharge. 
 
-DORI operated for approximately 8.6 hours before the cutoff was reached, at a mean discharge rate of 80 mV/h. For the 1200 mAh cell used, this corresponds to a mean current of approximately 140 mA at 3.7 V. While this is sufficient for uninterrupted operation over an eight hour working day, it would require frequent charging cycles. Thefore, there is still room for improvement in the component selection of the DORI board with respect to consumption. 
-The presented curve translates the state of charge behaviour of the LiPo battery, with a faster initial discharge rate, followed by a steadier one over
-a longer period. The sharp increase in slope at the last recorded events is a consequence of a higher discharge capacity at the LiPo cell, and justifies the placement of the cutoff at 3.3 V.
-Nevertheless, the battery voltage is a poor indicator of the charge remaining, and a proper characterisation of the cell would be required before it could be used to estimate the current state of charge.
+DORI operated for approximately 8.6 hours before the cutoff was reached, at a mean discharge rate of 80 mV/h. For the 1200 mAh cell used, this corresponds to a mean current of approximately 140 mA at 3.7 V. While this is sufficient for uninterrupted operation over an eight hour working day, it would require frequent charging cycles. Thefore, there is still room for improvement in the component selection of the DORI board with respect to consumption. Nevertheless, the battery voltage is a poor indicator of the charge remaining, and a proper characterisation of the cell would be required before it could be used to estimate the current state of charge.
 Additionally, the integrity of the wireless link was kept intact throughout the run, with no disconnections and no lost notifications. No rise was registered in the temperature of the MCU, indicating that no thermal load builds up even after continuous hours of operation.
 
- \begin{figure}[H]
+\section{Cost and Specifications}
+\label{sec:cost_specifications}
+
+DORI is also intended to represent a more cost effective solution against the prices currently charged for the active devices mentioned in the introduction. An estimated cost of the current prototype is listed in Table~\ref{tab:cost}, excluding assembly and the marginal cost of consumables. The detection chain accounts for most of the total, with the scintillator and the SiPM alone representing around 70\% of it. Even so, a finished product would still represent a fraction of the roughly 1000~dollars of a commercial device. The component selection can still be optimised, and at a larger production scale the cost per device is expected to fall further.
+
+% Requires \usepackage{tabularx} and \usepackage{eurosym} in the preamble
+
+\vspace{1em}
+\refstepcounter{table}
+\label{tab:cost}
+\noindent\textbf{Table~\thetable.} Estimated cost of the components of the final DORI prototype as of September 2026.
+\addcontentsline{lot}{table}{\protect\numberline{\thetable}Estimated cost of the components of the final DORI prototype.}
+
+\vspace{0.1em}
+\begin{table}[H]
   \centering
-  \includegraphics[width=0.85\linewidth]{images/battery.pdf}
-  \caption[DORI discharge curve during continuous operation at 100 interrupts/second.]{%
-DORI discharge curve during continuous operation at 100 interrupts/second.
-  }
-  \label{fig:battery}
-\end{figure}
+  \small
+  \begin{tabularx}{0.55\textwidth}{>{\raggedright\arraybackslash}m{0.26\textwidth}
+                                   >{\centering\arraybackslash}X}
+    \toprule
+    \textbf{Component} & \textbf{Cost (\euro)} \\
+    \midrule
+    BC-408 scintillator  & 110 \\
+    SiPM                 & 50 \\
+    Front-end components & $\sim$50 \\
+    LiPo battery         & 7.40 \\
+    PCB fabrication      & 5 \\
+    XIAO ESP32-C3        & 4.25 \\
+    3D printed enclosure & $\sim$2 \\
+    \midrule
+    \textbf{Total}       & \textbf{$\sim$229} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+Finally, the characteristics of the final prototype, as established throughout this work, are summarised in Table~\ref{tab:specifications}.
+
+\vspace{1em}
+
+\refstepcounter{table}
+\label{tab:specifications}
+\noindent\textbf{Table~\thetable.} Specifications of the final DORI prototype.
+\addcontentsline{lot}{table}{\protect\numberline{\thetable}Specifications of the final DORI prototype.}
+
+\vspace{0.1em}
+
+\begin{table}[H]
+  \centering
+  \small
+  \renewcommand{\arraystretch}{1.25}
+  \setlength{\tabcolsep}{3mm}
+  \begin{tabularx}{0.65\textwidth}{|P|V|}
+    \hline
+    \textbf{Parameter} & \textbf{Value} \\
+    \hline
+    Dead time & 17.8 $\pm$ 0.4~$\mu$s \\
+    \hline
+    Calibrated energy range & 20 to 60~keV \\
+    \hline
+    Operational unit & $H_p(10)$ \\
+    \hline
+    % \newline, not \\, forces the second line: inside an X column \\
+    % would end the table row.
+    Calibrated dose range & N-25 to N-40 \newline
+                            0.063 to 101~$\mu$Sv/h \\
+    \hline
+    Dimensions & 6.3 $\times$ 7.2 $\times$ 2.5~cm \\
+    \hline
+    Mass & 141~g \\
+    \hline
+    Autonomy & 8.6~h \\
+    \hline
+  \end{tabularx}
+\end{table}

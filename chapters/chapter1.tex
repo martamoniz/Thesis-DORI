@@ -6,7 +6,7 @@
 \chapter{Introduction}
 
 \section{Interventional Radiology}
-Interventional radiology (IR) is a subspecialty of radiology that utilizes fluoroscopy to perform diagnostic and therapeutic procedures through minimally invasive techniques \cite{8}. Fluoroscopy involves the use of X-rays and an image detection system to visualize internal structures and interventional tools in real-time \cite{11}. The conventional IR equipment configuration is illustrated in Fig.~\ref{fig:interventional_radiology_setup}. The X-rays are produced in an X-ray tube by converting the kinetic energy of electrons into electromagnetic radiation. It consists of two electrodes enclosed in a vacuum-sealed glass envelope. The cathode serves as the electron source, while the anode acts as the positive target. When heated by an electric current, the cathode emits electrons via thermionic emission. The number of electrons produced depends on the current passing through the filament. A high potential difference applied between the cathode and the anode accelerates the electrons toward the anode. The total incident energy delivered to the anode is proportional to both the voltage and the current\cite{5,6}.
+Interventional radiology (IR) is a subspecialty of radiology that uses fluoroscopy to perform diagnostic and therapeutic procedures through minimally invasive techniques \cite{8}. Fluoroscopy uses X-rays and an image detection system to visualize internal structures and interventional tools in real time \cite{11}. The conventional IR equipment configuration is illustrated in Fig.~\ref{fig:interventional_radiology_setup}. The X-ray tube and the detector are mounted at opposite ends of a C-arm gantry, with the patient lying on the operating table between them. X-rays are produced in the tube by accelerating electrons from a heated cathode toward a target anode \cite{5,6}. The X-rays transmitted through the patient strike the detector, where they are converted into an electronic signal. This signal is processed into an image and displayed on a monitor to guide the intervention in real time. In the standard configuration, the X-ray tube is positioned beneath the patient table and the detector above, capitalising on the anisotropic distribution of scattered radiation to minimise occupational exposure~\cite{21,22}.
 \begin{figure}[H]
  \centering
   \includegraphics[width=\linewidth]{images/interventional radiology setup.pdf}
@@ -15,7 +15,7 @@ Interventional radiology (IR) is a subspecialty of radiology that utilizes fluor
  \label{fig:interventional_radiology_setup}
 \end{figure}
 
-The X-rays transmitted through the patient strike the image detection system, mounted opposing the X-ray tube on a C-arm gantry. In the standard configuration, the X-ray tube is positioned beneath the patient table and the detector above, capitalising on the anisotropic distribution of scattered radiation to minimise occupational exposure~\cite{21,22}. The detector converts incident X-rays into visible light, which is optically transmitted to a camera system and displayed on a monitor to guide interventions in real-time. For continuous fluoroscopy, a steady tube current is supplied and images are acquired at 30 frames per second to maintain the perception of smooth motion~\cite{16}. Table~\ref{tab:ir_parameters} outlines common technical parameters used in IR procedures \cite{20}.
+To maintain the perception of continuous motion, modern systems emit X-rays in short pulses synchronised with image acquisition, at rates of up to 30 frames per second. Since a single procedure may require thousands of images, the fluoroscopic detector operates in a considerably more sensitive mode than a radiographic detector. As a result, each image is produced with a dose several orders of magnitude lower than a radiograph~\cite{6}. Table~\ref{tab:ir_parameters} outlines common technical parameters used in IR procedures \cite{20}.
 % Small vertical space after surrounding text
 \vspace{1em}
 
@@ -57,17 +57,17 @@ The X-rays transmitted through the patient strike the image detection system, mo
 
  \section{Photon Interaction with Matter}
  \label{sec:Photon Interaction with Matter}
-X-rays interact with matter through four physical mechanisms: the photoelectric effect, Compton scattering, Rayleigh dispersion and pair production. The latter two are not relevant in IR~\cite{14}. Therefore, only the photoelectric effect and Compton scattering are considered in detail. Both processes are shown schematically in Fig.~\ref{fig:interaction}.
+X-rays interact with matter through four physical mechanisms: Rayleigh scattering, the photoelectric effect, Compton scattering, and pair production. The contribution of Rayleigh scattering to overall interactions in the context of IR is negligible. Additionally, pair production requires photon energies exceeding 1.02 MeV, which
+are not present in diagnostic X-ray procedures~\cite{6}. Therefore, only the photoelectric effect and Compton scattering are considered in detail.
+
 \subsection{Photoelectric Effect}
-The photoelectric effect occurs when an incident photon transfers all of its energy to a bound electron within an atom, resulting in the ejection of the electron from its orbital. This process preferentially involves inner-shell electrons due to their greater electron density. The incident photon energy ($E_0$) is expended to overcome the binding energy of the electron ($E_b$), and any remaining energy is converted into the kinetic energy of the ejected photoelectron ($E_{\text{pe}}$), expressed as~\cite{5,6}:
+As shown in Fig.~\ref{fig:interaction} (a), the photoelectric effect occurs when an incident photon transfers all of its energy to a bound electron within an atom, resulting in the ejection of the electron from its orbital. This process preferentially involves inner-shell electrons due to their greater electron density. The incident photon energy ($E_0$) is expended to overcome the binding energy of the electron ($E_b$), and any remaining energy is converted into the kinetic energy of the ejected photoelectron ($E_{\text{pe}}$), expressed as~\cite{5,6}:
 \begin{equation}
-E_{\text{pe}} = E_0 - E_b,\ \text{unit: } [\mathrm{keV}]
+E_{\text{pe}} = E_0 - E_b,\ 
 \label{eq:photoeletric}
 \end{equation}
 \indent
-The vacancy is filled by an outer electron, with the release of a characteristic X-ray or an Auger electron. When these emissions are reabsorbed within the detector, the total deposited energy equals $E_0$, recorded as the photopeak. As the emissions are monoenergetic, the photopeak would be a Dirac delta. However, and as shown in Fig.~\ref{fig:interaction} (a), the peak has a finite width, set by the energy resolution of the detector and is a property of the instrument~\cite{14}.
-
-The probability of photoelectric interaction is predominant at lower energies ($<$50 keV). It is also dependent on atomic number, increasing with higher-$Z$ materials, which provides contrast in X-ray imaging. As a result, lower-energy X-ray beams produce higher contrast but also increase photon absorption in the patient, leading to a higher dose. In interventional planning, beam quality is therefore optimised to balance image quality and patient dose, as higher photon energies reduce patient absorption but increase the contribution of Compton scattering, leading to greater noise and poorer contrast~\cite{6}.
+The vacancy is filled by an outer electron, with the release of a characteristic X-ray or an Auger electron. When these emissions are reabsorbed within the detector, the total deposited energy equals $E_0$, recorded as the full absorption peak, also called the photopeak. Due to the orbital quantization, the transitions are monoenergetic. However, and as represented, the peak has a finite width, set by the energy resolution of the detector, which is a property of the instrument~\cite{14}.
 \begin{figure}[H]
   \centering
   \input{figures/Interaction_with_matter}
@@ -77,16 +77,18 @@ The probability of photoelectric interaction is predominant at lower energies ($
 \end{figure}
 
 
+
 \subsection{Compton Scattering}
 \label{sec:compton_scattering}
-Compton scattering is an inelastic interaction in which an incident photon interacts with a free outer-shell electron, transferring part of its energy. As a result, the electron is ejected as a recoil (Compton) electron. In accordance with the conservation of energy and momentum, the photon is deflected at an angle $\theta$, dependent on the energy transferred. The energy of the scattered photon $E_c$ is described as~\cite{6}:
+Compton scattering is an inelastic interaction in which an incident photon interacts with a loosely bound electron, transferring part of its energy. As a result, the electron is ejected as a recoil (Compton) electron. In accordance with the conservation of energy and momentum, the photon is deflected at an angle $\theta$, dependent on the energy transferred. The energy of the scattered photon $E_c$ is described as~\cite{6}:
 \begin{equation}
-E_c = \frac{E_0}{1 + \frac{E_0}{511} (1 - \cos\theta)},\ \text{unit: } [\mathrm{keV}] \label{eq:compton}
+E_c = \frac{E_0}{1 + \frac{E_0}{m_e c^2}(1 - \cos\theta)}
+\label{eq:compton}
 \end{equation}
 
- Within the detector, all scattering angles are permitted, from $0^\circ$ to $180^\circ$. This creates a Compton continuum, bounded by the two extremes. The maximum energy transfer to the electron occurs at $\theta = 180^\circ$, the Compton Edge (CE). At the same angle, a photon scattered in the surrounding material may enter the detector and be absorbed, forming the backscatter peak shown in Fig.~\ref{fig:interaction} (b)~\cite{14}.
+Within the detector, all scattering angles are permitted, from $0^\circ$ to $180^\circ$. This creates a Compton continuum, bounded by the two extremes. The maximum energy transfer to the electron occurs at $\theta = 180^\circ$, the Compton Edge (CE). At the same angle, a photon scattered in the surrounding material may enter the detector and be absorbed, forming the backscatter peak shown in Fig.~\ref{fig:interaction} (b)~\cite{14}.
 
- At photon energies typical of diagnostic radiology, the scattered photon retains most of the initial energy and remains sufficiently energetic to penetrate tissue. Within this energy range, Compton scattering predominates over the photoelectric effect in materials such as soft tissue, water and air. The interaction probability is proportional to the physical density of the material, but it is independent of the atomic number due to the uniform electron density across soft tissues~\cite{5,6}.
+In diagnostic and interventional radiology, the photoelectric effect is predominant at lower energies ($<$50~keV). Its probability increases with atomic number. This dependence provides contrast in X-ray imaging, as tissues of different composition absorb the beam differently. At higher energies, Compton scattering predominates in soft tissue, water and air. Its probability depends on the physical density of the material but not on the atomic number, since electron density is nearly uniform across soft tissues. The scattered photon retains most of the initial energy and remains sufficiently energetic to penetrate tissue, adding noise to the image. As a result, lower-energy X-ray beams produce higher contrast but also increase photon absorption in the patient, leading to a higher dose. Higher photon energies reduce patient absorption but increase the contribution of Compton scattering, leading to greater noise and poorer contrast. In interventional planning, beam quality is therefore optimised to balance image quality and patient dose~\cite{5,6}.
 
 \section{Dosimetry Fundamentals}
 

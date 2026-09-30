@@ -45,10 +45,8 @@
 %Straight Lines [id:da5075421281910572] 
 \draw    (136.62,154.55) -- (139.06,154.55) ;
 
-%Flowchart: Connector [id:dp9894655460576032] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (174.68,104.77) .. controls (174.68,101.3) and (177.41,98.49) .. (180.78,98.49) .. controls (184.14,98.49) and (186.87,101.3) .. (186.87,104.77) .. controls (186.87,108.24) and (184.14,111.06) .. (180.78,111.06) .. controls (177.41,111.06) and (174.68,108.24) .. (174.68,104.77) -- cycle ;
-%Straight Lines [id:da05474544120457914] 
-\draw    (179.56,104.77) -- (182,104.77) ;
+%Outer-shell vacancy left by the Auger electron (previously a filled electron)
+\draw  [color={rgb, 255:red, 81; green, 81; blue, 81 }  ,draw opacity=1 ,dash pattern={on 1.5pt off 1.5pt}] (174.68,104.77) .. controls (174.68,101.3) and (177.41,98.49) .. (180.78,98.49) .. controls (184.14,98.49) and (186.87,101.3) .. (186.87,104.77) .. controls (186.87,108.24) and (184.14,111.06) .. (180.78,111.06) .. controls (177.41,111.06) and (174.68,108.24) .. (174.68,104.77) -- cycle ;
 
 %Flowchart: Connector [id:dp20786805194406444] 
 \draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (75.89,104.52) .. controls (75.89,101.05) and (78.62,98.24) .. (81.99,98.24) .. controls (85.35,98.24) and (88.08,101.05) .. (88.08,104.52) .. controls (88.08,107.99) and (85.35,110.81) .. (81.99,110.81) .. controls (78.62,110.81) and (75.89,107.99) .. (75.89,104.52) -- cycle ;
@@ -66,6 +64,23 @@
 %Straight Lines [id:da7723098018749724] 
 \draw [color={rgb, 255:red, 81; green, 81; blue, 81 }  ,draw opacity=1 ]   (111.87,80.85) -- (165.75,49.23) ;
 \draw [shift={(168.34,47.71)}, rotate = 149.59] [fill={rgb, 255:red, 81; green, 81; blue, 81 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+
+%Outer-shell electron filling the inner-shell vacancy
+\draw [color={rgb, 255:red, 81; green, 81; blue, 81 }  ,draw opacity=1 ]   (87.49,100.19) -- (98.62,91.41) ;
+\draw [shift={(100.98,89.55)}, rotate = 141.76] [fill={rgb, 255:red, 81; green, 81; blue, 81 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+
+%Characteristic X-ray
+\begin{scope}[shift={(103,97)}, rotate=115]
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ] plot[domain=0:45, samples=121] (\x,{-4*sin(40*\x)}) -- (52,0) ;
+\draw [color={rgb, 255:red, 204; green, 153; blue, 0 }  ,draw opacity=1 ] (47.5,-4) -- (52,0) -- (47.5,4) ;
+\end{scope}
+
+%Auger electron
+\draw [color={rgb, 255:red, 81; green, 81; blue, 81 }  ,draw opacity=1 ]   (188.5,104.77) -- (216.68,104.77) ;
+\draw [shift={(219.68,104.77)}, rotate = 180] [fill={rgb, 255:red, 81; green, 81; blue, 81 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+\draw  [draw opacity=0][fill={rgb, 255:red, 26; green, 111; blue, 223 }  ,fill opacity=1 ] (219.68,104.77) .. controls (219.68,101.3) and (222.41,98.49) .. (225.78,98.49) .. controls (229.14,98.49) and (231.87,101.3) .. (231.87,104.77) .. controls (231.87,108.24) and (229.14,111.06) .. (225.78,111.06) .. controls (222.41,111.06) and (219.68,108.24) .. (219.68,104.77) -- cycle ;
+\draw    (224.56,104.77) -- (227,104.77) ;
+
 %Straight Lines [id:da9869604236883974] 
 \draw    (51.87,180.79) -- (51.87,298.53) ;
 %Straight Lines [id:da20854584514519992] 
@@ -161,6 +176,10 @@
 \draw (121.87,120.51) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=left] {1};
 % Text Node
 \draw (121.87,140.62) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=left] {2};
+% Text Node (characteristic X-ray)
+\draw (79,132) node [anchor=east][inner sep=0.75pt] [font=\scriptsize] [align=right] {Characteristic\\X-ray};
+% Text Node (Auger electron)
+\draw (225.78,114) node [anchor=north][inner sep=0.75pt] [font=\scriptsize] [align=center] {Auger e$^-$};
 % Text Node
 \draw (140.1,301.16) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {$E_0$};
 % Text Node
@@ -170,7 +189,7 @@
 % Text Node
 \draw (363.2,140.62) node [anchor=north west][inner sep=0.75pt] [font=\tiny] [align=left] {2};
 % Text Node
-\draw (422.89,39) node [anchor=north west][inner sep=0.75pt] [font=\scriptsize] [align=left] {$E_c = \dfrac{E_0}{1 + \frac{E_0}{511}\left(1 - \cos\theta\right)}$};
+\draw (422.89,39) node [anchor=north west][inner sep=0.75pt] [font=\scriptsize] [align=left] {$E_c = \dfrac{E_0}{1 + \frac{E_0}{m_e c^2}\left(1 - \cos\theta\right)}$};
 % Text Node
 \draw (77.11,162.08) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {\textbf{Photoelectric Effect}};
 % Text Node
@@ -197,6 +216,5 @@
 \draw (121,322) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {\textbf{(a)}};
 % Text Node
 \draw (361,322) node [anchor=north west][inner sep=0.75pt] [font=\small] [align=left] {\textbf{(b)}};
-
 
 \end{tikzpicture}

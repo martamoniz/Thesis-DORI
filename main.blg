@@ -7,45 +7,45 @@ Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: Bibliografia.bib
 Warning--empty journal in 33
 Warning--empty year in 33
-You've used 94 entries,
+You've used 93 entries,
             1876 wiz_defined-function locations,
-            1005 strings with 24287 characters,
-and the built_in function-call counts, 26118 in all, are:
-= -- 2462
-> -- 1426
+            1000 strings with 24207 characters,
+and the built_in function-call counts, 25774 in all, are:
+= -- 2421
+> -- 1422
 < -- 5
-+ -- 518
-- -- 424
-* -- 2000
-:= -- 3837
-add.period$ -- 127
-call.type$ -- 94
-change.case$ -- 80
++ -- 516
+- -- 423
+* -- 1977
+:= -- 3795
+add.period$ -- 126
+call.type$ -- 93
+change.case$ -- 79
 chr.to.int$ -- 0
-cite$ -- 96
-duplicate$ -- 1191
-empty$ -- 2199
-format.name$ -- 424
-if$ -- 6170
+cite$ -- 95
+duplicate$ -- 1173
+empty$ -- 2168
+format.name$ -- 423
+if$ -- 6084
 int.to.chr$ -- 0
-int.to.str$ -- 94
-missing$ -- 80
-newline$ -- 319
-num.names$ -- 91
-pop$ -- 285
+int.to.str$ -- 93
+missing$ -- 79
+newline$ -- 316
+num.names$ -- 90
+pop$ -- 284
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 881
+skip$ -- 863
 stack$ -- 0
-substring$ -- 1542
-swap$ -- 532
+substring$ -- 1502
+swap$ -- 521
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 227
-width$ -- 96
-write$ -- 910
+while$ -- 223
+width$ -- 95
+write$ -- 900
 (There were 2 warnings)

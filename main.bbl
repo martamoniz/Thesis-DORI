@@ -362,10 +362,33 @@ S.~Poudel, L.~Weir, D.~Dowling, and D.~C. Medich, ``Changes in occupational
   \url{https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/}, 2026.
 \newblock Accessed: 2026-07-19.
 
+\bibitem{broadcom2025afbrs4n22}
+{Broadcom Inc.}, ``{AFBR-S4N22P014M} {NUV-MT} silicon photomultiplier array,''
+  July 2025.
+\newblock Data sheet AFBR-S4N22P014M-DS105. Accessed: Oct.~4, 2026.
+
+\bibitem{luxiumfibers}
+{Luxium Solutions}, ``Plastic fiber: Scintillating and light transmitting.''
+\newblock Product page for the BCF series of scintillating fibres. Accessed:
+  Oct.~4, 2026.
+
+\bibitem{keithley2011model6487}
+{Keithley Instruments, Inc.}, {\em Model 6487 Picoammeter/Voltage Source
+  Reference Manual}.
+\newblock Keithley Instruments, Inc., 2011.
+\newblock Document number 6487-901-01 Rev.~B.
+
 \bibitem{oxford2019apogee}
 {Oxford Instruments}, {\em Apogee 5500 Series: Radiation Shielded {X}-ray Tube
   Technical Datasheet}.
 \newblock Oxford Instruments plc, Scotts Valley, CA, USA, June 2019.
+
+\bibitem{Danevich2014}
+F.~A. Danevich, V.~V. Kobychev, R.~V. Kobychev, H.~Kraus, V.~B. Mikhailik,
+  V.~M. Mokina, and I.~M. Solsky, ``Impact of geometry on light collection
+  efficiency of scintillation detectors for cryogenic rare event searches,''
+  {\em Nuclear Instruments and Methods in Physics Research Section B: Beam
+  Interactions with Materials and Atoms}, vol.~336, pp.~26--30, 2014.
 
 \bibitem{128}
 Luxium Solutions, {\em {BC-400}, {BC-404}, {BC-408}, {BC-412}, {BC-416} Premium

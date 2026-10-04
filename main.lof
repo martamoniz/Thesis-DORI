@@ -10,36 +10,38 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Scatter radiation distribution in IR environment.}}{8}{figure.caption.16}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Conceptual design of the proposed dosimeter.}}{12}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6}{\ignorespaces SiPM bias supply.}}{16}{figure.caption.22}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Architecture of the proposed dosimeter.}}{17}{figure.caption.23}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Prototype test board.}}{17}{figure.caption.24}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{17}{subfigure.8.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{17}{subfigure.8.2}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Transient response of the pulse shaping chain.}}{20}{figure.caption.27}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Firmware workflow diagram.}}{21}{figure.caption.29}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Transient response of the pulse discrimination chain.}}{23}{figure.caption.31}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Pulse height spectra and decay schemes of the CsI(Tl) calibration sources.}}{26}{figure.caption.32}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Channel-to-energy calibration of the front-end electronics with the CsI(Tl) crystal.}}{27}{figure.caption.33}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Preliminary measurement setup.}}{14}{figure.caption.22}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Mean current as a function of the SiPM bias voltage.}}{15}{figure.caption.23}%
+\contentsline {figure}{\numberline {8}{\ignorespaces SiPM bias supply.}}{16}{figure.caption.24}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Architecture of the proposed dosimeter.}}{17}{figure.caption.25}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Prototype test board.}}{18}{figure.caption.26}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{18}{subfigure.10.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{18}{subfigure.10.2}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Transient response of the pulse shaping chain.}}{20}{figure.caption.29}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Firmware workflow diagram.}}{22}{figure.caption.31}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Transient response of the pulse discrimination chain.}}{24}{figure.caption.33}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Pulse height spectra and decay schemes of the CsI(Tl) calibration sources.}}{26}{figure.caption.34}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Channel-to-energy calibration of the front-end electronics with the CsI(Tl) crystal.}}{27}{figure.caption.35}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {14}{\ignorespaces \emph {Bremsstrahlung} Spectra.}}{28}{figure.caption.34}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{28}{subfigure.14.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{28}{subfigure.14.2}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Reference source spectra.}}{29}{figure.caption.36}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{29}{subfigure.15.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{29}{subfigure.15.2}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Energy calibration of the DORI prototype.}}{30}{figure.caption.37}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Dose calibration setup.}}{33}{figure.caption.39}%
-\contentsline {figure}{\numberline {18}{\ignorespaces ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.}}{33}{figure.caption.40}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{subfigure.18.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{subfigure.18.2}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Dose per count obtained for three binning schemes.}}{35}{figure.caption.41}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{35}{subfigure.19.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{35}{subfigure.19.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{35}{subfigure.19.3}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Reconstructed $H_p(10)$ rate as a function of tube current.}}{37}{figure.caption.43}%
+\contentsline {figure}{\numberline {16}{\ignorespaces \emph {Bremsstrahlung} Spectra.}}{28}{figure.caption.36}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{28}{subfigure.16.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{28}{subfigure.16.2}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Reference source spectra.}}{29}{figure.caption.38}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{29}{subfigure.17.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{29}{subfigure.17.2}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Energy calibration of the DORI prototype.}}{30}{figure.caption.39}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Dose calibration setup.}}{33}{figure.caption.41}%
+\contentsline {figure}{\numberline {20}{\ignorespaces ISO 4037 narrow-series qualities N-25, N-30 and N-40, acquired at 0.500~mA for 2 minutes.}}{33}{figure.caption.42}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{subfigure.20.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{subfigure.20.2}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Dose per count obtained for three binning schemes.}}{35}{figure.caption.43}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{35}{subfigure.21.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{35}{subfigure.21.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{35}{subfigure.21.3}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Reconstructed $H_p(10)$ rate as a function of tube current.}}{37}{figure.caption.45}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {21}{\ignorespaces Final DORI prototype.}}{40}{figure.caption.44}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Endpoint channel correspondence between the DORI-test board and the final prototype.}}{42}{figure.caption.46}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Final DORI prototype.}}{40}{figure.caption.46}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Endpoint channel correspondence between the DORI-test board and the final prototype.}}{42}{figure.caption.48}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

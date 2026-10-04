@@ -10,22 +10,47 @@
 \subsection{Experimental Setup}
 The concept proposed in the previous chapter relies on the premise that a PS read by a SiPM produces a measurable signal under X-rays in the relevant energy range. To become familiar with the detection chain, a first sensing element (a SiPM coupled to a PS) was assembled with the components available at the beginning of the project.
 
-The SiPM was a Broadcom AFBR-S4N22P014M~\cite{}, with a $2 \times 2$~mm$^2$ active area. Its breakdown voltage lies between 32 and 33~V at 25~$^{\circ}$C, and its photon detection efficiency peaks at 63\% at 420~nm, for a 12~V overvoltage. The scintillator was a BCF-12 fibre~\cite{}, whose emission peaks at 435~nm. A 5~mm length was cut from a 2~mm diameter fibre, and both ends were polished. The SiPM was mounted on a small PCB giving pin access to its anode and cathode, and optical silicone grease was applied between the SiPM and the fibre. As shown in Fig.~\ref{}~(a), the assembly was placed in a 3D-printed enclosure sealed with black tape to prevent light from entering. Current measurements were performed with a Keithley 6487 picoammeter~\cite{}, in the configuration shown in Fig.~\ref{}~(b). The same instrument also biased the SiPM. Two configurations were measured: the SiPM alone and the SiPM coupled to the fibre. In both, X-rays were produced by the Apogee 5500 Series tube (Oxford Instruments) used throughout this work, a 50~W tube that operates from 0 to 50~kV with a maximum current of 1.0~mA~\cite{oxford2019apogee}.
+The SiPM was a Broadcom AFBR-S4N22P014M~\cite{broadcom2025afbrs4n22}, with a $2 \times 2$~mm$^2$ active area. Its breakdown voltage lies between 32 and 33~V at 25~$^{\circ}$C, and its photon detection efficiency peaks at 63\% at 420~nm, for a 12~V overvoltage. The scintillator was a BCF-12 fibre~\cite{luxiumfibers}, whose emission peaks at 435~nm. A 5~mm length was cut from a 2~mm diameter fibre, and both ends were polished. The SiPM was mounted on a small PCB giving pin access to its anode and cathode, and optical silicone grease was applied between the SiPM and the fibre. As shown in Fig.~\ref{fig:prelim_setup}~(a), the assembly was placed in a 3D-printed enclosure sealed with black tape to prevent light from entering. Current measurements were performed with a Keithley 6487 picoammeter~\cite{keithley2011model6487}, in the configuration shown in Fig.~\ref{fig:prelim_setup}~(b). The same instrument also biased the SiPM. Two configurations were measured: the SiPM alone and the SiPM coupled to the fibre. In both, X-rays were produced by the Apogee 5500 Series tube (Oxford Instruments) used throughout this work, a 50~W tube that operates from 0 to 50~kV with a maximum current of 1.0~mA~\cite{oxford2019apogee}.
+\begin{figure}[H]
+  \centering
+  \resizebox{0.85\linewidth}{!}{\input{figures/prelim_setup}}
+  \caption[Preliminary measurement setup.]{%
+    Preliminary measurement setup.
+    \textbf{(a)} Radiograph of the SiPM and fibre assembly inside the 3D-printed enclosure. Tube voltage and current were not recorded.
+    \textbf{(b)} Bias and current measurement circuit with the Keithley 6487.
+  }
+  \label{fig:prelim_setup}
+\end{figure}
 
 \subsection{Results}
-Fig.~\ref{} shows the mean current as a function of the SiPM bias voltage, for both configurations and all tested tube voltages. Below 30~V, the current remains at the nanoampere level in all cases. It is leakage current, since the electric field is not sufficient to trigger avalanches, even under irradiation. Beyond the grey band, the SiPM operates in Geiger mode and the dark current rises. In this region, with the tube off, both configurations converge, so the baseline is the SiPM's own dark current. In the presence of radiation, the measured signal is dominated by the fibre. Although, in all cases, the interaction of X-rays in the silicon raises the measured current, the signal due to radiation increases by at least one order of magnitude with the fibre. The least distinct case is 15~kV, consistent with the lower photon fluence at this tube voltage. Direct interaction in the SiPM is therefore a minor contribution, and coupling the SiPM to a PS produces a distinct signal.
+Fig.~\ref{fig:preliminary_fibre_comparison} shows the mean current as a function of the SiPM bias voltage, for both configurations and all tested tube voltages. Below 30~V, the current remains at the nanoampere level in all cases. It is leakage current, since the electric field is not sufficient to trigger avalanches, even under irradiation. Beyond the grey band, the SiPM operates in Geiger mode and the dark current rises. In this region, with the tube off, both configurations converge, so the baseline is the SiPM's own dark current. In the presence of radiation, the measured signal is dominated by the fibre. Although, in all cases, the interaction of X-rays in the silicon raises the measured current, the signal due to radiation increases by at least one order of magnitude with the fibre. The least distinct case is 15~kV, consistent with the lower photon fluence at this tube voltage. Direct interaction in the SiPM is therefore a minor contribution, and coupling the SiPM to a PS produces a distinct signal.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.90\linewidth]{images/preliminary_fibre_comparison.pdf}
+  \caption[Mean current as a function of the SiPM bias voltage.]{%
+    Mean current as a function of the SiPM bias voltage, for the SiPM alone and coupled to the fibre, at tube voltages of 0, 15, 30 and 50~kV and a tube current of 1~mA. 
+  }
+  \label{fig:preliminary_fibre_comparison}
+\end{figure}
+\section{Hardware Overview}
+With the detection principle validated, the PS selected for the prototype was a $5 \times 5 \times 5$~mm$^3$ BC-408 cube. Unlike the elongated fibre, the cube offers a larger interaction volume and a cross-section less dependent on the direction of incidence~\cite{Danevich2014}. BC-408 consists of a polyvinyltoluene base doped with fluorophores that shift the emission to a peak wavelength of 425~nm~\cite{128}, closer to the peak sensitivity of the SiPM. The photodetector was also replaced by the AFBR-S4N66P014M~\cite{131}, whose $6 \times 6$~mm$^2$ active area covers the full cross-section of the PS, maximising light collection.
 
-\section{Hardware Development}
-With the detection principle validated, the PS selected for the prototype was a $5 \times 5 \times 5$~mm$^3$ BC-408 cube. Unlike the elongated fibre, the cube offers a larger interaction volume and a cross-section less dependent on the direction of incidence~\cite{}. BC-408 consists of a polyvinyltoluene base doped with fluorophores that shift the emission to a peak wavelength of 425~nm~\cite{128}, closer to the peak sensitivity of the SiPM. The photodetector was also replaced by the AFBR-S4N66P014M~\cite{131}, whose $6 \times 6$~mm$^2$ active area covers the full cross-section of the PS, maximising light collection.
-
-Since each microcell fires at most once per event, the number of fired cells must remain well below the 22\,428 microcells of the SiPM~\cite{131}. With a light yield of 10\,000~photons/MeV~\cite{}, BC-408 produces about 1\,000 photons at 100~keV, the upper limit of the target range. Even with complete light collection and the 63\% peak photon detection efficiency of the SiPM, this corresponds to at most about 630 fired cells, fulfilling this requirement.
+Since each microcell fires at most once per event, the number of fired cells must remain well below the 22\,428 microcells of the SiPM~\cite{131}. With a light yield of 10\,000~photons/MeV~\cite{128}, BC-408 produces about 1\,000 photons at 100~keV, the upper limit of the target range. Even with complete light collection and the 63\% peak photon detection efficiency of the SiPM, this corresponds to at most about 630 fired cells, fulfilling this requirement.
 
 
 \subsection{SiPM Power Supply}
 \label{sec:sipm_power_supply}
 Although gain increases with overvoltage, so do the dark count rate and crosstalk probability, which in excess mask the low-energy end of the spectrum. For the 20 to 100~keV range, an overvoltage of about 4~V provides enough gain for these events to sit above noise levels. The operating voltage was therefore set to 37~V. The bias is generated by a MAX1932~\cite{132}, whose output is programmed by the MCU through a Serial Peripheral Interface (SPI). The MCU writes an eight-bit code to the internal digital-to-analogue converter (DAC) of the power supply.
 
-A fixed 37~V output does not account for the variation of the breakdown voltage with temperature, which increases at 30~mV/$^\circ$C according to the SiPM datasheet~\cite{131}. Since gain depends on the overvoltage, a constant bias means the gain decreases as temperature rises. The same deposited energy then produces a different pulse amplitude, affecting the energy calibration and the derived dose. To compensate for this, a negative temperature coefficient (NTC) thermistor was added to the feedback network, as recommended in the MAX1932 datasheet~\cite{132} and shown in Fig.~\ref{fig:bias}. The total resistance between the feedback (FB) node and ground is~\cite{132}:
+A fixed 37~V output does not account for the variation of the breakdown voltage with temperature, which increases at 30~mV/$^\circ$C according to the SiPM datasheet~\cite{131}. Since gain depends on the overvoltage, a constant bias means the gain decreases as temperature rises. The same deposited energy then produces a different pulse amplitude, affecting the energy calibration and the derived dose. To compensate for this, a negative temperature coefficient (NTC) thermistor was added to the feedback (FB) network, as recommended in the MAX1932 datasheet~\cite{132} and shown in Fig.~\ref{fig:bias}.
+\begin{figure}[H]
+  \centering
+  \resizebox{!}{5.2cm}{\input{figures/MAX1932}}
+  \caption[SiPM bias supply.]{MAX1932 feedback network with the NTC thermistor $R_T$ for temperature compensation of the SiPM bias. Pin labels on the left correspond to SPI connections.}
+  \label{fig:bias}
+\end{figure}
+
+\noindent The total resistance between the feedback node and ground is~\cite{132}:
 
 \begin{equation}
 R_\text{total}(T) = R_8 + \frac{R_9\,R_T(T)}{R_9 + R_T(T)},
@@ -42,26 +67,21 @@ where $V_\text{DAC}$ is the DAC output voltage. The compensation condition requi
 \label{eq:slope}
 \end{equation}
 where $\beta$ is the thermistor constant and $T$ the absolute temperature. Solving this condition together with Eqs.~\ref{eq:rtotal} and \ref{eq:vout_max} and the component selection equations of the datasheet~\cite{132} yields $R_5 = 91$~k$\Omega$, $R_6 = 27$~k$\Omega$, $R_8 = 2.4$~k$\Omega$, and $R_9 = 910$~$\Omega$.
-\begin{figure}[H]
-  \centering
-  \resizebox{!}{5.2cm}{\input{figures/MAX1932}}
-  \caption[SiPM bias supply.]{MAX1932 feedback network with the NTC thermistor $R_T$ for temperature compensation of the SiPM bias. Pin labels on the left correspond to SPI connections.}
-  \label{fig:bias}
-\end{figure}
-\noindent Finally, the DAC code was set so that the output is 37~V at the operating temperature of the board.
+
+Finally, the DAC code was set so that the output is 37~V at the operating temperature of the board.
 
 
 \subsection{Front-End Electronics}
 \label{sec:front_end}
 The front-end electronics perform the pulse-mode readout of the SiPM response. The architecture developed for this purpose is represented by the simplified block diagram in Fig.~\ref{fig:architecture}, and includes three stages. Pulse shaping integrates and filters the SiPM current into a voltage pulse whose amplitude is proportional to the collected charge. Pulse discrimination then compares this pulse against a reference threshold, rejecting noise, and retains its peak amplitude. Pulse sampling digitises the held value through an Analog-to-Digital Converter (ADC) and transmits it to the MCU. Each stage is detailed in the following sections.
-
-The front-end electronics were assembled on a printed circuit board (PCB), which also integrates the ESP32-C3, the MAX1932 bias supply and the SiPM described previously. The prototype test board is shown in Fig.~\ref{fig:pcb} (a). The scintillator and the SiPM are not soldered directly on the board. Instead, the two are optically coupled and enclosed in an individual light-tight printed box, connected to the readout chain through a pin header. This arrangement allows the detector elements to be replaced without reworking the board, so that different configurations can be evaluated with the same electronics. All measurements presented in this work were performed with three sealed radioactive sources, $^{241}$Am, $^{109}$Cd and $^{57}$Co, selected because their emissions fall within the energy range of interest. Further information on their activities can be found in Appendix~A. A test box was 3D printed to align each source with the active area of the photosensitive housing, as shown in Fig.~\ref{fig:pcb} (b). The box additionally reduces the handling of the sources and allows a greater distance to be maintained during testing, contributing to a lower radiation exposure.
 \begin{figure}[H]
   \centering
   \resizebox{\linewidth}{!}{\input{figures/Architecture.tex}}
   \caption[Architecture of the proposed dosimeter.]{Architecture of the proposed dosimeter.}
   \label{fig:architecture}
 \end{figure}
+
+The front-end electronics were assembled on a printed circuit board (PCB), which also integrates the ESP32-C3, the MAX1932 bias supply and the SiPM described previously. The prototype test board is shown in Fig.~\ref{fig:pcb} (a). The scintillator and the SiPM are not soldered directly on the board. Instead, it is the same arrangement of Fig.~\ref{fig:prelim_setup} (a), in a light-tight printed box connected to the readout chain through a pin header. This allows the detector elements to be replaced without reworking the board, so that different configurations can be evaluated with the same electronics. All measurements presented in this work were performed with three sealed radioactive sources, $^{241}$Am, $^{109}$Cd and $^{57}$Co, selected because their emissions fall within the energy range of interest. Further information on their activities can be found in Appendix~A. A test box was 3D printed to align each source with the active area of the photosensitive housing, as shown in Fig.~\ref{fig:pcb} (b). The box additionally reduces the handling of the sources and allows a greater distance to be maintained during testing, contributing to a lower radiation exposure.
 
 \begin{figure}[H]
   \centering
@@ -162,14 +182,14 @@ The $^{241}$Am source was nevertheless used to guide the gain. The pulses genera
 
 The transient response of the shaping chain to a single $^{241}$Am event is shown in Fig.~\ref{fig:shaping_chain}. The associated time metrics, extracted over the full set of acquired waveforms, are summarised in Table~\ref{tab:shaping}.
 
-The integration at the CSA produces a negative pulse, since the charge is collected onto $C_f$ in an inverting configuration, and this polarity is preserved through the differentiating network. The inverting topology adopted for the last integrating stage restores a positive output at the shaper, as required by the single-positive-supply operation of the subsequent stages. A residual undershoot is nevertheless observed at every stage, originating from the CSA. Its relative magnitude is not increased along the chain, which would be the case in the absence of $R_{pz}$. The gain at the final stage was decreased, so that events of this energy are sampled towards the lower end of the available bins, as discussed. 
-
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth]{images/shaping_chain_trace00001.pdf}
   \caption[Transient response of the pulse shaping chain.]{Transient response of the CSA (grey), PZC (blue) and shaper (green) to a single $^{241}$Am event.}
   \label{fig:shaping_chain}
 \end{figure}
+
+The integration at the CSA produces a negative pulse, since the charge is collected onto $C_f$ in an inverting configuration, and this polarity is preserved through the differentiating network. The inverting topology adopted for the last integrating stage restores a positive output at the shaper, as required by the single-positive-supply operation of the subsequent stages. A residual undershoot is nevertheless observed at every stage, originating from the CSA. Its relative magnitude is not increased along the chain, which would be the case in the absence of $R_{pz}$. The gain at the final stage was decreased, so that events of this energy are sampled towards the lower end of the available bins, as discussed. 
 
 \vspace{1em}
 
@@ -190,13 +210,13 @@ The integration at the CSA produces a negative pulse, since the charge is collec
     \midrule
     Amplitude range (mV)            & 191--861        & 87--430         & 61--407         \\
     Peaking time (ns)               & $147 \pm 28$    & $135 \pm 25$    & $387 \pm 50$    \\
-    Width at 90\% of peak (ns)      & $208 \pm 167$   & $192 \pm 141$   & $400 \pm 154$   \\
-    Total shaping time ($\mu$s)     & $1.42 \pm 0.09$ & $1.26 \pm 0.07$ & $1.96 \pm 0.09$ \\
+    Width at 90\% of peak (ns)      & $209 \pm 11$    & $188 \pm 12$    & $397 \pm 22$    \\
+    Pulse duration ($\mu$s)         & $1.42 \pm 0.09$ & $1.26 \pm 0.07$ & $1.96 \pm 0.09$ \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-The main effect of the shaping is the redistribution of the signal in time. The semi-Gaussian output is broader and the time taken to reach the maximum is increased from $147 \pm 28$~ns at the CSA output to $387 \pm 50$~ns at the shaper, even though the latter has a lower amplitude. The interval over which the signal remains within 90\% of its maximum is doubled, from $208 \pm 167$~ns to $400 \pm 154$~ns. These effects are intended, since the amplitude is retained through comparator logic, and a maximum that is both delayed and sustained reduces the timing demands imposed on both the hardware and firmware. Within a broad range of amplitudes, the total pulse duration is consistent across events, as it is set by the time constants selected for this network. At the shaper output, the pulse lasts $1.96 \pm 0.09$~$\mu$s. This is the pulse that the subsequent stages discriminate and sample.
+The main effect of the shaping is the redistribution of the signal in time. The semi-Gaussian output is broader and the time taken to reach the maximum is increased from $147 \pm 28$~ns at the CSA output to $387 \pm 50$~ns at the shaper, even though the latter has a lower amplitude. The interval over which the signal remains within 90\% of its maximum is doubled, from $209 \pm 11$~ns to $397 \pm 22$~ns. These effects are intended, since the amplitude is retained through comparator logic, and a maximum that is both delayed and sustained reduces the timing demands imposed on both the hardware and firmware. Within a broad range of amplitudes, the total pulse duration is consistent across events, as it is set by the time constants selected for this network. At the shaper output, the pulse lasts $1.96 \pm 0.09$~$\mu$s. This is the pulse that the subsequent stages discriminate and sample.
 \section{Pulse Discrimination}
 \label{sec:pulse_discrimination}
 Pulse discrimination distinguishes real X-ray events from electronic noise and retains the amplitude of those accepted for digitisation. This process is coordinated by the MCU firmware, summarised in Fig.~\ref{fig:firmware} and detailed in the following subsections. In general terms, after the chain is initialised (grey), the MCU waits at an event decision (red), driven by the comparator output (green). Each accepted event then starts a readout sequence (yellow), during which no further triggers are accepted.
@@ -217,7 +237,7 @@ V_{ref} = \frac{R_2}{R_1 + R_2} \cdot 3.3, \text{ unit: [V]}
 
 \noindent where $R_1$ is the resistor connecting the node to the supply, and $R_2$ the resistor between the divider node and ground. The threshold was set to 10 mV. This value was established from the shaper output acquired under dark count conditions of the SiPM. The amplitudes of these events lie predominantly below 10 mV. The condition is satisfied by $R_1 = 33$ k$\Omega$ and $R_2 = 100$ $\Omega$.
 
-A dedicated pin of the ESP32-C3 is connected to the logic output of the comparator and configured as an interrupt. Whenever the input exceeds $V_{ref}$, the comparator output switches to the logic HIGH level. The pin is monitored continuously by dedicated hardware within the MCU, so the transition is registered as soon as it occurs. Detection initiates the readout sequence of Fig.~\ref{fig:firmware}, and the interrupt is detached for its duration. It is reattached once the loop has terminated.
+A dedicated pin of the ESP32-C3 is connected to the logic output of the comparator and configured as an interrupt. Whenever the input exceeds $V_{ref}$, the comparator output switches to the logic HIGH level. The pin is monitored continuously the dedicated hardware within the MCU, so the transition is registered as soon as it occurs. Detection initiates the readout sequence of Fig.~\ref{fig:firmware}, and the interrupt is detached for its duration. It is reattached once the loop has terminated.
 
 \subsection{Peak-and-Hold}
 Simultaneously, the shaper output is fed to a Peak-and-Hold (P\&H) circuit. A P\&H captures the maximum of the input signal and sustains it after the pulse has decayed, extending the interval over which the peak amplitude remains available. The analogue conversion can then be performed more accurately. Given the small amplitude of the events, a configuration based on a precision rectifier was adopted~\cite{Franco2015}. The circuit alternates between two modes. While the shaped pulse is rising, the amplifier is enclosed in a feedback loop that charges a hold capacitor $C_H$, and the capacitor voltage follows the input. This is the track mode. Once the maximum has passed the loop is broken and the peak voltage is retained, read through a buffer. Both amplifiers are implemented with the OPA354~\cite{OPA354}, whose input draws negligible current, so the stored charge is not drained by the buffer. This is the hold mode. The value $C_H = 470$~pF reflects a compromise between the two. A larger capacitance reduces droop during hold, but is charged more slowly, and the higher pulses would no longer be tracked to their maximum~\cite{Franco2015,Horowitz2015}.

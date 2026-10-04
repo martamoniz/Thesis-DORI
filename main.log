@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  30 SEP 2026 11:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.15)  4 OCT 2026 14:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -877,7 +877,7 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 1
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<uaLogoNew.pdf, id=162, 60.225pt x 75.28125pt>
+<uaLogoNew.pdf, id=182, 60.225pt x 75.28125pt>
 File: uaLogoNew.pdf Graphic file (type pdf)
 <use uaLogoNew.pdf>
 Package pdftex.def Info: uaLogoNew.pdf  used on input line 142.
@@ -958,200 +958,200 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.252 \EndTitlePage
-                    [1] (main.toc)
+                    [1] (main.toc [1
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [1
-
-] (main.lof)
+ [2] (main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [2
+ [3
 
 {C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] (main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [3
+ [4
 
 ] (lista_acronimos.tex
 
-LaTeX Warning: Hyper reference `acro:ADC' on page iv undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:ADC' on page v undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:ADC' on page iv undefined on input line 5.
+LaTeX Warning: Hyper reference `acro:ADC' on page v undefined on input line 5.
 
 
-LaTeX Warning: Hyper reference `acro:ALARA' on page iv undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:ALARA' on page v undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:ALARA' on page iv undefined on input line 6.
+LaTeX Warning: Hyper reference `acro:ALARA' on page v undefined on input line 6.
 
 
-LaTeX Warning: Hyper reference `acro:APD' on page iv undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:APD' on page v undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:APD' on page iv undefined on input line 7.
+LaTeX Warning: Hyper reference `acro:APD' on page v undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `acro:BLE' on page iv undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:BLE' on page v undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:BLE' on page iv undefined on input line 8.
+LaTeX Warning: Hyper reference `acro:BLE' on page v undefined on input line 8.
 
 
-LaTeX Warning: Hyper reference `acro:CAD' on page iv undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:CAD' on page v undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:CAD' on page iv undefined on input line 9.
+LaTeX Warning: Hyper reference `acro:CAD' on page v undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `acro:CE' on page iv undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:CE' on page v undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:CE' on page iv undefined on input line 10.
+LaTeX Warning: Hyper reference `acro:CE' on page v undefined on input line 10.
 
 
-LaTeX Warning: Hyper reference `acro:CSA' on page iv undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:CSA' on page v undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:CSA' on page iv undefined on input line 11.
+LaTeX Warning: Hyper reference `acro:CSA' on page v undefined on input line 11.
 
 
-LaTeX Warning: Hyper reference `acro:DAC' on page iv undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:DAC' on page v undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:DAC' on page iv undefined on input line 12.
+LaTeX Warning: Hyper reference `acro:DAC' on page v undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:DORI' on page iv undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:DORI' on page v undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:DORI' on page iv undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:DORI' on page v undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:FWHM' on page iv undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:FWHM' on page v undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:FWHM' on page iv undefined on input line 14.
+LaTeX Warning: Hyper reference `acro:FWHM' on page v undefined on input line 14.
 
 
-LaTeX Warning: Hyper reference `acro:HVL' on page iv undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:HVL' on page v undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:HVL' on page iv undefined on input line 15.
+LaTeX Warning: Hyper reference `acro:HVL' on page v undefined on input line 15.
 
 
-LaTeX Warning: Hyper reference `acro:ICRP' on page iv undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:ICRP' on page v undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:ICRP' on page iv undefined on input line 16.
+LaTeX Warning: Hyper reference `acro:ICRP' on page v undefined on input line 16.
 
 
-LaTeX Warning: Hyper reference `acro:ICRU' on page iv undefined on input line 17.
+LaTeX Warning: Hyper reference `acro:ICRU' on page v undefined on input line 17.
 
 
-LaTeX Warning: Hyper reference `acro:ICRU' on page iv undefined on input line 17.
+LaTeX Warning: Hyper reference `acro:ICRU' on page v undefined on input line 17.
 
 
-LaTeX Warning: Hyper reference `acro:IR' on page iv undefined on input line 18.
+LaTeX Warning: Hyper reference `acro:IR' on page v undefined on input line 18.
 
 
-LaTeX Warning: Hyper reference `acro:IR' on page iv undefined on input line 18.
+LaTeX Warning: Hyper reference `acro:IR' on page v undefined on input line 18.
 
 
-LaTeX Warning: Hyper reference `acro:ISO' on page iv undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:ISO' on page v undefined on input line 19.
 
 
-LaTeX Warning: Hyper reference `acro:ISO' on page iv undefined on input line 19.
+LaTeX Warning: Hyper reference `acro:ISO' on page v undefined on input line 19.
 
 
-LaTeX Warning: Hyper reference `acro:KERMA' on page iv undefined on input line 20.
+LaTeX Warning: Hyper reference `acro:KERMA' on page v undefined on input line 20.
 
 
-LaTeX Warning: Hyper reference `acro:KERMA' on page iv undefined on input line 20.
+LaTeX Warning: Hyper reference `acro:KERMA' on page v undefined on input line 20.
 
 
-LaTeX Warning: Hyper reference `acro:LED' on page iv undefined on input line 21.
+LaTeX Warning: Hyper reference `acro:LED' on page v undefined on input line 21.
 
 
-LaTeX Warning: Hyper reference `acro:LED' on page iv undefined on input line 21.
+LaTeX Warning: Hyper reference `acro:LED' on page v undefined on input line 21.
 
 
-LaTeX Warning: Hyper reference `acro:LET' on page iv undefined on input line 22.
+LaTeX Warning: Hyper reference `acro:LET' on page v undefined on input line 22.
 
 
-LaTeX Warning: Hyper reference `acro:LET' on page iv undefined on input line 22.
+LaTeX Warning: Hyper reference `acro:LET' on page v undefined on input line 22.
 
 
-LaTeX Warning: Hyper reference `acro:LiPo' on page iv undefined on input line 23.
+LaTeX Warning: Hyper reference `acro:LiPo' on page v undefined on input line 23.
 
 
-LaTeX Warning: Hyper reference `acro:LiPo' on page iv undefined on input line 23.
+LaTeX Warning: Hyper reference `acro:LiPo' on page v undefined on input line 23.
 
 
-LaTeX Warning: Hyper reference `acro:MCU' on page iv undefined on input line 24.
+LaTeX Warning: Hyper reference `acro:MCU' on page v undefined on input line 24.
 
 
-LaTeX Warning: Hyper reference `acro:MCU' on page iv undefined on input line 24.
+LaTeX Warning: Hyper reference `acro:MCU' on page v undefined on input line 24.
 
 
-LaTeX Warning: Hyper reference `acro:MOSFET' on page iv undefined on input line 25.
+LaTeX Warning: Hyper reference `acro:MOSFET' on page v undefined on input line 25.
 
 
-LaTeX Warning: Hyper reference `acro:MOSFET' on page iv undefined on input line 25.
+LaTeX Warning: Hyper reference `acro:MOSFET' on page v undefined on input line 25.
 
 
-LaTeX Warning: Hyper reference `acro:NTC' on page iv undefined on input line 26.
+LaTeX Warning: Hyper reference `acro:NTC' on page v undefined on input line 26.
 
 
-LaTeX Warning: Hyper reference `acro:NTC' on page iv undefined on input line 26.
+LaTeX Warning: Hyper reference `acro:NTC' on page v undefined on input line 26.
 
 
-LaTeX Warning: Hyper reference `acro:PCB' on page iv undefined on input line 27.
+LaTeX Warning: Hyper reference `acro:PCB' on page v undefined on input line 27.
 
 
-LaTeX Warning: Hyper reference `acro:PCB' on page iv undefined on input line 27.
+LaTeX Warning: Hyper reference `acro:PCB' on page v undefined on input line 27.
 
 
-LaTeX Warning: Hyper reference `acro:PMMA' on page iv undefined on input line 28.
+LaTeX Warning: Hyper reference `acro:PMMA' on page v undefined on input line 28.
 
 
-LaTeX Warning: Hyper reference `acro:PMMA' on page iv undefined on input line 28.
+LaTeX Warning: Hyper reference `acro:PMMA' on page v undefined on input line 28.
 
 
-LaTeX Warning: Hyper reference `acro:PS' on page iv undefined on input line 29.
+LaTeX Warning: Hyper reference `acro:PS' on page v undefined on input line 29.
 
 
-LaTeX Warning: Hyper reference `acro:PS' on page iv undefined on input line 29.
+LaTeX Warning: Hyper reference `acro:PS' on page v undefined on input line 29.
 
 
-LaTeX Warning: Hyper reference `acro:PZC' on page iv undefined on input line 30.
+LaTeX Warning: Hyper reference `acro:PZC' on page v undefined on input line 30.
 
 
-LaTeX Warning: Hyper reference `acro:PZC' on page iv undefined on input line 30.
+LaTeX Warning: Hyper reference `acro:PZC' on page v undefined on input line 30.
 
 
-LaTeX Warning: Hyper reference `acro:SiPM' on page iv undefined on input line 31.
+LaTeX Warning: Hyper reference `acro:SiPM' on page v undefined on input line 31.
 
 
-LaTeX Warning: Hyper reference `acro:SiPM' on page iv undefined on input line 31.
+LaTeX Warning: Hyper reference `acro:SiPM' on page v undefined on input line 31.
 
 
-LaTeX Warning: Hyper reference `acro:SPI' on page iv undefined on input line 32.
+LaTeX Warning: Hyper reference `acro:SPI' on page v undefined on input line 32.
 
 
-LaTeX Warning: Hyper reference `acro:SPI' on page iv undefined on input line 32.
+LaTeX Warning: Hyper reference `acro:SPI' on page v undefined on input line 32.
 
 
-LaTeX Warning: Hyper reference `acro:USB' on page iv undefined on input line 33.
+LaTeX Warning: Hyper reference `acro:USB' on page v undefined on input line 33.
 
 
-LaTeX Warning: Hyper reference `acro:USB' on page iv undefined on input line 33.
+LaTeX Warning: Hyper reference `acro:USB' on page v undefined on input line 33.
 
-) [4
+) [5
 
 ] (chapters/contextualization.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1167,7 +1167,7 @@ l.1 \newpage
 
 ]
 Chapter 1.
-<images/interventional radiology setup.pdf, id=413, 1682.285pt x 894.34125pt>
+<images/interventional radiology setup.pdf, id=439, 1682.285pt x 894.34125pt>
 File: images/interventional radiology setup.pdf Graphic file (type pdf)
 <use images/interventional radiology setup.pdf>
 Package pdftex.def Info: images/interventional radiology setup.pdf  used on input line 12.
@@ -1180,59 +1180,63 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 184.
 ) [3{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [4] [5{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] (figures/deterministic_stochastic.tex) [6] [7]
-<images/dose rates.png, id=559, 1445.4pt x 813.0375pt>
+<images/dose rates.png, id=583, 1445.4pt x 813.0375pt>
 File: images/dose rates.png Graphic file (type png)
 <use images/dose rates.png>
-Package pdftex.def Info: images/dose rates.png  used on input line 181.
+Package pdftex.def Info: images/dose rates.png  used on input line 178.
 (pdftex.def)             Requested size: 442.65375pt x 248.98715pt.
  [8 <./images/dose rates.png (PNG copy)>] [9]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 249.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 243.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [10]
-<images/fig_apd_benefits.pdf, id=649, 643.40375pt x 470.75874pt>
-File: images/fig_apd_benefits.pdf Graphic file (type pdf)
-<use images/fig_apd_benefits.pdf>
-Package pdftex.def Info: images/fig_apd_benefits.pdf  used on input line 255.
-(pdftex.def)             Requested size: 442.65375pt x 323.88289pt.
- [11{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./images/fig_apd_benefits.pdf>]) (chapters/chapter2.tex [12]
-Chapter 2.
-<images/DORI.pdf, id=745, 3814.25pt x 2057.6875pt>
+) [10{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+<images/DORI.pdf, id=694, 3814.25pt x 2057.6875pt>
 File: images/DORI.pdf Graphic file (type pdf)
 <use images/DORI.pdf>
-Package pdftex.def Info: images/DORI.pdf  used on input line 10.
+Package pdftex.def Info: images/DORI.pdf  used on input line 258.
 (pdftex.def)             Requested size: 442.65375pt x 238.77983pt.
-[13
+ [11] [12 <./images/DORI.pdf>]) (chapters/chapter2.tex [13]
+Chapter 2.
 
- <./images/DORI.pdf>] [14] [15] (figures/MAX1932.tex) (figures/Architecture.tex) [16] (figures/dori_teste.tex
-<images/pcb_teste.jpg, id=816, 613.54219pt x 453.19313pt>
+LaTeX Warning: Reference `' on page 14 undefined on input line 13.
+
+
+LaTeX Warning: Reference `' on page 14 undefined on input line 13.
+
+
+LaTeX Warning: Reference `' on page 14 undefined on input line 16.
+
+[14
+
+] (figures/MAX1932.tex) [15] (figures/Architecture.tex) [16] (figures/dori_teste.tex
+<images/pcb_teste.jpg, id=780, 613.54219pt x 453.19313pt>
 File: images/pcb_teste.jpg Graphic file (type jpg)
 <use images/pcb_teste.jpg>
 Package pdftex.def Info: images/pcb_teste.jpg  used on input line 10.
 (pdftex.def)             Requested size: 186.00198pt x 126.99693pt.
 ) (figures/Dori_box.tex
-<images/dori_case.jpg, id=817, 750.55406pt x 422.32782pt>
+<images/dori_case.jpg, id=781, 750.55406pt x 422.32782pt>
 File: images/dori_case.jpg Graphic file (type jpg)
 <use images/dori_case.jpg>
 Package pdftex.def Info: images/dori_case.jpg  used on input line 10.
 (pdftex.def)             Requested size: 199.99532pt x 127.09886pt.
 ) [17 <./images/pcb_teste.jpg> <./images/dori_case.jpg>] [18] [19]
-<images/shaping_chain_trace00001.pdf, id=870, 754.82pt x 494.84875pt>
+<images/shaping_chain_trace00001.pdf, id=833, 754.82pt x 494.84875pt>
 File: images/shaping_chain_trace00001.pdf Graphic file (type pdf)
 <use images/shaping_chain_trace00001.pdf>
-Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 177.
+Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 169.
 (pdftex.def)             Requested size: 442.65375pt x 290.1989pt.
- [20 <./images/shaping_chain_trace00001.pdf>] [21]
-<images/peak_hold_trace17.pdf, id=930, 409.53pt x 216.81pt>
+ [20 <./images/shaping_chain_trace00001.pdf>] (figures/firmwareDORI.tex) [21] [22]
+<images/peak_hold_trace17.pdf, id=898, 409.53pt x 216.81pt>
 File: images/peak_hold_trace17.pdf Graphic file (type pdf)
 <use images/peak_hold_trace17.pdf>
-Package pdftex.def Info: images/peak_hold_trace17.pdf  used on input line 232.
+Package pdftex.def Info: images/peak_hold_trace17.pdf  used on input line 233.
 (pdftex.def)             Requested size: 442.65375pt x 234.35973pt.
- [22 <./images/peak_hold_trace17.pdf>] [23] (figures/firmwareDORI.tex) [24]
-<images/spectra.pdf, id=980, 860.21375pt x 260.975pt>
+ [23 <./images/peak_hold_trace17.pdf>] [24]
+<images/spectra.pdf, id=942, 860.21375pt x 260.975pt>
 File: images/spectra.pdf Graphic file (type pdf)
 <use images/spectra.pdf>
-Package pdftex.def Info: images/spectra.pdf  used on input line 286.
+Package pdftex.def Info: images/spectra.pdf  used on input line 281.
 (pdftex.def)             Requested size: 442.65375pt x 134.29411pt.
  (figures/decay.tex (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -1240,131 +1244,138 @@ File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowlength=\dimen330
 \pgfarrowwidth=\dimen331
 \pgfarrowlinewidth=\dimen332
-)) [25 <./images/spectra.pdf>]
-<images/fit_csi.pdf, id=1030, 451.6875pt x 338.26375pt>
+)) [25]
+<images/fit_csi.pdf, id=951, 451.6875pt x 338.26375pt>
 File: images/fit_csi.pdf Graphic file (type pdf)
 <use images/fit_csi.pdf>
-Package pdftex.def Info: images/fit_csi.pdf  used on input line 308.
+Package pdftex.def Info: images/fit_csi.pdf  used on input line 302.
 (pdftex.def)             Requested size: 354.12434pt x 265.21245pt.
-) (chapters/chapter3.tex [26 <./images/fit_csi.pdf>]
+ [26 <./images/spectra.pdf>]) (chapters/chapter3.tex [27 <./images/fit_csi.pdf>]
 Chapter 3.
-<images/bremsstrahlung_fits.pdf, id=1104, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_fits.pdf, id=1070, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_fits.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_fits.pdf>
 Package pdftex.def Info: images/bremsstrahlung_fits.pdf  used on input line 12.
 (pdftex.def)             Requested size: 212.4719pt x 144.886pt.
-<images/bremsstrahlung_40kVp_vs_current.pdf, id=1105, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_40kVp_vs_current.pdf, id=1071, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_40kVp_vs_current.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_40kVp_vs_current.pdf>
 Package pdftex.def Info: images/bremsstrahlung_40kVp_vs_current.pdf  used on input line 18.
 (pdftex.def)             Requested size: 212.4719pt x 144.886pt.
-[27
+[28
 
  <./images/bremsstrahlung_fits.pdf> <./images/bremsstrahlung_40kVp_vs_current.pdf>]
-<images/plastic_Am-241.pdf, id=1182, 354.32375pt x 247.92625pt>
+<images/plastic_Am-241.pdf, id=1147, 354.32375pt x 247.92625pt>
 File: images/plastic_Am-241.pdf Graphic file (type pdf)
 <use images/plastic_Am-241.pdf>
 Package pdftex.def Info: images/plastic_Am-241.pdf  used on input line 74.
 (pdftex.def)             Requested size: 221.32687pt x 154.8703pt.
-<images/plastic_Co-57_fit.pdf, id=1183, 354.32375pt x 247.92625pt>
+<images/plastic_Co-57_fit.pdf, id=1148, 354.32375pt x 247.92625pt>
 File: images/plastic_Co-57_fit.pdf Graphic file (type pdf)
 <use images/plastic_Co-57_fit.pdf>
 Package pdftex.def Info: images/plastic_Co-57_fit.pdf  used on input line 80.
 (pdftex.def)             Requested size: 221.32687pt x 154.8703pt.
- [28 <./images/plastic_Am-241.pdf> <./images/plastic_Co-57_fit.pdf>]
-<images/energy.pdf, id=1279, 445.665pt x 322.20375pt>
+ [29 <./images/plastic_Am-241.pdf> <./images/plastic_Co-57_fit.pdf>]
+<images/energy.pdf, id=1245, 445.665pt x 322.20375pt>
 File: images/energy.pdf Graphic file (type pdf)
 <use images/energy.pdf>
 Package pdftex.def Info: images/energy.pdf  used on input line 95.
 (pdftex.def)             Requested size: 376.25838pt x 272.0259pt.
- [29 <./images/energy.pdf>] [30]
-<images/dose.pdf, id=1339, 748.03917pt x 354.48723pt>
+ [30 <./images/energy.pdf>]
+
+LaTeX Warning: Reference `sec:scintillator' on page 31 undefined on input line 119.
+
+
+LaTeX Warning: Reference `sec:scintillator' on page 31 undefined on input line 119.
+
+[31]
+<images/dose.pdf, id=1301, 748.03917pt x 354.48723pt>
 File: images/dose.pdf Graphic file (type pdf)
 <use images/dose.pdf>
 Package pdftex.def Info: images/dose.pdf  used on input line 160.
 (pdftex.def)             Requested size: 442.65375pt x 209.76768pt.
- [31]
-<images/fig1_spectra.pdf, id=1350, 355.3275pt x 249.93375pt>
+ [32]
+<images/fig1_spectra.pdf, id=1312, 355.3275pt x 249.93375pt>
 File: images/fig1_spectra.pdf Graphic file (type pdf)
 <use images/fig1_spectra.pdf>
 Package pdftex.def Info: images/fig1_spectra.pdf  used on input line 175.
 (pdftex.def)             Requested size: 221.32687pt x 155.68192pt.
-<images/fig2_reference.pdf, id=1351, 357.335pt x 248.93pt>
+<images/fig2_reference.pdf, id=1313, 357.335pt x 248.93pt>
 File: images/fig2_reference.pdf Graphic file (type pdf)
 <use images/fig2_reference.pdf>
 Package pdftex.def Info: images/fig2_reference.pdf  used on input line 181.
 (pdftex.def)             Requested size: 221.32687pt x 154.18306pt.
- [32 <./images/dose.pdf> <./images/fig1_spectra.pdf> <./images/fig2_reference.pdf>] [33]
-<images/weights2bin25_sub.pdf, id=1476, 332.24126pt x 287.0725pt>
+ [33 <./images/dose.pdf> <./images/fig1_spectra.pdf> <./images/fig2_reference.pdf>] [34]
+<images/weights2bin25_sub.pdf, id=1438, 332.24126pt x 287.0725pt>
 File: images/weights2bin25_sub.pdf Graphic file (type pdf)
 <use images/weights2bin25_sub.pdf>
 Package pdftex.def Info: images/weights2bin25_sub.pdf  used on input line 234.
 (pdftex.def)             Requested size: 212.4719pt x 183.58559pt.
-<images/weights2bin30_sub.pdf, id=1477, 332.24126pt x 287.0725pt>
+<images/weights2bin30_sub.pdf, id=1439, 332.24126pt x 287.0725pt>
 File: images/weights2bin30_sub.pdf Graphic file (type pdf)
 <use images/weights2bin30_sub.pdf>
 Package pdftex.def Info: images/weights2bin30_sub.pdf  used on input line 240.
 (pdftex.def)             Requested size: 212.4719pt x 183.58559pt.
-<images/weights3bin_sub.pdf, id=1478, 684.5575pt x 344.28625pt>
+<images/weights3bin_sub.pdf, id=1440, 684.5575pt x 344.28625pt>
 File: images/weights3bin_sub.pdf Graphic file (type pdf)
 <use images/weights3bin_sub.pdf>
 Package pdftex.def Info: images/weights3bin_sub.pdf  used on input line 247.
 (pdftex.def)             Requested size: 376.25838pt x 189.23718pt.
- [34 <./images/weights2bin25_sub.pdf> <./images/weights2bin30_sub.pdf> <./images/weights3bin_sub.pdf>] [35]
-<images/dose_rate_linearity.pdf, id=1553, 699.61375pt x 341.275pt>
+ [35 <./images/weights2bin25_sub.pdf> <./images/weights2bin30_sub.pdf> <./images/weights3bin_sub.pdf>] [36]
+<images/dose_rate_linearity.pdf, id=1516, 699.61375pt x 341.275pt>
 File: images/dose_rate_linearity.pdf Graphic file (type pdf)
 <use images/dose_rate_linearity.pdf>
 Package pdftex.def Info: images/dose_rate_linearity.pdf  used on input line 320.
 (pdftex.def)             Requested size: 442.65375pt x 215.9313pt.
- [36 <./images/dose_rate_linearity.pdf>]) (chapters/chapter4.tex [37]
+ [37 <./images/dose_rate_linearity.pdf>]) (chapters/chapter4.tex [38]
 Chapter 4.
 (figures/Final.tex
-<images/baixo.jpg, id=1607, 2182.40344pt x 1620.80531pt>
+<images/baixo.jpg, id=1569, 2182.40344pt x 1620.80531pt>
 File: images/baixo.jpg Graphic file (type jpg)
 <use images/baixo.jpg>
 Package pdftex.def Info: images/baixo.jpg  used on input line 13.
 (pdftex.def)             Requested size: 177.7261pt x 136.88866pt.
-<images/meio.jpg, id=1608, 513.41812pt x 594.72188pt>
+<images/meio.jpg, id=1570, 513.41812pt x 594.72188pt>
 File: images/meio.jpg Graphic file (type jpg)
 <use images/meio.jpg>
 Package pdftex.def Info: images/meio.jpg  used on input line 45.
 (pdftex.def)             Requested size: 135.7026pt x 145.99399pt.
-<images/cima.jpg, id=1609, 407.27156pt x 441.14813pt>
+<images/cima.jpg, id=1571, 407.27156pt x 441.14813pt>
 File: images/cima.jpg Graphic file (type jpg)
 <use images/cima.jpg>
 Package pdftex.def Info: images/cima.jpg  used on input line 78.
 (pdftex.def)             Requested size: 137.09709pt x 145.99667pt.
-) [38
+) [39
 
-] [39 <./images/baixo.jpg> <./images/meio.jpg> <./images/cima.jpg>] [40]
-<images/channel_transfer.pdf, id=1632, 451.6875pt x 328.22626pt>
+] [40 <./images/baixo.jpg> <./images/meio.jpg> <./images/cima.jpg>] [41]
+<images/channel_transfer.pdf, id=1595, 451.6875pt x 328.22626pt>
 File: images/channel_transfer.pdf Graphic file (type pdf)
 <use images/channel_transfer.pdf>
 Package pdftex.def Info: images/channel_transfer.pdf  used on input line 63.
 (pdftex.def)             Requested size: 376.25838pt x 273.42938pt.
- [41 <./images/channel_transfer.pdf>]) (chapters/chapter-conclusions.tex [42]
+ [42 <./images/channel_transfer.pdf>]) (chapters/chapter-conclusions.tex [43]
 Chapter 5.
-) (main.bbl [43
+) (main.bbl [44
 
-] [44
+] [45
 
-] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 258--262
+] [46]
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
 []\OT1/lmr/m/n/9 AuntMinnieEurope, ``RaySafe launches new i3 dose plat-form at ECR 2017.''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--262
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
 []$\OT1/lmtt/m/n/9 https : / / www . auntminnieeurope . com / resources / conferences / article / 15650794 /
  []
 
-[46] [47]) (chapters/appendix-sources.tex [48]
-<images/bc408.pdf, id=1709, 456.70625pt x 362.35374pt>
+[47] [48]) (chapters/appendix-sources.tex [49]
+<images/bc408.pdf, id=1670, 456.70625pt x 362.35374pt>
 File: images/bc408.pdf Graphic file (type pdf)
 <use images/bc408.pdf>
 Package pdftex.def Info: images/bc408.pdf  used on input line 45.
 (pdftex.def)             Requested size: 401.18495pt x 318.30278pt.
-) [49
+) [50
 
  <./images/bc408.pdf>] (main.aux)
  ***********
@@ -1376,23 +1387,23 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BD1FB0903E2F8A1DD6AC1CFE032C59F2;5798.
+(rerunfilecheck)             Checksum: 3A4A1D48EE38D45F084A88A4CDF4560E;6556.
  ) 
 Here is how much of TeX's memory you used:
- 31331 strings out of 467866
- 632898 string characters out of 5418313
- 984428 words of memory out of 5000000
+ 31337 strings out of 467867
+ 632831 string characters out of 5418334
+ 984335 words of memory out of 5000000
  59287 multiletter control sequences out of 15000+600000
  743220 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,21n,104p,2194b,1364s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,21n,104p,2413b,1365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feybr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main.pdf (62 pages, 3829420 bytes).
+Output written on main.pdf (64 pages, 3780604 bytes).
 PDF statistics:
- 1972 PDF objects out of 2073 (max. 8388607)
- 323 named destinations out of 1000 (max. 500000)
- 465 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1935 PDF objects out of 2073 (max. 8388607)
+ 328 named destinations out of 1000 (max. 500000)
+ 500 words of extra memory for PDF output out of 10000 (max. 10000000)
 

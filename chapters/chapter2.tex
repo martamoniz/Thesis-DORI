@@ -3,40 +3,30 @@
 %%% Chapter 2: DORI - Hardware Development
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prototype Development}
-\label{chapter:hardware_development}
-This chapter describes the development of the DORI (\textit{DOs\'imetro para Radiologia de Interven\c{c}\~ao}) prototype, designed in response to the previously identified limitations. The conceptual design of the system is shown in Fig.~\ref{fig:DORI}.
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\linewidth]{images/DORI.pdf}
-  \caption[Conceptual design of DORI.]{Conceptual design of DORI. The wearable unit (exploded
-view) is worn over the protective apron and comprises the scintillator,
-photodetector, readout circuit, MCU and LiPo battery. Data are sent to a
-Raspberry Pi, which displays the real-time and history interfaces.}
-  \label{fig:DORI}
-\end{figure}
-DORI consists of a compact wearable unit, that may be worn over the protective apron, which integrates the full detection, pulse processing and transmission chain. Each stage is described in detail in the following sections. In general terms, scattered radiation interacts with a scintillator, and the resulting light is converted into an electrical signal by a photodetector.
-DORI operates in pulse mode, where each interaction is registered as an individual event. The corresponding pulse is conditioned by a readout board, which preserves the amplitude and thereby the energy deposited in each event. By accounting for the energy of individual interactions, rather than integrating total charge, the accuracy of the dose calculation can be improved. The target energy range is 20 to 100~keV, corresponding to the energies of the scattered field in IR (recall Table~\ref{tab:ir_parameters}).
+\label{chapter:development}
 
-The chain is controlled by a microcontroller unit (MCU) with wireless communication capabilities. The ESP32-C3 was selected for being compact, lightweight and low-cost. It supports 2.4~GHz Wi-Fi and Bluetooth\textsuperscript{\textregistered} Low Energy (BLE)~5~\cite{134}, the latter being the adopted communication protocol. Unlike Wi-Fi, BLE establishes a direct link with the receiver and requires no external router, reducing system complexity. In addition, BLE~5 offers extended range and increased data throughput relative to previous versions, meeting the requirements of continuous dose transmission. The unit is powered by a rechargeable lithium polymer (LiPo) battery, the AKYGA LP103040~\cite{135}, whose 1200~mAh capacity supports uninterrupted operation over extended periods. The selected Seeed Studio XIAO ESP32-C3~\cite{133} board already incorporates a charging circuit for the battery via its USB-C port. Accordingly, the front-end electronics operate at a 3.3~V logic level.
+\section{Preliminary Studies}
+\label{sec:Preliminary Studies}
+\subsection{Experimental Setup}
+The concept proposed in the previous chapter relies on the premise that a PS read by a SiPM produces a measurable signal under X-rays in the relevant energy range. To become familiar with the detection chain, a first sensing element (a SiPM coupled to a PS) was assembled with the components available at the beginning of the project.
 
-To preserve battery life, the wearable unit does not compute dose. The MCU accumulates the amplitude information of the detected events and transmits it via BLE at a one-second rate to a Raspberry Pi. Since the Raspberry Pi is permanently powered, it handles all data processing, from pulse amplitude to energy and, ultimately, to dose. A real-time interface then displays the dose rate with a complementary colour-coded scale, updated at the same one-second rate. The scale is replicated on an LED integrated in the wearable unit, with the corresponding colour level sent back to the badge via BLE. All measured data are also stored in an internal database, from which a second interface builds retrospective summaries of the recorded exposure.
-\section{Scintillator}
-\label{sec:scintillator}
-The detection of the scattered radiation is based on a plastic scintillator (PS). PSs are organic materials that emit photons in the near ultraviolet to visible range when excited by ionising radiation. The selected scintillator is a $5 \times 5 \times 5$~mm$^3$ BC-408 cube. BC-408 consists of a polyvinyltoluene base doped with fluorophore compounds that shift the emission to a peak wavelength of 425~nm~\cite{128}.
+The SiPM was a Broadcom AFBR-S4N22P014M~\cite{}, with a $2 \times 2$~mm$^2$ active area. Its breakdown voltage lies between 32 and 33~V at 25~$^{\circ}$C, and its photon detection efficiency peaks at 63\% at 420~nm, for a 12~V overvoltage. The scintillator was a BCF-12 fibre~\cite{}, whose emission peaks at 435~nm. A 5~mm length was cut from a 2~mm diameter fibre, and both ends were polished. The SiPM was mounted on a small PCB giving pin access to its anode and cathode, and optical silicone grease was applied between the SiPM and the fibre. As shown in Fig.~\ref{}~(a), the assembly was placed in a 3D-printed enclosure sealed with black tape to prevent light from entering. Current measurements were performed with a Keithley 6487 picoammeter~\cite{}, in the configuration shown in Fig.~\ref{}~(b). The same instrument also biased the SiPM. Two configurations were measured: the SiPM alone and the SiPM coupled to the fibre. In both, X-rays were produced by the Apogee 5500 Series tube (Oxford Instruments) used throughout this work, a 50~W tube that operates from 0 to 50~kV with a maximum current of 1.0~mA~\cite{oxford2019apogee}.
 
-The main advantage of PSs is their tissue equivalence. Their effective atomic number is also lower than that of the materials used in passive dosimeters or in solid-state diodes, like the RaySafe i3. The energy absorbed in the scintillator therefore approximates the dose to soft tissue without requiring further corrections~\cite{129}. However, as a drawback, the same tissue equivalence implies that, as in soft tissue, Compton scattering predominates over the photoelectric effect at the photon energies of the scattered field. From an energy calibration perspective, the acquired spectrum reduces to a Compton continuum without photopeaks, and the standard identification of $\gamma$-emitting radionuclides is not possible (recall Section~\ref{sec:Photon Interaction with Matter}). Consequently, the energy resolution of these detectors is poor. The only identifiable spectral feature is the CE, corresponding to the maximum energy transfer at a scattering angle of $\theta = 180^{\circ}$, whose energy is well known for a given source through Eq.\ref{eq:compton}. Nonetheless, owing to the poor energy resolution at the energies of interest, the CE may not even coincide with the channel of maximum counts. To resolve this ambiguity, Compton coincidence techniques are employed, in which the backscattered photon from a CE event is detected in coincidence with a reference detector. However, these have primarily been demonstrated using $^{22}$Na and $^{137}$Cs, whose CEs lie outside the range relevant to this work~\cite{127}.
+\subsection{Results}
+Fig.~\ref{} shows the mean current as a function of the SiPM bias voltage, for both configurations and all tested tube voltages. Below 30~V, the current remains at the nanoampere level in all cases. It is leakage current, since the electric field is not sufficient to trigger avalanches, even under irradiation. Beyond the grey band, the SiPM operates in Geiger mode and the dark current rises. In this region, with the tube off, both configurations converge, so the baseline is the SiPM's own dark current. In the presence of radiation, the measured signal is dominated by the fibre. Although, in all cases, the interaction of X-rays in the silicon raises the measured current, the signal due to radiation increases by at least one order of magnitude with the fibre. The least distinct case is 15~kV, consistent with the lower photon fluence at this tube voltage. Direct interaction in the SiPM is therefore a minor contribution, and coupling the SiPM to a PS produces a distinct signal.
 
-Such methods also assume a proportional response, meaning a light output that scales linearly with the deposited energy. However, below approximately 125~keV, the light output of PSs is non-proportional due to ionisation quenching. Slow (lower energy) electrons ionise the medium more densely, and part of the excitation is dissipated without the emission of light~\cite{130}. The Compton electrons produced in the PS in this work fall below this threshold. The pulse height of the detected events may therefore not be a linear measure of the deposited energy, and the response must instead be characterised locally, with any calibration valid only within the region where it is established.
-\section{Photodetector}
-To detect the scintillation light and convert it into an electrical signal, a silicon photomultiplier (SiPM) from Broadcom (AFBR-S4N66P014M~\cite{131}) was optically coupled to the scintillator. Its $6\times6$~mm\textsuperscript{2} active area matches the PS cross section, maximizing light collection. Additionally, the photon detection efficiency of the SiPM peaks at 420~nm, close to the peak emission of BC-408~\cite{131}.
+\section{Hardware Development}
+With the detection principle validated, the PS selected for the prototype was a $5 \times 5 \times 5$~mm$^3$ BC-408 cube. Unlike the elongated fibre, the cube offers a larger interaction volume and a cross-section less dependent on the direction of incidence~\cite{}. BC-408 consists of a polyvinyltoluene base doped with fluorophores that shift the emission to a peak wavelength of 425~nm~\cite{128}, closer to the peak sensitivity of the SiPM. The photodetector was also replaced by the AFBR-S4N66P014M~\cite{131}, whose $6 \times 6$~mm$^2$ active area covers the full cross-section of the PS, maximising light collection.
 
-A SiPM consists of a parallel array of avalanche photodiodes operated in Geiger mode. Each cell is reverse biased above its breakdown voltage, so a single absorbed photon is sufficient to trigger a self-sustaining avalanche. The photons produced by a scintillation event fire many pixels simultaneously, each of which contributes one identical pulse. The summed output current is proportional to the number of fired cells, and therefore to the energy deposited in the PS~\cite{14}. The number of available microcells (22\,428) fulfills the requirements given the photons produced per scintillation event. The SiPM has a breakdown voltage of 33~V and supports overvoltages of up to 16~V~\cite{131}.
+Since each microcell fires at most once per event, the number of fired cells must remain well below the 22\,428 microcells of the SiPM~\cite{131}. With a light yield of 10\,000~photons/MeV~\cite{}, BC-408 produces about 1\,000 photons at 100~keV, the upper limit of the target range. Even with complete light collection and the 63\% peak photon detection efficiency of the SiPM, this corresponds to at most about 630 fired cells, fulfilling this requirement.
+
 
 \subsection{SiPM Power Supply}
 \label{sec:sipm_power_supply}
-The SiPM operating voltage was set to 37~V. Although gain increases with overvoltage, so do the dark count rate and crosstalk probability, which in excess mask the low-energy end of the spectrum. For the 20 to 100~keV range, an overvoltage of 4~V provides enough gain for these events to sit above noise levels. The bias is generated by a MAX1932~\cite{132} and its output is programmed through a Serial Peripheral Interface (SPI) by the MCU, which writes an eight-bit code to the internal DAC of the power supply.
+Although gain increases with overvoltage, so do the dark count rate and crosstalk probability, which in excess mask the low-energy end of the spectrum. For the 20 to 100~keV range, an overvoltage of about 4~V provides enough gain for these events to sit above noise levels. The operating voltage was therefore set to 37~V. The bias is generated by a MAX1932~\cite{132}, whose output is programmed by the MCU through a Serial Peripheral Interface (SPI). The MCU writes an eight-bit code to the internal digital-to-analogue converter (DAC) of the power supply.
 
-A fixed 37~V output does not account for the variation of the breakdown voltage with temperature, which increases at 30~mV/$^\circ$C according to the SiPM datasheet~\cite{131}. Since gain depends on the overvoltage, a constant bias means the gain decreases as temperature rises. The same deposited energy then produces a different pulse amplitude, affecting the energy calibration and the derived dose. To compensate for this, an NTC thermistor was added to the feedback network, as recommended in the MAX1932 datasheet~\cite{132} and shown in Fig.~\ref{fig:bias}. The total resistance between the FB node and ground is~\cite{132}:
+A fixed 37~V output does not account for the variation of the breakdown voltage with temperature, which increases at 30~mV/$^\circ$C according to the SiPM datasheet~\cite{131}. Since gain depends on the overvoltage, a constant bias means the gain decreases as temperature rises. The same deposited energy then produces a different pulse amplitude, affecting the energy calibration and the derived dose. To compensate for this, a negative temperature coefficient (NTC) thermistor was added to the feedback network, as recommended in the MAX1932 datasheet~\cite{132} and shown in Fig.~\ref{fig:bias}. The total resistance between the feedback (FB) node and ground is~\cite{132}:
+
 \begin{equation}
 R_\text{total}(T) = R_8 + \frac{R_9\,R_T(T)}{R_9 + R_T(T)},
 \label{eq:rtotal}
@@ -46,29 +36,30 @@ The output voltage is therefore~\cite{132}:
 V_\text{OUT} = 1.25\left(1 + \frac{R_5}{R_\text{total}(T)}\right) + \frac{R_5}{R_6}\left(1.25 - V_\text{DAC}\right),
 \label{eq:vout_max}
 \end{equation}
-where $V_\text{DAC}$ is the DAC output voltage. The compensation condition requires the derivative of Eq.~\ref{eq:vout_max} to equal the temperature coefficient of the breakdown voltage over the operating range of 18 to 25~$^\circ$C:
+where $V_\text{DAC}$ is the DAC output voltage. The compensation condition requires the derivative of Eq.~\ref{eq:vout_max} to equal the temperature coefficient of the breakdown voltage around room temperature:
 \begin{equation}
-\frac{dV_\text{OUT}}{dT} = \frac{1.25\,R_5}{R_\text{total}^2}\left(\frac{R_9}{R_9 + R_T}\right)^2 \frac{\beta}{T^2}\,R_T = 30~\text{mV/}^\circ\text{C}.
+\frac{dV_\text{OUT}}{dT} = \frac{1.25\,R_5}{R_\text{total}^2}\left(\frac{R_9}{R_9 + R_T}\right)^2 \frac{\beta}{T^2}\,R_T = 30~\text{mV/}^\circ\text{C},
 \label{eq:slope}
 \end{equation}
-Solving this condition together with Eqs.~\ref{eq:rtotal} and \ref{eq:vout_max} and the component selection equations of the datasheet~\cite{132} yields $R_5 = 91$~k$\Omega$, $R_6 = 27$~k$\Omega$, $R_8 = 2.4$~k$\Omega$, and $R_9 = 910$~$\Omega$.
+where $\beta$ is the thermistor constant and $T$ the absolute temperature. Solving this condition together with Eqs.~\ref{eq:rtotal} and \ref{eq:vout_max} and the component selection equations of the datasheet~\cite{132} yields $R_5 = 91$~k$\Omega$, $R_6 = 27$~k$\Omega$, $R_8 = 2.4$~k$\Omega$, and $R_9 = 910$~$\Omega$.
 \begin{figure}[H]
   \centering
   \resizebox{!}{5.2cm}{\input{figures/MAX1932}}
   \caption[SiPM bias supply.]{MAX1932 feedback network with the NTC thermistor $R_T$ for temperature compensation of the SiPM bias. Pin labels on the left correspond to SPI connections.}
   \label{fig:bias}
 \end{figure}
-Finally, The DAC code must be written so that the nominal bias is centred on the expected temperature range. Owing to the ambient temperature of the laboratory, the code corresponding to 37~V was centred at around 35~$^\circ$C.
+\noindent Finally, the DAC code was set so that the output is 37~V at the operating temperature of the board.
 
-\section{Front-End Electronics}
+
+\subsection{Front-End Electronics}
 \label{sec:front_end}
 The front-end electronics perform the pulse-mode readout of the SiPM response. The architecture developed for this purpose is represented by the simplified block diagram in Fig.~\ref{fig:architecture}, and includes three stages. Pulse shaping integrates and filters the SiPM current into a voltage pulse whose amplitude is proportional to the collected charge. Pulse discrimination then compares this pulse against a reference threshold, rejecting noise, and retains its peak amplitude. Pulse sampling digitises the held value through an Analog-to-Digital Converter (ADC) and transmits it to the MCU. Each stage is detailed in the following sections.
 
-The front-end electronics were assembled on a printed circuit board (PCB), which also integrates the ESP32-C3, the MAX1932 bias supply and the SiPM described previously. The DORI-test board is shown in Fig.~\ref{fig:pcb} (a). The scintillator and the SiPM are not soldered directly on the board. Instead, the two are optically coupled and enclosed in an individual light-tight printed box, connected to the readout chain through a pin header. This arrangement allows the detector elements to be replaced without reworking the board, so that different configurations can be evaluated with the same electronics. All measurements presented in this work were performed with three sealed radioactive sources, $^{241}$Am, $^{109}$Cd and $^{57}$Co, selected because their emissions fall within the energy range of interest. Further information on their activities can be found in Appendix~A. A test box was 3D printed to align each source with the active area of the photosensitive housing, as shown in Fig.~\ref{fig:pcb} (b). The box additionally reduces the handling of the sources and allows a greater distance to be maintained during testing, contributing to a lower radiation exposure.
+The front-end electronics were assembled on a printed circuit board (PCB), which also integrates the ESP32-C3, the MAX1932 bias supply and the SiPM described previously. The prototype test board is shown in Fig.~\ref{fig:pcb} (a). The scintillator and the SiPM are not soldered directly on the board. Instead, the two are optically coupled and enclosed in an individual light-tight printed box, connected to the readout chain through a pin header. This arrangement allows the detector elements to be replaced without reworking the board, so that different configurations can be evaluated with the same electronics. All measurements presented in this work were performed with three sealed radioactive sources, $^{241}$Am, $^{109}$Cd and $^{57}$Co, selected because their emissions fall within the energy range of interest. Further information on their activities can be found in Appendix~A. A test box was 3D printed to align each source with the active area of the photosensitive housing, as shown in Fig.~\ref{fig:pcb} (b). The box additionally reduces the handling of the sources and allows a greater distance to be maintained during testing, contributing to a lower radiation exposure.
 \begin{figure}[H]
   \centering
   \resizebox{\linewidth}{!}{\input{figures/Architecture.tex}}
-  \caption[Architecture of the DORI system.]{Architecture of the DORI system.}
+  \caption[Architecture of the proposed dosimeter.]{Architecture of the proposed dosimeter.}
   \label{fig:architecture}
 \end{figure}
 
@@ -85,18 +76,19 @@ The front-end electronics were assembled on a printed circuit board (PCB), which
     \subfloat[]{\label{fig:dori_case}%
       \resizebox{\linewidth}{!}{\input{figures/Dori_box}}}
   \end{minipage}
-  \caption[DORI-test board.]{%
-    DORI-test board.
+  \caption[Prototype test board.]{%
+    Prototype test board.
     \textbf{(a)} PCB with the main functional blocks identified, together with the signal test points used for characterisation;
-    \textbf{(b)} assembled prototype inside the 3D printed test box, showing the sealed source ($^{241}$Am) and source holders aligned with the scintillator and SiPM.
+    \textbf{(b)} assembled prototype inside the 3D-printed test box, showing the sealed source ($^{241}$Am) and source holders aligned with the scintillator and SiPM.
   }
   \label{fig:pcb}
 \end{figure}
-\subsection{Pulse Shaping}
+
+\section{Pulse Shaping}
 \label{sec:shaping}
 The current pulse produced by the SiPM delivers a quantity of charge, $Q$, that must be converted into a measurable voltage signal in the preamplifier~\cite{105}:
 \begin{equation}
-    Q = \int I(t)\, dt, \quad \text{unit: } [\mathrm{C}]
+    Q = \int I(t)\, dt
     \label{eq:charge}
 \end{equation}
 
@@ -104,7 +96,7 @@ To achieve this, a Charge-Sensitive Amplifier (CSA) was implemented. The CSA is 
 
 In this circuit, the current flows through $C_f$, allowing it to store charge and producing an output voltage proportional to $Q$. $R_f$ acts as a reset mechanism, providing a discharge path for $C_f$, in order for new pulses to be detected. The resulting output voltage can be written as~\cite{104,105}:
 \begin{equation}
-    V_{\text{out}} = -\frac{Q}{C_f}\, e^{-t/\tau_f}, \quad \text{unit: } [\mathrm{V}]
+    V_{\text{out}} = -\frac{Q}{C_f}\, e^{-t/\tau_f}
     \label{eq:vout}
 \end{equation}
 
@@ -113,7 +105,7 @@ charge integration, this constant must be longer than the duration of the SiPM c
 
 The charge gain of the CSA, $G$,  depends exclusively on $C_f$ and is therefore~\cite{106}:
 \begin{equation}
-    G = \frac{V_{\text{out}}}{Q} = -\frac{1}{C_f}, \quad \text{unit: } [\mathrm{V/C}]
+    G = \frac{V_{\text{out}}}{Q} = -\frac{1}{C_f}
     \label{eq:gain}
 \end{equation}
 
@@ -159,7 +151,7 @@ The $^{241}$Am source was nevertheless used to guide the gain. The pulses genera
     \multirow{3}{*}{\shortstack{$R_s$ \\[2.2em] $C_s$}} &
     \multirow{3}{*}{\shortstack{10 k$\Omega$ \\[2.2em] 47 pF}} \\
     & & $R_{\text{pz}}$ & 4.7 k$\Omega$ & & \\
-    & & $C_{\text{pz}}$ & 100 pF & & \\
+    & & $C_{\text{diff}}$ & 100 pF & & \\
     \midrule
     $\tau$ & 470 ns & & 470 ns & & 470 ns \\
     \bottomrule
@@ -204,11 +196,19 @@ The integration at the CSA produces a negative pulse, since the charge is collec
   \end{tabular}
 \end{table}
 
-The main effect of the shaping is the redistribution of the signal in time. The semi-Gaussian output is broader and the time taken to reach the maximum is increased from $147 \pm 28$~ns at the CSA output to $387 \pm 50$~ns at the shaper, even though the latter has a lower amplitude. The interval over which the signal remains within 90\% of its maximum is doubled, from $208 \pm 167$~ns to $400 \pm 154$~ns. These effects are intended, since the amplitude is retained through comparator logic, and a maximum that is both delayed and sustained reduces the timing demands imposed on both the hardware and firmware. Within a broad range of amplitudes, the total shaping time is consistent across events, as it is set by the time constants selected for this network. At the shaper output it is $1.96 \pm 0.09$~$\mu$s, and this is the pulse the subsequent stages discriminate and sample.
-\subsection{Pulse Discrimination}
+The main effect of the shaping is the redistribution of the signal in time. The semi-Gaussian output is broader and the time taken to reach the maximum is increased from $147 \pm 28$~ns at the CSA output to $387 \pm 50$~ns at the shaper, even though the latter has a lower amplitude. The interval over which the signal remains within 90\% of its maximum is doubled, from $208 \pm 167$~ns to $400 \pm 154$~ns. These effects are intended, since the amplitude is retained through comparator logic, and a maximum that is both delayed and sustained reduces the timing demands imposed on both the hardware and firmware. Within a broad range of amplitudes, the total pulse duration is consistent across events, as it is set by the time constants selected for this network. At the shaper output, the pulse lasts $1.96 \pm 0.09$~$\mu$s. This is the pulse that the subsequent stages discriminate and sample.
+\section{Pulse Discrimination}
 \label{sec:pulse_discrimination}
-\subsubsection{Comparator}
-Pulse discrimination distinguishes real X-ray events from electronic noise and retains the amplitude of those accepted for digitisation. As mentioned above, it operates on a comparator logic. The LT1711~\cite{LT1711_LT1712} was selected for this application, a fast comparator operated in a non-inverting configuration. As shown in Fig.~\ref{fig:architecture}, the signal from the shaper is applied to the non-inverting input, while a fixed reference voltage, $V_{ref}$, is applied to the inverting input. The reference is derived from the 3.3 V supply rail through a resistive divider:
+Pulse discrimination distinguishes real X-ray events from electronic noise and retains the amplitude of those accepted for digitisation. This process is coordinated by the MCU firmware, summarised in Fig.~\ref{fig:firmware} and detailed in the following subsections. In general terms, after the chain is initialised (grey), the MCU waits at an event decision (red), driven by the comparator output (green). Each accepted event then starts a readout sequence (yellow), during which no further triggers are accepted.
+\begin{figure}[H]
+  \centering
+  \input{figures/firmwareDORI.tex}
+  \caption[Firmware workflow diagram.]{Firmware workflow diagram.}
+  \label{fig:firmware}
+\end{figure}
+
+\subsection{Comparator}
+As mentioned, discrimination operates on a comparator logic. The LT1711~\cite{LT1711_LT1712} was selected for this application, a fast comparator operated in a non-inverting configuration. As shown in Fig.~\ref{fig:architecture}, the signal from the shaper is applied to the non-inverting input, while a fixed reference voltage, $V_{ref}$, is applied to the inverting input. The reference is derived from the 3.3 V supply rail through a resistive divider:
 
 \begin{equation}
 V_{ref} = \frac{R_2}{R_1 + R_2} \cdot 3.3, \text{ unit: [V]}
@@ -217,8 +217,9 @@ V_{ref} = \frac{R_2}{R_1 + R_2} \cdot 3.3, \text{ unit: [V]}
 
 \noindent where $R_1$ is the resistor connecting the node to the supply, and $R_2$ the resistor between the divider node and ground. The threshold was set to 10 mV. This value was established from the shaper output acquired under dark count conditions of the SiPM. The amplitudes of these events lie predominantly below 10 mV. The condition is satisfied by $R_1 = 33$ k$\Omega$ and $R_2 = 100$ $\Omega$.
 
-A dedicated pin of the ESP32-C3 is connected to the logic output of the comparator and configured as an interrupt. Whenever the input exceeds $V_{ref}$, the comparator output switches to the logic HIGH level. The pin is monitored continuously by dedicated hardware within the MCU, so the transition is registered as soon as it occurs. Detection initiates the readout loop, and the interrupt is detached for its duration, so that no further triggers are accepted while the event is being processed. It is reattached once the loop has terminated.
-\subsubsection{Peak-and-Hold}
+A dedicated pin of the ESP32-C3 is connected to the logic output of the comparator and configured as an interrupt. Whenever the input exceeds $V_{ref}$, the comparator output switches to the logic HIGH level. The pin is monitored continuously by dedicated hardware within the MCU, so the transition is registered as soon as it occurs. Detection initiates the readout sequence of Fig.~\ref{fig:firmware}, and the interrupt is detached for its duration. It is reattached once the loop has terminated.
+
+\subsection{Peak-and-Hold}
 Simultaneously, the shaper output is fed to a Peak-and-Hold (P\&H) circuit. A P\&H captures the maximum of the input signal and sustains it after the pulse has decayed, extending the interval over which the peak amplitude remains available. The analogue conversion can then be performed more accurately. Given the small amplitude of the events, a configuration based on a precision rectifier was adopted~\cite{Franco2015}. The circuit alternates between two modes. While the shaped pulse is rising, the amplifier is enclosed in a feedback loop that charges a hold capacitor $C_H$, and the capacitor voltage follows the input. This is the track mode. Once the maximum has passed the loop is broken and the peak voltage is retained, read through a buffer. Both amplifiers are implemented with the OPA354~\cite{OPA354}, whose input draws negligible current, so the stored charge is not drained by the buffer. This is the hold mode. The value $C_H = 470$~pF reflects a compromise between the two. A larger capacitance reduces droop during hold, but is charged more slowly, and the higher pulses would no longer be tracked to their maximum~\cite{Franco2015,Horowitz2015}.
 
 With no reset path, the capacitor would only ever accumulate charge. Once a maximum has been stored, a subsequent event of lower amplitude cannot forward bias the charging path. The output would therefore converge to the largest amplitude ever received rather than to the amplitude of each individual event. A discharge path is therefore required, and it must be opened and closed under control so that $C_H$ is emptied between events. This is the function of the switch represented in Fig.~\ref{fig:architecture}, implemented in this configuration as an N-channel MOSFET placed in series with $R_{H}=7.5$~k$\Omega$ across the capacitor, driven by a logic level from the MCU. When held LOW, the path between drain and source is open and the stored charge is retained. At the 3.3 V level the channel is established and the capacitor discharges through $R_H$ with a time constant $\tau = R_H C_H$. The gate is therefore held LOW by default, so that the circuit is always ready to capture the maximum of the signal. Detection of a valid pulse raises the interrupt described above, after which a delay of 2~$\mu$s is imposed to allow the held value to stabilise before the sampling logic is applied. The gate is then driven HIGH for an interval longer than $\tau$, sufficient for $C_H$ to discharge, and returned LOW~\cite{Franco2015}.
@@ -234,13 +235,13 @@ The output of the pulse discrimination chain to a single $^{241}$Am event is sho
   \label{fig:pulse_discrimination}
 \end{figure}
 
-No sampling logic was implemented for these measurements. Nevertheless, a latency is present in the transition of the transistor logical state. The hold interval is therefore extended beyond the value imposed by the firmware, which contributes directly to the dead time of the detector. Once the reset path is closed, the discharge of the storage capacitor is governed by the time constant imposed by $R_H$ and $C_H$. It was observed, however, that the output does not return to ground, settling instead at a residual baseline of approximately 50~mV. The discharge also continues after the gate has returned to the LOW logical state, at which point the capacitor should retain its stored voltage. The latter consistent with the transition latency described above. It was first considered whether $R_H$ was too high for the discharge to complete within the time the gate sits at 3.3~V. To assess this, $R_H$ was changed to 1~k$\Omega$. Although the discharge was completed in a shorter interval, as expected, the output would settle at the same residual baseline. This behaviour could be justified with the single-supply configuration of the OpAmps. With their negative rail connected directly to ground, the amplifier cannot reproduce the negative baseline of the shaper output. Once the reset path is open, and the input of the amplifier remains negative, the current needed to supply this load may cause an output swing. This output swing would be the floor at which $C_H$ can be minimally charged. Therefore, no event below 50~mV can be sampled, as it cannot be tracked. It is a limitation of the current front-end electronics, and it reduces the dynamic range available at the lower end of the energies of interest. Ultimately, $R_H$ was kept at 7.5~k$\Omega$. Without sampling logic, the mean dead time is measured as 13~$\pm$~1~$\mu$s, taken as the interval over which the P\&H output remains at hold until it discharges to the residual baseline.
+No sampling logic was implemented for these measurements. Nevertheless, a latency is present in the transition of the transistor logical state. The hold interval is therefore extended beyond the value imposed by the firmware, which contributes directly to the dead time of the detector. Once the reset path is closed, the discharge of the storage capacitor is governed by the time constant imposed by $R_H$ and $C_H$. It was observed, however, that the output does not return to ground, settling instead at a residual baseline of approximately 50~mV. The discharge also continues after the gate has returned to the LOW logical state, at which point the capacitor should retain its stored voltage. The latter is consistent with the transition latency described above. It was first considered whether $R_H$ was too high for the discharge to complete within the time the gate sits at 3.3~V. To assess this, $R_H$ was changed to 1~k$\Omega$. Although the discharge was completed in a shorter interval, as expected, the output would settle at the same residual baseline. This behaviour could be explained by the single-supply configuration of the OpAmps. With their negative rail connected directly to ground, the amplifier cannot reproduce the negative baseline of the shaper output. Once the reset path is open, and the input of the amplifier remains negative, the current needed to supply this load may cause an output swing. This output swing would be the floor at which $C_H$ can be minimally charged. Therefore, no event below 50~mV can be sampled, as it cannot be tracked. It is a limitation of the current front-end electronics, and it reduces the dynamic range available at the lower end of the energies of interest. Ultimately, $R_H$ was kept at 7.5~k$\Omega$. Without sampling logic, the mean dead time is measured as 13~$\pm$~1~$\mu$s, taken as the interval over which the P\&H output remains at hold until it discharges to the residual baseline.
 
 
 \subsection{Pulse Sampling}
 \label{sec:pulse_sampling}
-Pulse sampling digitises the held signal through an ADC. The converter maps the input range onto $2^n$ discrete levels, where $n$ is its resolution in bits. Each amplitude is sampled and quantized to a corresponding digital bin. Since the conversion occupies the acquisition
-chain, the introduction of a sampling stage is expected to increase the dead time of DORI. Two converters were therefore evaluated, the internal ADC of the ESP32-C3 and an external ADS7883~\cite{ADS7883}, both of 12-bit resolution. The measured dead times are presented in Table~\ref{tab:dead_time}.
+Pulse sampling digitises the held signal through an Analog-to-Digital Converter (ADC). The converter maps the input range onto $2^n$ discrete levels, where $n$ is its resolution in bits. Each amplitude is sampled and quantised to a corresponding digital bin. Since the conversion occupies the acquisition
+chain, the introduction of a sampling stage is expected to increase the dead time of the detector. Two converters were therefore evaluated, the internal ADC of the ESP32-C3 and an external ADS7883~\cite{ADS7883}, both of 12-bit resolution. The measured dead times are presented in Table~\ref{tab:dead_time}.
 
 \vspace{1em}
 \refstepcounter{table}
@@ -264,22 +265,16 @@ External ADC & 17.8 $\pm$ 0.4 & SPI \\
 \end{center}
 \vspace{1em}
 
-From the perspective of power consumption, component complexity and cost reduction, the internal converter would be preferable. However, relative to the dead time measured without a sampling stage, the internal converter adds a delay ten times higher than the external one. The internal ADC is accessed through the \texttt{analogRead} routine, and limited by its own execution time, making it unsuitable for this application. On the other hand, the ADS7883 is read over SPI at 20~MHz, a dedicated high-speed protocol, and consequently increasing the dead time by only 4.6~$\mu$s. The external converter was therefore adopted, as it allows a higher count rate to be achieved. The digitised values are subsequently rebinned to a 10-bit range in order to reduce the volume of data transmitted by the communication protocol. Over the 3.3~V input range, the resulting 1024 channels correspond to a channel width of 3.2~mV, which sets the smallest amplitude difference that can be resolved. With a dead time of 17.8~$\pm$~0.4~$\mu$s, the maximum count rate of DORI is $(56~\pm~1)\times10^{3}$~counts per second.
+From the perspective of power consumption, component complexity and cost reduction, the internal converter would be preferable. However, relative to the dead time measured without a sampling stage, the internal converter adds a delay ten times higher than the external one. The internal ADC is accessed through the \texttt{analogRead} routine, and limited by its own execution time, making it unsuitable for this application. On the other hand, the ADS7883 is read over SPI at 20~MHz, a dedicated high-speed protocol, and consequently increasing the dead time by only 4.6~$\mu$s. The external converter was therefore adopted, as it allows a higher count rate to be achieved. On the ESP32, each 12-bit value is reduced to 10 bits by a two-bit right shift before being transmitted. Over the 3.3~V input range, the resulting 1024 channels correspond to a channel width of 3.2~mV, which sets the smallest amplitude difference that can be resolved. With a dead time of 17.8~$\pm$~0.4~$\mu$s, the maximum count rate of the detector is $(56~\pm~1)\times10^{3}$~counts per second.
 
-Finally, a simplified overview of the complete firmware logic described throughout this chapter is given in Fig.~\ref{fig:firmware}.
-\begin{figure}[H]
-  \centering
-  \input{figures/firmwareDORI.tex}
-  \caption[Firmware workflow diagram.]{DORI firmware workflow diagram.}
-
-  \label{fig:firmware}
-\end{figure}
 
 \section{Validation of the Front-End Electronics}
 \label{sec:frontend-validation}
-Prior to energy calibration of the PS, the readout electronics were validated using a $5 \times 5 \times 10$~mm CsI(Tl) crystal. The linearity of DORI can be tested by relating pulses of known energy to the channels in which they are stored. To identify an incident radionuclide emitting $\gamma$-rays, that is, to obtain the known energy pulse, photoelectric absorption must be favoured. An inorganic scintillator is appropriate for this validation owing to its higher density and effective atomic number, which favour photoelectric absorption in the energy range of interest. A linear channel-to-energy mapping is expected, and any significant deviation would be attributable to the front-end electronics~\cite{14}. This validation therefore indicates whether the front-end electronics introduce any non-linearity, such as the amplitude droop in the P\&H or its residual baseline. Should either prove amplitude-dependent, it would require characterisation or correction.
 
-The hardware gain was adjusted to accommodate the higher light output of CsI(Tl), and spectra were acquired over 10-minute intervals using the three radioactive sources described previously. The resulting pulse height spectra, together with the decay scheme of each source, are shown in Fig.~\ref{fig:spectra}. The background was subtracted, and channels 18 and below were excluded, as its elevated count rate would otherwise dominate the vertical scale. Given the ADC step, channel 18 corresponds to a voltage of approximately 58~mV, which lies near the residual baseline of the P\&H stage. It can therefore be concluded that any event below this level is assigned to this bin, owing to the return of the hold capacitor to that charge. This does not compromise the validation, since all expected spectral features are resolved for each source, including the lowest energy present, the 14.4~keV $\gamma$-ray emission of $^{57}$Co. The consequence is the masking of lower energies, and the implication for the PS calibration is that the energy range proposed must lie above this channel 18 threshold.
+Prior to energy calibration of the PS, the readout electronics were validated using a $5 \times 5 \times 10$~mm$^3$ CsI(Tl) crystal. The linearity of the energy-to-channel mapping can be tested by relating pulses of known energy to the channels in which they are stored. Unlike the continuous spectra of the X-ray tube and of scattered radiation, a radionuclide emits $\gamma$-rays at discrete energies, which provide these known references. To identify them as peaks, photoelectric absorption must be favoured. An inorganic scintillator is appropriate for this validation owing to its higher density and effective atomic number, which favour photoelectric absorption in the energy range of interest. Its higher light yield also gives a much better energy resolution than that of organic scintillators, so the peaks are narrow and their positions well defined. A linear channel-to-energy mapping is expected, and any significant deviation would be attributable to the front-end electronics~\cite{14}. This validation therefore indicates whether the front-end electronics introduce any non-linearity, such as the amplitude droop in the P\&H or its residual baseline. Should either prove amplitude-dependent, it would require characterisation or correction.
+
+The hardware gain was adjusted to accommodate the higher light output of CsI(Tl). Spectra were then acquired over 10-minute intervals using the three radioactive sources described previously, and a background spectrum was acquired without any source over the same interval. The resulting pulse height spectra are shown in Fig.~\ref{fig:spectra}, alongside a simplified decay scheme of each source, restricted to its most probable transitions.
+The background was subtracted, and channels 18 and below were excluded, as their elevated count rate would otherwise dominate the vertical scale. Given the ADC step, channel 18 corresponds to approximately 58~mV, which lies near the residual baseline of the P\&H stage. Events that exceed the 10~mV comparator threshold but remain below this level leave the P\&H output at its baseline, and are therefore all assigned to channel 18. These include real events, as they lie above a threshold intended to exclude dark counts from the SiPM. Their energy, however, is masked. This does not compromise the validation, since all expected spectral features are resolved for each source, including the lowest energy present, the 14.4~keV $\gamma$-ray emission of $^{57}$Co. Since the baseline is a property of the P\&H rather than of the gain, the implication for the PS calibration is that the proposed energy range must lie above channel 18.
 
 \begin{figure}[H]
   \centering
@@ -289,8 +284,7 @@ The hardware gain was adjusted to accommodate the higher light output of CsI(Tl)
   \caption[Pulse height spectra and decay schemes of the CsI(Tl) calibration sources.]{%
     Pulse height spectra acquired with the CsI(Tl) crystal for the three
     calibration sources, (a) $^{241}$Am, (b) $^{109}$Cd and (c) $^{57}$Co,
-    with the decay scheme of each source beneath. Blue arrows denote
-    $\alpha$ decay, green electron capture and yellow $\gamma$ emission.}
+    with the decay scheme of each source beneath.}
   \label{fig:spectra}
 \end{figure}
 
@@ -301,7 +295,7 @@ $^{241}$Am decays by $\alpha$ emission, predominantly to the 59.5~keV level of $
     \label{eq:calibration_csi}
 \end{equation}
 %
-was applied, where $C$ is the channel number and $E$ is the energy in keV (Fig.~\ref{fig:calib}). The fit yields $R^2 = 0.999$, confirming a linear channel-to-energy relationship up to at least channel 183, corresponding to an input amplitude of approximately 590~mV. This confirms that the P\&H circuit does not introduce amplitude-dependent errors within this bin range.
+was applied, where $C$ is the channel number and $E$ is the energy in keV (Fig.~\ref{fig:calib}). The fit yields $R^2 = 0.999$, showing a linear channel-to-energy relationship up to at least channel 183, corresponding to an input amplitude of approximately 590~mV. This confirms that the readout chain does not introduce amplitude-dependent errors within this bin range.
 
 \begin{figure}[H]
   \centering
@@ -312,5 +306,4 @@ was applied, where $C$ is the channel number and $E$ is the energy in keV (Fig.~
   \label{fig:calib}
 \end{figure}
 
-By reconstructing the $^{57}$Co spectrum in energy units, the fitted centroid of the 122~keV photopeak yields $\mu = 121 \pm 1$~keV, consistent with the nominal value within uncertainty. The measured FWHM is $19 \pm 1$~keV, corresponding to an energy resolution of $16 \pm 1$\% at 122~keV, consistent with values reported in the literature for CsI(Tl)~\cite{117,118}. This indicates that the front-end electronics do not degrade the intrinsic energy resolution of the crystal. The DORI hardware is therefore considered validated.
-
+By reconstructing the $^{57}$Co spectrum in energy units, the 122~keV photopeak shows a FWHM of $19 \pm 1$~keV, corresponding to an energy resolution of $16 \pm 1$\% at 122~keV, consistent with values reported in the literature for CsI(Tl)~\cite{117,118}. This indicates that the front-end electronics do not significantly degrade the intrinsic energy resolution of the crystal. The front-end is therefore considered validated.

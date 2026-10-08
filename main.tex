@@ -8,6 +8,7 @@
 \usepackage[english]{babel}
 \usepackage{hyperref}
 \hypersetup{hidelinks}
+\usepackage{doi} % DOI links in the references (ieeetr-thesis.bst)
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{bm}
@@ -129,6 +130,13 @@
 \addto\captionsenglish{\renewcommand{\bibname}{References}}
 \usepackage{enumitem}
 \usepackage{tabularx}
+% Extra vertical space before section and subsection entries in the ToC
+\makeatletter
+\pretocmd{\l@section}{\addvspace{5pt}}{}{}
+\pretocmd{\l@subsection}{\addvspace{2pt}}{}{}
+% Compact reference list: no extra space between entries
+\apptocmd{\thebibliography}{\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}}{}{}
+\makeatother
 
 \begin{document}
 
@@ -168,7 +176,7 @@
         }
   \vspace*{15mm}
   \TEXT{}
-      {Dissertação apresentada à Universidade de Aveiro para cumprimento dos requisitos necessários à obtenção do grau de Mestre em Engenharia Biomédica, realizada sob a orientação científica do Doutor Carlos Davide da Rocha Azevedo, professor auxiliar do Departamento de Física da Universidade de Aveiro}
+      {Dissertação apresentada à Universidade de Aveiro para cumprimento dos requisitos necessários à obtenção do grau de Mestre em Engenharia Biomédica, realizada sob a orientação científica do Doutor Carlos Davide da Rocha Azevedo, professor auxiliar do Departamento de Física da Universidade de Aveiro, e do Doutor Pedro Manuel Mendes Correia (co-orientador), Investigador do Auxiliar do Departamento de Física da Universidade de Aveiro.}
 
         \vspace*{60mm}
     \TEXT{}
@@ -235,9 +243,12 @@
 \TitlePage
   \vspace*{35mm}
 \TEXT{\textbf{Palavras-chave}}
-      {Calibração}
+      {\emph{Bremsstrahlung}, calibração, cintilador plástico, dosímetro, fotomultiplicador de silício, radiologia de intervenção}
  \vspace*{15mm}
   \TEXT{\textbf{Resumo}}
+  {Este trabalho apresenta o desenvolvimento de um dosímetro pessoal ativo e \textsl{wireless}, de baixo custo, para radiologia de intervenção. Baseia-se num cintilador plástico BC-408 de $5 \times 5 \times 5$~mm$^3$ acoplado a um fotomultiplicador de silício de $6 \times 6$~mm$^2$, polarizado a 37~V. Foi projetada uma eletrónica de \textit{front-end} em modo pulso, composta por um pré-amplificador de carga com modelação de pulso, um comparador, um circuito \textit{peak-and-hold} e um ADC externo. É controlada por um microcontrolador ESP32-C3 com comunicação \textit{Bluetooth Low Energy}. A cadeia de leitura tem um tempo morto de 17,8~$\pm$~0,4~$\mu$s, correspondente a uma taxa máxima de $(56 \pm 1)\times10^{3}$~contagens por segundo. Foi validada com um cristal de CsI(Tl) e fontes de $^{241}$Am, $^{109}$Cd e $^{57}$Co, através do ajuste dos canais dos centroides das suas emissões às energias conhecidas. A resposta canal-energia mostrou-se linear ($R^2 = 0{,}999$) até ao canal 183 do ADC.
+O cintilador plástico foi calibrado em energia através do método do \textit{endpoint} do espetro de \emph{Bremsstrahlung} de um tubo de raio X, no qual este é obtido como a interseção do eixo das abcissas de um ajuste linear do limiar do espetro. Os espetros foram adquiridos entre 20 e 50~kVp, para cinco correntes no tubo, e o fotopico de 59,5~keV do $^{241}$Am foi adicionado como ponto de calibração. Um ajuste linear ($R^2 = 0{,}989$) resultou num declive de $0{,}51 \pm 0{,}02$~canais/keV e numa ordenada na origem de $21 \pm 1$~canais. A resposta é linear entre 20 e 60~keV, com uma resolução em energia de $(29 \pm 5)$\% a 59,5~keV. A frente de Compton do $^{57}$Co foi também testada como ponto de validação, mas revelou-se pouco fiável a estas energias. A calibração em dose foi realizada em unidades de $H_p(10)$, segundo a norma ISO 4037, com as qualidades de radiação N-25, N-30 e N-40 e uma réplica do fantoma necessário. O espetro foi dividido em intervalos de energia, a cada um dos quais foi atribuída uma dose por contagem, e os pesos foram determinados pelo método dos mínimos quadrados. Foram testados três esquemas de divisão, tendo sido adotado o modelo de dois intervalos, com pesos de $93{,}5 \pm 11{,}4$~pSv/contagem para o intervalo de 20 a 25~keV e de $287{,}7 \pm 25{,}5$~pSv/contagem para o intervalo de 25 a 40~keV. O modelo reproduziu as taxas de dose de referência das três qualidades dentro da respetiva incerteza. As taxas de dose reconstruídas variaram entre 0,063 e 101~$\mu$Sv/h e apresentaram uma relação linear com a corrente no tubo ($R^2 \geq 0{,}998$).
+O protótipo final mede 6,3~$\times$~7,2~$\times$~2,5~cm, tem uma massa de 141~g e um custo estimado por unidade de aproximadamente 229~euros. Apresenta uma autonomia de 8,6~h a 100 eventos simulados por segundo.}
        {\hspace{5mm}.}
 \EndTitlePage
 
@@ -245,9 +256,12 @@
 \TitlePage
   \vspace*{35mm}
 \TEXT{\textbf{Keywords}}
-      {Calibration}
+      {\emph{Bremsstrahlung}, calibration, dosimeter, interventional radiology, plastic scintillator, silicon photomultiplier}
  \vspace*{15mm}
   \TEXT{\textbf{Abstract}}
+       {This work presents the development of a low-cost, wireless active personal dosimeter for interventional radiology. It is based on a $5 \times 5 \times 5$~mm$^3$ BC-408 plastic scintillator coupled to a $6 \times 6$~mm$^2$ silicon photomultiplier, biased at 37~V. A pulse-mode front-end was designed, comprising a charge-sensitive amplifier, pole-zero cancellation, a semi-Gaussian shaper, a comparator, a peak-and-hold circuit and an external ADC. It is controlled by an ESP32-C3 microcontroller with Bluetooth Low Energy communication. The readout reached a dead time of 17.8~$\pm$~0.4~$\mu$s, corresponding to a maximum count rate of $(56 \pm 1)\times10^{3}$~counts per second. It was validated with a CsI(Tl) crystal and $^{241}$Am, $^{109}$Cd and $^{57}$Co sources, by fitting the centroid channels of their emissions against the known energies. The channel-to-energy response was linear ($R^2 = 0.999$) up to ADC channel 183.
+The plastic scintillator was calibrated in energy through the \emph{Bremsstrahlung} endpoint method of an X-ray tube, in which the endpoint channel is taken as the $x$-intercept of a linear fit to the high-energy edge of the spectrum. Spectra were acquired from 20 to 50~kVp at five tube currents, and the 59.5~keV photopeak of $^{241}$Am was added as a calibration point. A weighted least-squares fit ($R^2 = 0.989$) gave a slope of $0.51 \pm 0.02$~channels/keV and an intercept of $21 \pm 1$~channels. The response is linear between 20 and 60~keV, with an energy resolution of $(29 \pm 5)$\% at 59.5~keV. The Compton edge of $^{57}$Co was also tested as a validation point, but was found to be unreliable at these energies. The dose calibration was performed in terms of $H_p(10)$ following ISO 4037, with the N-25, N-30 and N-40 radiation qualities and a replica of the ISO slab phantom. The spectrum was divided into energy bins, each assigned a dose per count, and the weights were solved by least squares. Three binning schemes were tested, and the two-bin model divided at 25~keV was adopted, with weights of $93.5 \pm 11.4$~pSv/count for the 20 to 25~keV bin and $287.7 \pm 25.5$~pSv/count for the 25 to 40~keV bin. It reproduced the reference dose rates of the three qualities within their uncertainty. The reconstructed dose rates ranged from 0.063 to 101~$\mu$Sv/h and were linear with tube current ($R^2 \geq 0.998$).
+The final wearable prototype measures 6.3~$\times$~7.2~$\times$~2.5~cm, has a mass of 141~g and an estimated component cost of approximately 229~euros per unit. It operates for 8.6~h at 100 simulated events per second.}
       {\hspace{5mm}}
 \EndTitlePage
 
@@ -258,7 +272,7 @@
 \pagenumbering{roman}
 
 \makeatletter\ua@notoc@true\makeatother
-\begin{spacing}{0.85} % or try 0.8, 0.7 for tighter spacing
+\begin{spacing}{1.15} % raise for more space between ToC entries
 \tableofcontents
 \end{spacing}
 \makeatletter\ua@notoc@false\makeatother
@@ -288,9 +302,9 @@
 %\cleardoublepage
 %\iffalse
 
-  \bibliographystyle{ieeetr}
+  \bibliographystyle{ieeetr-thesis} % ieeetr + et al. for >3 authors + DOI
   %\bibliographystyle{plain}
-  {\footnotesize
+  {\footnotesize\linespread{0.95}\selectfont
 \bibliography{Bibliografia}}
 %\bibliography{Biblio}% replace by the name of name of your .bib file
 %\cleardoublepage

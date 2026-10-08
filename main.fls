@@ -106,6 +106,8 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\reru
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\doi\doi.sty
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\doi\doi.sty
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
@@ -373,6 +375,8 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rmtt.en
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmsso10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmss10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT .\main.toc
@@ -384,7 +388,6 @@ INPUT .\main.lof
 INPUT .\main.lof
 INPUT main.lof
 OUTPUT main.lof
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT .\main.lot
 INPUT .\main.lot
 INPUT main.lot
@@ -452,7 +455,6 @@ INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.t
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib7.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
-INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbxi10.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT .\figures\deterministic_stochastic.tex
@@ -703,6 +705,7 @@ INPUT .\main.bbl
 INPUT main.bbl
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri9.tfm
 INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmtt9.tfm
+INPUT C:\Users\marta\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr9.tfm
 INPUT .\chapters\appendix-sources.tex
 INPUT .\chapters\appendix-sources.tex
 INPUT .\chapters\appendix-sources.tex

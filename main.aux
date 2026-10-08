@@ -23,7 +23,7 @@
 \newacro{CE}[\AC@hyperlink{CE}{CE}]{Compton Edge}
 \newacro{CSA}[\AC@hyperlink{CSA}{CSA}]{Charge-Sensitive Amplifier}
 \newacro{DAC}[\AC@hyperlink{DAC}{DAC}]{Digital-to-Analog Converter}
-\newacro{DORI}[\AC@hyperlink{DORI}{DORI}]{\textit  {DOs\'imetro para Radiologia de Interven\c {c}\~ao}}
+\newacro{FB}[\AC@hyperlink{FB}{FB}]{Feedback}
 \newacro{FWHM}[\AC@hyperlink{FWHM}{FWHM}]{Full Width at Half Maximum}
 \newacro{HVL}[\AC@hyperlink{HVL}{HVL}]{Half-Value Layer}
 \newacro{ICRP}[\AC@hyperlink{ICRP}{ICRP}]{International Commission on Radiological Protection}
@@ -37,6 +37,8 @@
 \newacro{MCU}[\AC@hyperlink{MCU}{MCU}]{Microcontroller Unit}
 \newacro{MOSFET}[\AC@hyperlink{MOSFET}{MOSFET}]{Metal-Oxide-Semiconductor Field-Effect Transistor}
 \newacro{NTC}[\AC@hyperlink{NTC}{NTC}]{Negative Temperature Coefficient}
+\newacro{OpAmp}[\AC@hyperlink{OpAmp}{OpAmp}]{Operational Amplifier}
+\newacro{PH}[\AC@hyperlink{PH}{P\&H}]{Peak-and-Hold}
 \newacro{PCB}[\AC@hyperlink{PCB}{PCB}]{Printed Circuit Board}
 \newacro{PMMA}[\AC@hyperlink{PMMA}{PMMA}]{Polymethyl Methacrylate}
 \newacro{PS}[\AC@hyperlink{PS}{PS}]{Plastic Scintillator}
@@ -194,17 +196,20 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.5.2}Proposed Dosimeter Concept}{11}{subsection.1.5.2}\protected@file@percent }
 \newlabel{subsection:concept}{{1.5.2}{11}{Proposed Dosimeter Concept}{subsection.1.5.2}{}}
 \citation{129}
+\citation{130}
 \citation{14}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Conceptual design of the proposed dosimeter.}}{12}{figure.caption.18}\protected@file@percent }
 \newlabel{fig:DORI}{{5}{12}{Conceptual design of the proposed dosimeter}{figure.caption.18}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Scintillation Detection}{12}{section*.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Readout and Transmission}{12}{section*.20}\protected@file@percent }
+\newlabel{sec:scintilator}{{1.5.2}{12}{Scintillation Detection}{section*.19}{}}
 \citation{134}
 \citation{135}
 \citation{133}
+\@writefile{toc}{\contentsline {subsubsection}{Readout and Transmission}{13}{section*.20}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Data Processing and Interface}{13}{section*.21}\protected@file@percent }
 \citation{broadcom2025afbrs4n22}
 \citation{luxiumfibers}
+\citation{saintgobain2005bc630}
 \citation{keithley2011model6487}
 \citation{oxford2019apogee}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Prototype Development}{14}{chapter.2}\protected@file@percent }
@@ -222,6 +227,7 @@
 \citation{131}
 \citation{128}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Results}{15}{subsection.2.1.2}\protected@file@percent }
+\newlabel{sec:Preliminary results}{{2.1.2}{15}{Results}{subsection.2.1.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Mean current as a function of the SiPM bias voltage.}}{15}{figure.caption.23}\protected@file@percent }
 \newlabel{fig:preliminary_fibre_comparison}{{7}{15}{Mean current as a function of the SiPM bias voltage}{figure.caption.23}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Hardware Overview}{15}{section.2.2}\protected@file@percent }
@@ -295,6 +301,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Pulse Sampling}{25}{subsection.2.4.3}\protected@file@percent }
 \newlabel{sec:pulse_sampling}{{2.4.3}{25}{Pulse Sampling}{subsection.2.4.3}{}}
 \newlabel{tab:dead_time}{{5}{25}{Pulse Sampling}{table.2.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}Dead time of the acquisition chain for each sampling condition.}{25}{table.2.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Validation of the Front-End Electronics}{25}{section.2.5}\protected@file@percent }
 \newlabel{sec:frontend-validation}{{2.5}{25}{Validation of the Front-End Electronics}{section.2.5}{}}
 \citation{sources}
@@ -306,7 +313,6 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Channel-to-energy calibration of the front-end electronics with the CsI(Tl) crystal.}}{27}{figure.caption.35}\protected@file@percent }
 \newlabel{fig:calib}{{15}{27}{Channel-to-energy calibration of the front-end electronics with the CsI(Tl) crystal}{figure.caption.35}{}}
 \citation{121}
-\citation{oxford2019apogee}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Calibration of the Prototype}{28}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -332,9 +338,10 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{29}{subfigure.17.2}\protected@file@percent }
 \citation{121}
 \citation{125}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Energy calibration of the DORI prototype.}}{30}{figure.caption.39}\protected@file@percent }
-\newlabel{fig:energy_calibration}{{18}{30}{Energy calibration of the DORI prototype}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Energy calibration of the prototype.}}{30}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:energy_calibration}{{18}{30}{Energy calibration of the prototype}{figure.caption.39}{}}
 \newlabel{eq:calibration}{{3.1}{30}{Energy Calibration}{equation.3.1}{}}
+\citation{127}
 \citation{127}
 \citation{113,ISO2,ISO3}
 \newlabel{eq:energy_conversion}{{3.2}{31}{Energy Calibration}{equation.3.2}{}}
@@ -379,7 +386,7 @@
 \newlabel{eq:dose_conversion}{{3.9}{36}{Methods}{equation.3.9}{}}
 \newlabel{eq:dose_uncertainty}{{3.10}{36}{Methods}{equation.3.10}{}}
 \newlabel{tab:response}{{8}{37}{Methods}{table.3.8}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}Response of DORI after the dose calibration.}{37}{table.3.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}Response of the prototype dosimeter after the dose calibration.}{37}{table.3.8}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Dose Rate Reconstruction}{37}{section.3.3}\protected@file@percent }
 \newlabel{sec:dose_rate}{{3.3}{37}{Dose Rate Reconstruction}{section.3.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Reconstructed $H_p(10)$ rate as a function of tube current.}}{37}{figure.caption.45}\protected@file@percent }
@@ -388,28 +395,29 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Final Prototype}{39}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Final DORI prototype.}}{40}{figure.caption.46}\protected@file@percent }
-\newlabel{fig:prototype}{{23}{40}{Final DORI prototype}{figure.caption.46}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Final dosimeter prototype.}}{40}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:prototype}{{23}{40}{Final dosimeter prototype}{figure.caption.46}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Channel Response}{40}{section.4.1}\protected@file@percent }
 \newlabel{sec:channel_response}{{4.1}{40}{Channel Response}{section.4.1}{}}
 \newlabel{tab:endpoints_prototype}{{9}{41}{Channel Response}{table.4.9}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {9}\emph  {Bremsstrahlung} endpoint channel for each tube voltage, obtained with the final prototype.}{41}{table.4.9}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Endpoint channel correspondence between the DORI-test board and the final prototype.}}{42}{figure.caption.48}\protected@file@percent }
-\newlabel{fig:channel_response}{{24}{42}{Endpoint channel correspondence between the DORI-test board and the final prototype}{figure.caption.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Endpoint channel correspondence between the test board and the final prototype.}}{42}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:channel_response}{{24}{42}{Endpoint channel correspondence between the test board and the final prototype}{figure.caption.48}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Power Consumption}{42}{section.4.2}\protected@file@percent }
 \newlabel{sec:power_consumption}{{4.2}{42}{Power Consumption}{section.4.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Cost and Specifications}{43}{section.4.3}\protected@file@percent }
 \newlabel{sec:cost_specifications}{{4.3}{43}{Cost and Specifications}{section.4.3}{}}
 \newlabel{tab:cost}{{10}{43}{Cost and Specifications}{table.4.10}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {10}Estimated cost of the components of the final DORI prototype.}{43}{table.4.10}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}Estimated cost of the components of the final prototype.}{43}{table.4.10}\protected@file@percent }
 \newlabel{tab:specifications}{{11}{43}{Cost and Specifications}{table.4.11}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {11}Specifications of the final DORI prototype.}{43}{table.4.11}\protected@file@percent }
-\bibstyle{ieeetr}
-\bibdata{Bibliografia}
+\@writefile{lot}{\contentsline {table}{\numberline {11}Specifications of the final prototype.}{43}{table.4.11}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusions}{44}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Future work}{44}{section.5.1}\protected@file@percent }
+\citation{lmri}
+\bibstyle{ieeetr-thesis}
+\bibdata{Bibliografia}
 \bibcite{6}{1}
 \bibcite{10}{2}
 \bibcite{55}{3}
@@ -430,14 +438,14 @@
 \bibcite{111}{18}
 \bibcite{112}{19}
 \bibcite{20}{20}
-\@writefile{toc}{\contentsline {chapter}{References}{45}{section.5.2}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
 \bibcite{14}{21}
 \bibcite{12}{22}
 \bibcite{13}{23}
 \bibcite{15}{24}
 \bibcite{113}{25}
+\@writefile{toc}{\contentsline {chapter}{References}{46}{section.5.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
 \bibcite{ISO3}{26}
 \bibcite{23}{27}
 \bibcite{24}{28}
@@ -472,46 +480,48 @@
 \bibcite{89}{57}
 \bibcite{116}{58}
 \bibcite{85}{59}
-\bibcite{134}{60}
-\bibcite{135}{61}
-\bibcite{133}{62}
-\bibcite{broadcom2025afbrs4n22}{63}
-\bibcite{luxiumfibers}{64}
-\bibcite{keithley2011model6487}{65}
-\bibcite{oxford2019apogee}{66}
-\bibcite{Danevich2014}{67}
-\bibcite{128}{68}
-\bibcite{131}{69}
-\bibcite{132}{70}
-\bibcite{105}{71}
-\bibcite{LT6202_LT6203_LT6204}{72}
-\bibcite{106}{73}
-\bibcite{104}{74}
-\bibcite{107}{75}
-\bibcite{108}{76}
-\bibcite{110}{77}
-\bibcite{119}{78}
-\bibcite{126}{79}
-\bibcite{127}{80}
-\bibcite{LT1711_LT1712}{81}
-\bibcite{Franco2015}{82}
-\bibcite{OPA354}{83}
-\bibcite{Horowitz2015}{84}
-\bibcite{ADS7883}{85}
-\bibcite{sources}{86}
-\bibcite{117}{87}
-\bibcite{118}{88}
-\bibcite{121}{89}
-\bibcite{125}{90}
-\bibcite{ISO2}{91}
-\bibcite{raysafe}{92}
-\bibcite{Specs}{93}
-\bibcite{portable}{94}
-\bibcite{53}{95}
+\bibcite{130}{60}
+\bibcite{134}{61}
+\bibcite{135}{62}
+\bibcite{133}{63}
+\bibcite{broadcom2025afbrs4n22}{64}
+\bibcite{luxiumfibers}{65}
+\bibcite{saintgobain2005bc630}{66}
+\bibcite{keithley2011model6487}{67}
+\bibcite{oxford2019apogee}{68}
+\bibcite{Danevich2014}{69}
+\bibcite{128}{70}
+\bibcite{131}{71}
+\bibcite{132}{72}
+\bibcite{105}{73}
+\bibcite{LT6202_LT6203_LT6204}{74}
+\bibcite{106}{75}
+\bibcite{104}{76}
+\bibcite{107}{77}
+\bibcite{108}{78}
+\bibcite{110}{79}
+\bibcite{119}{80}
+\bibcite{126}{81}
+\bibcite{127}{82}
+\bibcite{LT1711_LT1712}{83}
+\bibcite{Franco2015}{84}
+\bibcite{OPA354}{85}
+\bibcite{Horowitz2015}{86}
+\bibcite{ADS7883}{87}
+\bibcite{sources}{88}
+\bibcite{117}{89}
+\bibcite{118}{90}
+\bibcite{121}{91}
+\bibcite{125}{92}
+\bibcite{ISO2}{93}
+\bibcite{raysafe}{94}
+\bibcite{Specs}{95}
+\bibcite{portable}{96}
+\bibcite{53}{97}
+\bibcite{lmri}{98}
 \@writefile{toc}{\contentsline {chapter}{Appendix}{50}{section.Alph0.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{annex:sources}{{5.1}{50}{Appendix}{section.Alph0.1}{}}
-\newlabel{tab:sources}{{A}{50}{A - Sealed Source Activities}{table.Alph0.12}{}}
-\newlabel{fig:bc408}{{\caption@xref {fig:bc408}{ on input line 46}}{50}{B - BC-408 Photon Absorption in 5 mm}{figure.caption.56}{}}
+\newlabel{fig:bc408}{{\caption@xref {fig:bc408}{ on input line 32}}{50}{B - BC-408 Photon Absorption in 5 mm}{figure.caption.56}{}}
 \gdef \@abspage@last{64}

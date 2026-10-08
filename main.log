@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.2.23)  4 OCT 2026 17:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.15)  8 OCT 2026 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -200,6 +200,8 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip51
+) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/doi\doi.sty
+Package: doi 2018/09/09 handle doi numbers
 ) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip52
@@ -784,7 +786,7 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@cols=\count389
 \TX@ftn=\toks43
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 133.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 141.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -793,24 +795,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count391
@@ -830,7 +832,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 133.
+Package hyperref Info: Link coloring OFF on input line 141.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -838,7 +840,7 @@ Package hyperref Info: Link coloring OFF on input line 133.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 133.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 141.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -847,117 +849,123 @@ Package: fr-subfig 2007/12/24 v0.1g (beta) floatrow: additions for subfig
 \FBsc@max=\skip82
 \FBso@max=\skip83
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 142.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 150.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 142.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 150.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 142.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 150.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 142.
+(Font)              <10.95> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 142.
+(Font)              <8> on input line 150.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 142.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 142.
+(Font)              <6> on input line 150.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 150.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 142.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 150.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 142.
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 150.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 <uaLogoNew.pdf, id=182, 60.225pt x 75.28125pt>
 File: uaLogoNew.pdf Graphic file (type pdf)
 <use uaLogoNew.pdf>
-Package pdftex.def Info: uaLogoNew.pdf  used on input line 142.
+Package pdftex.def Info: uaLogoNew.pdf  used on input line 150.
 (pdftex.def)             Requested size: 20.48633pt x 25.60747pt.
  [1
 
 {C:/Users/marta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc} <./uaLogoNew.pdf>]
 File: uaLogoNew.pdf Graphic file (type pdf)
 <use uaLogoNew.pdf>
-Package pdftex.def Info: uaLogoNew.pdf  used on input line 154.
+Package pdftex.def Info: uaLogoNew.pdf  used on input line 162.
 (pdftex.def)             Requested size: 20.48633pt x 25.60747pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.159 \EndTitlePage
+l.167 \EndTitlePage
                     [1]
 File: uaLogoNew.pdf Graphic file (type pdf)
 <use uaLogoNew.pdf>
-Package pdftex.def Info: uaLogoNew.pdf  used on input line 164.
+Package pdftex.def Info: uaLogoNew.pdf  used on input line 172.
 (pdftex.def)             Requested size: 36.14813pt x 45.18298pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 176.
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 184.
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 3118) in paragraph at lines 176--176
+Underfull \hbox (badness 3118) in paragraph at lines 184--184
 \OT1/lmss/m/n/10.95 do Sis-tema EasyPET.CT para Im-agem M[]edica Molec-u-lar e Mor-
  []
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 176--176
+Underfull \hbox (badness 2237) in paragraph at lines 184--184
 \OT1/lmtt/m/n/10.95 54499 / UID / 50025 / 2025$[]\OT1/lmss/m/n/10.95 ), UID/PRR/50025/2025 ([]$\OT1/lmtt/m/n/10.95 https : / / doi . org /
  []
 
 
-Underfull \hbox (badness 2426) in paragraph at lines 176--176
+Underfull \hbox (badness 2426) in paragraph at lines 184--184
 \OT1/lmtt/m/n/10.95 10 . 54499 / UID / PRR / 50025 / 2025$[]\OT1/lmss/m/n/10.95 ), UID/PRR2/50025/2025 ([]$\OT1/lmtt/m/n/10.95 https : / /
  []
 
 
-Overfull \vbox (75.76497pt too high) has occurred while \output is active []
+Overfull \vbox (102.96498pt too high) has occurred while \output is active []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.184 \EndTitlePage
+l.192 \EndTitlePage
                     [1{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}]
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 190.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 198.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.191 \EndTitlePage
+l.199 \EndTitlePage
                     [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.205 \EndTitlePage
+l.213 \EndTitlePage
                     [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.228 \EndTitlePage
-                    [1]
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.234 \EndTitlePage
+l.236 \EndTitlePage
                     [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.242 \EndTitlePage
                     [1]
+Overfull \vbox (51.48624pt too high) has occurred while \output is active []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.252 \EndTitlePage
+l.253 \EndTitlePage
+                    [1{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+Overfull \vbox (14.52618pt too high) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.266 \EndTitlePage
                     [1] (main.toc [1
 
 ])
@@ -970,7 +978,7 @@ l.252 \EndTitlePage
 
  [3
 
-{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] (main.lot)
+] (main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
@@ -1026,10 +1034,10 @@ LaTeX Warning: Hyper reference `acro:DAC' on page v undefined on input line 12.
 LaTeX Warning: Hyper reference `acro:DAC' on page v undefined on input line 12.
 
 
-LaTeX Warning: Hyper reference `acro:DORI' on page v undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:FB' on page v undefined on input line 13.
 
 
-LaTeX Warning: Hyper reference `acro:DORI' on page v undefined on input line 13.
+LaTeX Warning: Hyper reference `acro:FB' on page v undefined on input line 13.
 
 
 LaTeX Warning: Hyper reference `acro:FWHM' on page v undefined on input line 14.
@@ -1110,46 +1118,58 @@ LaTeX Warning: Hyper reference `acro:NTC' on page v undefined on input line 26.
 LaTeX Warning: Hyper reference `acro:NTC' on page v undefined on input line 26.
 
 
-LaTeX Warning: Hyper reference `acro:PCB' on page v undefined on input line 27.
+LaTeX Warning: Hyper reference `acro:OpAmp' on page v undefined on input line 27.
 
 
-LaTeX Warning: Hyper reference `acro:PCB' on page v undefined on input line 27.
+LaTeX Warning: Hyper reference `acro:OpAmp' on page v undefined on input line 27.
 
 
-LaTeX Warning: Hyper reference `acro:PMMA' on page v undefined on input line 28.
+LaTeX Warning: Hyper reference `acro:PH' on page v undefined on input line 28.
 
 
-LaTeX Warning: Hyper reference `acro:PMMA' on page v undefined on input line 28.
+LaTeX Warning: Hyper reference `acro:PH' on page v undefined on input line 28.
 
 
-LaTeX Warning: Hyper reference `acro:PS' on page v undefined on input line 29.
+LaTeX Warning: Hyper reference `acro:PCB' on page v undefined on input line 29.
 
 
-LaTeX Warning: Hyper reference `acro:PS' on page v undefined on input line 29.
+LaTeX Warning: Hyper reference `acro:PCB' on page v undefined on input line 29.
 
 
-LaTeX Warning: Hyper reference `acro:PZC' on page v undefined on input line 30.
+LaTeX Warning: Hyper reference `acro:PMMA' on page v undefined on input line 30.
 
 
-LaTeX Warning: Hyper reference `acro:PZC' on page v undefined on input line 30.
+LaTeX Warning: Hyper reference `acro:PMMA' on page v undefined on input line 30.
 
 
-LaTeX Warning: Hyper reference `acro:SiPM' on page v undefined on input line 31.
+LaTeX Warning: Hyper reference `acro:PS' on page v undefined on input line 31.
 
 
-LaTeX Warning: Hyper reference `acro:SiPM' on page v undefined on input line 31.
+LaTeX Warning: Hyper reference `acro:PS' on page v undefined on input line 31.
 
 
-LaTeX Warning: Hyper reference `acro:SPI' on page v undefined on input line 32.
+LaTeX Warning: Hyper reference `acro:PZC' on page v undefined on input line 32.
 
 
-LaTeX Warning: Hyper reference `acro:SPI' on page v undefined on input line 32.
+LaTeX Warning: Hyper reference `acro:PZC' on page v undefined on input line 32.
 
 
-LaTeX Warning: Hyper reference `acro:USB' on page v undefined on input line 33.
+LaTeX Warning: Hyper reference `acro:SiPM' on page v undefined on input line 33.
 
 
-LaTeX Warning: Hyper reference `acro:USB' on page v undefined on input line 33.
+LaTeX Warning: Hyper reference `acro:SiPM' on page v undefined on input line 33.
+
+
+LaTeX Warning: Hyper reference `acro:SPI' on page v undefined on input line 34.
+
+
+LaTeX Warning: Hyper reference `acro:SPI' on page v undefined on input line 34.
+
+
+LaTeX Warning: Hyper reference `acro:USB' on page v undefined on input line 35.
+
+
+LaTeX Warning: Hyper reference `acro:USB' on page v undefined on input line 35.
 
 ) [5
 
@@ -1167,7 +1187,7 @@ l.1 \newpage
 
 ]
 Chapter 1.
-<images/interventional radiology setup.pdf, id=443, 1682.285pt x 894.34125pt>
+<images/interventional radiology setup.pdf, id=447, 1682.285pt x 894.34125pt>
 File: images/interventional radiology setup.pdf Graphic file (type pdf)
 <use images/interventional radiology setup.pdf>
 Package pdftex.def Info: images/interventional radiology setup.pdf  used on input line 12.
@@ -1179,8 +1199,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 184.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 184.
-) [3{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [4] [5{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] (figures/deterministic_stochastic.tex) [6] [7]
-<images/dose rates.png, id=587, 1445.4pt x 813.0375pt>
+) [3] [4] [5{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] (figures/deterministic_stochastic.tex) [6] [7]
+<images/dose rates.png, id=590, 1445.4pt x 813.0375pt>
 File: images/dose rates.png Graphic file (type png)
 <use images/dose rates.png>
 Package pdftex.def Info: images/dose rates.png  used on input line 178.
@@ -1190,7 +1210,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 24
  (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [10{C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-<images/DORI.pdf, id=698, 3748.0025pt x 2058.69125pt>
+<images/DORI.pdf, id=701, 3748.0025pt x 2058.69125pt>
 File: images/DORI.pdf Graphic file (type pdf)
 <use images/DORI.pdf>
 Package pdftex.def Info: images/DORI.pdf  used on input line 258.
@@ -1198,48 +1218,48 @@ Package pdftex.def Info: images/DORI.pdf  used on input line 258.
  [11] [12 <./images/DORI.pdf>]) (chapters/chapter2.tex [13]
 Chapter 2.
 (figures/prelim_setup.tex
-<images/sipm_fibre.jpg, id=753, interpolate=true, 768.8725pt x 576.1525pt>
+<images/sipm_fibre.jpg, id=759, interpolate=true, 768.8725pt x 576.1525pt>
 File: images/sipm_fibre.jpg Graphic file (type jpg)
 <use images/sipm_fibre.jpg>
 Package pdftex.def Info: images/sipm_fibre.jpg  used on input line 14.
 (pdftex.def)             Requested size: 199.99599pt x 173.69983pt.
 )
-<images/preliminary_fibre_comparison.pdf, id=755, 499.8675pt x 318.18875pt>
+<images/preliminary_fibre_comparison.pdf, id=761, 499.8675pt x 318.18875pt>
 File: images/preliminary_fibre_comparison.pdf Graphic file (type pdf)
 <use images/preliminary_fibre_comparison.pdf>
-Package pdftex.def Info: images/preliminary_fibre_comparison.pdf  used on input line 29.
+Package pdftex.def Info: images/preliminary_fibre_comparison.pdf  used on input line 30.
 (pdftex.def)             Requested size: 398.38567pt x 253.59972pt.
  [14
 
  <./images/sipm_fibre.jpg>] [15 <./images/preliminary_fibre_comparison.pdf>] (figures/MAX1932.tex) [16] (figures/Architecture.tex) [17] (figures/dori_teste.tex
-<images/pcb_teste.jpg, id=831, 613.54219pt x 453.19313pt>
+<images/pcb_teste.jpg, id=838, 613.54219pt x 453.19313pt>
 File: images/pcb_teste.jpg Graphic file (type jpg)
 <use images/pcb_teste.jpg>
 Package pdftex.def Info: images/pcb_teste.jpg  used on input line 10.
 (pdftex.def)             Requested size: 186.00198pt x 126.99693pt.
 ) (figures/Dori_box.tex
-<images/dori_case.jpg, id=832, 750.55406pt x 422.32782pt>
+<images/dori_case.jpg, id=839, 750.55406pt x 422.32782pt>
 File: images/dori_case.jpg Graphic file (type jpg)
 <use images/dori_case.jpg>
 Package pdftex.def Info: images/dori_case.jpg  used on input line 10.
 (pdftex.def)             Requested size: 199.99532pt x 127.09886pt.
 ) [18 <./images/pcb_teste.jpg> <./images/dori_case.jpg>] [19]
-<images/shaping_chain_trace00001.pdf, id=876, 754.82pt x 494.84875pt>
+<images/shaping_chain_trace00001.pdf, id=883, 754.82pt x 494.84875pt>
 File: images/shaping_chain_trace00001.pdf Graphic file (type pdf)
 <use images/shaping_chain_trace00001.pdf>
-Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 187.
+Package pdftex.def Info: images/shaping_chain_trace00001.pdf  used on input line 188.
 (pdftex.def)             Requested size: 442.65375pt x 290.1989pt.
  [20 <./images/shaping_chain_trace00001.pdf>] (figures/firmwareDORI.tex) [21] [22]
-<images/peak_hold_trace17.pdf, id=940, 412.54124pt x 216.81pt>
+<images/peak_hold_trace17.pdf, id=947, 412.54124pt x 216.81pt>
 File: images/peak_hold_trace17.pdf Graphic file (type pdf)
 <use images/peak_hold_trace17.pdf>
-Package pdftex.def Info: images/peak_hold_trace17.pdf  used on input line 253.
+Package pdftex.def Info: images/peak_hold_trace17.pdf  used on input line 254.
 (pdftex.def)             Requested size: 442.65375pt x 232.63943pt.
  [23] [24 <./images/peak_hold_trace17.pdf>] [25]
-<images/spectra.pdf, id=991, 861.2175pt x 260.975pt>
+<images/spectra.pdf, id=997, 861.2175pt x 260.975pt>
 File: images/spectra.pdf Graphic file (type pdf)
 <use images/spectra.pdf>
-Package pdftex.def Info: images/spectra.pdf  used on input line 301.
+Package pdftex.def Info: images/spectra.pdf  used on input line 303.
 (pdftex.def)             Requested size: 442.65375pt x 134.13881pt.
  (figures/decay.tex (C:\Users\marta\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -1248,19 +1268,19 @@ File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowwidth=\dimen331
 \pgfarrowlinewidth=\dimen332
 )) [26 <./images/spectra.pdf>]
-<images/fit_csi.pdf, id=1041, 451.6875pt x 338.26375pt>
+<images/fit_csi.pdf, id=1047, 451.6875pt x 338.26375pt>
 File: images/fit_csi.pdf Graphic file (type pdf)
 <use images/fit_csi.pdf>
-Package pdftex.def Info: images/fit_csi.pdf  used on input line 322.
+Package pdftex.def Info: images/fit_csi.pdf  used on input line 324.
 (pdftex.def)             Requested size: 354.12434pt x 265.21245pt.
 ) (chapters/chapter3.tex [27 <./images/fit_csi.pdf>]
 Chapter 3.
-<images/bremsstrahlung_fits.pdf, id=1115, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_fits.pdf, id=1121, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_fits.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_fits.pdf>
 Package pdftex.def Info: images/bremsstrahlung_fits.pdf  used on input line 12.
 (pdftex.def)             Requested size: 212.4719pt x 144.886pt.
-<images/bremsstrahlung_40kVp_vs_current.pdf, id=1116, 460.72125pt x 314.17375pt>
+<images/bremsstrahlung_40kVp_vs_current.pdf, id=1122, 460.72125pt x 314.17375pt>
 File: images/bremsstrahlung_40kVp_vs_current.pdf Graphic file (type pdf)
 <use images/bremsstrahlung_40kVp_vs_current.pdf>
 Package pdftex.def Info: images/bremsstrahlung_40kVp_vs_current.pdf  used on input line 18.
@@ -1268,64 +1288,57 @@ Package pdftex.def Info: images/bremsstrahlung_40kVp_vs_current.pdf  used on inp
 [28
 
  <./images/bremsstrahlung_fits.pdf> <./images/bremsstrahlung_40kVp_vs_current.pdf>]
-<images/plastic_Am-241.pdf, id=1192, 354.32375pt x 247.92625pt>
+<images/plastic_Am-241.pdf, id=1198, 354.32375pt x 247.92625pt>
 File: images/plastic_Am-241.pdf Graphic file (type pdf)
 <use images/plastic_Am-241.pdf>
-Package pdftex.def Info: images/plastic_Am-241.pdf  used on input line 74.
+Package pdftex.def Info: images/plastic_Am-241.pdf  used on input line 75.
 (pdftex.def)             Requested size: 221.32687pt x 154.8703pt.
-<images/plastic_Co-57_fit.pdf, id=1193, 354.32375pt x 247.92625pt>
+<images/plastic_Co-57_fit.pdf, id=1199, 354.32375pt x 247.92625pt>
 File: images/plastic_Co-57_fit.pdf Graphic file (type pdf)
 <use images/plastic_Co-57_fit.pdf>
-Package pdftex.def Info: images/plastic_Co-57_fit.pdf  used on input line 80.
+Package pdftex.def Info: images/plastic_Co-57_fit.pdf  used on input line 81.
 (pdftex.def)             Requested size: 221.32687pt x 154.8703pt.
  [29 <./images/plastic_Am-241.pdf> <./images/plastic_Co-57_fit.pdf>]
-<images/energy.pdf, id=1290, 445.665pt x 322.20375pt>
+<images/energy.pdf, id=1296, 445.665pt x 322.20375pt>
 File: images/energy.pdf Graphic file (type pdf)
 <use images/energy.pdf>
-Package pdftex.def Info: images/energy.pdf  used on input line 95.
+Package pdftex.def Info: images/energy.pdf  used on input line 96.
 (pdftex.def)             Requested size: 376.25838pt x 272.0259pt.
- [30 <./images/energy.pdf>]
-
-LaTeX Warning: Reference `sec:scintillator' on page 31 undefined on input line 119.
-
-
-LaTeX Warning: Reference `sec:scintillator' on page 31 undefined on input line 119.
-
-[31]
-<images/dose.pdf, id=1346, 748.03917pt x 354.48723pt>
+ [30 <./images/energy.pdf>] [31]
+<images/dose.pdf, id=1354, 748.03917pt x 354.48723pt>
 File: images/dose.pdf Graphic file (type pdf)
 <use images/dose.pdf>
-Package pdftex.def Info: images/dose.pdf  used on input line 160.
+Package pdftex.def Info: images/dose.pdf  used on input line 162.
 (pdftex.def)             Requested size: 442.65375pt x 209.76768pt.
  [32]
-<images/fig1_spectra.pdf, id=1357, 355.3275pt x 249.93375pt>
+<images/fig1_spectra.pdf, id=1365, 355.3275pt x 249.93375pt>
 File: images/fig1_spectra.pdf Graphic file (type pdf)
 <use images/fig1_spectra.pdf>
 Package pdftex.def Info: images/fig1_spectra.pdf  used on input line 175.
 (pdftex.def)             Requested size: 221.32687pt x 155.68192pt.
-<images/fig2_reference.pdf, id=1358, 357.335pt x 248.93pt>
+<images/fig2_reference.pdf, id=1366, 357.335pt x 248.93pt>
 File: images/fig2_reference.pdf Graphic file (type pdf)
 <use images/fig2_reference.pdf>
 Package pdftex.def Info: images/fig2_reference.pdf  used on input line 181.
 (pdftex.def)             Requested size: 221.32687pt x 154.18306pt.
  [33 <./images/dose.pdf> <./images/fig1_spectra.pdf> <./images/fig2_reference.pdf>] [34]
-<images/weights2bin25_sub.pdf, id=1483, 332.24126pt x 287.0725pt>
+<images/weights2bin25_sub.pdf, id=1491, 332.24126pt x 287.0725pt>
 File: images/weights2bin25_sub.pdf Graphic file (type pdf)
 <use images/weights2bin25_sub.pdf>
 Package pdftex.def Info: images/weights2bin25_sub.pdf  used on input line 234.
 (pdftex.def)             Requested size: 212.4719pt x 183.58559pt.
-<images/weights2bin30_sub.pdf, id=1484, 332.24126pt x 287.0725pt>
+<images/weights2bin30_sub.pdf, id=1492, 332.24126pt x 287.0725pt>
 File: images/weights2bin30_sub.pdf Graphic file (type pdf)
 <use images/weights2bin30_sub.pdf>
 Package pdftex.def Info: images/weights2bin30_sub.pdf  used on input line 240.
 (pdftex.def)             Requested size: 212.4719pt x 183.58559pt.
-<images/weights3bin_sub.pdf, id=1485, 684.5575pt x 344.28625pt>
+<images/weights3bin_sub.pdf, id=1493, 684.5575pt x 344.28625pt>
 File: images/weights3bin_sub.pdf Graphic file (type pdf)
 <use images/weights3bin_sub.pdf>
 Package pdftex.def Info: images/weights3bin_sub.pdf  used on input line 247.
 (pdftex.def)             Requested size: 376.25838pt x 189.23718pt.
  [35 <./images/weights2bin25_sub.pdf> <./images/weights2bin30_sub.pdf> <./images/weights3bin_sub.pdf>] [36]
-<images/dose_rate_linearity.pdf, id=1561, 699.61375pt x 341.275pt>
+<images/dose_rate_linearity.pdf, id=1569, 699.61375pt x 341.275pt>
 File: images/dose_rate_linearity.pdf Graphic file (type pdf)
 <use images/dose_rate_linearity.pdf>
 Package pdftex.def Info: images/dose_rate_linearity.pdf  used on input line 320.
@@ -1333,17 +1346,17 @@ Package pdftex.def Info: images/dose_rate_linearity.pdf  used on input line 320.
  [37 <./images/dose_rate_linearity.pdf>]) (chapters/chapter4.tex [38]
 Chapter 4.
 (figures/Final.tex
-<images/baixo.jpg, id=1614, 2182.40344pt x 1620.80531pt>
+<images/baixo.jpg, id=1622, 2182.40344pt x 1620.80531pt>
 File: images/baixo.jpg Graphic file (type jpg)
 <use images/baixo.jpg>
 Package pdftex.def Info: images/baixo.jpg  used on input line 13.
 (pdftex.def)             Requested size: 177.7261pt x 136.88866pt.
-<images/meio.jpg, id=1615, 513.41812pt x 594.72188pt>
+<images/meio.jpg, id=1623, 513.41812pt x 594.72188pt>
 File: images/meio.jpg Graphic file (type jpg)
 <use images/meio.jpg>
 Package pdftex.def Info: images/meio.jpg  used on input line 45.
 (pdftex.def)             Requested size: 135.7026pt x 145.99399pt.
-<images/cima.jpg, id=1616, 407.27156pt x 441.14813pt>
+<images/cima.jpg, id=1624, 407.27156pt x 441.14813pt>
 File: images/cima.jpg Graphic file (type jpg)
 <use images/cima.jpg>
 Package pdftex.def Info: images/cima.jpg  used on input line 78.
@@ -1351,32 +1364,67 @@ Package pdftex.def Info: images/cima.jpg  used on input line 78.
 ) [39
 
 ] [40 <./images/baixo.jpg> <./images/meio.jpg> <./images/cima.jpg>] [41]
-<images/channel_transfer.pdf, id=1640, 451.6875pt x 328.22626pt>
+<images/channel_transfer.pdf, id=1648, 451.6875pt x 328.22626pt>
 File: images/channel_transfer.pdf Graphic file (type pdf)
 <use images/channel_transfer.pdf>
 Package pdftex.def Info: images/channel_transfer.pdf  used on input line 63.
 (pdftex.def)             Requested size: 376.25838pt x 273.42938pt.
  [42 <./images/channel_transfer.pdf>]) (chapters/chapter-conclusions.tex [43]
 Chapter 5.
-) (main.bbl [44
+[44
 
-] [45
+]) (main.bbl [45]
+Underfull \hbox (badness 6641) in paragraph at lines 50--55
+[]\OT1/lmr/m/n/9 G. Christopou-los \OT1/lmr/m/it/9 et al.\OT1/lmr/m/n/9 , ``Ef-fect of a real-time ra-di-a-tion mon-i-tor-ing de-vice on op-er-a-tor
+ []
 
-] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 268--272
+
+Underfull \hbox (badness 7963) in paragraph at lines 50--55
+\OT1/lmr/m/n/9 ra-di-a-tion ex-po-sure dur-ing car-diac catheter-i-za-tion: The ra-di-a-tion re-duc-tion dur-ing car-diac
+ []
+
+
+Underfull \hbox (badness 6428) in paragraph at lines 50--55
+\OT1/lmr/m/n/9 catheter-i-za-tion us-ing real-time mon-i-tor-ing study,'' \OT1/lmr/m/it/9 Circ. Car-dio-vasc. In-terv. \OT1/lmr/m/n/9 7 (2014) 744.
+ []
+
+[46
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 243--247
 []\OT1/lmr/m/n/9 AuntMinnieEurope, ``RaySafe launches new i3 dose plat-form at ECR 2017.''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--272
+Underfull \hbox (badness 10000) in paragraph at lines 243--247
 []$\OT1/lmtt/m/n/9 https : / / www . auntminnieeurope . com / resources / conferences / article / 15650794 /
  []
 
-[47] [48]) (chapters/appendix-sources.tex [49]
-<images/bc408.pdf, id=1715, 456.70625pt x 362.35374pt>
+
+Underfull \hbox (badness 1043) in paragraph at lines 249--253
+\OT1/lmr/m/n/9 trauma op-er-a-tions with in-tro-duc-tion of real-time dosime-try,'' \OT1/lmr/m/it/9 J. Or-thop. Trauma \OT1/lmr/m/n/9 30 (2016) 53.
+ []
+
+[47]
+Underfull \hbox (badness 1708) in paragraph at lines 307--311
+[]\OT1/lmr/m/n/9 S. Poudel \OT1/lmr/m/it/9 et al.\OT1/lmr/m/n/9 , ``Changes in oc-cu-pa-tional ra-di-a-tion ex-po-sures af-ter in-cor-po-ra-tion of a real-
+ []
+
+
+Underfull \hbox (badness 2253) in paragraph at lines 307--311
+\OT1/lmr/m/n/9 time dosime-try sys-tem in the in-ter-ven-tional ra-di-ol-ogy suite,'' \OT1/lmr/m/it/9 Health Phys. \OT1/lmr/m/n/9 111 (2016) S166.
+ []
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 359--363
+\OT1/lmr/m/n/9 tors for cryo-genic rare event searches,'' \OT1/lmr/m/it/9 Nucl. In-strum. Meth-ods Phys. Res. B \OT1/lmr/m/n/9 336 (2014) 26.
+ []
+
+[48]) (chapters/appendix-sources.tex [49]
+<images/bc408.pdf, id=1789, 456.70625pt x 362.35374pt>
 File: images/bc408.pdf Graphic file (type pdf)
 <use images/bc408.pdf>
-Package pdftex.def Info: images/bc408.pdf  used on input line 45.
+Package pdftex.def Info: images/bc408.pdf  used on input line 31.
 (pdftex.def)             Requested size: 401.18495pt x 318.30278pt.
 ) [50
 
@@ -1393,20 +1441,20 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 55035BF3BC76BA9C089BE8A3E46C37E8;6513.
  ) 
 Here is how much of TeX's memory you used:
- 31398 strings out of 467866
- 634324 string characters out of 5418313
- 979649 words of memory out of 5000000
- 59340 multiletter control sequences out of 15000+600000
- 743220 words of font info for 134 fonts, out of 8000000 for 9000
+ 31434 strings out of 467867
+ 635004 string characters out of 5418334
+ 980127 words of memory out of 5000000
+ 59366 multiletter control sequences out of 15000+600000
+ 743590 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,21n,104p,2413b,1365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/eurosym/feybr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on main.pdf (64 pages, 3963075 bytes).
+Output written on main.pdf (64 pages, 3990127 bytes).
 PDF statistics:
- 1981 PDF objects out of 2073 (max. 8388607)
- 334 named destinations out of 1000 (max. 500000)
+ 2057 PDF objects out of 2073 (max. 8388607)
+ 338 named destinations out of 1000 (max. 500000)
  510 words of extra memory for PDF output out of 10000 (max. 10000000)
 

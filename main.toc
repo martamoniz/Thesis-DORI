@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {1.5.1}Reported Benefits}{10}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Proposed Dosimeter Concept}{11}{subsection.1.5.2}%
 \contentsline {subsubsection}{Scintillation Detection}{12}{section*.19}%
-\contentsline {subsubsection}{Readout and Transmission}{12}{section*.20}%
+\contentsline {subsubsection}{Readout and Transmission}{13}{section*.20}%
 \contentsline {subsubsection}{Data Processing and Interface}{13}{section*.21}%
 \contentsline {chapter}{\numberline {2}Prototype Development}{14}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Preliminary Studies}{14}{section.2.1}%
@@ -51,5 +51,5 @@
 \contentsline {section}{\numberline {4.3}Cost and Specifications}{43}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Conclusions}{44}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Future work}{44}{section.5.1}%
-\contentsline {chapter}{References}{45}{section.5.2}%
+\contentsline {chapter}{References}{46}{section.5.2}%
 \contentsline {chapter}{Appendix}{50}{section.Alph0.1}%

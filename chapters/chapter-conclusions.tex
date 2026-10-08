@@ -1,19 +1,45 @@
 \chapter{Conclusions}
+In summary, the initially established objectives were achieved. The preliminary measurements first confirmed the detection principle, as the combination of a PS with a SiPM produced a measurable signal under X-ray irradiation. The prototype was then designed around a $5 \times 5 \times 5$~mm$^3$ BC-408 cube and a $6 \times 6$~mm$^2$ SiPM. The pulse-mode front-end electronics were assembled, reaching a dead time of 17.8~$\pm$~0.4~$\mu$s, and validated using a CsI(Tl) crystal. The channel-to-energy response was linear ($R^2 = 0.999$) up to approximately channel 183, and the energy resolution of $16 \pm 1$\% at 122~keV was consistent with the literature. The readout and binning therefore do not introduce amplitude-dependent errors within this voltage range, and do not significantly degrade the intrinsic resolution of the crystal. The tests with CsI(Tl) also showed that the readout can be coupled to any scintillator, as long as the gain is adjusted. Further iterations of the prototype proved the front-end to be scalable to other formats, namely those required to monitor the eyes, neck, thorax and hands. The response of a new board relates to that of the test board through a constant offset, and the gain is preserved. The main limitation of the front-end is the residual baseline of approximately 50~mV at the P\&H output that currently reduces the dynamic range at the lower end of the energies of interest.
 
-The readout is scalable.
+Additionally, this work demonstrated that a PS can be calibrated for personal dosimetry. An energy calibration method was presented, based on the \emph{Bremsstrahlung} endpoint between 20 and 50~keV. The $^{241}$Am photopeak provided an additional calibration point, extending the range to 60~keV. Within this interval the response is linear, with an energy resolution of $(29 \pm 5)$\% at 59.5~keV, consistent with that reported for BC-408. Following the ISO 4037 framework, the dose calibration was then performed in terms of $H_p(10)$. Given the instrumentation available, only the N-25 to N-40 reference qualities could be used. The weights of the two-bin model reflect the expected increase of dose with energy. The reconstructed ${H}_p(10)$ agreed with the reference values within their uncertainty, including in the leave-one-out test. Although the reference conditions could not be fully reproduced, the methodology was validated. It should be noted that, dose calibration for other anatomical regions, and therefore other depths, will require other phantoms, although the same methodology applies.
 
-Calibration to other depths (mainly Hp(3)) requires other phantoms!!!
-
-The readout is ready to receive any scintillator, as long as the gain is adjusted.
+Finally, a wearable prototype was assembled. It currently measures 6.3 $\times$ 7.2 $\times$ 2.5~cm, has a mass of 141~g and an estimated component cost of approximately 229~euros per unit. It communicates via BLE, with an autonomy of 8.6~h at 100 simulated events per second.
 
 
 \section{Future work}
-Fix the residual baseline on the P\&H.
 
-How can we get more calibration points up to 100–120 keV?
+Most of the future work has already been identified throughout this thesis, alongside the
+limitations that motivate it. Regarding the current prototype, the first task should focus
+on the correction of the residual baseline of the P\&H circuit. The shaping stage should be
+examined first, so that its output remains positive. The P\&H  may also be
+optimised, and should a faster circuit be achieved, fewer shaping stages may be required,
+possibly down to the CSA alone, which would further reduce the footprint of the front-end
+electronics. In parallel, and as discussed, the component selection should be optimised
+with respect to power consumption. These changes should then be implemented with a better
+use of the PCB layers, ultimately contributing to a more compact design. The enclosure
+should also be iterated to reduce its mass, while
+preserving light-tightness. As the dosimeter was presented as scalable to different
+anatomical regions, units in the formats required by the other monitoring positions
+should also be developed.
 
-Where are these "certified laboratories"? aqui em Portugal (se houver)
+With the expected changes in the electronics, the calibrations must be repeated. The
+overall gain of the system is expected to change, and the weights obtained in the dose calibration
+may not be transferable. The energy calibration was limited to 60~keV by the absence of
+calibration points above this energy. Although no deviation from linearity was observed
+within this range, a conservative approach was taken and the calibration was not extended
+beyond it. The response may remain linear up to the upper limit of the energy range
+relevant to IR, and tests with the CEs of sources emitting at higher energies should be
+carried out. The dose calibration should follow once this is complete. With the calibration method
+validated, it must be repeated at a certified laboratory. Future work therefore includes
+coordinating with the Laboratório de Metrologia das Radiações Ionizantes of
+Instituto Superior Técnico, which is recognised in Portugal for the verification of this
+type of instrumentation~\cite{lmri}, and planning a calibration visit
+to its facilities. With these achieved, the linearity of the response with count rate should be
+characterised, up to saturation. The angular dependence should also be tested, to
+characterise the response over 180$^\circ$.
 
-BLE stability tests.
-
+Finally, the interface for real-time dose visualisation must be developed, including
+alarms set according to the relevant dose rate levels. The stability of the BLE link
+should be assessed, both in range and under higher data throughput. Ultimately, the
+dosimeter should be validated in a real clinical environment.
 

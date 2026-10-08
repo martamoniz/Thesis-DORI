@@ -1,51 +1,50 @@
 This is BibTeX, Version 0.99e
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-Reallocating 'name_of_file' (item size: 1) to 7 items.
-The style file: ieeetr.bst
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+The style file: ieeetr-thesis.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: Bibliografia.bib
-Warning--empty journal in 33
 Warning--empty year in 33
-You've used 95 entries,
-            1876 wiz_defined-function locations,
-            1009 strings with 24795 characters,
-and the built_in function-call counts, 26030 in all, are:
-= -- 2434
-> -- 1457
+You've used 98 entries,
+            1942 wiz_defined-function locations,
+            1093 strings with 26170 characters,
+and the built_in function-call counts, 15431 in all, are:
+= -- 1486
+> -- 411
 < -- 5
-+ -- 529
-- -- 434
-* -- 2007
-:= -- 3857
-add.period$ -- 131
-call.type$ -- 95
-change.case$ -- 81
++ -- 166
+- -- 68
+* -- 1378
+:= -- 2162
+add.period$ -- 136
+call.type$ -- 98
+change.case$ -- 84
 chr.to.int$ -- 0
-cite$ -- 97
-duplicate$ -- 1163
-empty$ -- 2198
-format.name$ -- 434
-if$ -- 6129
+cite$ -- 99
+duplicate$ -- 631
+empty$ -- 1623
+format.name$ -- 115
+if$ -- 3760
 int.to.chr$ -- 0
-int.to.str$ -- 95
-missing$ -- 77
-newline$ -- 326
-num.names$ -- 92
-pop$ -- 296
+int.to.str$ -- 98
+missing$ -- 83
+newline$ -- 336
+num.names$ -- 95
+pop$ -- 288
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 839
+skip$ -- 405
 stack$ -- 0
-substring$ -- 1496
-swap$ -- 504
+substring$ -- 688
+swap$ -- 131
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 227
-width$ -- 97
-write$ -- 922
-(There were 2 warnings)
+warning$ -- 1
+while$ -- 111
+width$ -- 100
+write$ -- 867
+(There was 1 warning)
